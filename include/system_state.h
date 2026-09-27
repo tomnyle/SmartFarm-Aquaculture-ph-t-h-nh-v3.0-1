@@ -11,11 +11,13 @@ struct SensorReadings {
     float water_ph;               // pH units
     float dissolved_oxygen;       // mg/L or %
     float water_level;            // cm
+    bool water_level_low;         // Float switch safety interlock status
     
     uint32_t temperature_timestamp;
     uint32_t ph_timestamp;
     uint32_t do_timestamp;
     uint32_t level_timestamp;
+    uint32_t water_level_switch_timestamp;
     
     bool temperature_valid;
     bool ph_valid;

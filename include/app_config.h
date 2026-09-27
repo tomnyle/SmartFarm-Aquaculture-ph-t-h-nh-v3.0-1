@@ -37,6 +37,7 @@
 #define MQTT_TOPIC_AIR_TEMP "smartfarm/aquaculture/sensor/air_temp"
 #define MQTT_TOPIC_HUMIDITY "smartfarm/aquaculture/sensor/humidity"
 #define MQTT_TOPIC_LIGHT "smartfarm/aquaculture/sensor/light"
+#define MQTT_TOPIC_WATER_LEVEL_LOW "smartfarm/aquaculture/sensor/water_level_low"
 
 // Output Topics - State
 #define MQTT_TOPIC_PUMP "smartfarm/aquaculture/output/pump"
