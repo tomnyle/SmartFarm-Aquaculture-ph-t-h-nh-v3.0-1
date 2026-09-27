@@ -28,6 +28,8 @@ struct SensorData {
   float do_value;
   float co2;
   float light;
+  bool water_level_low;
+  uint32_t water_level_timestamp;
   uint32_t last_read;
 };
 
@@ -54,6 +56,7 @@ struct ConditionState {
   bool do_critical;
   bool co2_high;
   bool turbidity_high;
+  bool water_level_low;
   bool any_active_alarm;
   bool critical_condition_active;
 };
@@ -97,6 +100,9 @@ void read_sensors();
 void evaluate_conditions();
 void update_operation_profile_state(bool force_publish = false);
 void apply_species_rules();
+bool is_water_level_low();
+void update_water_level_state();
+void enforce_water_level_interlock();
 void publish_sensor_data();
 void publish_output_state();
 void publish_profile_state();
@@ -146,10 +152,14 @@ void setup() {
   pinMode(AERATOR_PIN, OUTPUT);
   pinMode(CIRCULATION_PIN, OUTPUT);
   pinMode(FEEDER_PIN, OUTPUT);
+  pinMode(WATER_LEVEL_SWITCH_PIN, INPUT_PULLUP);
   digitalWrite(PUMP_PIN, LOW);
   digitalWrite(AERATOR_PIN, LOW);
   digitalWrite(CIRCULATION_PIN, LOW);
   digitalWrite(FEEDER_PIN, LOW);
+  sensors.water_level_low = is_water_level_low();
+  sensors.water_level_timestamp = millis();
+  conditions.water_level_low = sensors.water_level_low;
 
   Serial.println("[INIT] Initializing sensors...");
   waterTemp.begin();
@@ -190,6 +200,7 @@ void loop() {
   }
 
   uint32_t now = millis();
+  enforce_water_level_interlock();
 
   if (now - last_sensor_read >= SENSOR_READ_INTERVAL) {
     read_sensors();
@@ -315,6 +326,7 @@ void publish_mqtt_discovery() {
   publish_discovery_sensor("aquaculture_relay_test_status", "Aquaculture Relay Test Status", MQTT_TOPIC_RELAY_TEST_STATE, "mdi:toggle-switch");
   publish_discovery_binary_sensor("aquaculture_can_no_load_test", "Aquaculture Can No-Load Test", MQTT_TOPIC_CAN_NO_LOAD_TEST, "mdi:beaker-check");
   publish_discovery_binary_sensor("aquaculture_can_production", "Aquaculture Can Production", MQTT_TOPIC_CAN_PRODUCTION, "mdi:fish");
+  publish_discovery_binary_sensor("aquaculture_water_level_low", "Aquaculture Water Level Low", MQTT_TOPIC_WATER_LEVEL_LOW, "mdi:waves-arrow-down", "problem");
   publish_discovery_binary_sensor("aquaculture_outputs_locked", "Aquaculture Outputs Locked", MQTT_TOPIC_OUTPUTS_LOCKED, "mdi:lock");
   publish_discovery_binary_sensor("aquaculture_required_sensors_valid", "Aquaculture Required Sensors Valid", MQTT_TOPIC_REQUIRED_SENSORS_VALID, "mdi:check-decagram");
   publish_discovery_binary_sensor("aquaculture_sensor_fault", "Aquaculture Sensor Fault", MQTT_TOPIC_SENSOR_FAULT_ACTIVE, "mdi:alert-circle", "problem");
@@ -447,6 +459,7 @@ void mqtt_callback(char* topic, byte* payload, unsigned int length) {
 }
 
 void read_sensors() {
+  update_water_level_state();
   waterTemp.requestTemperatures();
   sensors.water_temp = waterTemp.getTempCByIndex(0);
   if (sensors.water_temp == -127) {
@@ -496,6 +509,8 @@ void read_sensors() {
   Serial.print("Light: ");
   Serial.print(sensors.light);
   Serial.println(" lux");
+  Serial.print("Water Level Switch: ");
+  Serial.println(sensors.water_level_low ? "LOW" : "OK");
 }
 
 void evaluate_conditions() {
@@ -517,6 +532,7 @@ void evaluate_conditions() {
   conditions.do_critical = conditions.do_valid && sensors.do_value <= rule->do_critical;
   conditions.co2_high = sensors.co2 > rule->co2_max;
   conditions.turbidity_high = conditions.turbidity_valid && sensors.turbidity > rule->turbidity_max;
+  conditions.water_level_low = sensors.water_level_low;
 
   conditions.any_active_alarm =
       conditions.temp_high ||
@@ -525,7 +541,8 @@ void evaluate_conditions() {
       conditions.do_low ||
       conditions.do_critical ||
       conditions.co2_high ||
-      conditions.turbidity_high;
+      conditions.turbidity_high ||
+      conditions.water_level_low;
 
   conditions.critical_condition_active =
       conditions.do_critical ||
@@ -644,6 +661,10 @@ void apply_species_rules() {
     aerator_on = true;
   }
 
+  if (conditions.water_level_low) {
+    pump_on = false;
+  }
+
   if (conditions.do_valid && sensors.do_value < rule->do_min + 0.5f) {
     circulation_on = true;
   }
@@ -682,8 +703,17 @@ void apply_species_rules() {
 
 void set_output(const char* name, bool state) {
   if (strcmp(name, "pump") == 0) {
-    outputs.pump = state;
-    digitalWrite(PUMP_PIN, state ? HIGH : LOW);
+    if (state && is_water_level_low()) {
+      outputs.pump = false;
+      digitalWrite(PUMP_PIN, LOW);
+      sensors.water_level_low = true;
+      conditions.water_level_low = true;
+      sensors.water_level_timestamp = millis();
+      Serial.println("[SAFETY] Water level low, pump ON request rejected");
+    } else {
+      outputs.pump = state;
+      digitalWrite(PUMP_PIN, state ? HIGH : LOW);
+    }
   } else if (strcmp(name, "aerator") == 0) {
     outputs.aerator = state;
     digitalWrite(AERATOR_PIN, state ? HIGH : LOW);
@@ -740,6 +770,7 @@ void publish_sensor_data() {
   mqtt_client.publish(MQTT_TOPIC_AIR_TEMP, String(sensors.air_temp, 2).c_str(), true);
   mqtt_client.publish(MQTT_TOPIC_HUMIDITY, String(sensors.air_humidity, 2).c_str(), true);
   mqtt_client.publish(MQTT_TOPIC_LIGHT, String(sensors.light, 0).c_str(), true);
+  mqtt_client.publish(MQTT_TOPIC_WATER_LEVEL_LOW, sensors.water_level_low ? "ON" : "OFF", true);
 }
 
 void publish_output_state() {
@@ -927,4 +958,32 @@ void copy_text(char* destination, size_t destination_size, const char* source) {
 
   strncpy(destination, source, destination_size - 1);
   destination[destination_size - 1] = '\0';
+}
+
+bool is_water_level_low() {
+  return digitalRead(WATER_LEVEL_SWITCH_PIN) == LOW;
+}
+
+void update_water_level_state() {
+  bool current_low = is_water_level_low();
+  if (current_low != sensors.water_level_low) {
+    sensors.water_level_timestamp = millis();
+    Serial.print("[SAFETY] Water level state changed: ");
+    Serial.println(current_low ? "LOW" : "OK");
+    if (mqtt_client.connected()) {
+      mqtt_client.publish(MQTT_TOPIC_WATER_LEVEL_LOW, current_low ? "ON" : "OFF", true);
+    }
+  }
+  sensors.water_level_low = current_low;
+  conditions.water_level_low = current_low;
+}
+
+void enforce_water_level_interlock() {
+  update_water_level_state();
+  if (conditions.water_level_low && outputs.pump) {
+    set_output("pump", false);
+    if (mqtt_client.connected()) {
+      publish_output_state();
+    }
+  }
 }

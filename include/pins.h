@@ -19,6 +19,9 @@
 #define I2C_SDA 21          // I2C Data
 #define I2C_SCL 22          // I2C Clock
 
+// Float Switch Input (Dry Contact to GND)
+#define WATER_LEVEL_SWITCH_PIN 33
+
 // ==================== OUTPUT PINS ====================
 // Relay Pins
 #define PUMP_PIN 13         // Main pump relay
