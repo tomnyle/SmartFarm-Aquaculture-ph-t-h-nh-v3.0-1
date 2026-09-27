@@ -23,7 +23,6 @@ struct SensorReadings {
     bool ph_valid;
     bool do_valid;
     bool level_valid;
-    bool water_level_switch_valid;
 };
 
 // ==================== OUTPUT STATES ====================

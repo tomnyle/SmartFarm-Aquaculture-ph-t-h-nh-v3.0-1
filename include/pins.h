@@ -21,6 +21,8 @@
 
 // Float Switch Input (Dry Contact to GND)
 #define WATER_LEVEL_SWITCH_PIN 33
+// Electrical assumption: dry contact closes to GND on low-water condition
+#define WATER_LEVEL_SWITCH_ACTIVE_LOW true
 
 // ==================== OUTPUT PINS ====================
 // Relay Pins
