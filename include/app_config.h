@@ -37,18 +37,27 @@
 #define MQTT_TOPIC_AIR_TEMP "smartfarm/aquaculture/sensor/air_temp"
 #define MQTT_TOPIC_HUMIDITY "smartfarm/aquaculture/sensor/humidity"
 #define MQTT_TOPIC_LIGHT "smartfarm/aquaculture/sensor/light"
+#define MQTT_TOPIC_WATER_LEVEL_LOW "smartfarm/aquaculture/sensor/water_level_low"
 
 // Output Topics - State
 #define MQTT_TOPIC_PUMP "smartfarm/aquaculture/output/pump"
 #define MQTT_TOPIC_AERATOR "smartfarm/aquaculture/output/aerator"
 #define MQTT_TOPIC_CIRCULATION "smartfarm/aquaculture/output/circulation"
 #define MQTT_TOPIC_FEEDER "smartfarm/aquaculture/output/feeder"
+#define MQTT_TOPIC_VALVE "smartfarm/aquaculture/output/valve"
+#define MQTT_TOPIC_LIGHT_OUTPUT "smartfarm/aquaculture/output/light"
+#define MQTT_TOPIC_SPARE1 "smartfarm/aquaculture/output/spare1"
+#define MQTT_TOPIC_SPARE2 "smartfarm/aquaculture/output/spare2"
 
 // Control Topics - Command
 #define MQTT_TOPIC_CONTROL_PUMP "smartfarm/aquaculture/control/pump/set"
 #define MQTT_TOPIC_CONTROL_AERATOR "smartfarm/aquaculture/control/aerator/set"
 #define MQTT_TOPIC_CONTROL_CIRCULATION "smartfarm/aquaculture/control/circulation/set"
 #define MQTT_TOPIC_CONTROL_FEEDER "smartfarm/aquaculture/control/feeder/set"
+#define MQTT_TOPIC_CONTROL_VALVE "smartfarm/aquaculture/control/valve/set"
+#define MQTT_TOPIC_CONTROL_LIGHT "smartfarm/aquaculture/control/light/set"
+#define MQTT_TOPIC_CONTROL_SPARE1 "smartfarm/aquaculture/control/spare1/set"
+#define MQTT_TOPIC_CONTROL_SPARE2 "smartfarm/aquaculture/control/spare2/set"
 #define MQTT_TOPIC_CONTROL_MODE "smartfarm/aquaculture/config/mode/set"
 #define MQTT_TOPIC_CONFIG_SPECIES "smartfarm/aquaculture/config/species/set"
 #define MQTT_TOPIC_CONTROL_OPERATION_PROFILE "smartfarm/aquaculture/config/operation_profile/set"
@@ -115,6 +124,18 @@
 // Keep true during sensor-only checkout; ON commands are suppressed,
 // outputs remain locked OFF, and AUTO rules are skipped.
 #define SENSOR_TEST_MODE true
+
+// ==================== WATER LEVEL SAFETY INTERLOCK ====================
+// Float switch on WATER_LEVEL_PIN (see pins.h) wired to GND with INPUT_PULLUP.
+// WATER_LEVEL_LOW_STATE is the pin level that means "water too low".
+// Low water forces the pump OFF immediately; the lock is released only after
+// the switch reports normal level continuously for WATER_LEVEL_CLEAR_DELAY.
+#define WATER_LEVEL_LOW_STATE LOW
+#define WATER_LEVEL_CLEAR_DELAY 3000  // ms
+
+// ==================== ADS1115 ANALOG FRONT END ====================
+// Sensor outputs must be conditioned to 0..ADS1115_FULL_SCALE_VOLTAGE.
+#define ADS1115_FULL_SCALE_VOLTAGE 3.3f
 
 // ==================== CONTROL THRESHOLDS ====================
 // Temperature (°C)

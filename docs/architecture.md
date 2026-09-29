@@ -14,23 +14,24 @@ The Aquaculture Controller is designed to manage family pond conditions autonomo
 ## Hardware Architecture
 
 ```
-    ESP32 Microcontroller
+    ESP32 Microcontroller (pin map Rev.A - include/pins.h)
     ├── 1-Wire Bus (GPIO4)
-    │   └── DS18B20 Temperature Sensor
-    ├── I2C Bus (GPIO21/22)
-    │   ├── ADS1115 #1 (pH & DO)
-    │   └── ADS1115 #2 (optional, future expansion)
-    ├── Analog Input (GPIO34)
-    │   └── Water Level Sensor
-    └── GPIO Digital Outputs (GPIO32-27, 14, 12-13)
-        ├── Relay 1: Aerator
-        ├── Relay 2: Water Pump
-        ├── Relay 3: Circulation
-        ├── Relay 4: Feeder
-        ├── Relay 5: Valve
-        ├── Relay 6: Light
-        ├── Relay 7: Spare 1
-        └── Relay 8: Spare 2
+    │   └── DS18B20 Water Temperature
+    ├── DHT22 (GPIO15)
+    ├── I2C Bus (SDA GPIO21 / SCL GPIO22)
+    │   ├── ADS1115 @0x48 (A0 pH, A1 DO, A2 Turbidity, A3 CO2)
+    │   └── BH1750 light sensor
+    ├── Float switch (GPIO33, INPUT_PULLUP) - pump safety interlock
+    ├── GPIO Digital Outputs (relay drivers)
+    │   ├── Relay 1: Pump        GPIO13
+    │   ├── Relay 2: Aerator     GPIO25
+    │   ├── Relay 3: Circulation GPIO14
+    │   ├── Relay 4: Feeder      GPIO27
+    │   ├── Relay 5: Valve       GPIO26
+    │   ├── Relay 6: Light       GPIO32
+    │   ├── Relay 7: Spare 1     GPIO12
+    │   └── Relay 8: Spare 2     GPIO16
+    └── Status LED (GPIO2)
 ```
 
 ## Software Architecture

@@ -13,7 +13,9 @@ ESP32-based aquaculture controller for family pond management with MQTT & Home A
   - Water Temperature (DS18B20)
   - pH Level (via ADS1115)
   - Dissolved Oxygen (via ADS1115)
-  - Turbidity
+  - Turbidity (via ADS1115)
+  - CO2 (via ADS1115)
+  - Water level float switch (pump safety interlock)
 
 - **Relay Control** (8-channel):
   - Aerator (Máy sục khí)
@@ -30,8 +32,8 @@ ESP32-based aquaculture controller for family pond management with MQTT & Home A
 - DS18B20 Temperature Sensor
 - pH Electrode + ADS1115 ADC Module
 - Dissolved Oxygen Probe + ADS1115
-- Water Level Sensor
-- 8-Channel Relay Module
+- Water Level Float Switch
+- 8 relay channels (active-HIGH drivers, see `docs/wiring.md`)
 - 5V Power Supply
 
 ## Getting Started
@@ -58,6 +60,31 @@ platformio run -e esp32dev -t upload
 ```bash
 platformio device monitor -b 115200
 ```
+
+## Hardware Pin Map (Rev.A)
+
+`include/pins.h` is the single source of truth for pin mapping; the PCB must use the
+same map. Full schematic guidance, net list and BOM: [`docs/wiring.md`](docs/wiring.md).
+
+| Function | Pin | Function | Pin |
+|----------|-----|----------|-----|
+| ADS1115 (I2C `0x48`) A0 | pH | Pump relay | GPIO13 |
+| ADS1115 A1 | DO | Aerator relay | GPIO25 |
+| ADS1115 A2 | Turbidity | Circulation relay | GPIO14 |
+| ADS1115 A3 | CO2 | Feeder relay | GPIO27 |
+| I2C SDA / SCL | GPIO21 / GPIO22 | Valve relay | GPIO26 |
+| DS18B20 (1-Wire) | GPIO4 | Light relay | GPIO32 |
+| DHT22 | GPIO15 | Spare 1 relay | GPIO12 (must be LOW at boot) |
+| Float switch | GPIO33 | Spare 2 relay | GPIO16 |
+| Status LED | GPIO2 | | |
+
+### Water Level Safety Interlock
+
+The float switch on GPIO33 (`INPUT_PULLUP`, `LOW` = water low by default) forces the pump
+OFF immediately. While low water is active every pump ON request — MQTT/Home Assistant,
+AUTO rules or relay test — is rejected, and the pump stays locked at boot until the switch
+reports normal level for `WATER_LEVEL_CLEAR_DELAY`. State is published on
+`smartfarm/aquaculture/sensor/water_level_low`.
 
 ## System Architecture
 
@@ -160,7 +187,9 @@ Each species has predefined parameter ranges:
 Core retained topics:
 
 - `smartfarm/aquaculture/sensor/*` - Sensor readings
-- `smartfarm/aquaculture/output/*` - Output states
+- `smartfarm/aquaculture/output/{pump,aerator,circulation,feeder,valve,light,spare1,spare2}` - Output states
+- `smartfarm/aquaculture/control/{pump,aerator,circulation,feeder,valve,light,spare1,spare2}/set` - Output commands
+- `smartfarm/aquaculture/sensor/water_level_low` - Float switch low-water state
 - `smartfarm/aquaculture/config/mode/set|state`
 - `smartfarm/aquaculture/config/species/set|state`
 - `smartfarm/aquaculture/config/operation_profile/set|selected|actual`
@@ -190,6 +219,8 @@ Home Assistant MQTT discovery also creates entities for:
 - outputs locked
 - production block reason / active reminder
 - per-blocker reminder indicators
+- all 8 output switches (pump, aerator, circulation, feeder, valve, light, spare 1, spare 2)
+- water level low binary sensor
 
 Binary-sensor style eligibility and blocker topics publish retained `ON` / `OFF` payloads. Select entities publish fixed option strings such as `SENSOR_TEST`, `NO_LIVESTOCK_TEST`, `PRODUCTION`, `NOT_STARTED`, `IN_PROGRESS`, `PASSED`, and `FAILED`.
 
@@ -225,7 +256,7 @@ automation:
 See `/docs` folder for:
 - `architecture.md` - System design
 - `sensors.md` - Sensor specifications & calibration
-- `wiring.md` - Hardware wiring diagram
+- `wiring.md` - Hardware pin map Rev.A, schematic blocks, net list & BOM for PCB design
 - `mqtt.md` - MQTT protocol details
 
 ## License

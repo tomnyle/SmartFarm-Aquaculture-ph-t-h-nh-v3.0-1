@@ -105,34 +105,37 @@ DO Probe → Amplifier → ADS1115 A1
 sensor.setWaterTemperature(25.5);  // For accurate DO calculation
 ```
 
-## Water Level Sensor
+## Turbidity & CO2 Sensors
+
+Both are analog sensors read through the shared ADS1115 (address `0x48`):
+
+```
+Turbidity OUT → ADS1115 A2   (TURB_CHANNEL)
+CO2 OUT       → ADS1115 A3   (CO2_CHANNEL)
+```
+
+Any sensor output above 3.3 V must be divided down before reaching the
+ADS1115 input (see `docs/wiring.md`). The firmware currently applies a linear
+placeholder scaling over 0–3.3 V; calibrate before relying on the values.
+
+## Water Level Float Switch (Safety Interlock)
 
 ### Specifications
-- Type: Ultrasonic or capacitive water level sensor
-- Signal: 0-5V analog (read via ADS1115)
-- Accuracy: ±2-5% of range
-- Response Time: <100ms
-- Cost: $10-20
+- Type: Dry-contact float switch
+- Input: `WATER_LEVEL_PIN` = GPIO33, `INPUT_PULLUP`
+- Active level: `WATER_LEVEL_LOW_STATE` (default `LOW` = switch closed to GND = water low)
 
 ### Wiring
 ```
-Water Level Sensor
-  ├─ VCC → 5V
-  ├─ GND → GND
-  └─ OUT → GPIO34 or ADS1115 A2
+GPIO33 ──[1k series]──┬── Float switch ── GND
+                      └── 100nF ── GND  (RC debounce / ESD)
 ```
 
-### Calibration
-
-1. **Measure empty level (0%)**
-   ```cpp
-   sensor.setMinMaxLevel(0, 100);  // in cm
-   ```
-
-2. **Measure full level (100%)**
-   ```cpp
-   sensor.setCalibrationPoints(adc_empty, adc_full, 0, 100);
-   ```
+### Behaviour
+- Low water forces the pump (GPIO13) OFF immediately.
+- Every pump ON request (MQTT/Home Assistant, AUTO rules, relay test) is rejected while low water is active.
+- On boot the pump starts locked; the lock is released only after the switch reports normal level for `WATER_LEVEL_CLEAR_DELAY` ms.
+- State is published on `smartfarm/aquaculture/sensor/water_level_low` (`ON` = low water).
 
 ## Sensor Selection Strategy
 
@@ -140,7 +143,7 @@ Water Level Sensor
 ✓ Temperature (DS18B20)
 ✓ pH (via ADS1115)
 ✓ Dissolved Oxygen (via ADS1115)
-✓ Water Level (via ADS1115)
+✓ Water Level float switch (GPIO33 interlock)
 
 ### Phase 2 - Enhanced Monitoring
 - ORP (Oxidation potential)
