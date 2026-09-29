@@ -24,21 +24,40 @@ struct SensorReadings {
 };
 
 // ==================== OUTPUT STATES ====================
+// One entry per relay output in pins.h (Rev.A: 8 outputs).
+// Each output is published on smartfarm/aquaculture/output/<name> and
+// controlled via smartfarm/aquaculture/control/<name>/set.
 
 struct OutputStates {
-    bool aerator;           // Máy sục khí
-    bool water_pump;        // Bơm cấp nước
-    bool circulation;       // Bơm tuần hoàn
-    bool feeder;            // Máy cho ăn
-    bool valve;             // Van
-    bool light;             // Đèn
-    bool spare1;            // Dự phòng 1
-    bool spare2;            // Dự phòng 2
+    bool pump;              // Bơm cấp nước (PUMP_PIN) - float-switch interlocked
+    bool aerator;           // Máy sục khí (AERATOR_PIN)
+    bool circulation;       // Bơm tuần hoàn (CIRCULATION_PIN)
+    bool feeder;            // Máy cho ăn (FEEDER_PIN)
+    bool valve;             // Van (VALVE_PIN)
+    bool light;             // Đèn (LIGHT_PIN)
+    bool spare1;            // Dự phòng 1 (SPARE1_PIN)
+    bool spare2;            // Dự phòng 2 (SPARE2_PIN)
     
+    uint32_t pump_on_time;
     uint32_t aerator_on_time;
-    uint32_t water_pump_on_time;
     uint32_t circulation_on_time;
     uint32_t feeder_on_time;
+    uint32_t valve_on_time;
+    uint32_t light_on_time;
+    uint32_t spare1_on_time;
+    uint32_t spare2_on_time;
+};
+
+// ==================== WATER LEVEL SAFETY ====================
+// Float switch on WATER_LEVEL_PIN. While water_level_low is true the pump
+// is forced OFF and every ON request (manual, AUTO, relay test) is rejected.
+// Published on smartfarm/aquaculture/sensor/water_level_low (ON = low water).
+
+struct WaterLevelSafetyState {
+    bool water_level_low;          // Debounced low-water state (true = pump locked)
+    bool raw_low;                  // Last raw float switch reading
+    uint32_t last_change;          // millis() of last raw change
+    uint32_t pump_blocked_count;   // Number of pump ON requests rejected
 };
 
 // ==================== SYSTEM STATUS ====================
@@ -102,6 +121,7 @@ struct AquacultureSystemState {
     // Data
     SensorReadings sensors;
     OutputStates outputs;
+    WaterLevelSafetyState water_level;
     SystemState system;
     
     // Active profile
@@ -121,7 +141,7 @@ class StateManager {
 public:
     static void initializeState(AquacultureSystemState& state);
     static void updateSensorReading(AquacultureSystemState& state, const char* sensor_type, float value);
-    static void updateOutputState(AquacultureSystemState& state, const char* output_name, bool state);
+    static void updateOutputState(AquacultureSystemState& state, const char* output_name, bool output_state);
     static void setSystemMode(AquacultureSystemState& state, SystemMode mode);
     static void setSystemStatus(AquacultureSystemState& state, SystemStatus status, ErrorCode error = ERROR_NONE);
     static void addEvent(AquacultureSystemState& state, const char* message);

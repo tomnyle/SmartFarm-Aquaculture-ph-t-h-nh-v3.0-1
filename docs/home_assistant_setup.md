@@ -75,7 +75,7 @@ entities:
     name: Aerator
     icon: mdi:air-purifier
   
-  - entity: switch.aquaculture_water_pump
+  - entity: switch.aquaculture_pump
     name: Water Pump
     icon: mdi:pump
   
@@ -86,6 +86,24 @@ entities:
   - entity: switch.aquaculture_feeder
     name: Feeder
     icon: mdi:fish-food
+
+  - entity: switch.aquaculture_valve
+    name: Valve
+    icon: mdi:valve
+
+  - entity: switch.aquaculture_light_output
+    name: Light
+    icon: mdi:lightbulb-on
+
+  - entity: switch.aquaculture_spare1
+    name: Spare 1
+
+  - entity: switch.aquaculture_spare2
+    name: Spare 2
+
+  - entity: binary_sensor.aquaculture_water_level_low
+    name: Water Level Low
+    icon: mdi:water-alert
 ```
 
 ### Option C: Beautiful Grid Card
@@ -132,12 +150,16 @@ entities:
 smartfarm/aquaculture/sensor/temperature  → Temperature value
 smartfarm/aquaculture/sensor/ph            → pH value  
 smartfarm/aquaculture/sensor/do            → DO value
-smartfarm/aquaculture/sensor/level         → Water level %
+smartfarm/aquaculture/sensor/water_level_low → Float switch low water ON/OFF
 
+smartfarm/aquaculture/output/pump          → Pump ON/OFF
 smartfarm/aquaculture/output/aerator       → Aerator ON/OFF
-smartfarm/aquaculture/output/water_pump    → Pump ON/OFF
 smartfarm/aquaculture/output/circulation   → Circulation ON/OFF
 smartfarm/aquaculture/output/feeder        → Feeder ON/OFF
+smartfarm/aquaculture/output/valve         → Valve ON/OFF
+smartfarm/aquaculture/output/light         → Light ON/OFF
+smartfarm/aquaculture/output/spare1        → Spare 1 ON/OFF
+smartfarm/aquaculture/output/spare2        → Spare 2 ON/OFF
 
 smartfarm/aquaculture/config/species       → Current species
 smartfarm/aquaculture/config/mode          → Current mode (AUTO/MANUAL/etc)
@@ -145,10 +167,14 @@ smartfarm/aquaculture/config/mode          → Current mode (AUTO/MANUAL/etc)
 
 ### Subscribe FROM Home Assistant TO ESP32
 ```
+smartfarm/aquaculture/control/pump/set           ← Control pump (blocked while water level low)
 smartfarm/aquaculture/control/aerator/set        ← Control aerator
-smartfarm/aquaculture/control/water_pump/set     ← Control pump
 smartfarm/aquaculture/control/circulation/set    ← Control circulation
 smartfarm/aquaculture/control/feeder/set         ← Control feeder
+smartfarm/aquaculture/control/valve/set          ← Control valve
+smartfarm/aquaculture/control/light/set          ← Control light
+smartfarm/aquaculture/control/spare1/set         ← Control spare 1
+smartfarm/aquaculture/control/spare2/set         ← Control spare 2
 
 smartfarm/aquaculture/config/species/set         ← Change species
 smartfarm/aquaculture/config/mode/set            ← Change mode

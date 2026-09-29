@@ -63,21 +63,23 @@ void publishDOSensorDiscovery() {
     Serial.println("[HA Discovery] DO sensor registered");
 }
 
-void publishWaterLevelSensorDiscovery() {
+void publishWaterLevelLowBinarySensorDiscovery() {
     StaticJsonDocument<512> doc;
-    doc["name"] = "Aquaculture Water Level";
-    doc["unique_id"] = "aquaculture_level";
-    doc["state_topic"] = MQTT_TOPIC_TURBIDITY;
-    doc["unit_of_measurement"] = "%";
-    doc["icon"] = "mdi:water-percent";
+    doc["name"] = "Aquaculture Water Level Low";
+    doc["unique_id"] = "aquaculture_water_level_low";
+    doc["state_topic"] = MQTT_TOPIC_WATER_LEVEL_LOW;
+    doc["payload_on"] = "ON";
+    doc["payload_off"] = "OFF";
+    doc["device_class"] = "problem";
+    doc["icon"] = "mdi:water-alert";
     doc["device"]["identifiers"][0] = MQTT_CLIENT_ID;
     doc["device"]["name"] = "Aquaculture Controller";
 
     String payload;
     serializeJson(doc, payload);
 
-    mqtt_client.publish("homeassistant/sensor/aquaculture_level/config", payload.c_str(), true);
-    Serial.println("[HA Discovery] Water level sensor registered");
+    mqtt_client.publish("homeassistant/binary_sensor/aquaculture_water_level_low/config", payload.c_str(), true);
+    Serial.println("[HA Discovery] Water level low binary sensor registered");
 }
 
 void publishAeratorSwitchDiscovery() {
@@ -156,6 +158,45 @@ void publishFeederSwitchDiscovery() {
     Serial.println("[HA Discovery] Feeder switch registered");
 }
 
+void publishOutputSwitchDiscovery(const char* object_id,
+                                  const char* name,
+                                  const char* state_topic,
+                                  const char* command_topic,
+                                  const char* icon) {
+    StaticJsonDocument<512> doc;
+    doc["name"] = name;
+    doc["unique_id"] = object_id;
+    doc["state_topic"] = state_topic;
+    doc["command_topic"] = command_topic;
+    doc["payload_on"] = "ON";
+    doc["payload_off"] = "OFF";
+    doc["icon"] = icon;
+    doc["device"]["identifiers"][0] = MQTT_CLIENT_ID;
+    doc["device"]["name"] = "Aquaculture Controller";
+
+    String payload;
+    serializeJson(doc, payload);
+
+    String topic = String("homeassistant/switch/") + object_id + "/config";
+    mqtt_client.publish(topic.c_str(), payload.c_str(), true);
+    Serial.print("[HA Discovery] ");
+    Serial.print(name);
+    Serial.println(" switch registered");
+}
+
+void publishValveSwitchDiscovery() {
+    publishOutputSwitchDiscovery("aquaculture_valve", "Aquaculture Valve", MQTT_TOPIC_VALVE, MQTT_TOPIC_CONTROL_VALVE, "mdi:valve");
+}
+
+void publishLightSwitchDiscovery() {
+    publishOutputSwitchDiscovery("aquaculture_light_output", "Aquaculture Light", MQTT_TOPIC_LIGHT_OUTPUT, MQTT_TOPIC_CONTROL_LIGHT, "mdi:lightbulb-on");
+}
+
+void publishSpareSwitchDiscovery() {
+    publishOutputSwitchDiscovery("aquaculture_spare1", "Aquaculture Spare 1", MQTT_TOPIC_SPARE1, MQTT_TOPIC_CONTROL_SPARE1, "mdi:electric-switch");
+    publishOutputSwitchDiscovery("aquaculture_spare2", "Aquaculture Spare 2", MQTT_TOPIC_SPARE2, MQTT_TOPIC_CONTROL_SPARE2, "mdi:electric-switch");
+}
+
 void publishSpeciesSelectDiscovery() {
     StaticJsonDocument<768> doc;
     doc["name"] = "Aquaculture Species";
@@ -208,12 +249,15 @@ void publishAllDiscoveries() {
     publishTemperatureSensorDiscovery();
     publishPHSensorDiscovery();
     publishDOSensorDiscovery();
-    publishWaterLevelSensorDiscovery();
+    publishWaterLevelLowBinarySensorDiscovery();
 
     publishAeratorSwitchDiscovery();
     publishWaterPumpSwitchDiscovery();
     publishCirculationSwitchDiscovery();
     publishFeederSwitchDiscovery();
+    publishValveSwitchDiscovery();
+    publishLightSwitchDiscovery();
+    publishSpareSwitchDiscovery();
 
     publishSpeciesSelectDiscovery();
     publishModeSelectorDiscovery();

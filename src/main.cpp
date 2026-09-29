@@ -6,8 +6,10 @@
 #include <DHT.h>
 #include <Wire.h>
 #include <BH1750.h>
+#include <Adafruit_ADS1X15.h>
 #include "app_config.h"
 #include "pins.h"
+#include "system_state.h"
 #include "species_rules.h"
 #include "operation_profile.h"
 
@@ -18,6 +20,8 @@ OneWire oneWire(ONE_WIRE_BUS);
 DallasTemperature waterTemp(&oneWire);
 DHT dht(DHTPIN, DHTTYPE);
 BH1750 lightMeter;
+Adafruit_ADS1115 ads;
+bool ads_ready = false;
 
 struct SensorData {
   float water_temp;
@@ -29,13 +33,6 @@ struct SensorData {
   float co2;
   float light;
   uint32_t last_read;
-};
-
-struct OutputState {
-  bool pump;
-  bool aerator;
-  bool circulation;
-  bool feeder;
 };
 
 struct ConditionState {
@@ -54,13 +51,35 @@ struct ConditionState {
   bool do_critical;
   bool co2_high;
   bool turbidity_high;
+  bool water_level_low;
   bool any_active_alarm;
   bool critical_condition_active;
 };
 
 SensorData sensors = {};
-OutputState outputs = {};
+OutputStates outputs = {};
+WaterLevelSafetyState water_level = {};
 ConditionState conditions = {};
+
+struct OutputChannel {
+  const char* name;
+  uint8_t pin;
+  bool* state;
+  const char* state_topic;
+  const char* command_topic;
+};
+
+OutputChannel output_channels[] = {
+    {"pump", PUMP_PIN, &outputs.pump, MQTT_TOPIC_PUMP, MQTT_TOPIC_CONTROL_PUMP},
+    {"aerator", AERATOR_PIN, &outputs.aerator, MQTT_TOPIC_AERATOR, MQTT_TOPIC_CONTROL_AERATOR},
+    {"circulation", CIRCULATION_PIN, &outputs.circulation, MQTT_TOPIC_CIRCULATION, MQTT_TOPIC_CONTROL_CIRCULATION},
+    {"feeder", FEEDER_PIN, &outputs.feeder, MQTT_TOPIC_FEEDER, MQTT_TOPIC_CONTROL_FEEDER},
+    {"valve", VALVE_PIN, &outputs.valve, MQTT_TOPIC_VALVE, MQTT_TOPIC_CONTROL_VALVE},
+    {"light", LIGHT_PIN, &outputs.light, MQTT_TOPIC_LIGHT_OUTPUT, MQTT_TOPIC_CONTROL_LIGHT},
+    {"spare1", SPARE1_PIN, &outputs.spare1, MQTT_TOPIC_SPARE1, MQTT_TOPIC_CONTROL_SPARE1},
+    {"spare2", SPARE2_PIN, &outputs.spare2, MQTT_TOPIC_SPARE2, MQTT_TOPIC_CONTROL_SPARE2},
+};
+const size_t OUTPUT_CHANNEL_COUNT = sizeof(output_channels) / sizeof(output_channels[0]);
 
 uint32_t last_sensor_read = 0;
 uint32_t last_mqtt_publish = 0;
@@ -94,13 +113,16 @@ void reconnect_mqtt();
 void publish_mqtt_discovery();
 void mqtt_callback(char* topic, byte* payload, unsigned int length);
 void read_sensors();
+float read_ads_ratio(uint8_t channel);
+void update_water_level();
+bool any_output_active();
 void evaluate_conditions();
 void update_operation_profile_state(bool force_publish = false);
 void apply_species_rules();
 void publish_sensor_data();
 void publish_output_state();
 void publish_profile_state();
-void set_output(const char* name, bool state);
+bool set_output(const char* name, bool state);
 bool handle_output_command(const char* output_name, bool requested_state);
 void force_outputs_off();
 void publish_discovery_sensor(const char* object_id,
@@ -142,19 +164,34 @@ void setup() {
   copy_text(current_mode, sizeof(current_mode), DEFAULT_MODE);
   copy_text(current_species, sizeof(current_species), "Rô Phi");
 
-  pinMode(PUMP_PIN, OUTPUT);
-  pinMode(AERATOR_PIN, OUTPUT);
-  pinMode(CIRCULATION_PIN, OUTPUT);
-  pinMode(FEEDER_PIN, OUTPUT);
-  digitalWrite(PUMP_PIN, LOW);
-  digitalWrite(AERATOR_PIN, LOW);
-  digitalWrite(CIRCULATION_PIN, LOW);
-  digitalWrite(FEEDER_PIN, LOW);
+  for (size_t i = 0; i < OUTPUT_CHANNEL_COUNT; ++i) {
+    digitalWrite(output_channels[i].pin, LOW);
+    pinMode(output_channels[i].pin, OUTPUT);
+    digitalWrite(output_channels[i].pin, LOW);
+  }
+  pinMode(LED_PIN, OUTPUT);
+  digitalWrite(LED_PIN, LOW);
+
+  // Float switch interlock: start locked until the switch reports normal
+  // level continuously for WATER_LEVEL_CLEAR_DELAY.
+  pinMode(WATER_LEVEL_PIN, INPUT_PULLUP);
+  water_level.raw_low = digitalRead(WATER_LEVEL_PIN) == WATER_LEVEL_LOW_STATE;
+  water_level.water_level_low = true;
+  water_level.last_change = millis();
+  update_water_level();
 
   Serial.println("[INIT] Initializing sensors...");
   waterTemp.begin();
   dht.begin();
   Wire.begin(I2C_SDA, I2C_SCL);
+
+  ads_ready = ads.begin(ADS1115_ADDRESS, &Wire);
+  if (ads_ready) {
+    ads.setGain(GAIN_ONE);
+    Serial.println("[OK] ADS1115 initialized (pH=A0, DO=A1, Turbidity=A2, CO2=A3)");
+  } else {
+    Serial.println("[ERROR] ADS1115 not found - analog water-quality sensors invalid");
+  }
 
   if (lightMeter.begin(BH1750::CONTINUOUS_HIGH_RES_MODE)) {
     Serial.println("[OK] BH1750 Light Sensor initialized");
@@ -188,6 +225,8 @@ void loop() {
   if (WiFi.status() != WL_CONNECTED) {
     setup_wifi();
   }
+
+  update_water_level();
 
   uint32_t now = millis();
 
@@ -263,10 +302,9 @@ void reconnect_mqtt() {
     Serial.println("[OK] MQTT Connected!");
 
     mqtt_client.publish(MQTT_TOPIC_STATUS, "online", true);
-    mqtt_client.subscribe(MQTT_TOPIC_CONTROL_PUMP);
-    mqtt_client.subscribe(MQTT_TOPIC_CONTROL_AERATOR);
-    mqtt_client.subscribe(MQTT_TOPIC_CONTROL_CIRCULATION);
-    mqtt_client.subscribe(MQTT_TOPIC_CONTROL_FEEDER);
+    for (size_t i = 0; i < OUTPUT_CHANNEL_COUNT; ++i) {
+      mqtt_client.subscribe(output_channels[i].command_topic);
+    }
     mqtt_client.subscribe(MQTT_TOPIC_CONTROL_MODE);
     mqtt_client.subscribe(MQTT_TOPIC_CONFIG_SPECIES);
     mqtt_client.subscribe(MQTT_TOPIC_CONTROL_OPERATION_PROFILE);
@@ -299,11 +337,16 @@ void publish_mqtt_discovery() {
   publish_discovery_sensor("aquaculture_air_temp", "Aquaculture Air Temperature", MQTT_TOPIC_AIR_TEMP, "mdi:thermometer", "°C", "temperature");
   publish_discovery_sensor("aquaculture_humidity", "Aquaculture Humidity", MQTT_TOPIC_HUMIDITY, "mdi:water-percent", "%", "humidity");
   publish_discovery_sensor("aquaculture_light", "Aquaculture Light Level", MQTT_TOPIC_LIGHT, "mdi:lightbulb", "lux", "illuminance");
+  publish_discovery_binary_sensor("aquaculture_water_level_low", "Aquaculture Water Level Low", MQTT_TOPIC_WATER_LEVEL_LOW, "mdi:water-alert", "problem");
 
   publish_discovery_switch("aquaculture_pump", "Aquaculture Pump", MQTT_TOPIC_PUMP, MQTT_TOPIC_CONTROL_PUMP, "mdi:pump");
   publish_discovery_switch("aquaculture_aerator", "Aquaculture Aerator", MQTT_TOPIC_AERATOR, MQTT_TOPIC_CONTROL_AERATOR, "mdi:air-purifier");
   publish_discovery_switch("aquaculture_circulation", "Aquaculture Circulation", MQTT_TOPIC_CIRCULATION, MQTT_TOPIC_CONTROL_CIRCULATION, "mdi:water-pump");
   publish_discovery_switch("aquaculture_feeder", "Aquaculture Feeder", MQTT_TOPIC_FEEDER, MQTT_TOPIC_CONTROL_FEEDER, "mdi:fish-food");
+  publish_discovery_switch("aquaculture_valve", "Aquaculture Valve", MQTT_TOPIC_VALVE, MQTT_TOPIC_CONTROL_VALVE, "mdi:valve");
+  publish_discovery_switch("aquaculture_light_output", "Aquaculture Light", MQTT_TOPIC_LIGHT_OUTPUT, MQTT_TOPIC_CONTROL_LIGHT, "mdi:lightbulb-on");
+  publish_discovery_switch("aquaculture_spare1", "Aquaculture Spare 1", MQTT_TOPIC_SPARE1, MQTT_TOPIC_CONTROL_SPARE1, "mdi:electric-switch");
+  publish_discovery_switch("aquaculture_spare2", "Aquaculture Spare 2", MQTT_TOPIC_SPARE2, MQTT_TOPIC_CONTROL_SPARE2, "mdi:electric-switch");
   publish_discovery_switch("aquaculture_livestock_present", "Aquaculture Livestock Confirmation", MQTT_TOPIC_LIVESTOCK_PRESENT_STATE, MQTT_TOPIC_CONTROL_LIVESTOCK_PRESENT, "mdi:fish");
 
   publish_discovery_select("aquaculture_mode", "Aquaculture Mode", MQTT_TOPIC_MODE_STATE, MQTT_TOPIC_CONTROL_MODE, "mdi:cog", mode_options, 4, "config");
@@ -349,32 +392,13 @@ void mqtt_callback(char* topic, byte* payload, unsigned int length) {
   Serial.print(" = ");
   Serial.println(message);
 
-  if (strcmp(topic, MQTT_TOPIC_CONTROL_PUMP) == 0) {
-    copy_text(current_mode, sizeof(current_mode), "MANUAL");
-    handle_output_command("pump", message == "ON");
-    publish_output_state();
-    return;
-  }
-
-  if (strcmp(topic, MQTT_TOPIC_CONTROL_AERATOR) == 0) {
-    copy_text(current_mode, sizeof(current_mode), "MANUAL");
-    handle_output_command("aerator", message == "ON");
-    publish_output_state();
-    return;
-  }
-
-  if (strcmp(topic, MQTT_TOPIC_CONTROL_CIRCULATION) == 0) {
-    copy_text(current_mode, sizeof(current_mode), "MANUAL");
-    handle_output_command("circulation", message == "ON");
-    publish_output_state();
-    return;
-  }
-
-  if (strcmp(topic, MQTT_TOPIC_CONTROL_FEEDER) == 0) {
-    copy_text(current_mode, sizeof(current_mode), "MANUAL");
-    handle_output_command("feeder", message == "ON");
-    publish_output_state();
-    return;
+  for (size_t i = 0; i < OUTPUT_CHANNEL_COUNT; ++i) {
+    if (strcmp(topic, output_channels[i].command_topic) == 0) {
+      copy_text(current_mode, sizeof(current_mode), "MANUAL");
+      handle_output_command(output_channels[i].name, message == "ON");
+      publish_output_state();
+      return;
+    }
   }
 
   if (strcmp(topic, MQTT_TOPIC_CONTROL_MODE) == 0) {
@@ -396,12 +420,11 @@ void mqtt_callback(char* topic, byte* payload, unsigned int length) {
   }
 
   if (strcmp(topic, MQTT_TOPIC_CONTROL_OPERATION_PROFILE) == 0) {
-    bool any_output_active = outputs.pump || outputs.aerator || outputs.circulation || outputs.feeder;
     ProfileEligibilityInputs inputs = {
         conditions.required_sensors_valid,
         conditions.sensor_fault_active,
         relay_test_status == RELAY_TEST_PASSED,
-        external_outputs_locked || any_output_active,
+        external_outputs_locked || any_output_active(),
         SENSOR_TEST_MODE,
         conditions.any_active_alarm,
         conditions.critical_condition_active,
@@ -467,10 +490,27 @@ void read_sensors() {
     sensors.light = 0;
   }
 
-  sensors.ph = (analogRead(PH_PIN) / 4095.0f) * 14.0f;
-  sensors.turbidity = analogRead(TURBIDITY_PIN);
-  sensors.do_value = (analogRead(DO_PIN) / 4095.0f) * 20.0f;
-  sensors.co2 = (analogRead(CO2_PIN) / 4095.0f) * 10.0f;
+  if (!ads_ready) {
+    ads_ready = ads.begin(ADS1115_ADDRESS, &Wire);
+    if (ads_ready) {
+      ads.setGain(GAIN_ONE);
+      Serial.println("[OK] ADS1115 recovered");
+    }
+  }
+
+  if (ads_ready) {
+    // Linear placeholder scaling over 0..ADS1115_FULL_SCALE_VOLTAGE until
+    // per-probe calibration is applied. Turbidity keeps the legacy 12-bit scale.
+    sensors.ph = read_ads_ratio(PH_CHANNEL) * 14.0f;
+    sensors.do_value = read_ads_ratio(DO_CHANNEL) * 20.0f;
+    sensors.turbidity = read_ads_ratio(TURB_CHANNEL) * 4095.0f;
+    sensors.co2 = read_ads_ratio(CO2_CHANNEL) * 10.0f;
+  } else {
+    sensors.ph = 0;
+    sensors.do_value = 0;
+    sensors.turbidity = -1;
+    sensors.co2 = 0;
+  }
   sensors.last_read = millis();
 
   Serial.println("===== SENSOR READINGS =====");
@@ -496,6 +536,63 @@ void read_sensors() {
   Serial.print("Light: ");
   Serial.print(sensors.light);
   Serial.println(" lux");
+  Serial.print("Water Level: ");
+  Serial.println(water_level.water_level_low ? "LOW (pump locked)" : "OK");
+}
+
+float read_ads_ratio(uint8_t channel) {
+  int16_t raw = ads.readADC_SingleEnded(channel);
+  float ratio = ads.computeVolts(raw) / ADS1115_FULL_SCALE_VOLTAGE;
+  if (ratio < 0.0f) {
+    ratio = 0.0f;
+  }
+  if (ratio > 1.0f) {
+    ratio = 1.0f;
+  }
+  return ratio;
+}
+
+void update_water_level() {
+  uint32_t now = millis();
+  bool raw_low = digitalRead(WATER_LEVEL_PIN) == WATER_LEVEL_LOW_STATE;
+
+  if (raw_low != water_level.raw_low) {
+    water_level.raw_low = raw_low;
+    water_level.last_change = now;
+  }
+
+  bool previous_low = water_level.water_level_low;
+  if (raw_low) {
+    water_level.water_level_low = true;
+  } else if (water_level.water_level_low && now - water_level.last_change >= WATER_LEVEL_CLEAR_DELAY) {
+    water_level.water_level_low = false;
+  }
+  conditions.water_level_low = water_level.water_level_low;
+
+  if (water_level.water_level_low && outputs.pump) {
+    set_output("pump", false);
+    last_pump_change = now;
+    publish_output_state();
+  }
+
+  if (water_level.water_level_low != previous_low) {
+    Serial.println(water_level.water_level_low ? "[SAFETY] Water level LOW - pump locked OFF"
+                                               : "[SAFETY] Water level OK - pump interlock released");
+    if (mqtt_client.connected()) {
+      mqtt_client.publish(MQTT_TOPIC_WATER_LEVEL_LOW, water_level.water_level_low ? "ON" : "OFF", true);
+    }
+  }
+
+  digitalWrite(LED_PIN, water_level.water_level_low ? HIGH : LOW);
+}
+
+bool any_output_active() {
+  for (size_t i = 0; i < OUTPUT_CHANNEL_COUNT; ++i) {
+    if (*output_channels[i].state) {
+      return true;
+    }
+  }
+  return false;
 }
 
 void evaluate_conditions() {
@@ -517,6 +614,7 @@ void evaluate_conditions() {
   conditions.do_critical = conditions.do_valid && sensors.do_value <= rule->do_critical;
   conditions.co2_high = sensors.co2 > rule->co2_max;
   conditions.turbidity_high = conditions.turbidity_valid && sensors.turbidity > rule->turbidity_max;
+  conditions.water_level_low = water_level.water_level_low;
 
   conditions.any_active_alarm =
       conditions.temp_high ||
@@ -534,8 +632,7 @@ void evaluate_conditions() {
 }
 
 void update_operation_profile_state(bool force_publish) {
-  bool any_output_active = outputs.pump || outputs.aerator || outputs.circulation || outputs.feeder;
-  external_outputs_locked = strcmp(current_mode, "SAFE") == 0 || (any_output_active && requested_profile != actual_profile);
+  external_outputs_locked = strcmp(current_mode, "SAFE") == 0 || (any_output_active() && requested_profile != actual_profile);
   ProfileEligibilityInputs inputs = {
       conditions.required_sensors_valid,
       conditions.sensor_fault_active,
@@ -650,6 +747,10 @@ void apply_species_rules() {
 
   feeder_on = false;
 
+  if (water_level.water_level_low) {
+    pump_on = false;
+  }
+
   uint32_t now = millis();
 
   if (pump_on != outputs.pump && now - last_pump_change > PUMP_MIN_OFF_TIME) {
@@ -680,24 +781,34 @@ void apply_species_rules() {
   Serial.println(rule->name);
 }
 
-void set_output(const char* name, bool state) {
-  if (strcmp(name, "pump") == 0) {
-    outputs.pump = state;
-    digitalWrite(PUMP_PIN, state ? HIGH : LOW);
-  } else if (strcmp(name, "aerator") == 0) {
-    outputs.aerator = state;
-    digitalWrite(AERATOR_PIN, state ? HIGH : LOW);
-  } else if (strcmp(name, "circulation") == 0) {
-    outputs.circulation = state;
-    digitalWrite(CIRCULATION_PIN, state ? HIGH : LOW);
-  } else if (strcmp(name, "feeder") == 0) {
-    outputs.feeder = state;
-    digitalWrite(FEEDER_PIN, state ? HIGH : LOW);
+bool set_output(const char* name, bool state) {
+  OutputChannel* channel = nullptr;
+  for (size_t i = 0; i < OUTPUT_CHANNEL_COUNT; ++i) {
+    if (strcmp(name, output_channels[i].name) == 0) {
+      channel = &output_channels[i];
+      break;
+    }
   }
+
+  if (channel == nullptr) {
+    Serial.print("[WARN] Unknown output: ");
+    Serial.println(name);
+    return false;
+  }
+
+  if (state && channel->pin == PUMP_PIN && water_level.water_level_low) {
+    Serial.println("[SAFETY] Pump ON blocked - water level LOW");
+    water_level.pump_blocked_count++;
+    state = false;
+  }
+
+  *channel->state = state;
+  digitalWrite(channel->pin, state ? HIGH : LOW);
 
   Serial.print("[OUTPUT] ");
   Serial.print(name);
   Serial.println(state ? " ON" : " OFF");
+  return state;
 }
 
 bool handle_output_command(const char* output_name, bool requested_state) {
@@ -708,22 +819,14 @@ bool handle_output_command(const char* output_name, bool requested_state) {
     return false;
   }
 
-  set_output(output_name, requested_state);
-  return true;
+  return set_output(output_name, requested_state) == requested_state;
 }
 
 void force_outputs_off() {
-  if (outputs.pump) {
-    set_output("pump", false);
-  }
-  if (outputs.aerator) {
-    set_output("aerator", false);
-  }
-  if (outputs.circulation) {
-    set_output("circulation", false);
-  }
-  if (outputs.feeder) {
-    set_output("feeder", false);
+  for (size_t i = 0; i < OUTPUT_CHANNEL_COUNT; ++i) {
+    if (*output_channels[i].state) {
+      set_output(output_channels[i].name, false);
+    }
   }
 }
 
@@ -740,6 +843,7 @@ void publish_sensor_data() {
   mqtt_client.publish(MQTT_TOPIC_AIR_TEMP, String(sensors.air_temp, 2).c_str(), true);
   mqtt_client.publish(MQTT_TOPIC_HUMIDITY, String(sensors.air_humidity, 2).c_str(), true);
   mqtt_client.publish(MQTT_TOPIC_LIGHT, String(sensors.light, 0).c_str(), true);
+  mqtt_client.publish(MQTT_TOPIC_WATER_LEVEL_LOW, water_level.water_level_low ? "ON" : "OFF", true);
 }
 
 void publish_output_state() {
@@ -747,10 +851,9 @@ void publish_output_state() {
     return;
   }
 
-  mqtt_client.publish(MQTT_TOPIC_PUMP, outputs.pump ? "ON" : "OFF", true);
-  mqtt_client.publish(MQTT_TOPIC_AERATOR, outputs.aerator ? "ON" : "OFF", true);
-  mqtt_client.publish(MQTT_TOPIC_CIRCULATION, outputs.circulation ? "ON" : "OFF", true);
-  mqtt_client.publish(MQTT_TOPIC_FEEDER, outputs.feeder ? "ON" : "OFF", true);
+  for (size_t i = 0; i < OUTPUT_CHANNEL_COUNT; ++i) {
+    mqtt_client.publish(output_channels[i].state_topic, *output_channels[i].state ? "ON" : "OFF", true);
+  }
   mqtt_client.publish(MQTT_TOPIC_MODE_STATE, current_mode, true);
   mqtt_client.publish(MQTT_TOPIC_SPECIES_STATE, current_species, true);
 }
