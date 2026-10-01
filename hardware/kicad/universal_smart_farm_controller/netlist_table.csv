@@ -1,0 +1,74 @@
+board,net,terminals,design_note
+PCB-B,+12V_IN,J10.1;F0.1,12V DC only
+PCB-B,12V_FUSED,F0.2;Q0.IN,reverse polarity stage input
+PCB-B,+12V_PROTECTED,Q0.OUT;D1.K;C10.1;F9.1;JB.1,protected supply to PCB-A
+PCB-A,+12V_PROTECTED,JA.1;U4.VIN,from PCB-B only
+PCB-B,+12V_LOAD,F9.2;F1.1;F2.1;F3.1;F4.1;F5.1;F6.1;F7.1;F8.1,protected separately fused load distribution
+PCB-A,+5V,U4.VOUT;U5.VIN;C2.1;J5.1;J6.1;J7.1;J8.1,verify sensor power budget
+PCB-A,+3V3,U5.VOUT;C3.1;U1.3V3;R1.1;R2.1;R3.1;R4.1;R5.1;R6.1;U2.VDD;U3.VCC;C4.1;C5.1;J2.1;J3.1;J4.2;J9.1,UART header 3V3 is reference output only
+PCB-A,GND,JA.2;JA.11;JA.12;U4.GND;U5.GND;U1.GND;U2.GND;U2.ADDR;U3.GND;C1.2;C2.2;C3.2;C4.2;C5.2;D2.K;SW1.2;SW2.2;J2.3;J3.3;J4.1;J5.3;J6.3;J7.3;J8.3;J9.4;J19.3;R12.2;R13.2;R14.2;R15.2;C6.2;C7.2;C8.2;C9.2,shared logic ground and ADS address 0x48
+PCB-B,GND,J10.2;D1.A;C10.2;JB.2;JB.11;JB.12;Q1.S;Q2.S;Q3.S;Q4.S;Q5.S;Q6.S;Q7.S;Q8.S;R25.2;R26.2;R27.2;R28.2;R29.2;R30.2;R31.2;R32.2,dimension returns for aggregate load current
+PCB-A,EN_NET,U1.EN;R1.2;SW1.1;C1.1,active low reset
+PCB-A,BOOT_NET,U1.GPIO0;R2.2;SW2.1,active low boot select
+PCB-A,STATUS_LED,U1.GPIO2;R7.1,status LED check strap behavior
+PCB-A,STATUS_LED_ANODE,R7.2;D2.A,limit LED current
+PCB-A,DS18B20_DATA,U1.GPIO4;J2.2;R3.2,3V3 pull-up
+PCB-A,DHT22_DATA,U1.GPIO18;J3.2;R4.2,3V3 pull-up
+PCB-A,I2C_SDA,U1.GPIO21;U2.SDA;J9.2;R5.2,check total bus pull-ups
+PCB-A,I2C_SCL,U1.GPIO22;U2.SCL;J9.3;R6.2,check total bus pull-ups
+PCB-A,RS485_RX,U1.GPIO16;U3.RO,3V3 transceiver
+PCB-A,RS485_TX,U1.GPIO17;U3.DI,3V3 transceiver
+PCB-A,RS485_DE_RE,U1.GPIO23;U3.DE;U3./RE,add default-disabled bias at design review
+PCB-A,RS485_A,U3.A;J19.1;JP1.1,bus polarity per selected transceiver
+PCB-A,RS485_TERM,JP1.2;R16.1,optional 120 ohm
+PCB-A,RS485_B,U3.B;J19.2;R16.2,enable JP1 only at bus end
+PCB-A,UART_TX,U1.GPIO1;J4.3,connect to external USB-UART RX at 3V3 logic
+PCB-A,UART_RX,U1.GPIO3;J4.4,connect to external USB-UART TX at 3V3 logic
+PCB-A,A0_IN,J5.2;R8.1,0 to 5V nominal only
+PCB-A,A1_IN,J6.2;R9.1,0 to 5V nominal only
+PCB-A,A2_IN,J7.2;R10.1,0 to 5V nominal only
+PCB-A,A3_IN,J8.2;R11.1,0 to 5V nominal only
+PCB-A,A0_ADC,R8.2;R12.1;C6.1;U2.A0,divider 10k over 15k nominal 0 to 3V
+PCB-A,A1_ADC,R9.2;R13.1;C7.1;U2.A1,divider 10k over 15k nominal 0 to 3V
+PCB-A,A2_ADC,R10.2;R14.1;C8.1;U2.A2,divider 10k over 15k nominal 0 to 3V
+PCB-A,A3_ADC,R11.2;R15.1;C9.1;U2.A3,divider 10k over 15k nominal 0 to 3V
+PCB-A,OUT1_CTRL,U1.GPIO13;JA.3,interboard control
+PCB-A,OUT2_CTRL,U1.GPIO19;JA.4,interboard control
+PCB-A,OUT3_CTRL,U1.GPIO14;JA.5,interboard control
+PCB-A,OUT4_CTRL,U1.GPIO27;JA.6,interboard control
+PCB-A,OUT5_CTRL,U1.GPIO25;JA.7,interboard control
+PCB-A,OUT6_CTRL,U1.GPIO26;JA.8,interboard control
+PCB-A,OUT7_CTRL,U1.GPIO32;JA.9,interboard control
+PCB-A,OUT8_CTRL,U1.GPIO33;JA.10,interboard control
+PCB-B,OUT1_CTRL,JB.3;R17.1,logic control from PCB-A
+PCB-B,OUT2_CTRL,JB.4;R18.1,logic control from PCB-A
+PCB-B,OUT3_CTRL,JB.5;R19.1,logic control from PCB-A
+PCB-B,OUT4_CTRL,JB.6;R20.1,logic control from PCB-A
+PCB-B,OUT5_CTRL,JB.7;R21.1,logic control from PCB-A
+PCB-B,OUT6_CTRL,JB.8;R22.1,logic control from PCB-A
+PCB-B,OUT7_CTRL,JB.9;R23.1,logic control from PCB-A
+PCB-B,OUT8_CTRL,JB.10;R24.1,logic control from PCB-A
+PCB-B,OUT1_GATE,R17.2;R25.1;Q1.G,100k gate pulldown
+PCB-B,OUT2_GATE,R18.2;R26.1;Q2.G,100k gate pulldown
+PCB-B,OUT3_GATE,R19.2;R27.1;Q3.G,100k gate pulldown
+PCB-B,OUT4_GATE,R20.2;R28.1;Q4.G,100k gate pulldown
+PCB-B,OUT5_GATE,R21.2;R29.1;Q5.G,100k gate pulldown
+PCB-B,OUT6_GATE,R22.2;R30.1;Q6.G,100k gate pulldown
+PCB-B,OUT7_GATE,R23.2;R31.1;Q7.G,100k gate pulldown
+PCB-B,OUT8_GATE,R24.2;R32.1;Q8.G,100k gate pulldown
+PCB-B,OUT1_V+,F1.2;J11.1;D11.K,per-channel fused supply
+PCB-B,OUT2_V+,F2.2;J12.1;D12.K,per-channel fused supply
+PCB-B,OUT3_V+,F3.2;J13.1;D13.K,per-channel fused supply
+PCB-B,OUT4_V+,F4.2;J14.1;D14.K,per-channel fused supply
+PCB-B,OUT5_V+,F5.2;J15.1;D15.K,per-channel fused supply
+PCB-B,OUT6_V+,F6.2;J16.1;D16.K,per-channel fused supply
+PCB-B,OUT7_V+,F7.2;J17.1;D17.K,per-channel fused supply
+PCB-B,OUT8_V+,F8.2;J18.1;D18.K,per-channel fused supply
+PCB-B,OUT1_SW,Q1.D;J11.2;D11.A,switched return
+PCB-B,OUT2_SW,Q2.D;J12.2;D12.A,switched return
+PCB-B,OUT3_SW,Q3.D;J13.2;D13.A,switched return
+PCB-B,OUT4_SW,Q4.D;J14.2;D14.A,switched return
+PCB-B,OUT5_SW,Q5.D;J15.2;D15.A,switched return
+PCB-B,OUT6_SW,Q6.D;J16.2;D16.A,switched return
+PCB-B,OUT7_SW,Q7.D;J17.2;D17.A,switched return
+PCB-B,OUT8_SW,Q8.D;J18.2;D18.A,switched return
