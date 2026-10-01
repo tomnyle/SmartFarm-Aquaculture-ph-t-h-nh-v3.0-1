@@ -1,0 +1,38 @@
+board,references,quantity,description,nominal_value_or_selection,status
+PCB-A,U1,1,ESP32-WROOM-32E module,verify exact module footprint and antenna clearance,select
+PCB-A,U2,1,ADS1115 ADC,3V3 powered I2C address 0x48,select
+PCB-A,U3,1,3V3 RS485 transceiver,MAX3485-compatible pinout to verify,select
+PCB-A,U4,1,12V to 5V buck regulator,part and external network per datasheet,design
+PCB-A,U5,1,5V to 3V3 regulator,part and external network per datasheet,design
+PCB-A,JA,1,keyed 12-way interboard connector,mates JB pin 1 to pin 1,select
+PCB-A,J2,1,3-way DS18B20 sensor connector,3V3 / DATA / GND,select
+PCB-A,J3,1,3-way DHT22 sensor connector,3V3 / DATA / GND,select
+PCB-A,J4,1,4-way external USB-to-3V3-UART adapter header,GND / 3V3 reference / TX / RX,select
+PCB-A,J5;J6;J7;J8,4,3-way analog connectors A0-A3,5V / signal / GND,select
+PCB-A,J9,1,4-way I2C expansion connector,3V3 / SDA / SCL / GND,select
+PCB-A,J19,1,3-way RS485 bus connector,A / B / GND,select
+PCB-A,SW1;SW2,2,momentary switches,RESET / BOOT to GND,select
+PCB-A,JP1,1,RS485 termination jumper,open except at bus end,select
+PCB-A,D2,1,status LED,select color and current rating,select
+PCB-A,R1;R2;R4,3,pull-up resistors,10k,nominal
+PCB-A,R3;R5;R6,3,pull-up resistors,4.7k,nominal
+PCB-A,R7,1,LED current limit resistor,1k nominal verify brightness,nominal
+PCB-A,R8;R9;R10;R11,4,analog divider top resistors,10k,nominal
+PCB-A,R12;R13;R14;R15,4,analog divider bottom resistors,15k,nominal
+PCB-A,R16,1,optional RS485 termination resistor,120 ohm,nominal
+PCB-A,C1,1,EN capacitor,1uF,nominal
+PCB-A,C2;C3,2,power bulk capacitors,size per selected regulators and ESP32 peak current,design
+PCB-A,C4;C5;C6;C7;C8;C9,6,local decoupling and analog filter capacitors,100nF nominal check selected IC datasheets,nominal
+PCB-B,J10,1,12V DC input connector,12V / GND,select
+PCB-B,JB,1,keyed 12-way interboard connector,mates JA pin 1 to pin 1,select
+PCB-B,J11;J12;J13;J14;J15;J16;J17;J18,8,2-way 12V output connectors,per-channel fused 12V / switched return,select
+PCB-B,F0,1,main input fuse,rating from wiring and aggregate load current,design
+PCB-B,Q0,1,reverse-polarity protection stage,choose device and external network per datasheet,design
+PCB-B,D1,1,input TVS diode,standoff and surge energy for 12V system,design
+PCB-B,C10,1,12V bulk capacitor,voltage and ripple rating to verify,design
+PCB-B,F9,1,load-rail fuse,rating from aggregate load and copper design,design
+PCB-B,F1;F2;F3;F4;F5;F6;F7;F8,8,individual load fuses or polyfuses,size per channel and wiring,design
+PCB-B,Q1;Q2;Q3;Q4;Q5;Q6;Q7;Q8,8,logic-level low-side N-MOSFET,verify Rds(on) at 3V3 and thermal dissipation,design
+PCB-B,R17;R18;R19;R20;R21;R22;R23;R24,8,MOSFET gate series resistors,100 ohm nominal,nominal
+PCB-B,R25;R26;R27;R28;R29;R30;R31;R32,8,MOSFET gate pulldown resistors,100k nominal,nominal
+PCB-B,D11;D12;D13;D14;D15;D16;D17;D18,8,flyback diode provisions for inductive loads,cathode to fused output positive / anode to switched return,design
