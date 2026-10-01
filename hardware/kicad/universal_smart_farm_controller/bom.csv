@@ -1,0 +1,36 @@
+board,references,qty,manufacturer_part_or_value,footprint,status_or_limit
+PCB-A,U1,1,ESP32-WROOM-32E,RF_Module:ESP32-WROOM-32,verify antenna keepout
+PCB-A,U2,1,ADS1115IDGS,Package_SO:VSSOP-10_3x3mm_P0.5mm,verified standard symbol pins
+PCB-A,U3,1,MAX3485ESA+,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm,3.3V RS485
+PCB-A,U4,1,TPS5430DDA,Package_SO:Texas_HSOP-8-1EP_3.9x4.9mm_P1.27mm,review thermal pad and loop
+PCB-A,U5,1,AP2112K-3.3,Package_TO_SOT_SMD:SOT-23-5,600mA nominal; budget peaks
+PCB-A,L1,1,15uH >=3A,Inductor_SMD:L_1210_3225Metric_Pad1.42x2.65mm_HandSolder,select saturation/thermal rating
+PCB-A,D3,1,SS34,Diode_SMD:D_SMA,TPS5430 catch diode
+PCB-A,D2,1,status LED,LED_SMD:LED_0805_2012Metric,color/current TBD
+PCB-A,R1 R2 R4 R10,4,10k,Resistor_SMD:R_0805_2012Metric,
+PCB-A,R3 R5 R6,3,4.7k,Resistor_SMD:R_0805_2012Metric,
+PCB-A,R7,1,1k,Resistor_SMD:R_0805_2012Metric,
+PCB-A,R11,1,3.24k 1%,Resistor_SMD:R_0805_2012Metric,buck feedback
+PCB-A,R12-R15,4,10k 1%,Resistor_SMD:R_0805_2012Metric,analog divider top
+PCB-A,R16-R19,4,15k 1%,Resistor_SMD:R_0805_2012Metric,analog divider bottom
+PCB-A,R20,1,100k,Resistor_SMD:R_0805_2012Metric,RS485 default disable
+PCB-A,R21,1,120R,Resistor_SMD:R_0805_2012Metric,optional termination
+PCB-A,C1 C10,2,10uF,Capacitor_SMD:C_0805_2012Metric,voltage/ripple ratings differ
+PCB-A,C2 C4-C9 C13,8,100nF,Capacitor_SMD:C_0805_2012Metric,
+PCB-A,C3 C14 C15,3,1uF,Capacitor_SMD:C_0805_2012Metric,
+PCB-A,C11,1,10nF,Capacitor_SMD:C_0805_2012Metric,bootstrap
+PCB-A,C12,1,220uF 10V low-ESR,,unassigned; select appropriate package
+PCB-A,J1,1,2x6 keyed header,Connector_PinHeader_2.54mm:PinHeader_2x06_P2.54mm_Vertical,logic/controller power only
+PCB-A,J2 J5-J8 J19,6,1x3 header,Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical,
+PCB-A,J3 J4 J9,3,1x4 header,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical,
+PCB-A,SW1 SW2,2,TL3342,Button_Switch_SMD:SW_SPST_TL3342,
+PCB-B,D0,1,SS54,Diode_SMD:D_SMA,series reverse protection; verify loss
+PCB-B,D1,1,SMBJ15A,Diode_SMD:D_SMB,unidirectional TVS
+PCB-B,D11-D18,8,SS34,Diode_SMD:D_SMA,flyback; provisional
+PCB-B,Q1-Q8,8,AO3400A,Package_TO_SOT_SMD:SOT-23,thermal/current provisional
+PCB-B,R1-R8,8,100R,Resistor_SMD:R_0805_2012Metric,gate series
+PCB-B,R9-R16,8,100k,Resistor_SMD:R_0805_2012Metric,default-off pulldown
+PCB-B,F0 F9 F1-F8,10,fuse rating TBD,Fuse:Fuse_1812_4532Metric_Pad1.30x3.40mm_HandSolder,size from measured loads/wiring
+PCB-B,C1,1,470uF 25V,,unassigned; select real bulk package/ripple rating
+PCB-B,J1,1,2x6 keyed header,Connector_PinHeader_2.54mm:PinHeader_2x06_P2.54mm_Vertical,mates PCB-A J1 1:1
+PCB-B,J10 J11-J18,9,5mm 2-pin terminal,"TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal",current rating provisional
