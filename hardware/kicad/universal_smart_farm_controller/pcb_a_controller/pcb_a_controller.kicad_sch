@@ -3678,7 +3678,7 @@
 			(uuid "7fa87cb8-f048-49c7-b5b1-f5f07d0c9e82")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "J1")
 					(unit 1)
@@ -3751,7 +3751,7 @@
 			(uuid "261b1ee4-6144-4244-8b37-cedc6c181ce8")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "U4")
 					(unit 1)
@@ -3803,7 +3803,7 @@
 			(uuid "b6b76a8d-e50a-4784-a6d0-343f0c2656d9")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "C10")
 					(unit 1)
@@ -3855,7 +3855,7 @@
 			(uuid "ab312960-cccb-4006-923c-e8d02bb62110")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "C11")
 					(unit 1)
@@ -3907,7 +3907,7 @@
 			(uuid "9a2212e8-c0b9-4fb9-9cc0-8f00434e30bd")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "D3")
 					(unit 1)
@@ -3959,7 +3959,7 @@
 			(uuid "685ecd02-8a68-4a8f-9dc8-731b8ca530c7")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "L1")
 					(unit 1)
@@ -4011,7 +4011,7 @@
 			(uuid "13bcfbc7-4175-423a-9991-f940dcf4d68d")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "R10")
 					(unit 1)
@@ -4063,7 +4063,7 @@
 			(uuid "5bc50e0f-0038-4147-9d22-efa3be61a556")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "R11")
 					(unit 1)
@@ -4115,7 +4115,7 @@
 			(uuid "203ea632-e956-4038-86a7-578777b12863")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "C12")
 					(unit 1)
@@ -4167,7 +4167,7 @@
 			(uuid "2470a244-b6bb-4680-a493-810cbb613f8f")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "C13")
 					(unit 1)
@@ -4228,7 +4228,7 @@
 			(uuid "af2708eb-713d-4e8b-87f0-1f031716edb1")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "U5")
 					(unit 1)
@@ -4280,7 +4280,7 @@
 			(uuid "9673ed42-4df8-4f47-8e8e-7f0e154eb46e")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "C14")
 					(unit 1)
@@ -4332,7 +4332,7 @@
 			(uuid "87c260d7-26e9-43ff-888e-45e00b359159")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "C15")
 					(unit 1)
@@ -4495,7 +4495,7 @@
 			(uuid "4d00dc0e-3205-465c-ab87-5bdff41f389d")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "U1")
 					(unit 1)
@@ -4547,7 +4547,7 @@
 			(uuid "3155c037-ac42-449b-a534-9db4ede82b00")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "C1")
 					(unit 1)
@@ -4599,7 +4599,7 @@
 			(uuid "ff01bf68-9dd9-4eb4-a383-71c2fdc18f99")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "C2")
 					(unit 1)
@@ -4651,7 +4651,7 @@
 			(uuid "0c9b72dc-880a-45d4-ac49-56b3869469e6")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "R1")
 					(unit 1)
@@ -4703,7 +4703,7 @@
 			(uuid "e290f634-e3c6-42ac-bcbf-bd7ce38af12c")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "C3")
 					(unit 1)
@@ -4755,7 +4755,7 @@
 			(uuid "f34b266a-d5e7-4074-abea-d6984a585999")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "SW1")
 					(unit 1)
@@ -4807,7 +4807,7 @@
 			(uuid "475954a4-97f7-4321-8edc-38469af5c1ba")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "R2")
 					(unit 1)
@@ -4859,7 +4859,7 @@
 			(uuid "03165aec-0a42-4017-8c9e-0739055e88d7")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "SW2")
 					(unit 1)
@@ -4911,7 +4911,7 @@
 			(uuid "5cb6012f-2a29-4e77-974a-040c48620d13")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "R7")
 					(unit 1)
@@ -4963,7 +4963,7 @@
 			(uuid "3074434f-cb68-47ad-839e-6ab3474a14cd")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "D2")
 					(unit 1)
@@ -5018,7 +5018,7 @@
 			(uuid "91853517-27e3-4c95-9e86-b61787298613")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "J2")
 					(unit 1)
@@ -5070,7 +5070,7 @@
 			(uuid "edf47eaa-e38e-45d6-be6f-5deceabd05e5")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "R3")
 					(unit 1)
@@ -5128,7 +5128,7 @@
 			(uuid "e0782b1d-52f4-4d24-89d6-5b36ec7009a7")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "J3")
 					(unit 1)
@@ -5180,7 +5180,7 @@
 			(uuid "fc703abb-4c35-43ff-971c-4e65eafb7437")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "R4")
 					(unit 1)
@@ -5256,7 +5256,7 @@
 			(uuid "3a72d8ab-ffe4-40f1-afb5-482815ed505e")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "U2")
 					(unit 1)
@@ -5308,7 +5308,7 @@
 			(uuid "d93df043-faad-48da-afef-24f6c85d2a53")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "C4")
 					(unit 1)
@@ -5360,7 +5360,7 @@
 			(uuid "652b759a-24bf-4420-a64e-729242456e7d")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "R5")
 					(unit 1)
@@ -5412,7 +5412,7 @@
 			(uuid "d6418faa-ce7c-45ea-afa1-8cbe82a7b3c6")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "R6")
 					(unit 1)
@@ -5467,7 +5467,7 @@
 			(uuid "c9559684-f0f0-4eff-8685-78ec971b38f1")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "J5")
 					(unit 1)
@@ -5519,7 +5519,7 @@
 			(uuid "4891dfdc-de8a-463b-9685-0c816187a9f5")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "R12")
 					(unit 1)
@@ -5571,7 +5571,7 @@
 			(uuid "a538e16c-8f8b-46bc-b88a-af7b8a269f9d")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "R16")
 					(unit 1)
@@ -5623,7 +5623,7 @@
 			(uuid "df32a9e9-1057-4dab-9cca-e6ba2e0ec5cb")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "C6")
 					(unit 1)
@@ -5678,7 +5678,7 @@
 			(uuid "88c5eb80-1be6-4dab-953f-081b63df29bb")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "J6")
 					(unit 1)
@@ -5730,7 +5730,7 @@
 			(uuid "abc441c3-d04c-4d75-9add-be19b3e52c63")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "R13")
 					(unit 1)
@@ -5782,7 +5782,7 @@
 			(uuid "762db233-96f3-41de-be6b-518fc5b1d782")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "R17")
 					(unit 1)
@@ -5834,7 +5834,7 @@
 			(uuid "2d5358c4-87b6-4730-b151-204bfc6307a2")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "C7")
 					(unit 1)
@@ -5889,7 +5889,7 @@
 			(uuid "54c8e35e-3a73-44c3-b49d-1ade2cdf8969")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "J7")
 					(unit 1)
@@ -5941,7 +5941,7 @@
 			(uuid "8fd377e3-8b80-41c2-bec5-dcc83575c011")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "R14")
 					(unit 1)
@@ -5993,7 +5993,7 @@
 			(uuid "1a8eb87f-6c63-4c35-bab5-66cf3a8f82ea")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "R18")
 					(unit 1)
@@ -6045,7 +6045,7 @@
 			(uuid "f7eb2b18-9a34-4c32-95c8-3d2e92095489")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "C8")
 					(unit 1)
@@ -6100,7 +6100,7 @@
 			(uuid "1441431e-6fd0-4ca0-b325-53e5809010ae")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "J8")
 					(unit 1)
@@ -6152,7 +6152,7 @@
 			(uuid "8f1e1e9e-bcbe-48a5-b54c-7d1d47eb0453")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "R15")
 					(unit 1)
@@ -6204,7 +6204,7 @@
 			(uuid "72c33b19-74ef-43ea-89e9-f2cb8bbf75a7")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "R19")
 					(unit 1)
@@ -6256,7 +6256,7 @@
 			(uuid "2bf4d0a0-6fd3-4f98-a579-1cbe1730cfde")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "C9")
 					(unit 1)
@@ -6326,7 +6326,7 @@
 			(uuid "87cc7891-2d44-4c8c-b945-cf24d80c2a1e")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "U3")
 					(unit 1)
@@ -6378,7 +6378,7 @@
 			(uuid "fbe083e6-179f-4b44-a12a-89f1b00c31e9")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "C5")
 					(unit 1)
@@ -6430,7 +6430,7 @@
 			(uuid "7f01deb8-3e2d-4757-87af-c5ddc3d356a5")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "R20")
 					(unit 1)
@@ -6485,7 +6485,7 @@
 			(uuid "46cb16ba-7827-4355-81c0-295d634f3089")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "J19")
 					(unit 1)
@@ -6537,7 +6537,7 @@
 			(uuid "92933296-d862-4b41-b705-88f66a4c98e2")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "JP1")
 					(unit 1)
@@ -6589,7 +6589,7 @@
 			(uuid "5affc146-fffc-4073-adcc-f8cfd8a297df")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "R21")
 					(unit 1)
@@ -6647,7 +6647,7 @@
 			(uuid "c9857086-3a23-468c-8a8f-69c6fcdc94e3")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "J4")
 					(unit 1)
@@ -6705,7 +6705,7 @@
 			(uuid "f0155dd0-d2ab-49ce-b9c3-088a58fd4f15")
 		)
 		(instances
-			(project "PCB-A Controller Rev A reference"
+			(project "pcb_a_controller"
 				(path "/ef6d9368-7a34-400f-be1a-9727cfacc43b"
 					(reference "J9")
 					(unit 1)
