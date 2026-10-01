@@ -1,0 +1,5880 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "99b31c03-3e14-461b-a0bf-97759b6823f3")
+	(paper "A4")
+	(title_block
+		(title "PCB-B 12V Power and Outputs Rev A reference")
+	)
+	(lib_symbols
+		(symbol "Connector_Generic:Conn_01x02"
+			(pin_names
+				(offset 1.016) hide
+			)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x02"
+				(at 0 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					) hide
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					) hide
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					) hide
+				)
+			)
+			(property "ki_description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					) hide
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					) hide
+				)
+			)
+			(symbol "Conn_01x02_1_1"
+				(rectangle
+					(start -1.27 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 1.27)
+					(end 1.27 -3.81)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Device:Fuse"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0)
+			)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "F"
+				(at 2.032 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Fuse"
+				(at -1.905 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					) hide
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					) hide
+				)
+			)
+			(property "ki_keywords" "fuse"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					) hide
+				)
+			)
+			(property "ki_description" "Fuse"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					) hide
+				)
+			)
+			(property "ki_fp_filters" "*Fuse*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					) hide
+				)
+			)
+			(symbol "Fuse_0_1"
+				(rectangle
+					(start -0.762 -2.54)
+					(end 0.762 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Fuse_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Device:D_Schottky"
+			(pin_numbers hide)
+			(pin_names
+				(offset 1.016) hide
+			)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "D_Schottky"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					) hide
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					) hide
+				)
+			)
+			(property "ki_keywords" "diode Schottky"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					) hide
+				)
+			)
+			(property "ki_description" "Schottky diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					) hide
+				)
+			)
+			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					) hide
+				)
+			)
+			(symbol "D_Schottky_0_1"
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.905 0.635) (xy -1.905 1.27) (xy -1.27 1.27) (xy -1.27 -1.27) (xy -0.635 -1.27) (xy -0.635 -0.635)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "D_Schottky_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Device:D_Zener"
+			(pin_numbers hide)
+			(pin_names
+				(offset 1.016) hide
+			)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "D_Zener"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					) hide
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					) hide
+				)
+			)
+			(property "ki_keywords" "diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					) hide
+				)
+			)
+			(property "ki_description" "Zener diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					) hide
+				)
+			)
+			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					) hide
+				)
+			)
+			(symbol "D_Zener_0_1"
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -1.27) (xy -1.27 1.27) (xy -0.762 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "D_Zener_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Device:C"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.254)
+			)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C"
+				(at 0.635 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					) hide
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					) hide
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					) hide
+				)
+			)
+			(property "ki_description" "Unpolarized capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					) hide
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					) hide
+				)
+			)
+			(symbol "C_0_1"
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Connector_Generic:Conn_01x12"
+			(pin_names
+				(offset 1.016) hide
+			)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 15.24 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x12"
+				(at 0 -17.78 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					) hide
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					) hide
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					) hide
+				)
+			)
+			(property "ki_description" "Generic connector, single row, 01x12, script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					) hide
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					) hide
+				)
+			)
+			(symbol "Conn_01x12_1_1"
+				(rectangle
+					(start -1.27 -15.113)
+					(end 0 -15.367)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -12.573)
+					(end 0 -12.827)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -10.033)
+					(end 0 -10.287)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -7.493)
+					(end 0 -7.747)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -4.953)
+					(end 0 -5.207)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 2.667)
+					(end 0 2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 5.207)
+					(end 0 4.953)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 7.747)
+					(end 0 7.493)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 10.287)
+					(end 0 10.033)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 12.827)
+					(end 0 12.573)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 13.97)
+					(end 1.27 -16.51)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin passive line
+					(at -5.08 12.7 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -10.16 0)
+					(length 3.81)
+					(name "Pin_10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -12.7 0)
+					(length 3.81)
+					(name "Pin_11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -15.24 0)
+					(length 3.81)
+					(name "Pin_12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 10.16 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 7.62 0)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 5.08 0)
+					(length 3.81)
+					(name "Pin_4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 2.54 0)
+					(length 3.81)
+					(name "Pin_5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -5.08 0)
+					(length 3.81)
+					(name "Pin_8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -7.62 0)
+					(length 3.81)
+					(name "Pin_9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Device:R"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0)
+			)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					) hide
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					) hide
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					) hide
+				)
+			)
+			(property "ki_description" "Resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					) hide
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					) hide
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Transistor_FET:AO3400A"
+			(property "Reference" "Q"
+				(at 5.08 1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "AO3400A"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+				(at 5.08 -1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27) italic
+					)
+					(justify left) hide
+				)
+			)
+			(property "Datasheet" "http://www.aosmd.com/pdfs/datasheet/AO3400A.pdf"
+				(at 5.08 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left) hide
+				)
+			)
+			(property "ki_keywords" "N-Channel MOSFET"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					) hide
+				)
+			)
+			(property "ki_description" "30V Vds, 5.7A Id, N-Channel MOSFET, SOT-23"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					) hide
+				)
+			)
+			(property "ki_fp_filters" "SOT?23*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					) hide
+				)
+			)
+			(pin_names hide)
+			(in_bom yes)
+			(on_board yes)
+			(symbol "AO3400A_0_1"
+				(polyline
+					(pts
+						(xy 0.254 0) (xy -2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 1.905) (xy 0.254 -1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.27) (xy 0.762 -2.286)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 0.508) (xy 0.762 -0.508)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 2.286) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy 2.54 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.778) (xy 3.302 -1.778) (xy 3.302 1.778) (xy 0.762 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 0) (xy 2.032 0.381) (xy 2.032 -0.381) (xy 1.016 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.794 0.508) (xy 2.921 0.381) (xy 3.683 0.381) (xy 3.81 0.254)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.302 0.381) (xy 2.921 -0.254) (xy 3.683 -0.254) (xy 3.302 0.381)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 1.651 0)
+					(radius 2.794)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.54 -1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 2.54 1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+			)
+			(symbol "AO3400A_1_1"
+				(pin input line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "G"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 25.4 48.26 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f63201b6-bc61-464c-8e5c-333d2b77ab6f")
+		(property "Reference" "J10"
+			(at 25.4 50.8 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Conn_01x02"
+			(at 25.4 43.18 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal"
+			(at 25.4 48.26 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "556dfe5c-8637-41bf-9cc2-8ac44b7aa825")
+		)
+		(pin "2"
+			(uuid "d590a23e-9470-4985-a677-a71030eba122")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "J10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 43.18 43.18 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "0524e042-21aa-4278-9462-4d850075fa90")
+		(property "Reference" "F0"
+			(at 45.212 43.18 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MAIN FUSE TBD"
+			(at 41.275 43.18 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Fuse:Fuse_1812_4532Metric_Pad1.30x3.40mm_HandSolder"
+			(at 41.402 43.18 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6fb45371-0700-4917-8a51-5596c33de969")
+		)
+		(pin "2"
+			(uuid "b3fb64f7-53dc-4ee7-be34-7c24ee378a37")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "F0")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Schottky")
+		(at 62.23 43.18 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "9f0b30f2-2f4a-496e-b741-55e1fb12ed29")
+		(property "Reference" "D0"
+			(at 62.23 45.72 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SS54 SERIES REVERSE PROTECTION"
+			(at 62.23 40.64 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SMA"
+			(at 62.23 43.18 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2227460b-ed00-4e5a-8d2f-5a27857600e2")
+		)
+		(pin "2"
+			(uuid "201eeb80-7bdf-484f-bfda-98df991696ab")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "D0")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Zener")
+		(at 77.47 50.8 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "2f90e28f-b13b-4772-b6f5-9e7a91a77cac")
+		(property "Reference" "D1"
+			(at 77.47 53.34 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SMBJ15A"
+			(at 77.47 48.26 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SMB"
+			(at 77.47 50.8 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e118c73f-c12c-49cf-8984-e3d96ed0b160")
+		)
+		(pin "2"
+			(uuid "31d03c3e-bc1b-44b6-9c7b-5e0e66af2410")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 91.44 50.8 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "1c8ba51d-59d2-4c23-b73a-f140d62334e0")
+		(property "Reference" "C1"
+			(at 92.075 53.34 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "470uF 25V"
+			(at 92.075 48.26 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 92.4052 46.99 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ea38af2b-e997-4ba1-bfcf-2d31cdd823e9")
+		)
+		(pin "2"
+			(uuid "d3761b2c-13a1-49ed-877d-1b135663102e")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "C1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 106.68 43.18 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "6309a475-3fdd-4a10-92b9-4bda48f28164")
+		(property "Reference" "F9"
+			(at 108.712 43.18 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "LOAD RAIL FUSE TBD"
+			(at 104.775 43.18 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Fuse:Fuse_1812_4532Metric_Pad1.30x3.40mm_HandSolder"
+			(at 104.902 43.18 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "da25e949-0a28-47c9-bd58-ebb7bb6bbf16")
+		)
+		(pin "2"
+			(uuid "3c885c5e-ad92-4981-ab48-394cee08635a")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "F9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x12")
+		(at 149.86 48.26 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "59f12db3-137e-497e-857e-ee7bb2541836")
+		(property "Reference" "J1"
+			(at 149.86 63.5 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Conn_01x12"
+			(at 149.86 30.48 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_2x06_P2.54mm_Vertical"
+			(at 149.86 48.26 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8c665e20-94d8-4ca4-a777-7d926752e94f")
+		)
+		(pin "10"
+			(uuid "86cec36c-d9c1-40a7-b738-2e2543e97cd9")
+		)
+		(pin "11"
+			(uuid "15355a7c-1157-4b23-802f-f04f48afa672")
+		)
+		(pin "12"
+			(uuid "858e8f3f-664c-485f-a6f0-6d0f9241a029")
+		)
+		(pin "2"
+			(uuid "fa785e59-7471-48aa-aeef-1b3014a17f45")
+		)
+		(pin "3"
+			(uuid "6e7e47cf-c6af-4a7f-9296-39497c5ac115")
+		)
+		(pin "4"
+			(uuid "dedc0c70-143b-404e-ae20-9fb9f4910a94")
+		)
+		(pin "5"
+			(uuid "d3210236-a89e-4aed-99f9-03644b53e3ee")
+		)
+		(pin "6"
+			(uuid "4c6265fa-a757-42e2-acdf-0568fba09e79")
+		)
+		(pin "7"
+			(uuid "53b286c3-f9aa-49bf-9ddb-a13d61c2d151")
+		)
+		(pin "8"
+			(uuid "9957270f-5af7-432a-a027-8f2a1203fc1e")
+		)
+		(pin "9"
+			(uuid "63ccd939-c8e6-466a-b727-609e55431e16")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 30.48 110.49 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "5e315302-afc0-49e4-8968-8827412aacc2")
+		(property "Reference" "F1"
+			(at 32.512 110.49 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "CH1 FUSE TBD"
+			(at 28.575 110.49 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Fuse:Fuse_1812_4532Metric_Pad1.30x3.40mm_HandSolder"
+			(at 28.702 110.49 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2c72296a-eb0f-4c13-af61-6b9c565be751")
+		)
+		(pin "2"
+			(uuid "7d4a0b8b-b224-4db9-aa52-e7314e99cb33")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "F1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 46.99 110.49 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "704ad23a-48b8-4c04-a5d6-ae902192b81e")
+		(property "Reference" "J11"
+			(at 46.99 113.03 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Conn_01x02"
+			(at 46.99 105.41 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal"
+			(at 46.99 110.49 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "91790c61-d9f8-4b79-a2b5-1d208ef12687")
+		)
+		(pin "2"
+			(uuid "62413b24-63f3-49e1-8737-d9515a6f8a85")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "J11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 30.48 128.27 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "aba92b82-4f46-45a1-90b2-93516b5b2612")
+		(property "Reference" "R1"
+			(at 32.512 128.27 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100R"
+			(at 30.48 128.27 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 28.702 128.27 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "538791e7-bfd0-49ee-87a3-56e723fdb8f3")
+		)
+		(pin "2"
+			(uuid "e94b379a-94e3-4296-a60a-3d5111088b3e")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 40.64 128.27 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "91893096-6e76-489d-ba8b-bb979be59c51")
+		(property "Reference" "R9"
+			(at 42.672 128.27 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100k"
+			(at 40.64 128.27 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 38.862 128.27 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fb4535ef-6974-4be5-8dd9-6a5c5ebb3133")
+		)
+		(pin "2"
+			(uuid "f57a982b-0a73-4cd7-ad95-04a23d9069ef")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "R9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:AO3400A")
+		(at 54.61 132.08 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "a76d74ae-c37d-4c98-9cae-8c5592981ebd")
+		(property "Reference" "Q1"
+			(at 59.69 133.985 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "AO3400A"
+			(at 59.69 132.08 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 59.69 130.175 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3499c71f-f7cf-481f-aedc-e6a21c0a494a")
+		)
+		(pin "2"
+			(uuid "da5f7274-1ec3-4451-8827-07cbb7361047")
+		)
+		(pin "3"
+			(uuid "acc54f3b-078d-4d70-982b-86e4f1677625")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "Q1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Schottky")
+		(at 68.58 120.65 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "30425acc-ef94-4558-9693-ba38bf220203")
+		(property "Reference" "D11"
+			(at 68.58 123.19 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SS34 FLYBACK"
+			(at 68.58 118.11 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SMA"
+			(at 68.58 120.65 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5c880f7d-4197-4725-a882-0fa595e44181")
+		)
+		(pin "2"
+			(uuid "c9143d5f-371a-4abb-8b0f-9f1ed1bd61d8")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "D11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 87.63 110.49 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "fc34a0cf-8d26-4b52-9c3c-90b6e368e73f")
+		(property "Reference" "F2"
+			(at 89.662 110.49 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "CH2 FUSE TBD"
+			(at 85.725 110.49 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Fuse:Fuse_1812_4532Metric_Pad1.30x3.40mm_HandSolder"
+			(at 85.852 110.49 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d2dacb24-66a1-4b50-8e56-ae7d0ebae7fb")
+		)
+		(pin "2"
+			(uuid "007e1ef1-ee7f-44db-b5a3-122ffba1bb38")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "F2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 105.41 110.49 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "3e0f2078-6712-40c5-8249-9279ee9425b4")
+		(property "Reference" "J12"
+			(at 105.41 113.03 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Conn_01x02"
+			(at 105.41 105.41 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal"
+			(at 105.41 110.49 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6b1ddf92-c9cb-4616-8492-b5340b27f65e")
+		)
+		(pin "2"
+			(uuid "64b9a58a-a54a-45f4-ad16-7c7c7028f359")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "J12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 87.63 128.27 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "139ba300-a4be-4134-91e9-b4a48061155c")
+		(property "Reference" "R2"
+			(at 89.662 128.27 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100R"
+			(at 87.63 128.27 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 85.852 128.27 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bfeaf74e-9faa-44e4-bc20-56efab85561b")
+		)
+		(pin "2"
+			(uuid "67cd60bb-1945-48fe-a18f-5f2e0c227256")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 99.06 128.27 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "eac80272-1745-435d-bcd3-3879632d7215")
+		(property "Reference" "R10"
+			(at 101.092 128.27 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100k"
+			(at 99.06 128.27 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 97.282 128.27 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5588c1d1-8c23-4a73-a4cf-4e7a785628b4")
+		)
+		(pin "2"
+			(uuid "82ab6070-14ff-4483-8a62-374fae897e0d")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "R10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:AO3400A")
+		(at 113.03 132.08 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "98bf74ba-c05d-4b5d-b9cc-a97cf792d6b3")
+		(property "Reference" "Q2"
+			(at 118.11 133.985 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "AO3400A"
+			(at 118.11 132.08 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 118.11 130.175 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f581f98e-ba4e-4ad3-8865-4c5584da8f2a")
+		)
+		(pin "2"
+			(uuid "064c88bd-0742-4a80-817a-ea268e6a09af")
+		)
+		(pin "3"
+			(uuid "108757bb-ee5a-4931-ad47-24a7417ed0c5")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "Q2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Schottky")
+		(at 127 120.65 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "25344e4f-fbd9-4404-81dd-92c06c9f1256")
+		(property "Reference" "D12"
+			(at 127 123.19 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SS34 FLYBACK"
+			(at 127 118.11 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SMA"
+			(at 127 120.65 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7745f0c9-e92f-4315-aa69-cefc7ede9be3")
+		)
+		(pin "2"
+			(uuid "dfb482f8-8c1f-4ba6-aca6-59d325d5174d")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "D12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 146.05 110.49 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "6c1090f0-a84d-4fa9-893f-59e25f4c2ad1")
+		(property "Reference" "F3"
+			(at 148.082 110.49 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "CH3 FUSE TBD"
+			(at 144.145 110.49 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Fuse:Fuse_1812_4532Metric_Pad1.30x3.40mm_HandSolder"
+			(at 144.272 110.49 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b1b45743-0616-4514-a413-7ada344d26a2")
+		)
+		(pin "2"
+			(uuid "250b3e0b-2eaa-4de4-94a2-233be788f13d")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "F3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 162.56 110.49 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "741240ce-0621-453c-b021-f693ef0670a1")
+		(property "Reference" "J13"
+			(at 162.56 113.03 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Conn_01x02"
+			(at 162.56 105.41 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal"
+			(at 162.56 110.49 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4adf0a2c-4210-4ee3-a616-ea6033dc3e0c")
+		)
+		(pin "2"
+			(uuid "7ad3e5de-0f88-4a32-92a4-51ec9abab0f4")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "J13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 146.05 128.27 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "98941ac0-f806-4d08-a648-d0b160370003")
+		(property "Reference" "R3"
+			(at 148.082 128.27 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100R"
+			(at 146.05 128.27 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 144.272 128.27 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8cdb662b-c231-454f-a484-1514c7a6b522")
+		)
+		(pin "2"
+			(uuid "86198fb0-5574-4c19-ac9b-df2f5c79db52")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "R3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 157.48 128.27 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "c50f4d1e-c361-4951-970f-d7484dad6841")
+		(property "Reference" "R11"
+			(at 159.512 128.27 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100k"
+			(at 157.48 128.27 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 155.702 128.27 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0b689ec0-9a9f-4179-b112-501461901850")
+		)
+		(pin "2"
+			(uuid "5ddb7973-dc42-4f8c-934b-703250d7e554")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "R11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:AO3400A")
+		(at 171.45 132.08 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "df540049-c3cb-49d8-bb00-4de23910ed12")
+		(property "Reference" "Q3"
+			(at 176.53 133.985 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "AO3400A"
+			(at 176.53 132.08 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 176.53 130.175 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f42358ac-35ac-4037-ab09-e9d1141f4376")
+		)
+		(pin "2"
+			(uuid "131e68af-5c7d-475a-b285-f6fd255571c6")
+		)
+		(pin "3"
+			(uuid "50cd0b7d-1ea5-4371-b15a-4899d8f5abf9")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "Q3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Schottky")
+		(at 185.42 120.65 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "2d2a530c-064d-49c1-b4f8-c31ee9221621")
+		(property "Reference" "D13"
+			(at 185.42 123.19 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SS34 FLYBACK"
+			(at 185.42 118.11 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SMA"
+			(at 185.42 120.65 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8a5b86c3-5099-493b-abfe-39a704e87382")
+		)
+		(pin "2"
+			(uuid "3ff985fa-dec6-4d12-a29d-2e10338a0cf9")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "D13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 204.47 110.49 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "25f0581f-d635-4afd-98c2-34e887df075f")
+		(property "Reference" "F4"
+			(at 206.502 110.49 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "CH4 FUSE TBD"
+			(at 202.565 110.49 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Fuse:Fuse_1812_4532Metric_Pad1.30x3.40mm_HandSolder"
+			(at 202.692 110.49 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "961df23a-7de1-4bc9-9bae-aad8ac4975ae")
+		)
+		(pin "2"
+			(uuid "2701c2ae-4e6c-482c-a286-0624a48d0650")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "F4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 220.98 110.49 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "05e08efb-ac12-4cff-b5fb-1aafa00c8465")
+		(property "Reference" "J14"
+			(at 220.98 113.03 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Conn_01x02"
+			(at 220.98 105.41 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal"
+			(at 220.98 110.49 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5527b37a-7a05-4821-83ca-03e3ad686429")
+		)
+		(pin "2"
+			(uuid "62a6187d-fa97-47d2-9b23-4687ce06e275")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "J14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 204.47 128.27 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "4b66bee3-3dc2-454d-b14b-f5d3c76c0084")
+		(property "Reference" "R4"
+			(at 206.502 128.27 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100R"
+			(at 204.47 128.27 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 202.692 128.27 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4f45d47c-404a-4158-8871-315b49e5961c")
+		)
+		(pin "2"
+			(uuid "d13a1dcc-7a89-4d8a-9503-4239b9bc3475")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "R4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 214.63 128.27 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "edcc4a6f-d07f-4d46-baeb-6a94e258c99a")
+		(property "Reference" "R12"
+			(at 216.662 128.27 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100k"
+			(at 214.63 128.27 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 212.852 128.27 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "18055ebb-93e1-4f28-8fa7-e16f24cc6140")
+		)
+		(pin "2"
+			(uuid "7b3e7d22-1121-4503-ac02-e8395ba6afc2")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "R12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:AO3400A")
+		(at 228.6 132.08 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "aa7761cb-19ce-421f-ae3b-de6686909b5d")
+		(property "Reference" "Q4"
+			(at 233.68 133.985 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "AO3400A"
+			(at 233.68 132.08 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 233.68 130.175 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "66332edf-322b-4dc0-90a0-371a7efa09a8")
+		)
+		(pin "2"
+			(uuid "1151554a-14bd-4e5a-a5b6-5740fb936de5")
+		)
+		(pin "3"
+			(uuid "80565ff2-a6ec-421a-b5c3-1bb07c7bdd70")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "Q4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Schottky")
+		(at 242.57 120.65 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "c97864f2-227e-4174-afa9-ace1efbcfda5")
+		(property "Reference" "D14"
+			(at 242.57 123.19 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SS34 FLYBACK"
+			(at 242.57 118.11 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SMA"
+			(at 242.57 120.65 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f30c3e38-948b-4ba4-b243-69c2d85f857c")
+		)
+		(pin "2"
+			(uuid "8bb941db-efb6-4993-948d-9b2548cfd137")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "D14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 30.48 181.61 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "4cf81c97-84dc-4c3e-b453-8a4486541e1b")
+		(property "Reference" "F5"
+			(at 32.512 181.61 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "CH5 FUSE TBD"
+			(at 28.575 181.61 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Fuse:Fuse_1812_4532Metric_Pad1.30x3.40mm_HandSolder"
+			(at 28.702 181.61 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "45e2b5cf-d6b2-4e95-acf5-b7a59dfa1d92")
+		)
+		(pin "2"
+			(uuid "47c1d742-1a4a-47c8-a53f-e0615e5da099")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "F5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 46.99 181.61 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "2b3e91bf-f21b-40ae-b9d8-71a8f2047d26")
+		(property "Reference" "J15"
+			(at 46.99 184.15 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Conn_01x02"
+			(at 46.99 176.53 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal"
+			(at 46.99 181.61 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "372d2e58-ba19-4fdd-8abf-bb470339d314")
+		)
+		(pin "2"
+			(uuid "6882e3dc-1659-4212-9cf0-9bc5c739c65e")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "J15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 30.48 199.39 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "820af87e-e2fe-46e7-944c-ad308c189368")
+		(property "Reference" "R5"
+			(at 32.512 199.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100R"
+			(at 30.48 199.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 28.702 199.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5cad82e7-941d-4428-8722-e58dd7e560c4")
+		)
+		(pin "2"
+			(uuid "ee9439e9-d02e-4471-ba8b-ed0bca137715")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "R5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 40.64 199.39 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "22ec9f0b-fa69-4d37-bad5-eede9a47da20")
+		(property "Reference" "R13"
+			(at 42.672 199.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100k"
+			(at 40.64 199.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 38.862 199.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "74d268d1-164c-403a-9ed9-f16b679b5173")
+		)
+		(pin "2"
+			(uuid "024ba1cf-6abb-4e2f-ad1e-5249593bfb15")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "R13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:AO3400A")
+		(at 54.61 204.47 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "dda5a978-948c-4c75-a1b6-4226a66e09b7")
+		(property "Reference" "Q5"
+			(at 59.69 206.375 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "AO3400A"
+			(at 59.69 204.47 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 59.69 202.565 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fab8a7d0-6969-4e1c-a8c5-027d37a7b0ac")
+		)
+		(pin "2"
+			(uuid "9b03aece-c6c3-4e9a-81a3-be30bb666199")
+		)
+		(pin "3"
+			(uuid "691e66a6-dd5a-45ed-a505-b57a88a0b4c0")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "Q5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Schottky")
+		(at 68.58 193.04 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "4fcb19f5-82da-4a0f-9970-10f56e141ca1")
+		(property "Reference" "D15"
+			(at 68.58 195.58 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SS34 FLYBACK"
+			(at 68.58 190.5 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SMA"
+			(at 68.58 193.04 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9f648c66-4bc1-4a08-a345-5bc670c16d71")
+		)
+		(pin "2"
+			(uuid "781fd307-24ec-4324-945c-0302d4995e74")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "D15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 87.63 181.61 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f7a5bba3-d2c0-4053-b065-e918952b10d1")
+		(property "Reference" "F6"
+			(at 89.662 181.61 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "CH6 FUSE TBD"
+			(at 85.725 181.61 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Fuse:Fuse_1812_4532Metric_Pad1.30x3.40mm_HandSolder"
+			(at 85.852 181.61 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9908e2a1-8ef8-4c42-b750-9f632f4e3c17")
+		)
+		(pin "2"
+			(uuid "79f53925-645e-43f4-8e2a-86525c16fe10")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "F6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 105.41 181.61 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "3aa45a27-4db2-434a-a443-ded8689c6bff")
+		(property "Reference" "J16"
+			(at 105.41 184.15 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Conn_01x02"
+			(at 105.41 176.53 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal"
+			(at 105.41 181.61 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e075aa88-1a1f-46c3-a479-df4f285c106b")
+		)
+		(pin "2"
+			(uuid "42278fd4-f768-4488-adf5-88d7c41132ee")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "J16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 87.63 199.39 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "154e9e22-1a71-43ad-aba7-ec76c16652b0")
+		(property "Reference" "R6"
+			(at 89.662 199.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100R"
+			(at 87.63 199.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 85.852 199.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "59674c0f-f218-4e84-beee-de7394ad4cc5")
+		)
+		(pin "2"
+			(uuid "d143a12b-fe39-49b3-a5fd-58c58b4f977d")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "R6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 99.06 199.39 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "c1d4339b-7711-42ec-890f-6ab928306ceb")
+		(property "Reference" "R14"
+			(at 101.092 199.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100k"
+			(at 99.06 199.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 97.282 199.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "53dd488f-bae9-4973-8452-ec2a7e19eff8")
+		)
+		(pin "2"
+			(uuid "5cb507aa-c1e4-432a-83d2-1a0e7c655531")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "R14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:AO3400A")
+		(at 113.03 204.47 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "6adba2b5-91b0-4fa4-98d5-46b6b8369fdf")
+		(property "Reference" "Q6"
+			(at 118.11 206.375 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "AO3400A"
+			(at 118.11 204.47 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 118.11 202.565 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "75e06eb7-5ebc-4b97-9bd5-924f86b3d325")
+		)
+		(pin "2"
+			(uuid "09b38cd0-eabe-449a-a33b-73843f640a11")
+		)
+		(pin "3"
+			(uuid "3bac8c6d-fa83-4fbf-ac57-9899b869818b")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "Q6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Schottky")
+		(at 127 193.04 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "5db0f9b5-775f-4fc5-918b-76e5dccb81fd")
+		(property "Reference" "D16"
+			(at 127 195.58 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SS34 FLYBACK"
+			(at 127 190.5 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SMA"
+			(at 127 193.04 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c0ca1fa5-3f06-41a6-a921-cdddcde6ff50")
+		)
+		(pin "2"
+			(uuid "70b72a87-adfa-428c-ad45-cac6b1fc5f49")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "D16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 146.05 181.61 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "22833953-40c0-4691-ba90-963f0b9d9a48")
+		(property "Reference" "F7"
+			(at 148.082 181.61 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "CH7 FUSE TBD"
+			(at 144.145 181.61 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Fuse:Fuse_1812_4532Metric_Pad1.30x3.40mm_HandSolder"
+			(at 144.272 181.61 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "767d717c-4e75-4362-8870-f93e3c44dac5")
+		)
+		(pin "2"
+			(uuid "3d0bee3e-3b30-4a19-a9d3-82292786d0ca")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "F7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 162.56 181.61 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "dfe4cc65-6c39-40a9-bf3f-cb417c97dcf0")
+		(property "Reference" "J17"
+			(at 162.56 184.15 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Conn_01x02"
+			(at 162.56 176.53 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal"
+			(at 162.56 181.61 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4c69a117-2162-43ee-a8c0-ccccad1a92bb")
+		)
+		(pin "2"
+			(uuid "6d537954-969c-4f47-8ab3-95a370f5bca3")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "J17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 146.05 199.39 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "5e5d1193-c8a5-4bb6-a956-d76e033700d6")
+		(property "Reference" "R7"
+			(at 148.082 199.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100R"
+			(at 146.05 199.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 144.272 199.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d3b72cda-5c54-45f6-9687-b782f8e589ff")
+		)
+		(pin "2"
+			(uuid "99b8cdc9-c9cb-4228-87b1-22b65ab224d2")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "R7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 157.48 199.39 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "29b87a7f-ce94-4f57-ba35-2799f181286e")
+		(property "Reference" "R15"
+			(at 159.512 199.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100k"
+			(at 157.48 199.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 155.702 199.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "16bc91a2-e1ac-471f-b099-5e479df5300a")
+		)
+		(pin "2"
+			(uuid "bc119568-f664-434e-bf16-854834cc6f23")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "R15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:AO3400A")
+		(at 171.45 204.47 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "edd10558-417e-4858-82e5-365555b8f5f7")
+		(property "Reference" "Q7"
+			(at 176.53 206.375 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "AO3400A"
+			(at 176.53 204.47 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 176.53 202.565 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0f6190a8-e6fa-4371-a56c-83664db45161")
+		)
+		(pin "2"
+			(uuid "038ed3e8-dec5-4f2e-90de-7984a38ce0d7")
+		)
+		(pin "3"
+			(uuid "b04377e0-55c7-402b-9e86-4599f4e986b0")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "Q7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Schottky")
+		(at 185.42 193.04 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "5bde8dff-eeae-4709-ac6d-ca284b7e5871")
+		(property "Reference" "D17"
+			(at 185.42 195.58 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SS34 FLYBACK"
+			(at 185.42 190.5 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SMA"
+			(at 185.42 193.04 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5a63c3d0-3255-45ef-aa0a-37b29daa3b98")
+		)
+		(pin "2"
+			(uuid "3a8ec594-cd27-4671-a7b7-f7c5891b22c5")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "D17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 204.47 181.61 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "15950e63-c202-4a0b-8c11-b584f11627c7")
+		(property "Reference" "F8"
+			(at 206.502 181.61 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "CH8 FUSE TBD"
+			(at 202.565 181.61 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Fuse:Fuse_1812_4532Metric_Pad1.30x3.40mm_HandSolder"
+			(at 202.692 181.61 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "738b66fe-ae1f-4392-9e15-89a6031995db")
+		)
+		(pin "2"
+			(uuid "55d8a2ca-4b13-4bdd-968c-5c13ca96614b")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "F8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 220.98 181.61 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "17e5d360-8ec7-415e-9425-c457fb1fb9fe")
+		(property "Reference" "J18"
+			(at 220.98 184.15 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Conn_01x02"
+			(at 220.98 176.53 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal"
+			(at 220.98 181.61 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5fc09ee1-b8b3-48bb-ba08-155c170c01c1")
+		)
+		(pin "2"
+			(uuid "b809cfab-4971-4345-95be-1159c16dbd25")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "J18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 204.47 199.39 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "968d01f5-df3c-4a78-9398-e10ed63f353e")
+		(property "Reference" "R8"
+			(at 206.502 199.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100R"
+			(at 204.47 199.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 202.692 199.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d075ae6b-4e45-4c70-b09e-67c53f9e6ac9")
+		)
+		(pin "2"
+			(uuid "73d48ded-0ff3-43c7-afe1-7868074f7e08")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "R8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 214.63 199.39 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f3605003-7af9-42ab-b1ec-d72800aaf937")
+		(property "Reference" "R16"
+			(at 216.662 199.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100k"
+			(at 214.63 199.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 212.852 199.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "80deb6d5-7de0-4670-8a51-7896e28b2c41")
+		)
+		(pin "2"
+			(uuid "2a71f170-c585-4ea9-b91c-2064db656db1")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "R16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:AO3400A")
+		(at 228.6 204.47 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "b4ed2204-0419-4e05-91a3-418a5a17110b")
+		(property "Reference" "Q8"
+			(at 233.68 206.375 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "AO3400A"
+			(at 233.68 204.47 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 233.68 202.565 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "204e8122-a63a-4019-9721-5fdc5dde8537")
+		)
+		(pin "2"
+			(uuid "6bc1ba1d-fa9e-4c9e-8398-d36ad0edc36e")
+		)
+		(pin "3"
+			(uuid "5dc28228-46ef-4582-bd83-7af5630162f9")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "Q8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Schottky")
+		(at 242.57 193.04 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "9ce350e3-84fd-4c8b-9ff0-617719140fa6")
+		(property "Reference" "D18"
+			(at 242.57 195.58 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SS34 FLYBACK"
+			(at 242.57 190.5 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SMA"
+			(at 242.57 193.04 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "19527390-117c-4c3c-bb93-69e042d79062")
+		)
+		(pin "2"
+			(uuid "1c187287-a6bd-4215-acc5-4048489580b4")
+		)
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3"
+					(reference "D18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "+12V_IN"
+		(at 20.32 48.26 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "b2335f5f-ca15-4167-8ea6-860463e1e412")
+	)
+	(label "GND"
+		(at 20.32 45.72 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "2e15df47-a43d-481a-b157-3c3b342d8938")
+	)
+	(label "+12V_IN"
+		(at 43.18 46.99 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "98e2f57c-cae9-4435-a78e-9b5bc0e5bad1")
+	)
+	(label "12V_FUSED"
+		(at 43.18 39.37 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "508966b0-3aaf-4662-8150-6d8e8e3d1b33")
+	)
+	(label "12V_FUSED"
+		(at 66.04 43.18 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "687950b0-1276-480c-a16f-35b5c98b47b6")
+	)
+	(label "+12V_PROTECTED"
+		(at 58.42 43.18 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "c77a1096-68e5-4f30-af91-0abe5435f2e6")
+	)
+	(label "+12V_PROTECTED"
+		(at 73.66 50.8 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "8ec30b89-a3e6-463f-8977-a6dbb8854cad")
+	)
+	(label "GND"
+		(at 81.28 50.8 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "b60c1218-9848-44cc-bfa3-dc12f68e9e76")
+	)
+	(label "+12V_PROTECTED"
+		(at 91.44 54.61 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "9acb3a0b-28e7-4278-912f-ee657a6aeb4c")
+	)
+	(label "GND"
+		(at 91.44 46.99 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "e6d224a3-84ed-4228-92d2-5853fc083e1a")
+	)
+	(label "+12V_PROTECTED"
+		(at 106.68 46.99 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "b54e0f53-f76d-43ea-860c-64100dc9bdf6")
+	)
+	(label "+12V_LOAD"
+		(at 106.68 39.37 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "ffdbf294-e40d-412f-aeba-47d78ff2b24b")
+	)
+	(label "+12V_PROTECTED"
+		(at 144.78 60.96 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "116ee322-ebba-45a0-8a0c-d12d8fb21341")
+	)
+	(label "GND"
+		(at 144.78 58.42 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "768e54e0-0019-4d29-a979-c56f0ce2d0f3")
+	)
+	(label "OUT1_CTRL"
+		(at 144.78 55.88 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f03e3a8a-a901-4bb8-98f7-a0fb808ca773")
+	)
+	(label "OUT2_CTRL"
+		(at 144.78 53.34 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "592f6c21-7a18-4d14-9dee-3bc212761d65")
+	)
+	(label "OUT3_CTRL"
+		(at 144.78 50.8 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "ce3a8d8e-e14c-4f3e-ba74-48b424fa2dcb")
+	)
+	(label "OUT4_CTRL"
+		(at 144.78 48.26 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "ac8c6c15-719b-42a8-902b-8a8c75bc2e66")
+	)
+	(label "OUT5_CTRL"
+		(at 144.78 45.72 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "53653e31-cd22-421f-bf90-112fc89e5539")
+	)
+	(label "OUT6_CTRL"
+		(at 144.78 43.18 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "cd5096e9-3ed0-459b-831b-65098cf1c063")
+	)
+	(label "OUT7_CTRL"
+		(at 144.78 40.64 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "0206f059-5bfd-4f2b-9fcd-a974a193975e")
+	)
+	(label "OUT8_CTRL"
+		(at 144.78 38.1 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "6e79e691-650e-436c-9d38-e896e73b3935")
+	)
+	(label "GND"
+		(at 144.78 35.56 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "c0f48ca2-894b-4088-bfc4-ce3c4419e75c")
+	)
+	(label "GND"
+		(at 144.78 33.02 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "39fb50c1-dcee-4cb9-8059-461ffdeba560")
+	)
+	(label "+12V_LOAD"
+		(at 30.48 114.3 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d3b3eae8-035f-4980-bb44-cc1b9ec2eb6a")
+	)
+	(label "OUT1_V+"
+		(at 30.48 106.68 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "28ed24d0-e518-4b7b-96e1-50c827922a97")
+	)
+	(label "OUT1_V+"
+		(at 41.91 110.49 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "33907e48-c4bd-4752-ad53-aa1bdb62d2c3")
+	)
+	(label "OUT1_SW"
+		(at 41.91 107.95 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "ef3c8f64-70c9-45ab-9324-9e6ce334b93a")
+	)
+	(label "OUT1_CTRL"
+		(at 30.48 132.08 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "c4384a17-ad04-4770-98b9-942d8534c47a")
+	)
+	(label "OUT1_GATE"
+		(at 30.48 124.46 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "076b91c8-f9e7-4365-908a-5d35536c7c2f")
+	)
+	(label "OUT1_GATE"
+		(at 40.64 132.08 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d1f2c977-2485-4e70-8bcd-c79fc68b022c")
+	)
+	(label "GND"
+		(at 40.64 124.46 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "b66ce043-47ae-49d3-bc2e-52f0343ad5ae")
+	)
+	(label "OUT1_GATE"
+		(at 49.53 132.08 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "bac77cea-d1ea-4f8c-8857-52a69b4c3f2d")
+	)
+	(label "GND"
+		(at 57.15 127 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "c5d76fb5-8270-4912-b1dc-85bf755aa5ff")
+	)
+	(label "OUT1_SW"
+		(at 57.15 137.16 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "609d6e31-8ada-4f21-a59e-39a18ea57b0c")
+	)
+	(label "OUT1_V+"
+		(at 64.77 120.65 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "00a4053a-7fcc-4e79-8fa3-2522db83a0e7")
+	)
+	(label "OUT1_SW"
+		(at 72.39 120.65 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "a1938384-8b4a-4f93-948a-06c48b7800cb")
+	)
+	(label "+12V_LOAD"
+		(at 87.63 114.3 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "5fb0f938-efc3-4858-8ce8-e84a8b2911d3")
+	)
+	(label "OUT2_V+"
+		(at 87.63 106.68 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "69422e91-48f8-4cc8-be4a-9d0d0e5bcad1")
+	)
+	(label "OUT2_V+"
+		(at 100.33 110.49 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "617184b7-1664-49fd-9368-2ee856e47d70")
+	)
+	(label "OUT2_SW"
+		(at 100.33 107.95 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d8cf8b07-ecae-42f8-8145-27a1dbdb3d20")
+	)
+	(label "OUT2_CTRL"
+		(at 87.63 132.08 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "1dd09cae-10cb-441c-b15f-c15369433b16")
+	)
+	(label "OUT2_GATE"
+		(at 87.63 124.46 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "350a66fd-693b-43dd-a761-bb251b3469f8")
+	)
+	(label "OUT2_GATE"
+		(at 99.06 132.08 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "a0bd8928-bc1a-435b-9729-66085201cda2")
+	)
+	(label "GND"
+		(at 99.06 124.46 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d743c773-e7e9-4040-85f3-9f83bf9a5b1c")
+	)
+	(label "OUT2_GATE"
+		(at 107.95 132.08 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "c9b86b9c-fcf7-461c-b8ea-ebd0e2589aab")
+	)
+	(label "GND"
+		(at 115.57 127 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "2a85d096-a3b0-47b5-a8a5-2227cba09567")
+	)
+	(label "OUT2_SW"
+		(at 115.57 137.16 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f3e9e1b5-7535-415e-ac7e-3e496257b2ad")
+	)
+	(label "OUT2_V+"
+		(at 123.19 120.65 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "094e2f92-4558-4fe7-a47b-aa6e05ee73f1")
+	)
+	(label "OUT2_SW"
+		(at 130.81 120.65 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "75e745bb-bfb7-4a7e-bd3b-5047a1bb565f")
+	)
+	(label "+12V_LOAD"
+		(at 146.05 114.3 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "ffa19108-5a25-4166-8bd7-0c12f28d3b6d")
+	)
+	(label "OUT3_V+"
+		(at 146.05 106.68 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "204597b1-3e64-4286-8a08-4f9684ca95fb")
+	)
+	(label "OUT3_V+"
+		(at 157.48 110.49 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "de9af964-d32d-4d1a-8bcd-e08baeb0d9b9")
+	)
+	(label "OUT3_SW"
+		(at 157.48 107.95 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "b5b7a52d-8c74-4c78-a8ae-7fb8e965b8a4")
+	)
+	(label "OUT3_CTRL"
+		(at 146.05 132.08 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "7d2ba3ba-75fb-47c9-b4fa-d48568cb8af9")
+	)
+	(label "OUT3_GATE"
+		(at 146.05 124.46 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "e617a83d-0cf7-457b-b5db-87a340a717ef")
+	)
+	(label "OUT3_GATE"
+		(at 157.48 132.08 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "4b912454-21f4-40f6-9bb3-9b69fce3cb43")
+	)
+	(label "GND"
+		(at 157.48 124.46 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "56ca573f-01b3-47af-8243-4aa880e07598")
+	)
+	(label "OUT3_GATE"
+		(at 166.37 132.08 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "850a3aaa-a4f3-47c5-8c2f-02f2ee727895")
+	)
+	(label "GND"
+		(at 173.99 127 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f41b9458-d9c9-4533-9021-07fc117cab27")
+	)
+	(label "OUT3_SW"
+		(at 173.99 137.16 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "e737ad7a-3555-403b-8c30-be565f9ea578")
+	)
+	(label "OUT3_V+"
+		(at 181.61 120.65 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "e77f4cf5-cfd3-4275-8ab3-082f0e6f1896")
+	)
+	(label "OUT3_SW"
+		(at 189.23 120.65 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "cd83b9bf-bac0-4133-a8b1-de7f1c5723ed")
+	)
+	(label "+12V_LOAD"
+		(at 204.47 114.3 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "159678ab-f99f-49bc-9d4f-e7bdb2930964")
+	)
+	(label "OUT4_V+"
+		(at 204.47 106.68 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "cdefb27d-f4f4-47ab-bcc3-e92f2fabf5d3")
+	)
+	(label "OUT4_V+"
+		(at 215.9 110.49 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "a957493d-95eb-41ca-8b2d-c551ed72eb41")
+	)
+	(label "OUT4_SW"
+		(at 215.9 107.95 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "1fcaf7e4-99a4-44a7-b85f-5bec2379a7e8")
+	)
+	(label "OUT4_CTRL"
+		(at 204.47 132.08 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "ea15ac66-570a-40a2-b3e7-ea1cfd424e95")
+	)
+	(label "OUT4_GATE"
+		(at 204.47 124.46 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "702d7b4a-cb0a-4fa4-a6a1-2f783256dc72")
+	)
+	(label "OUT4_GATE"
+		(at 214.63 132.08 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "ddc96bf9-3d68-4df0-a528-dc234505778e")
+	)
+	(label "GND"
+		(at 214.63 124.46 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "ee736ac4-ffb7-4a8a-96f9-8847842d8b75")
+	)
+	(label "OUT4_GATE"
+		(at 223.52 132.08 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "c7604cff-359c-4dd9-a22f-758276043c1a")
+	)
+	(label "GND"
+		(at 231.14 127 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "46d78dc9-3d53-4c86-8f35-bc00dfa223cc")
+	)
+	(label "OUT4_SW"
+		(at 231.14 137.16 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "6115c500-c1b0-4ee3-91dc-4ede67f21868")
+	)
+	(label "OUT4_V+"
+		(at 238.76 120.65 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "62c94c43-43db-4f31-868a-4ccb60caf3c4")
+	)
+	(label "OUT4_SW"
+		(at 246.38 120.65 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "ce6ea143-4c73-4b7f-a10e-f27e376d34eb")
+	)
+	(label "+12V_LOAD"
+		(at 30.48 185.42 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "0adee466-9afc-48c8-9dbe-715a1a4fab71")
+	)
+	(label "OUT5_V+"
+		(at 30.48 177.8 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "bf875246-a1bb-48a0-a96e-fbb3f95dad79")
+	)
+	(label "OUT5_V+"
+		(at 41.91 181.61 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "e4c685f3-557f-45ff-8111-ee3d0fc64bd1")
+	)
+	(label "OUT5_SW"
+		(at 41.91 179.07 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "ba47eab9-02eb-4083-90f6-43b755d5fe90")
+	)
+	(label "OUT5_CTRL"
+		(at 30.48 203.2 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "6d2b6e93-cec0-42ff-b306-feb61abee247")
+	)
+	(label "OUT5_GATE"
+		(at 30.48 195.58 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "0c638baa-db63-41d1-be77-3ae5fd22a908")
+	)
+	(label "OUT5_GATE"
+		(at 40.64 203.2 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "c035b2f8-2a25-4fa5-bed3-bd36b9b775f7")
+	)
+	(label "GND"
+		(at 40.64 195.58 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "fa960b7a-c649-424c-b19d-9eb150ba1e3a")
+	)
+	(label "OUT5_GATE"
+		(at 49.53 204.47 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "8ba8379d-5094-4544-95b1-6a14ef071952")
+	)
+	(label "GND"
+		(at 57.15 199.39 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d41da9ad-49f0-4829-8f1c-27477fbcd9eb")
+	)
+	(label "OUT5_SW"
+		(at 57.15 209.55 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "898ff23a-56eb-42c6-9e0a-f13bdb647668")
+	)
+	(label "OUT5_V+"
+		(at 64.77 193.04 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "c5bc4b0d-1857-4451-81a0-bdd288347e0b")
+	)
+	(label "OUT5_SW"
+		(at 72.39 193.04 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "b7bfc609-4e51-4667-b436-0b89ed429608")
+	)
+	(label "+12V_LOAD"
+		(at 87.63 185.42 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "e2e9c745-af8d-40e1-a568-e6ee3f624e96")
+	)
+	(label "OUT6_V+"
+		(at 87.63 177.8 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "180b6343-fc2a-4af5-b673-7b061bdc8ede")
+	)
+	(label "OUT6_V+"
+		(at 100.33 181.61 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "6b1ec7e6-e699-44ff-a7e8-7b53fa1479b4")
+	)
+	(label "OUT6_SW"
+		(at 100.33 179.07 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "b4370869-34ad-4fb2-91f0-5d0c875089be")
+	)
+	(label "OUT6_CTRL"
+		(at 87.63 203.2 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "0e4e7d78-5b8d-4be5-b758-f3a2d059bb69")
+	)
+	(label "OUT6_GATE"
+		(at 87.63 195.58 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "348776f5-2b42-44e0-9e24-b216f0db3d6f")
+	)
+	(label "OUT6_GATE"
+		(at 99.06 203.2 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "1284b8f9-35ab-449c-8d57-cdfc00ce3feb")
+	)
+	(label "GND"
+		(at 99.06 195.58 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "fda0c1ce-537b-4aba-a04b-c0497963f2b2")
+	)
+	(label "OUT6_GATE"
+		(at 107.95 204.47 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "257d0b23-984e-4bcb-a400-2a2f9726ca2e")
+	)
+	(label "GND"
+		(at 115.57 199.39 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "1abd8780-371e-4fd3-8b3e-9bd2f17d3508")
+	)
+	(label "OUT6_SW"
+		(at 115.57 209.55 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "5550384d-a531-46ff-ac91-ea095b36b340")
+	)
+	(label "OUT6_V+"
+		(at 123.19 193.04 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "45df4a98-a2f6-4806-9557-776f895e0a12")
+	)
+	(label "OUT6_SW"
+		(at 130.81 193.04 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "8f82be25-6f6f-4f97-b326-2098f9ad49d0")
+	)
+	(label "+12V_LOAD"
+		(at 146.05 185.42 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "caedfed4-1c56-4b2f-89f1-880297e3c773")
+	)
+	(label "OUT7_V+"
+		(at 146.05 177.8 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "e27d0f94-8555-4ef1-ae8a-ded80ea341c0")
+	)
+	(label "OUT7_V+"
+		(at 157.48 181.61 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "a882eab9-a110-4107-ab9f-40f251ef89db")
+	)
+	(label "OUT7_SW"
+		(at 157.48 179.07 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "bdc07e20-2ce3-42e4-a70f-84e019583c2c")
+	)
+	(label "OUT7_CTRL"
+		(at 146.05 203.2 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "54187c96-48c1-4152-9a06-6d73a6e425fc")
+	)
+	(label "OUT7_GATE"
+		(at 146.05 195.58 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "287cd1e8-4383-4d2d-82f0-73e365991a04")
+	)
+	(label "OUT7_GATE"
+		(at 157.48 203.2 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "93c53e24-391e-40c2-95ef-e64110672041")
+	)
+	(label "GND"
+		(at 157.48 195.58 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "90c8d82d-54e8-40c3-af22-e93356b477be")
+	)
+	(label "OUT7_GATE"
+		(at 166.37 204.47 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "241e5702-0ea5-4036-a820-e14030ae3352")
+	)
+	(label "GND"
+		(at 173.99 199.39 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "bd34e5b9-1eb7-41dd-a874-1aca4c3c04e4")
+	)
+	(label "OUT7_SW"
+		(at 173.99 209.55 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "96813ccb-685e-4cfe-8a48-6a906d121a11")
+	)
+	(label "OUT7_V+"
+		(at 181.61 193.04 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "7c9751f8-eaad-48c7-a914-7559568be5c4")
+	)
+	(label "OUT7_SW"
+		(at 189.23 193.04 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "b4c75f5d-dbc9-4a89-bd4b-d45600bb5f75")
+	)
+	(label "+12V_LOAD"
+		(at 204.47 185.42 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "087285d1-9486-4cca-a086-3a87c414ecaa")
+	)
+	(label "OUT8_V+"
+		(at 204.47 177.8 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "1f76457b-a9c0-4f6f-afb5-0d3657569c8d")
+	)
+	(label "OUT8_V+"
+		(at 215.9 181.61 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "93c91fce-0945-45aa-8cb4-853d0bf14ea0")
+	)
+	(label "OUT8_SW"
+		(at 215.9 179.07 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "ac1165d8-be8b-4c1f-a0f4-b36433ebe29e")
+	)
+	(label "OUT8_CTRL"
+		(at 204.47 203.2 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "9d4ad96c-5498-4dd8-a8b6-21329d210839")
+	)
+	(label "OUT8_GATE"
+		(at 204.47 195.58 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "fa45781c-5f32-454e-af24-38d59992380b")
+	)
+	(label "OUT8_GATE"
+		(at 214.63 203.2 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "10aff909-9ed1-4425-9dca-ff4995139f2a")
+	)
+	(label "GND"
+		(at 214.63 195.58 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "b022efd7-8e44-40a9-b5aa-ab32538dfda1")
+	)
+	(label "OUT8_GATE"
+		(at 223.52 204.47 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "5ba0fe27-381c-4c6f-8356-aaa1cd03b3bc")
+	)
+	(label "GND"
+		(at 231.14 199.39 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "879e5945-16ca-4c32-9685-1b19c0ff705f")
+	)
+	(label "OUT8_SW"
+		(at 231.14 209.55 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "49d0c150-2541-423a-ad34-c67b9d90c04b")
+	)
+	(label "OUT8_V+"
+		(at 238.76 193.04 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "1d31b3d3-5dc9-4728-9795-7a52d2584c10")
+	)
+	(label "OUT8_SW"
+		(at 246.38 193.04 0)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "41bae797-8935-409e-b1ae-b4912c7c3a1e")
+	)
+	(text "PCB-B 12V DC POWER & OUTPUTS — KiCad 9 reference schematic; NOT fabrication-ready"
+		(exclude_from_sim no)
+		(at 20 15 0.0000)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+		)
+		(uuid "8188bb23-cad0-4d72-88f9-1d2083913fdd")
+	)
+	(text "12V DC ONLY. Never route mains. PCB-B owns the only supply input and sends protected 12V + logic ground to PCB-A."
+		(exclude_from_sim no)
+		(at 20 20 0.0000)
+		(effects
+			(font
+				(size 1.1 1.1)
+			)
+		)
+		(uuid "eb9d9dab-a11f-4420-9732-f989c270c490")
+	)
+	(text "Output ratings are provisional: size fuses, copper, connectors, MOSFETs and diodes from measured continuous/stall/inrush current."
+		(exclude_from_sim no)
+		(at 20 25 0.0000)
+		(effects
+			(font
+				(size 1.1 1.1)
+			)
+		)
+		(uuid "9a95ec4a-dcd5-4d71-a283-caaca0cf491f")
+	)
+	(text "D0 series SS54 blocks reverse polarity (loss/thermal limits apply). D1 unidirectional TVS: cathode pin 1 to +12V, anode pin 2 to GND."
+		(exclude_from_sim no)
+		(at 25 67 0.0000)
+		(effects
+			(font
+				(size 1.1 1.1)
+			)
+		)
+		(uuid "ded790e0-df90-4b08-8674-0c684201bfad")
+	)
+	(text "INTERBOARD JB mates JA 1:1: pin 1 protected +12V; 2,11,12 GND; pins 3..10 OUT1..OUT8 control."
+		(exclude_from_sim no)
+		(at 130 80 0.0000)
+		(effects
+			(font
+				(size 1.1 1.1)
+			)
+		)
+		(uuid "46cb7f0e-7563-469e-990a-28f8edcdd209")
+	)
+	(text "Use multiple ground pins for logic/reference return only. Route load return directly to input ground plane/star; never through header."
+		(exclude_from_sim no)
+		(at 130 85 0.0000)
+		(effects
+			(font
+				(size 1.1 1.1)
+			)
+		)
+		(uuid "255c2dac-7223-46c4-afc5-0e6ec330ac70")
+	)
+	(text "OUT1: diode K(pin1)=V+, A(pin2)=SW"
+		(exclude_from_sim no)
+		(at 22 145 0.0000)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+		)
+		(uuid "07fe0f27-d201-4195-9942-6d3bc991e25f")
+	)
+	(text "OUT2: diode K(pin1)=V+, A(pin2)=SW"
+		(exclude_from_sim no)
+		(at 80 145 0.0000)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+		)
+		(uuid "c3aa0e06-7967-46c8-a8eb-b34e5ea10c42")
+	)
+	(text "OUT3: diode K(pin1)=V+, A(pin2)=SW"
+		(exclude_from_sim no)
+		(at 138 145 0.0000)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+		)
+		(uuid "d838b1fc-2032-4de7-9281-74c3d3f798f9")
+	)
+	(text "OUT4: diode K(pin1)=V+, A(pin2)=SW"
+		(exclude_from_sim no)
+		(at 196 145 0.0000)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+		)
+		(uuid "2418f039-63f5-461a-95db-9c70d9945fef")
+	)
+	(text "OUT5: diode K(pin1)=V+, A(pin2)=SW"
+		(exclude_from_sim no)
+		(at 22 217 0.0000)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+		)
+		(uuid "efd1dae9-e71d-4857-95d1-fca94a0db3b9")
+	)
+	(text "OUT6: diode K(pin1)=V+, A(pin2)=SW"
+		(exclude_from_sim no)
+		(at 80 217 0.0000)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+		)
+		(uuid "4ec23023-9fd4-4ec7-9614-9085c1d60cee")
+	)
+	(text "OUT7: diode K(pin1)=V+, A(pin2)=SW"
+		(exclude_from_sim no)
+		(at 138 217 0.0000)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+		)
+		(uuid "b1abeb82-126b-4004-bd6b-077bed6951ea")
+	)
+	(text "OUT8: diode K(pin1)=V+, A(pin2)=SW"
+		(exclude_from_sim no)
+		(at 196 217 0.0000)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+		)
+		(uuid "02e1338e-07d2-4ae9-a53a-a86f1a4591a8")
+	)
+	(text "All gates have 100k default-OFF pulldowns. AO3400A RDS(on) is specified at 2.5V but SOT-23 thermal/current limits require measurement."
+		(exclude_from_sim no)
+		(at 20 258 0.0000)
+		(effects
+			(font
+				(size 1.1 1.1)
+			)
+		)
+		(uuid "a30008b8-c663-4b9f-b4b0-571e294846d6")
+	)
+	(text "Flyback parts are for external 12V DC inductive loads/relay coils only. DNP for loads needing other suppression; no mains contacts on PCB."
+		(exclude_from_sim no)
+		(at 20 263 0.0000)
+		(effects
+			(font
+				(size 1.1 1.1)
+			)
+		)
+		(uuid "d9e8c096-0f17-4d78-b862-a697d5c2f1f8")
+	)
+	(text "Small header carries control and controller supply only. Aggregate high-current load paths must use J10, rated copper and output terminals."
+		(exclude_from_sim no)
+		(at 20 268 0.0000)
+		(effects
+			(font
+				(size 1.1 1.1)
+			)
+		)
+		(uuid "2c0c5a45-33bf-40fe-92eb-d8873a307ad3")
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
