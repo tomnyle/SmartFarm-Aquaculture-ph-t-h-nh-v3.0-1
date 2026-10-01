@@ -1,0 +1,45 @@
+Ref,Description,Recommended_Part,Footprint,Qty,Notes
+J1,12V DC input,Keyed 2-pin terminal connector,TerminalBlock_1x02_P5.08mm candidate,1,Verify voltage/current rating and mating cable
+F1,Input fuse,Replaceable fuse sized to input wiring and total load,Fuseholder manufacturer-specific TBD,1,Select fault rating and thermal behavior
+D1,Input transient suppressor,Unidirectional 12V-line TVS,Diode_SMD:DO-214AA_SMB candidate,1,Check standoff/clamp energy and fuse coordination
+Q1,Reverse polarity protection,Qualified ideal-diode or P-MOS stage,Manufacturer-specific TBD,1,Verify full-current dissipation and gate protection before capture
+C1 C2,Input bulk and bypass capacitors,Datasheet-selected rated capacitors,Capacitor_SMD TBD,2,Select voltage ripple and placement for chosen protection/buck
+U1,12V to 5V buck,Qualified 5V buck converter circuit,Manufacturer-specific TBD,1,Regulator passives must follow final datasheet/reference layout; no assumed inductor/capacitor values
+U2,5V to 3V3 regulator,Qualified 3V3 regulator sized for ESP32 Wi-Fi peaks,SOT-223 or manufacturer-specific TBD,1,Verify pinout dropout dissipation and regulator passives against final datasheet/reference layout
+U3,Wi-Fi controller,ESP32-WROOM-32E,RF_Module:ESP32-WROOM-32E candidate,1,Check exact module land pattern and antenna keepout
+JUSB,USB programming connector,USB connector with rated ESD protection,Connector_USB manufacturer-specific TBD,1,USB VBUS isolated from board 5V until power mux reviewed
+U6,USB to 3V3 UART,3V3-compatible USB UART bridge,Manufacturer-specific TBD,1,Verify USB interface pinout VIO and programming procedure
+D_USB,USB ESD protection,USB data ESD array,Manufacturer-specific TBD,1,Select for USB signal integrity and connector location
+R1 R2,EN and BOOT pull-ups,10k ohm candidate,Resistor_SMD:R_0603_1608Metric,2,Verify ESP32 reset and boot requirements
+SW1 SW2,RESET and BOOT buttons,Momentary normally-open switch,Button_Switch_SMD manufacturer-specific TBD,2,Pull to GND
+R3,Status LED resistor,Datasheet-selected current limiter,Resistor_SMD:R_0603_1608Metric,1,GPIO2 boot strap must remain valid
+LED1,Status LED,Low-current indicator LED,LED_SMD:LED_0603_1608Metric candidate,1,Series resistor mandatory
+J2,DS18B20 connector,Keyed 3-pin connector,Connector_Generic:Conn_01x03 candidate,1,3V3 data GND
+J3,DHT22 connector,Keyed 4-pin connector,Connector_Generic:Conn_01x04 candidate,1,3V3 data NC GND
+R4 R5,Digital sensor data pull-ups,4.7k ohm candidate,Resistor_SMD:R_0603_1608Metric,2,Verify cable length and sensors
+J4,3V3 I2C expansion,Keyed 4-pin connector,Connector_Generic:Conn_01x04 candidate,1,No 5V bus
+R6 R7,I2C pull-ups,4.7k ohm candidate,Resistor_SMD:R_0603_1608Metric,2,Review parallel expansion pull-ups and capacitance
+U4,Four-channel I2C ADC,ADS1115,TSSOP-10 manufacturer-specific candidate,1,Confirm package pinout and ADDR=GND for 0x48
+J5 J6 J7 J8,Universal analog input connectors,Keyed 3-pin connectors,Connector_Generic:Conn_01x03 candidate,4,3V3 signal GND; analog input requires conditioning
+R_A0 R_A1 R_A2 R_A3,Analog series and conditioning resistors,Sensor-specific current limit/scale TBD,Resistor_SMD:R_0603_1608Metric candidate,4,Value and any divider/buffer depend on sensor range
+C_A0 C_A1 C_A2 C_A3,ADC low-pass filter capacitors,Sensor-specific filter TBD,Capacitor_SMD:C_0603_1608Metric candidate,4,Verify ADC acquisition and source impedance
+D_A0_H D_A0_L D_A1_H D_A1_L D_A2_H D_A2_L D_A3_H D_A3_L,Analog clamp provisions,Low-leakage clamps TBD,Diode_SMD manufacturer-specific TBD,8,DNP until fault-current and rail injection analysis; not a substitute for 5V scaling
+U5,3V3 RS485 transceiver,MAX3485-compatible 3V3 transceiver,SOIC-8 manufacturer-specific candidate,1,Verify pinout ESD and fail-safe behavior
+D2,RS485 interface TVS,RS485-rated differential protection array,Manufacturer-specific TBD,1,Verify clamp and common-mode requirements
+J9,RS485 connector,Keyed 4-pin connector,Connector_Generic:Conn_01x04 candidate,1,GND A B SHIELD_NC
+JP1,RS485 termination enable,2-pin jumper,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm candidate,1,Populate only on bus endpoint
+R8,RS485 termination,120 ohm candidate,Resistor_SMD:R_0603_1608Metric,1,Series with JP1; DNP/open except bus endpoint
+R12,RS485 TX series provision,Value TBD,Resistor_SMD:R_0603_1608Metric,1,Populate resistor or 0-ohm link; DNP only if alternate continuous TX route is fitted
+R13,RS485 DE/RE pulldown,10k ohm candidate,Resistor_SMD:R_0603_1608Metric,1,Receive by default at startup
+J18A J18B,Inter-board 12V power pair,Keyed high-current 2-pin mating set,Manufacturer-specific TBD,2,Verify contacts and cable for aggregate load and polarity
+F2,PCB-B load fuse,Replaceable fuse or qualified polyfuse,Fuseholder manufacturer-specific TBD,1,Size to rail cable and output distribution; branch fuses if needed
+C3,PCB-B load rail bulk,Rated bulk capacitor TBD,Capacitor_THT or SMD TBD,1,Validate load surge and ripple
+J19A J19B,Inter-board logic harness,Keyed 10-pin mating set,Manufacturer-specific TBD,2,Eight controls and two signal grounds; load current returns via J18
+R_G1 R_G2 R_G3 R_G4 R_G5 R_G6 R_G7 R_G8,MOSFET series gate resistors,100 ohm initial candidate,Resistor_SMD:R_0603_1608Metric,8,Verify switching waveform and GPIO drive
+R_PD1 R_PD2 R_PD3 R_PD4 R_PD5 R_PD6 R_PD7 R_PD8,MOSFET gate pulldowns,100k ohm initial candidate,Resistor_SMD:R_0603_1608Metric,8,On MOSFET gate side of resistor
+Q2 Q3 Q4 Q5 Q6 Q7 Q8 Q9,Low-side DC load MOSFETs,3V3 logic-level N-channel MOSFET TBD,Manufacturer-specific thermal footprint TBD,8,Verify Rds(on) at actual Vgs current SOA and temperature
+D_F1 D_F2 D_F3 D_F4 D_F5 D_F6 D_F7 D_F8,Inductive DC flyback provisions,Load-rated diode TBD,Diode_SMD manufacturer-specific TBD,8,Populate for compatible inductive DC loads; cathode to +12V_LOAD
+J10 J11 J12 J13 J14 J15 J16 J17,DC-only output connectors,Keyed 2-pin rated connectors,TerminalBlock_1x02_P5.08mm candidate,8,Pin1 +12V_LOAD pin2 switched return; no mains
+TP1 TP2 TP3 TP4,Power test points,Test pad,TestPoint:TestPoint_Pad_D1.0mm candidate,4,+12V_PROT +5V +3V3 GND
+H1 H2 H3 H4,PCB-A mounting holes,Insulated mechanical mounting,MountingHole:MountingHole_3.2mm_M3 candidate,4,Mechanical clearances and antenna keepout
+H5 H6 H7 H8,PCB-B mounting holes,Insulated mechanical mounting,MountingHole:MountingHole_3.2mm_M3 candidate,4,Verify chassis isolation and spacing

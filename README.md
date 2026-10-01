@@ -26,6 +26,9 @@ ESP32-based aquaculture controller for family pond management with MQTT & Home A
 
 ## Hardware Requirements
 
+The items below describe the **existing DevKit/relay firmware**, not the
+unverified universal controller design linked later in this README.
+
 - ESP32 DevKitC V4 / ESP-WROOM-32
 - DS18B20 Temperature Sensor
 - pH Electrode + ADS1115 ADC Module
@@ -225,8 +228,29 @@ automation:
 See `/docs` folder for:
 - `architecture.md` - System design
 - `sensors.md` - Sensor specifications & calibration
-- `wiring.md` - Hardware wiring diagram
 - `mqtt.md` - MQTT protocol details
+
+## Hardware Design
+
+The [Universal Smart Farm Controller Rev A1 hardware package](docs/hardware/README.md)
+is a **production-preparation engineering reference**, with separate PCB-A
+controller and PCB-B low-voltage DC output boards for distinct Aquaculture,
+Garden and Livestock firmware builds. It does **not** describe a completed
+manufactured PCB. This repository does **not** yet contain verified KiCad
+schematic/PCB sources or Gerber manufacturing files. Human electrical
+review, datasheet/footprint verification, ERC/DRC, prototype bring-up and
+load/thermal testing remain required.
+
+- [KiCad-oriented pin and net tables](docs/hardware/universal_controller_netlist.md)
+- [Rev A1 BOM (CSV)](docs/hardware/bom_rev_a1.csv)
+- [PCB sizing and layout rules](docs/hardware/pcb_layout_rules.md)
+- [Universal connector labels and firmware profile maps](docs/hardware/profile_io_maps.md)
+- [Bring-up and manufacturing checklist](docs/hardware/bringup_and_manufacturing_checklist.md)
+
+The existing firmware pinout is **not** compatible with the proposed
+universal board without the migration in the profile maps. Neither PCB
+routes or switches 230 VAC; outputs are low-voltage DC MOSFET switches
+for DC loads or coils of external relays/contactors.
 
 ## License
 
