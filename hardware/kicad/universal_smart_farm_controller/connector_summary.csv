@@ -1,0 +1,13 @@
+pin,PCB-A_J1,PCB-B_J1,direction_or_budget
+1,+12V_PROTECTED,+12V_PROTECTED,PCB-B to PCB-A; controller power only; budget after regulator/load calculations
+2,GND,GND,controller power and signal reference return
+3,OUT1_CTRL,OUT1_CTRL,PCB-A 3.3V GPIO13 to 100R gate resistor; negligible DC except 100k pulldown
+4,OUT2_CTRL,OUT2_CTRL,PCB-A 3.3V GPIO19 to 100R gate resistor; negligible DC except 100k pulldown
+5,OUT3_CTRL,OUT3_CTRL,PCB-A 3.3V GPIO14 to 100R gate resistor; negligible DC except 100k pulldown
+6,OUT4_CTRL,OUT4_CTRL,PCB-A 3.3V GPIO27 to 100R gate resistor; negligible DC except 100k pulldown
+7,OUT5_CTRL,OUT5_CTRL,PCB-A 3.3V GPIO25 to 100R gate resistor; negligible DC except 100k pulldown
+8,OUT6_CTRL,OUT6_CTRL,PCB-A 3.3V GPIO26 to 100R gate resistor; negligible DC except 100k pulldown
+9,OUT7_CTRL,OUT7_CTRL,PCB-A 3.3V GPIO32 to 100R gate resistor; negligible DC except 100k pulldown
+10,OUT8_CTRL,OUT8_CTRL,PCB-A 3.3V GPIO33 to 100R gate resistor; negligible DC except 100k pulldown
+11,GND,GND,parallel controller/reference return; not a load-current path
+12,GND,GND,parallel controller/reference return; not a load-current path
