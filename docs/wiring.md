@@ -40,6 +40,15 @@ pinout match** for the current firmware:
 - PCB-A and PCB-B are schematic-only references. They contain no PCB layout,
   manufacturing outputs, or KiCad 9 ERC/DRC results.
 
+The schematics include a GPIO2 STATUS LED and a 3.3 V rail LED on PCB-A, a
+protected-12 V power LED on PCB-B, and one current-limited LED across each
+fused MOSFET output. An output LED indicates the MOSFET channel is switched on;
+it does not confirm that the attached load is working. The WiFi, MQTT, and
+ERROR indicators from the approved Rev.A.1 target are not included: available
+ESP32 output pins are assigned and spare boot-strapping pins must not be loaded.
+Adding those indicators requires a deliberate GPIO-expander or pin-remapping
+design and firmware support.
+
 Do not wire the firmware to these schematics or fabricate either board until
 the firmware/hardware pin map is reconciled and the design is reviewed and
 validated. The project README records additional limitations and review items.

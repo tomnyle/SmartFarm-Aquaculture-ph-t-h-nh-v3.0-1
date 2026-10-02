@@ -1506,7 +1506,7 @@
 				)
 			)
 		)
-	
+
 (symbol "Device:LED"
 			(pin_numbers hide)
 			(pin_names
