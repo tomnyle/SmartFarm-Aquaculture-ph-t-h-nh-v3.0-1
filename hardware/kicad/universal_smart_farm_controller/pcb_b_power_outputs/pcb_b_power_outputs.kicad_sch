@@ -1506,6 +1506,171 @@
 				)
 			)
 		)
+	
+(symbol "Device:LED"
+			(pin_numbers hide)
+			(pin_names
+				(offset 1.016) hide
+			)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "LED"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					) hide
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					) hide
+				)
+			)
+			(property "ki_keywords" "LED diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					) hide
+				)
+			)
+			(property "ki_description" "Light emitting diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					) hide
+				)
+			)
+			(property "ki_fp_filters" "LED* LED_SMD:* LED_THT:*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					) hide
+				)
+			)
+			(symbol "LED_0_1"
+				(polyline
+					(pts
+						(xy -1.27 -1.27) (xy -1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 0) (xy 1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.048 -0.762) (xy -4.572 -2.286) (xy -3.81 -2.286) (xy -4.572 -2.286) (xy -4.572 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 -0.762) (xy -3.302 -2.286) (xy -2.54 -2.286) (xy -3.302 -2.286) (xy -3.302 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "LED_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
@@ -5877,4 +6042,743 @@
 		)
 	)
 	(embedded_fonts no)
+
+	(symbol
+		(lib_id "Device:R")
+		(at 252.0000 68.0000 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "69c687bd-4b5f-459f-ba48-9ab113ba01c0")
+		(property "Reference" "R17"
+			(at 252.0000 64.1900 0.0000)
+			(effects (font (size 1.27 1.27)) (justify left bottom))
+		)
+		(property "Value" "3.3k"
+			(at 252.0000 71.8100 0.0000)
+			(effects (font (size 1.27 1.27)) (justify left bottom))
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 252.0000 68.0000 0.0000)
+			(effects (font (size 1.27 1.27)) (hide yes))
+		)
+		(pin "1" (uuid "0c27731b-d281-4464-bc5c-701d2e8c668a"))
+		(pin "2" (uuid "5f0dd0d7-6921-47c5-8a02-37af51310639"))
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3" (reference "R17") (unit 1))
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 262.0000 68.0000 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "8b27ef7e-7aef-4ba6-ab2a-3c72f10f4f7b")
+		(property "Reference" "D19"
+			(at 262.0000 64.1900 0.0000)
+			(effects (font (size 1.27 1.27)) (justify left bottom))
+		)
+		(property "Value" "12V POWER"
+			(at 262.0000 71.8100 0.0000)
+			(effects (font (size 1.27 1.27)) (justify left bottom))
+		)
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+			(at 262.0000 68.0000 0.0000)
+			(effects (font (size 1.27 1.27)) (hide yes))
+		)
+		(pin "1" (uuid "769295b8-19e0-42b0-9367-225225da80df"))
+		(pin "2" (uuid "2a3d85bc-d6bb-4cb6-97c2-b81cc7c34458"))
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3" (reference "D19") (unit 1))
+			)
+		)
+	)
+	(wire (pts (xy 244.0000 68.0000) (xy 248.1900 68.0000))
+		(stroke (width 0) (type default))
+		(uuid "89e1d0cb-6404-4bc8-91dd-ec7dea018fb0")
+	)
+	(wire (pts (xy 255.8100 68.0000) (xy 258.1900 68.0000))
+		(stroke (width 0) (type default))
+		(uuid "9700b973-4052-443a-a341-984a8817e511")
+	)
+	(wire (pts (xy 265.8100 68.0000) (xy 270.0000 68.0000))
+		(stroke (width 0) (type default))
+		(uuid "25b3e434-823e-4cbc-b929-025186349da8")
+	)
+	(label "+12V_PROTECTED"
+		(at 244.0000 68.0000 180)
+		(effects (font (size 1 1)) (justify right bottom))
+		(uuid "a462e4b8-4aaa-4fc2-8553-f72d1908cba9")
+	)
+	(label "GND"
+		(at 270.0000 68.0000 0)
+		(effects (font (size 1 1)) (justify left bottom))
+		(uuid "c7546ab4-7291-4990-a251-1e368dd1ae74")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 252.0000 88.0000 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "cd4d3740-a53e-4f32-b128-a9e5f89d0f55")
+		(property "Reference" "R18"
+			(at 252.0000 84.1900 0.0000)
+			(effects (font (size 1.27 1.27)) (justify left bottom))
+		)
+		(property "Value" "3.3k"
+			(at 252.0000 91.8100 0.0000)
+			(effects (font (size 1.27 1.27)) (justify left bottom))
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 252.0000 88.0000 0.0000)
+			(effects (font (size 1.27 1.27)) (hide yes))
+		)
+		(pin "1" (uuid "b2a24b0d-2d3b-411d-834b-8d66d3f60d0d"))
+		(pin "2" (uuid "11166498-7c8a-429b-bca7-24d841220646"))
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3" (reference "R18") (unit 1))
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 262.0000 88.0000 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "5c654823-102b-405c-9b1b-9635fc6966ac")
+		(property "Reference" "D20"
+			(at 262.0000 84.1900 0.0000)
+			(effects (font (size 1.27 1.27)) (justify left bottom))
+		)
+		(property "Value" "OUT1 ACTIVE"
+			(at 262.0000 91.8100 0.0000)
+			(effects (font (size 1.27 1.27)) (justify left bottom))
+		)
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+			(at 262.0000 88.0000 0.0000)
+			(effects (font (size 1.27 1.27)) (hide yes))
+		)
+		(pin "1" (uuid "26530ba6-312a-4f87-be67-ef9f13640966"))
+		(pin "2" (uuid "141d4d4a-7a57-4090-96b3-2e267b4176ac"))
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3" (reference "D20") (unit 1))
+			)
+		)
+	)
+	(wire (pts (xy 244.0000 88.0000) (xy 248.1900 88.0000))
+		(stroke (width 0) (type default))
+		(uuid "420c430c-4a1a-4f41-9350-c3bcaecf9911")
+	)
+	(wire (pts (xy 255.8100 88.0000) (xy 258.1900 88.0000))
+		(stroke (width 0) (type default))
+		(uuid "3762c5b7-2024-45b1-bcce-d5fbbfdfeb05")
+	)
+	(wire (pts (xy 265.8100 88.0000) (xy 270.0000 88.0000))
+		(stroke (width 0) (type default))
+		(uuid "10c6669d-5c80-4596-9ae9-33a261c95de4")
+	)
+	(label "OUT1_V+"
+		(at 244.0000 88.0000 180)
+		(effects (font (size 1 1)) (justify right bottom))
+		(uuid "1be10675-0e87-4c86-9972-df7cd1f15e9e")
+	)
+	(label "OUT1_SW"
+		(at 270.0000 88.0000 0)
+		(effects (font (size 1 1)) (justify left bottom))
+		(uuid "32d171a8-f207-4cf8-82b9-bde086f2796d")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 252.0000 100.0000 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "5e65537e-3e99-4b88-aa3b-11f0faf843bd")
+		(property "Reference" "R19"
+			(at 252.0000 96.1900 0.0000)
+			(effects (font (size 1.27 1.27)) (justify left bottom))
+		)
+		(property "Value" "3.3k"
+			(at 252.0000 103.8100 0.0000)
+			(effects (font (size 1.27 1.27)) (justify left bottom))
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 252.0000 100.0000 0.0000)
+			(effects (font (size 1.27 1.27)) (hide yes))
+		)
+		(pin "1" (uuid "106bc251-2d07-46d0-bc7b-f3b5ca668cd2"))
+		(pin "2" (uuid "d56710fc-bddf-4ceb-8430-e0acaceb7e90"))
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3" (reference "R19") (unit 1))
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 262.0000 100.0000 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "d89e63b3-7439-418a-bf1e-5b992a0e4d00")
+		(property "Reference" "D21"
+			(at 262.0000 96.1900 0.0000)
+			(effects (font (size 1.27 1.27)) (justify left bottom))
+		)
+		(property "Value" "OUT2 ACTIVE"
+			(at 262.0000 103.8100 0.0000)
+			(effects (font (size 1.27 1.27)) (justify left bottom))
+		)
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+			(at 262.0000 100.0000 0.0000)
+			(effects (font (size 1.27 1.27)) (hide yes))
+		)
+		(pin "1" (uuid "78e667db-7c5d-439e-b337-7d773f4f65f1"))
+		(pin "2" (uuid "523d9b7f-22b0-4454-85cf-539e15e0f666"))
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3" (reference "D21") (unit 1))
+			)
+		)
+	)
+	(wire (pts (xy 244.0000 100.0000) (xy 248.1900 100.0000))
+		(stroke (width 0) (type default))
+		(uuid "cf40a0b7-f42d-46be-a741-b8a09ec11da3")
+	)
+	(wire (pts (xy 255.8100 100.0000) (xy 258.1900 100.0000))
+		(stroke (width 0) (type default))
+		(uuid "14ed3a85-3b94-4839-92a1-650e21987117")
+	)
+	(wire (pts (xy 265.8100 100.0000) (xy 270.0000 100.0000))
+		(stroke (width 0) (type default))
+		(uuid "f5eb5830-c103-4248-8c6c-2b95ad6c657a")
+	)
+	(label "OUT2_V+"
+		(at 244.0000 100.0000 180)
+		(effects (font (size 1 1)) (justify right bottom))
+		(uuid "8e818ade-7201-414b-adfc-e5623d57fdfc")
+	)
+	(label "OUT2_SW"
+		(at 270.0000 100.0000 0)
+		(effects (font (size 1 1)) (justify left bottom))
+		(uuid "ba3bf8f2-6731-46fc-bf54-f4ed57e9daf2")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 252.0000 112.0000 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "b0a149aa-0085-4c7a-9fd7-097cca29d871")
+		(property "Reference" "R20"
+			(at 252.0000 108.1900 0.0000)
+			(effects (font (size 1.27 1.27)) (justify left bottom))
+		)
+		(property "Value" "3.3k"
+			(at 252.0000 115.8100 0.0000)
+			(effects (font (size 1.27 1.27)) (justify left bottom))
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 252.0000 112.0000 0.0000)
+			(effects (font (size 1.27 1.27)) (hide yes))
+		)
+		(pin "1" (uuid "1e01bc39-bd65-4cee-84dc-50245bb7be05"))
+		(pin "2" (uuid "20173a8b-957c-4d36-9ff0-716f82ba8a10"))
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3" (reference "R20") (unit 1))
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 262.0000 112.0000 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "2e01f1ff-902f-4ea4-a6ee-a88da27d38df")
+		(property "Reference" "D22"
+			(at 262.0000 108.1900 0.0000)
+			(effects (font (size 1.27 1.27)) (justify left bottom))
+		)
+		(property "Value" "OUT3 ACTIVE"
+			(at 262.0000 115.8100 0.0000)
+			(effects (font (size 1.27 1.27)) (justify left bottom))
+		)
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+			(at 262.0000 112.0000 0.0000)
+			(effects (font (size 1.27 1.27)) (hide yes))
+		)
+		(pin "1" (uuid "2e04c5ad-decf-4f68-b443-bda25f4c4d54"))
+		(pin "2" (uuid "89f79bc6-b723-4e8b-9a81-3d45324b76a8"))
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3" (reference "D22") (unit 1))
+			)
+		)
+	)
+	(wire (pts (xy 244.0000 112.0000) (xy 248.1900 112.0000))
+		(stroke (width 0) (type default))
+		(uuid "4cd6b80b-2b71-4c76-b112-2b681cf8ab55")
+	)
+	(wire (pts (xy 255.8100 112.0000) (xy 258.1900 112.0000))
+		(stroke (width 0) (type default))
+		(uuid "40958244-7aaa-4058-95a4-3cb74ce39d91")
+	)
+	(wire (pts (xy 265.8100 112.0000) (xy 270.0000 112.0000))
+		(stroke (width 0) (type default))
+		(uuid "8ce07db3-35ba-4bf7-9324-e9c5085c2cc7")
+	)
+	(label "OUT3_V+"
+		(at 244.0000 112.0000 180)
+		(effects (font (size 1 1)) (justify right bottom))
+		(uuid "f7ab10f9-36f6-4788-a866-fb2f5360664e")
+	)
+	(label "OUT3_SW"
+		(at 270.0000 112.0000 0)
+		(effects (font (size 1 1)) (justify left bottom))
+		(uuid "1c31c68c-c392-4009-932a-da1374d45da7")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 252.0000 124.0000 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "5fa2280c-01c7-43f2-9444-6896506d31c0")
+		(property "Reference" "R21"
+			(at 252.0000 120.1900 0.0000)
+			(effects (font (size 1.27 1.27)) (justify left bottom))
+		)
+		(property "Value" "3.3k"
+			(at 252.0000 127.8100 0.0000)
+			(effects (font (size 1.27 1.27)) (justify left bottom))
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 252.0000 124.0000 0.0000)
+			(effects (font (size 1.27 1.27)) (hide yes))
+		)
+		(pin "1" (uuid "55f7f20a-faca-44ce-83b6-3373d60ad435"))
+		(pin "2" (uuid "25ef1d53-231a-4526-bbe1-72687ca47b99"))
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3" (reference "R21") (unit 1))
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 262.0000 124.0000 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "6287049b-edbe-4984-b023-e275298d0c78")
+		(property "Reference" "D23"
+			(at 262.0000 120.1900 0.0000)
+			(effects (font (size 1.27 1.27)) (justify left bottom))
+		)
+		(property "Value" "OUT4 ACTIVE"
+			(at 262.0000 127.8100 0.0000)
+			(effects (font (size 1.27 1.27)) (justify left bottom))
+		)
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+			(at 262.0000 124.0000 0.0000)
+			(effects (font (size 1.27 1.27)) (hide yes))
+		)
+		(pin "1" (uuid "a84c64f7-ad46-4216-aa68-589ea71ae0cb"))
+		(pin "2" (uuid "3df4f687-3e18-4dac-89d8-2e1fe282f4f8"))
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3" (reference "D23") (unit 1))
+			)
+		)
+	)
+	(wire (pts (xy 244.0000 124.0000) (xy 248.1900 124.0000))
+		(stroke (width 0) (type default))
+		(uuid "4dce1e41-90e9-470a-8c8d-0d78e43733d7")
+	)
+	(wire (pts (xy 255.8100 124.0000) (xy 258.1900 124.0000))
+		(stroke (width 0) (type default))
+		(uuid "7a39b998-2fb8-4efd-92d0-97201ed52c03")
+	)
+	(wire (pts (xy 265.8100 124.0000) (xy 270.0000 124.0000))
+		(stroke (width 0) (type default))
+		(uuid "1664245f-120b-4241-96fc-e499b0778855")
+	)
+	(label "OUT4_V+"
+		(at 244.0000 124.0000 180)
+		(effects (font (size 1 1)) (justify right bottom))
+		(uuid "5e84ac10-54d9-4588-9427-70d08656e27a")
+	)
+	(label "OUT4_SW"
+		(at 270.0000 124.0000 0)
+		(effects (font (size 1 1)) (justify left bottom))
+		(uuid "fa74ede6-5d79-4c4d-b79b-7e96b67991aa")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 252.0000 136.0000 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "5a65429d-fa62-4c31-aadc-163fafaa5a77")
+		(property "Reference" "R22"
+			(at 252.0000 132.1900 0.0000)
+			(effects (font (size 1.27 1.27)) (justify left bottom))
+		)
+		(property "Value" "3.3k"
+			(at 252.0000 139.8100 0.0000)
+			(effects (font (size 1.27 1.27)) (justify left bottom))
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 252.0000 136.0000 0.0000)
+			(effects (font (size 1.27 1.27)) (hide yes))
+		)
+		(pin "1" (uuid "b74715e6-b89a-4c86-89c5-16f391dbe737"))
+		(pin "2" (uuid "d5c6e28c-2b27-4608-b465-77fb9854daf9"))
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3" (reference "R22") (unit 1))
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 262.0000 136.0000 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "dc26ebe7-556e-43b9-82dc-7abf409d8140")
+		(property "Reference" "D24"
+			(at 262.0000 132.1900 0.0000)
+			(effects (font (size 1.27 1.27)) (justify left bottom))
+		)
+		(property "Value" "OUT5 ACTIVE"
+			(at 262.0000 139.8100 0.0000)
+			(effects (font (size 1.27 1.27)) (justify left bottom))
+		)
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+			(at 262.0000 136.0000 0.0000)
+			(effects (font (size 1.27 1.27)) (hide yes))
+		)
+		(pin "1" (uuid "5f4db5cd-b2eb-49b8-b71a-cff615b47910"))
+		(pin "2" (uuid "4ccebbb1-67fa-49fe-83c3-c319e3ee8e13"))
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3" (reference "D24") (unit 1))
+			)
+		)
+	)
+	(wire (pts (xy 244.0000 136.0000) (xy 248.1900 136.0000))
+		(stroke (width 0) (type default))
+		(uuid "3aead2e9-1a82-40a8-ba03-746e5a2b0344")
+	)
+	(wire (pts (xy 255.8100 136.0000) (xy 258.1900 136.0000))
+		(stroke (width 0) (type default))
+		(uuid "fac2d756-82eb-4e93-a82c-4f599d921d4b")
+	)
+	(wire (pts (xy 265.8100 136.0000) (xy 270.0000 136.0000))
+		(stroke (width 0) (type default))
+		(uuid "2b149d0f-c55c-424d-9021-253a72589f77")
+	)
+	(label "OUT5_V+"
+		(at 244.0000 136.0000 180)
+		(effects (font (size 1 1)) (justify right bottom))
+		(uuid "e306341f-ca45-4365-9a83-99cb7b7244e2")
+	)
+	(label "OUT5_SW"
+		(at 270.0000 136.0000 0)
+		(effects (font (size 1 1)) (justify left bottom))
+		(uuid "18719d84-5840-4870-a5a4-2838590c8e0d")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 252.0000 148.0000 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "2787a715-5436-4454-b19d-6d1e6a1d4c3b")
+		(property "Reference" "R23"
+			(at 252.0000 144.1900 0.0000)
+			(effects (font (size 1.27 1.27)) (justify left bottom))
+		)
+		(property "Value" "3.3k"
+			(at 252.0000 151.8100 0.0000)
+			(effects (font (size 1.27 1.27)) (justify left bottom))
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 252.0000 148.0000 0.0000)
+			(effects (font (size 1.27 1.27)) (hide yes))
+		)
+		(pin "1" (uuid "ac2e27ea-8ab2-415e-aecc-1ed396e621ab"))
+		(pin "2" (uuid "560552ec-3887-4da1-9b02-4ab7f1a40d2f"))
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3" (reference "R23") (unit 1))
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 262.0000 148.0000 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "edbc4e70-e524-4543-a320-2c36d415e045")
+		(property "Reference" "D25"
+			(at 262.0000 144.1900 0.0000)
+			(effects (font (size 1.27 1.27)) (justify left bottom))
+		)
+		(property "Value" "OUT6 ACTIVE"
+			(at 262.0000 151.8100 0.0000)
+			(effects (font (size 1.27 1.27)) (justify left bottom))
+		)
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+			(at 262.0000 148.0000 0.0000)
+			(effects (font (size 1.27 1.27)) (hide yes))
+		)
+		(pin "1" (uuid "188cad5c-1831-4acc-9cf1-0177e339b22c"))
+		(pin "2" (uuid "61aba404-1343-42e7-8327-9eb4640870eb"))
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3" (reference "D25") (unit 1))
+			)
+		)
+	)
+	(wire (pts (xy 244.0000 148.0000) (xy 248.1900 148.0000))
+		(stroke (width 0) (type default))
+		(uuid "6148c1bb-d5cd-4ffc-a35a-09a095c8572f")
+	)
+	(wire (pts (xy 255.8100 148.0000) (xy 258.1900 148.0000))
+		(stroke (width 0) (type default))
+		(uuid "0d7b14b2-bfc5-4b28-8dbc-7da43b7f42df")
+	)
+	(wire (pts (xy 265.8100 148.0000) (xy 270.0000 148.0000))
+		(stroke (width 0) (type default))
+		(uuid "e9b2e56b-f8f1-498d-bca0-689c3e0bcf66")
+	)
+	(label "OUT6_V+"
+		(at 244.0000 148.0000 180)
+		(effects (font (size 1 1)) (justify right bottom))
+		(uuid "5909254d-dc6f-42e9-91b9-7372f76470d2")
+	)
+	(label "OUT6_SW"
+		(at 270.0000 148.0000 0)
+		(effects (font (size 1 1)) (justify left bottom))
+		(uuid "ad3c0e2e-e4a7-4520-83bd-76efefbebe3a")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 252.0000 160.0000 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "7b0ca49e-c367-47d7-a7cf-9019864e0972")
+		(property "Reference" "R24"
+			(at 252.0000 156.1900 0.0000)
+			(effects (font (size 1.27 1.27)) (justify left bottom))
+		)
+		(property "Value" "3.3k"
+			(at 252.0000 163.8100 0.0000)
+			(effects (font (size 1.27 1.27)) (justify left bottom))
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 252.0000 160.0000 0.0000)
+			(effects (font (size 1.27 1.27)) (hide yes))
+		)
+		(pin "1" (uuid "9592a21c-83cb-4cd6-832a-0b4b24b63cc7"))
+		(pin "2" (uuid "90f6dfdf-9662-4594-a317-032f4e6c75f3"))
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3" (reference "R24") (unit 1))
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 262.0000 160.0000 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "eeae3711-69ff-49a2-ab69-b5badf4790bf")
+		(property "Reference" "D26"
+			(at 262.0000 156.1900 0.0000)
+			(effects (font (size 1.27 1.27)) (justify left bottom))
+		)
+		(property "Value" "OUT7 ACTIVE"
+			(at 262.0000 163.8100 0.0000)
+			(effects (font (size 1.27 1.27)) (justify left bottom))
+		)
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+			(at 262.0000 160.0000 0.0000)
+			(effects (font (size 1.27 1.27)) (hide yes))
+		)
+		(pin "1" (uuid "5b3994c4-c6f4-45d3-893a-605ebb5e26a9"))
+		(pin "2" (uuid "f9deecbd-d1bf-4b19-a27a-7c3f5f6c1666"))
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3" (reference "D26") (unit 1))
+			)
+		)
+	)
+	(wire (pts (xy 244.0000 160.0000) (xy 248.1900 160.0000))
+		(stroke (width 0) (type default))
+		(uuid "48e8f1b4-c9aa-4bd5-a670-0bbd754d07c6")
+	)
+	(wire (pts (xy 255.8100 160.0000) (xy 258.1900 160.0000))
+		(stroke (width 0) (type default))
+		(uuid "c798dc60-dddf-4638-b999-7312425f89e3")
+	)
+	(wire (pts (xy 265.8100 160.0000) (xy 270.0000 160.0000))
+		(stroke (width 0) (type default))
+		(uuid "f82a7292-8a46-400f-b72d-d9f46ec61250")
+	)
+	(label "OUT7_V+"
+		(at 244.0000 160.0000 180)
+		(effects (font (size 1 1)) (justify right bottom))
+		(uuid "4c3835fb-f227-413f-a12b-db1739b6b583")
+	)
+	(label "OUT7_SW"
+		(at 270.0000 160.0000 0)
+		(effects (font (size 1 1)) (justify left bottom))
+		(uuid "73ac7a5f-3978-4368-bdbd-7d2396eb3806")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 252.0000 172.0000 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "674c30e8-fa64-487d-bbde-f5d555571c6e")
+		(property "Reference" "R25"
+			(at 252.0000 168.1900 0.0000)
+			(effects (font (size 1.27 1.27)) (justify left bottom))
+		)
+		(property "Value" "3.3k"
+			(at 252.0000 175.8100 0.0000)
+			(effects (font (size 1.27 1.27)) (justify left bottom))
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 252.0000 172.0000 0.0000)
+			(effects (font (size 1.27 1.27)) (hide yes))
+		)
+		(pin "1" (uuid "e9e9c1e3-a2c3-46d2-92cd-b601fbeb6fb8"))
+		(pin "2" (uuid "99577d6e-0631-4b29-b057-aa59d77faa2b"))
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3" (reference "R25") (unit 1))
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 262.0000 172.0000 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "04ba7022-4e99-44ae-b474-429e2fe2ccc6")
+		(property "Reference" "D27"
+			(at 262.0000 168.1900 0.0000)
+			(effects (font (size 1.27 1.27)) (justify left bottom))
+		)
+		(property "Value" "OUT8 ACTIVE"
+			(at 262.0000 175.8100 0.0000)
+			(effects (font (size 1.27 1.27)) (justify left bottom))
+		)
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+			(at 262.0000 172.0000 0.0000)
+			(effects (font (size 1.27 1.27)) (hide yes))
+		)
+		(pin "1" (uuid "eed4fd9c-8119-46a2-985b-f3ddf2b21b6c"))
+		(pin "2" (uuid "b15b5718-7f20-44bd-bdb8-ac342e8ab702"))
+		(instances
+			(project "PCB-B 12V Power and Outputs Rev A reference"
+				(path "/99b31c03-3e14-461b-a0bf-97759b6823f3" (reference "D27") (unit 1))
+			)
+		)
+	)
+	(wire (pts (xy 244.0000 172.0000) (xy 248.1900 172.0000))
+		(stroke (width 0) (type default))
+		(uuid "5d2d4bce-fd1b-4de8-8721-a936c103d54e")
+	)
+	(wire (pts (xy 255.8100 172.0000) (xy 258.1900 172.0000))
+		(stroke (width 0) (type default))
+		(uuid "cda64d11-b2a4-47f8-8024-f24903467472")
+	)
+	(wire (pts (xy 265.8100 172.0000) (xy 270.0000 172.0000))
+		(stroke (width 0) (type default))
+		(uuid "c66b81c9-fc48-4139-97a5-941aff02f2e1")
+	)
+	(label "OUT8_V+"
+		(at 244.0000 172.0000 180)
+		(effects (font (size 1 1)) (justify right bottom))
+		(uuid "919f797a-ca00-4418-9a9c-256ea9f8e963")
+	)
+	(label "OUT8_SW"
+		(at 270.0000 172.0000 0)
+		(effects (font (size 1 1)) (justify left bottom))
+		(uuid "59e61844-1dfc-4542-b4b9-449279ee827a")
+	)
 )

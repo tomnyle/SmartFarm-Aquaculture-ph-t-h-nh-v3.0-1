@@ -84,6 +84,8 @@ reference return. See `connector_summary.csv` for the 1:1 mating table.
 * 3.3 V MAX3485, default driver-disable pull-down, bus connector and
   jumper-selectable 120 ohm termination.
 * Matching J1 controls: GPIO13/19/14/27/25/26/32/33 for OUT1–OUT8.
+* D4/R22 indicate that the 3.3 V rail is present. D2/R7 is the existing
+  GPIO2-driven STATUS indicator.
 
 The TPS5430 values implement the datasheet topology (bootstrap capacitor,
 catch diode, inductor, input/output capacitors and 10 k/3.24 k feedback).
@@ -99,6 +101,18 @@ its **anode (pin 2) at `OUTx_SW`** and **cathode (pin 1) at the individually
 fused `OUTx_V+`**. Fit that suppression only for appropriate external
 inductive 12 V DC loads, such as relay coils. Do not route relay contact
 wiring or any 220/230 V AC/mains voltage onto either board.
+
+D19/R17 indicate protected 12 V power. D20–D27, each with a 3.3 kΩ series
+resistor, are connected across the corresponding fused output supply and
+MOSFET-switched return. They indicate that a channel is switched on, not that
+an external load is connected or functioning. These circuits add about 4 mA
+per active channel at nominal 12 V.
+
+The WiFi, MQTT, and ERROR indicators from the approved Rev.A.1 target are not
+implemented in these reference schematics. All non-strapping ESP32 output
+GPIOs are already assigned; do not attach LEDs to unused boot-strapping pins.
+Those three indicators need a deliberate GPIO-expander/remapping design and
+firmware support.
 
 Output current ratings are intentionally TBD. AO3400A has an Rds(on)
 specification at 2.5 V gate drive, but its SOT-23 thermal limit, connector,

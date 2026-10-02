@@ -7,6 +7,7 @@ PCB-A,U5,1,AP2112K-3.3,Package_TO_SOT_SMD:SOT-23-5,600mA nominal; budget peaks
 PCB-A,L1,1,15uH >=3A,Inductor_SMD:L_1210_3225Metric_Pad1.42x2.65mm_HandSolder,select saturation/thermal rating
 PCB-A,D3,1,SS34,Diode_SMD:D_SMA,TPS5430 catch diode
 PCB-A,D2,1,status LED,LED_SMD:LED_0805_2012Metric,color/current TBD
+PCB-A,D4,1,3.3V rail LED,LED_SMD:LED_0805_2012Metric,series resistor R22 1k
 PCB-A,R1 R2 R4 R10,4,10k,Resistor_SMD:R_0805_2012Metric,
 PCB-A,R3 R5 R6,3,4.7k,Resistor_SMD:R_0805_2012Metric,
 PCB-A,R7,1,1k,Resistor_SMD:R_0805_2012Metric,
@@ -34,3 +35,8 @@ PCB-B,F0 F9 F1-F8,10,fuse rating TBD,Fuse:Fuse_1812_4532Metric_Pad1.30x3.40mm_Ha
 PCB-B,C1,1,470uF 25V,,unassigned; select real bulk package/ripple rating
 PCB-B,J1,1,2x6 keyed header,Connector_PinHeader_2.54mm:PinHeader_2x06_P2.54mm_Vertical,mates PCB-A J1 1:1
 PCB-B,J10 J11-J18,9,5mm 2-pin terminal,"TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal",current rating provisional
+PCB-A,R22,1,1k,Resistor_SMD:R_0805_2012Metric,3.3V indicator series resistor
+PCB-B,D19,1,12V power LED,LED_SMD:LED_0805_2012Metric,series resistor R17 3.3k
+PCB-B,D20-D27,8,output indicator LED,LED_SMD:LED_0805_2012Metric,one per MOSFET channel
+PCB-B,R17,1,3.3k,Resistor_SMD:R_0805_2012Metric,12V indicator series resistor
+PCB-B,R18-R25,8,3.3k,Resistor_SMD:R_0805_2012Metric,one series resistor per output indicator

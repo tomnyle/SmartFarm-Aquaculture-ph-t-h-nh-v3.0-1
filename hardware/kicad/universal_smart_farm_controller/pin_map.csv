@@ -15,6 +15,7 @@ PCB-A,output 6,OUT6,GPIO26,OUT6_CTRL,PCB-A J1.8 / PCB-B J1.8
 PCB-A,output 7,OUT7,GPIO32,OUT7_CTRL,PCB-A J1.9 / PCB-B J1.9
 PCB-A,output 8,OUT8,GPIO33,OUT8_CTRL,PCB-A J1.10 / PCB-B J1.10
 PCB-A,status LED,STATUS,GPIO2,STATUS_LED,D2
+PCB-A,3.3V rail LED,3V3,,+3V3,D4 through R22 to GND
 PCB-A,boot button,BOOT,GPIO0,BOOT_NET,SW2
 PCB-A,reset button,RESET,EN,EN_NET,SW1
 PCB-A,UART transmit,UART_TX,GPIO1,UART_TX,J4.3
@@ -23,3 +24,12 @@ PCB-A,analog input,A0,,A0_IN,J5.2 / U2.A0 via divider
 PCB-A,analog input,A1,,A1_IN,J6.2 / U2.A1 via divider
 PCB-A,analog input,A2,,A2_IN,J7.2 / U2.A2 via divider
 PCB-A,analog input,A3,,A3_IN,J8.2 / U2.A3 via divider
+PCB-B,12V power LED,PWR,,+12V_PROTECTED,D19 through R17 to GND
+PCB-B,output indicator,OUT1,,OUT1_V+ to OUT1_SW,D20 through R18
+PCB-B,output indicator,OUT2,,OUT2_V+ to OUT2_SW,D21 through R19
+PCB-B,output indicator,OUT3,,OUT3_V+ to OUT3_SW,D22 through R20
+PCB-B,output indicator,OUT4,,OUT4_V+ to OUT4_SW,D23 through R21
+PCB-B,output indicator,OUT5,,OUT5_V+ to OUT5_SW,D24 through R22
+PCB-B,output indicator,OUT6,,OUT6_V+ to OUT6_SW,D25 through R23
+PCB-B,output indicator,OUT7,,OUT7_V+ to OUT7_SW,D26 through R24
+PCB-B,output indicator,OUT8,,OUT8_V+ to OUT8_SW,D27 through R25
