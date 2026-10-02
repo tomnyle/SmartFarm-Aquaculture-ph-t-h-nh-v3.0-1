@@ -225,7 +225,7 @@ automation:
 See `/docs` folder for:
 - `architecture.md` - System design
 - `sensors.md` - Sensor specifications & calibration
-- `wiring.md` - Hardware wiring diagram
+- `wiring.md` - Removable ESP32 carrier-board wiring reference
 - `mqtt.md` - MQTT protocol details
 
 ## License
