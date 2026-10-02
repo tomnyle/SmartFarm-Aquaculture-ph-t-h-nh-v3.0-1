@@ -1,6 +1,50 @@
-# Universal Smart Farm Controller — connected KiCad schematics
+# Universal Smart Farm Controller — KiCad hardware
 
-This directory contains two separate, native **KiCad 9** schematic projects:
+## Approved Rev.A.1 target
+
+The approved hardware target is one universal **mainboard** shared by Garden,
+Aquaculture, and Livestock controllers. Egg Incubator uses this mainboard with
+a dedicated expansion board. Requirements for the mainboard:
+
+| Area | Rev.A.1 requirement |
+| --- | --- |
+| PCB | 120 × 100 mm, 2 copper layers |
+| Controller | Removable ESP32 module using a 2 × 15 socket |
+| Indicators | Six system LEDs: PWR, 3V3, STATUS, WiFi, MQTT, ERROR; plus one indicator for each of OUT1–OUT8 |
+| Analog inputs | ADS1115 A0–A3, general-purpose inputs |
+| Interfaces | DS18B20, DHT22, I²C, RS485 |
+| Outputs | Eight MOSFET-switched outputs |
+| Power | 12 V DC input, converted to 5 V and then 3.3 V |
+| Controls | BOOT and RESET buttons |
+| Mains | 220 VAC is kept off the PCB; use external relays/contactors |
+
+### Status of the checked-in KiCad files
+
+The projects below are an earlier, split-board reference design, **not the
+approved Rev.A.1 implementation**. They must not be ordered or treated as
+compliant with the target above:
+
+* They use a solder-down ESP32-WROOM-32E rather than a removable 2 × 15 ESP32
+  module.
+* They split the controller and output stages across PCB-A and PCB-B instead
+  of one 120 × 100 mm mainboard.
+* They do not define the complete six-system/eight-output LED indicator set.
+* No PCB layout is present; board dimensions, two-layer stackup, placement,
+  routing, and fabrication outputs have not been created.
+* The existing schematic pin map and firmware are not reconciled for the
+  ADS1115 analog channels and all eight outputs.
+
+The approved feature list does not yet specify the exact ESP32 module and
+socket footprint, connector pinouts, sensor voltage ranges, per-output
+continuous/inrush current limits, protection/fuse ratings, or the mounting
+hole and edge geometry. Those electrical and mechanical details must be
+confirmed before completing a manufacturable layout. Keep all 220 VAC wiring
+external to the PCB.
+
+## Earlier reference schematics
+
+This directory currently contains two separate, native **KiCad 9** schematic
+projects from the earlier split-board concept:
 
 * `pcb_a_controller/pcb_a_controller.kicad_pro` and `.kicad_sch`
 * `pcb_b_power_outputs/pcb_b_power_outputs.kicad_pro` and `.kicad_sch`
