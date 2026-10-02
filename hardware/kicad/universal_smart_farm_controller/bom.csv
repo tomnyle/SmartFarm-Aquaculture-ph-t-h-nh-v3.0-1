@@ -6,10 +6,10 @@ PCB-A,U4,1,TPS5430DDA,Package_SO:Texas_HSOP-8-1EP_3.9x4.9mm_P1.27mm,review therm
 PCB-A,U5,1,AP2112K-3.3,Package_TO_SOT_SMD:SOT-23-5,600mA nominal; budget peaks
 PCB-A,L1,1,15uH >=3A,Inductor_SMD:L_1210_3225Metric_Pad1.42x2.65mm_HandSolder,select saturation/thermal rating
 PCB-A,D3,1,SS34,Diode_SMD:D_SMA,TPS5430 catch diode
-PCB-A,D2,1,status LED,LED_SMD:LED_0805_2012Metric,color/current TBD
+PCB-A,D2,1,status LED,LED_SMD:LED_0805_2012Metric,GPIO2 STATUS_LED via R7; ~1.3 mA at 3.3V (Vf ~2V)
 PCB-A,R1 R2 R4 R10,4,10k,Resistor_SMD:R_0805_2012Metric,
 PCB-A,R3 R5 R6,3,4.7k,Resistor_SMD:R_0805_2012Metric,
-PCB-A,R7,1,1k,Resistor_SMD:R_0805_2012Metric,
+PCB-A,R7,1,1k,Resistor_SMD:R_0805_2012Metric,status LED current limit
 PCB-A,R11,1,3.24k 1%,Resistor_SMD:R_0805_2012Metric,buck feedback
 PCB-A,R12-R15,4,10k 1%,Resistor_SMD:R_0805_2012Metric,analog divider top
 PCB-A,R16-R19,4,15k 1%,Resistor_SMD:R_0805_2012Metric,analog divider bottom
@@ -30,6 +30,8 @@ PCB-B,D11-D18,8,SS34,Diode_SMD:D_SMA,flyback; provisional
 PCB-B,Q1-Q8,8,AO3400A,Package_TO_SOT_SMD:SOT-23,thermal/current provisional
 PCB-B,R1-R8,8,100R,Resistor_SMD:R_0805_2012Metric,gate series
 PCB-B,R9-R16,8,100k,Resistor_SMD:R_0805_2012Metric,default-off pulldown
+PCB-B,D2,1,power LED,LED_SMD:LED_0805_2012Metric,+12V_PROTECTED indicator via R17
+PCB-B,R17,1,4.7k,Resistor_SMD:R_0805_2012Metric,power LED current limit; ~2 mA at 12V
 PCB-B,F0 F9 F1-F8,10,fuse rating TBD,Fuse:Fuse_1812_4532Metric_Pad1.30x3.40mm_HandSolder,size from measured loads/wiring
 PCB-B,C1,1,470uF 25V,,unassigned; select real bulk package/ripple rating
 PCB-B,J1,1,2x6 keyed header,Connector_PinHeader_2.54mm:PinHeader_2x06_P2.54mm_Vertical,mates PCB-A J1 1:1
