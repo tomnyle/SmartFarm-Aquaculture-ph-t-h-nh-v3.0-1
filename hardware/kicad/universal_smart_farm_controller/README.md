@@ -40,6 +40,11 @@ reference return. See `connector_summary.csv` for the 1:1 mating table.
 * 3.3 V MAX3485, default driver-disable pull-down, bus connector and
   jumper-selectable 120 ohm termination.
 * Matching J1 controls: GPIO13/19/14/27/25/26/32/33 for OUT1–OUT8.
+* Status LED: GPIO2 (`LED_PIN` in `include/pins.h`) drives net
+  `STATUS_LED` → R7 1 k → `STATUS_LED_A` → D2 anode (pin 2); D2 cathode
+  (pin 1) is on GND. The LED is active-high (about 1.3 mA at 3.3 V). GPIO2
+  is a strapping pin that must not be pulled high for serial download; a
+  low-side LED does not pull it high, so it relies on the internal pull-down.
 
 The TPS5430 values implement the datasheet topology (bootstrap capacitor,
 catch diode, inductor, input/output capacitors and 10 k/3.24 k feedback).
@@ -62,6 +67,14 @@ diode, fuse, wiring and copper limits may dominate. Before manufacture,
 measure each load's continuous, starting/stall and fault currents and size
 all of those items plus the main/load-rail fuses and return paths.
 
+PCB-B also carries a power-present LED: `+12V_PROTECTED` → R17 4.7 k →
+`PWR_LED_A` → D2 anode (pin 2); D2 cathode (pin 1) is on GND, giving about
+2 mA at 12 V (about 36 mW in R17 at the 15 V TVS stand-off). PCB-B has no
+ESP32 and every J1 pin is already allocated (power, three grounds and
+OUT1–OUT8), so GPIO2 is not routed to PCB-B; the firmware status indication
+stays on PCB-A D2 and PCB-B D2 only shows that the protected 12 V rail is
+live.
+
 ## Firmware compatibility conflict
 
 The required schematic map is not compatible with the current Rev.A firmware
@@ -82,7 +95,10 @@ is **not** claimed compatible by this hardware package.
 The files were generated and round-trip parsed with `kicad-sch-api 0.5.6`.
 Automated checks verify unique references, valid library identifiers, every
 symbol pin accounted for by a net label or no-connect marker, the critical
-GPIO-to-net map, flyback polarity and exact J1 mating order.
+GPIO-to-net map, flyback polarity and exact J1 mating order. The status
+LED (PCB-A D2/R7) and power LED (PCB-B D2/R17) pin-to-net connectivity and
+LED polarity were re-checked by parsing the schematics and matching every
+symbol pin endpoint to its net label.
 
 **Real KiCad ERC and KiCad SVG/PDF/netlist export were NOT run.** The sandbox
 provided KiCad CLI 7.0.11, which correctly rejects the newer KiCad 9 file
@@ -90,7 +106,11 @@ format, and a KiCad 9 CLI could not be obtained. Consequently these sources
 are reviewable reference schematics, not electrically validated or
 fabrication-ready designs. Open and re-save both projects with KiCad 9,
 resolve libraries, run **Inspect → Electrical Rules Checker**, and export
-SVG/PDF/netlists before relying on them.
+SVG/PDF/netlists before relying on them. Because there are no
+`.kicad_pcb` files yet, the LEDs exist only as schematic symbols with
+assigned 0805 footprints; place them (visible board edge, away from the
+ESP32 antenna keepout on PCB-A) when the layouts are created via
+**Tools → Update PCB from Schematic**.
 
 A qualified hardware engineer must review datasheet pinouts, footprints,
 power and ground budget, protection, EMC, antenna keepout, analog
