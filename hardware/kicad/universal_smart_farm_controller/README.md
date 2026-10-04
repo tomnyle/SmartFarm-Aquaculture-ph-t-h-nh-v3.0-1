@@ -1,6 +1,30 @@
 # Universal Smart Farm Controller — KiCad hardware
 
-## Approved Rev.A.1 target
+## Current selected prototype direction
+
+The selected prototype architecture is a shared **PCB-A controller/sensor
+board** and a farm-specific **PCB-B low-voltage output board**. This replaces
+the earlier single-mainboard Rev.A.1 target below for the current prototype.
+
+* PCB-A hosts the ESP32, sensor interfaces, controller power, and system
+  indicators.
+* PCB-B takes a 12 V DC input and provides eight low-side MOSFET channels for
+  external 12 V relay coils. The provisional design assumption is a maximum
+  coil current of 100 mA per channel; verify the actual relay before connecting
+  it.
+* The 12 V relay contacts and all 220/230 V AC wiring remain external to both
+  PCBs. The eight PCB-B LEDs indicate driven channels, not load operation.
+* System indicators are PWR, 3V3, STATUS, WiFi, MQTT, and ERROR across the two
+  boards.
+
+This is a prototype design direction, **not manufacturing approval**. The
+checked-in projects still contain only schematics, not PCB layouts, Gerbers, or
+drill files. Fuse values, power-component selection, connector ratings,
+mechanical details, firmware mapping, and electrical/thermal validation remain
+open; do not order boards until those items are resolved and KiCad ERC/DRC have
+passed.
+
+## Earlier Rev.A.1 single-mainboard target
 
 The approved hardware target is one universal **mainboard** shared by Garden,
 Aquaculture, and Livestock controllers. Egg Incubator uses this mainboard with
