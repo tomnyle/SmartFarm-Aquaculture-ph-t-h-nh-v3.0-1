@@ -86,6 +86,10 @@ reference return. See `connector_summary.csv` for the 1:1 mating table.
 * Matching J1 controls: GPIO13/19/14/27/25/26/32/33 for OUT1–OUT8.
 * D4/R22 indicate that the 3.3 V rail is present. D2/R7 is the existing
   GPIO2-driven STATUS indicator.
+* U6 is an MCP23008 at I²C address 0x20 (A0–A2 grounded), sharing SDA/SCL with
+  the ADS1115. D5/R23, D6/R24, and D7/R25 indicate WiFi connected, MQTT
+  connected, and sensor-fault/critical-condition states. They are active-low
+  sink outputs, initialized OFF; C16 is local 100 nF decoupling.
 
 The TPS5430 values implement the datasheet topology (bootstrap capacitor,
 catch diode, inductor, input/output capacitors and 10 k/3.24 k feedback).
@@ -108,11 +112,11 @@ MOSFET-switched return. They indicate that a channel is switched on, not that
 an external load is connected or functioning. These circuits add about 4 mA
 per active channel at nominal 12 V.
 
-The WiFi, MQTT, and ERROR indicators from the approved Rev.A.1 target are not
-implemented in these reference schematics. All non-strapping ESP32 output
-GPIOs are already assigned; do not attach LEDs to unused boot-strapping pins.
-Those three indicators need a deliberate GPIO-expander/remapping design and
-firmware support.
+The six requested system indicators are now represented across both reference
+boards: 12 V PWR (PCB-B), 3V3, STATUS, WiFi, MQTT, and ERROR (PCB-A). WiFi and
+MQTT LEDs show live network connections. ERROR lights for required sensor
+faults or critical conditions; ordinary noncritical alerts do not light it.
+Keep the I²C address and expander GPIO mapping consistent with firmware.
 
 Output current ratings are intentionally TBD. AO3400A has an Rds(on)
 specification at 2.5 V gate drive, but its SOT-23 thermal limit, connector,

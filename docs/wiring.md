@@ -40,14 +40,16 @@ pinout match** for the current firmware:
 - PCB-A and PCB-B are schematic-only references. They contain no PCB layout,
   manufacturing outputs, or KiCad 9 ERC/DRC results.
 
-The schematics include a GPIO2 STATUS LED and a 3.3 V rail LED on PCB-A, a
-protected-12 V power LED on PCB-B, and one current-limited LED across each
+The schematics include a blinking GPIO2 STATUS LED, 3.3 V rail LED, and
+MCP23008-controlled WiFi/MQTT/ERROR LEDs on PCB-A. U6 uses I²C address 0x20
+(A0–A2 grounded) on the ADS1115's shared bus. Its first three outputs sink the
+LED current; each LED has its own 1 kΩ series resistor to 3.3 V. WiFi and MQTT
+light when connected; ERROR lights for required sensor faults or critical
+conditions. A missing expander leaves these three LEDs off and logs a warning.
+
+PCB-B has a protected-12 V power LED and one current-limited LED across each
 fused MOSFET output. An output LED indicates the MOSFET channel is switched on;
-it does not confirm that the attached load is working. The WiFi, MQTT, and
-ERROR indicators from the approved Rev.A.1 target are not included: available
-ESP32 output pins are assigned and spare boot-strapping pins must not be loaded.
-Adding those indicators requires a deliberate GPIO-expander or pin-remapping
-design and firmware support.
+it does not confirm that the attached load is working.
 
 Do not wire the firmware to these schematics or fabricate either board until
 the firmware/hardware pin map is reconciled and the design is reviewed and

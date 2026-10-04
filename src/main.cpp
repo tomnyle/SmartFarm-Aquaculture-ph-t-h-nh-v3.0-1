@@ -69,6 +69,8 @@ uint32_t last_pump_change = 0;
 uint32_t last_aerator_change = 0;
 uint32_t last_circulation_change = 0;
 uint32_t last_feeder_change = 0;
+uint32_t last_status_led_toggle = 0;
+bool status_led_state = false;
 
 char current_mode[16] = "";
 char current_species[32] = "Rô Phi";
@@ -81,6 +83,8 @@ bool external_outputs_locked = false;
 bool outputs_locked = true;
 bool can_no_load_test = false;
 bool can_production = false;
+bool system_led_expander_available = false;
+uint8_t last_system_led_output = 0xFF;
 uint16_t requested_blockers = 0;
 uint16_t production_blockers = 0;
 uint16_t display_blockers = 0;
@@ -131,6 +135,9 @@ void publish_discovery_select(const char* object_id,
                               const char* entity_category = nullptr);
 bool parse_boolean_message(const String& message, bool& value);
 void copy_text(char* destination, size_t destination_size, const char* source);
+bool write_system_led_expander(uint8_t reg, uint8_t value);
+void initialize_system_led_expander();
+void update_system_indicators();
 
 void setup() {
   Serial.begin(115200);
@@ -146,15 +153,18 @@ void setup() {
   pinMode(AERATOR_PIN, OUTPUT);
   pinMode(CIRCULATION_PIN, OUTPUT);
   pinMode(FEEDER_PIN, OUTPUT);
+  pinMode(LED_PIN, OUTPUT);
   digitalWrite(PUMP_PIN, LOW);
   digitalWrite(AERATOR_PIN, LOW);
   digitalWrite(CIRCULATION_PIN, LOW);
   digitalWrite(FEEDER_PIN, LOW);
+  digitalWrite(LED_PIN, LOW);
 
   Serial.println("[INIT] Initializing sensors...");
   waterTemp.begin();
   dht.begin();
   Wire.begin(I2C_SDA, I2C_SCL);
+  initialize_system_led_expander();
 
   if (lightMeter.begin(BH1750::CONTINUOUS_HIGH_RES_MODE)) {
     Serial.println("[OK] BH1750 Light Sensor initialized");
@@ -191,6 +201,12 @@ void loop() {
 
   uint32_t now = millis();
 
+  if (now - last_status_led_toggle >= 500) {
+    status_led_state = !status_led_state;
+    digitalWrite(LED_PIN, status_led_state ? HIGH : LOW);
+    last_status_led_toggle = now;
+  }
+
   if (now - last_sensor_read >= SENSOR_READ_INTERVAL) {
     read_sensors();
     evaluate_conditions();
@@ -213,7 +229,50 @@ void loop() {
     last_mqtt_publish = now;
   }
 
+  update_system_indicators();
   delay(10);
+}
+
+bool write_system_led_expander(uint8_t reg, uint8_t value) {
+  Wire.beginTransmission(SYSTEM_LED_EXPANDER_ADDRESS);
+  Wire.write(reg);
+  Wire.write(value);
+  return Wire.endTransmission() == 0;
+}
+
+void initialize_system_led_expander() {
+  if (!write_system_led_expander(SYSTEM_LED_EXPANDER_OLAT_REGISTER, 0x07) ||
+      !write_system_led_expander(SYSTEM_LED_EXPANDER_IODIR_REGISTER, 0xF8)) {
+    Serial.println("[WARN] System LED I2C expander not found at 0x20");
+    system_led_expander_available = false;
+    return;
+  }
+
+  system_led_expander_available = true;
+  last_system_led_output = 0x07;
+  Serial.println("[OK] System LED I2C expander initialized at 0x20");
+}
+
+void update_system_indicators() {
+  if (!system_led_expander_available) {
+    return;
+  }
+
+  uint8_t output = 0x07;
+  if (WiFi.status() == WL_CONNECTED) {
+    output &= static_cast<uint8_t>(~(1U << SYSTEM_LED_WIFI_BIT));
+  }
+  if (mqtt_client.connected()) {
+    output &= static_cast<uint8_t>(~(1U << SYSTEM_LED_MQTT_BIT));
+  }
+  if (conditions.sensor_fault_active || conditions.critical_condition_active) {
+    output &= static_cast<uint8_t>(~(1U << SYSTEM_LED_ERROR_BIT));
+  }
+
+  if (output != last_system_led_output &&
+      write_system_led_expander(SYSTEM_LED_EXPANDER_GPIO_REGISTER, output)) {
+    last_system_led_output = output;
+  }
 }
 
 void setup_wifi() {

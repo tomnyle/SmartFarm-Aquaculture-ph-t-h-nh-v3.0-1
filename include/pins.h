@@ -18,6 +18,13 @@
 // I2C Pins (BH1750 Light Sensor)
 #define I2C_SDA 21          // I2C Data
 #define I2C_SCL 22          // I2C Clock
+#define SYSTEM_LED_EXPANDER_ADDRESS 0x20
+#define SYSTEM_LED_EXPANDER_IODIR_REGISTER 0x00
+#define SYSTEM_LED_EXPANDER_GPIO_REGISTER 0x09
+#define SYSTEM_LED_EXPANDER_OLAT_REGISTER 0x0A
+#define SYSTEM_LED_WIFI_BIT 0
+#define SYSTEM_LED_MQTT_BIT 1
+#define SYSTEM_LED_ERROR_BIT 2
 
 // ==================== OUTPUT PINS ====================
 // Relay Pins
