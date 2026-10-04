@@ -39,7 +39,7 @@ PCB-B,C1,1,470uF 25V,,unassigned; select real bulk package/ripple rating
 PCB-B,J1,1,2x6 keyed header,Connector_PinHeader_2.54mm:PinHeader_2x06_P2.54mm_Vertical,mates PCB-A J1 1:1
 PCB-B,J10 J11-J18,9,5mm 2-pin terminal,"TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal",current rating provisional
 PCB-A,R22,1,1k,Resistor_SMD:R_0805_2012Metric,3.3V indicator series resistor
-PCB-A,U6,1,MCP23008-E/ SO,Package_SO:SOIC-18W_7.5x11.6mm_P1.27mm,I2C 0x20; A0-A2 tied low
+PCB-A,U6,1,MCP23008-E/SO,Package_SO:SOIC-18W_7.5x11.6mm_P1.27mm,I2C 0x20; A0-A2 tied low
 PCB-A,C16,1,100nF,Capacitor_SMD:C_0805_2012Metric,MCP23008 local decoupling
 PCB-A,R23-R25,3,1k,Resistor_SMD:R_0805_2012Metric,system LED current limiting
 PCB-B,D19,1,12V power LED,LED_SMD:LED_0805_2012Metric,series resistor R17 3.3k
