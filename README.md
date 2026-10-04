@@ -225,8 +225,17 @@ automation:
 See `/docs` folder for:
 - `architecture.md` - System design
 - `sensors.md` - Sensor specifications & calibration
-- `wiring.md` - Hardware wiring diagram
-- `mqtt.md` - MQTT protocol details
+- `wiring.md` - Firmware pinout, KiCad compatibility, and electrical safety notes
+- `mqtt.md` - MQTT topics, commands, and state values
+
+## KiCad Hardware Reference
+
+Two KiCad 9 schematic projects are available in
+`hardware/kicad/universal_smart_farm_controller/`. They are schematic-only
+references, not fabrication-ready PCBs, and their pin map differs from the
+current firmware. Read that directory's README and `docs/wiring.md` before
+connecting hardware. KiCad ERC/DRC and manufacturing outputs have not been
+validated.
 
 ## License
 
