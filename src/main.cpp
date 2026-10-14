@@ -6,6 +6,7 @@
 #include <DHT.h>
 #include <Wire.h>
 #include <BH1750.h>
+#include <Adafruit_ADS1X15.h>
 #include "app_config.h"
 #include "pins.h"
 #include "species_rules.h"
@@ -18,6 +19,8 @@ OneWire oneWire(ONE_WIRE_BUS);
 DallasTemperature waterTemp(&oneWire);
 DHT dht(DHTPIN, DHTTYPE);
 BH1750 lightMeter;
+Adafruit_ADS1115 analogAdc;
+bool analog_adc_ready = false;
 
 struct SensorData {
   float water_temp;
@@ -142,19 +145,27 @@ void setup() {
   copy_text(current_mode, sizeof(current_mode), DEFAULT_MODE);
   copy_text(current_species, sizeof(current_species), "Rô Phi");
 
+  digitalWrite(PUMP_PIN, RELAY_INACTIVE_LEVEL);
   pinMode(PUMP_PIN, OUTPUT);
+  digitalWrite(AERATOR_PIN, RELAY_INACTIVE_LEVEL);
   pinMode(AERATOR_PIN, OUTPUT);
+  digitalWrite(CIRCULATION_PIN, RELAY_INACTIVE_LEVEL);
   pinMode(CIRCULATION_PIN, OUTPUT);
+  digitalWrite(FEEDER_PIN, RELAY_INACTIVE_LEVEL);
   pinMode(FEEDER_PIN, OUTPUT);
-  digitalWrite(PUMP_PIN, LOW);
-  digitalWrite(AERATOR_PIN, LOW);
-  digitalWrite(CIRCULATION_PIN, LOW);
-  digitalWrite(FEEDER_PIN, LOW);
 
   Serial.println("[INIT] Initializing sensors...");
   waterTemp.begin();
   dht.begin();
   Wire.begin(I2C_SDA, I2C_SCL);
+
+  analog_adc_ready = analogAdc.begin(ADS1115_ADDRESS, &Wire);
+  if (analog_adc_ready) {
+    analogAdc.setGain(GAIN_TWOTHIRDS);
+    Serial.println("[OK] ADS1115 analog inputs initialized");
+  } else {
+    Serial.println("[ERROR] ADS1115 not found; analog sensor readings are invalid");
+  }
 
   if (lightMeter.begin(BH1750::CONTINUOUS_HIGH_RES_MODE)) {
     Serial.println("[OK] BH1750 Light Sensor initialized");
@@ -467,10 +478,21 @@ void read_sensors() {
     sensors.light = 0;
   }
 
-  sensors.ph = (analogRead(PH_PIN) / 4095.0f) * 14.0f;
-  sensors.turbidity = analogRead(TURBIDITY_PIN);
-  sensors.do_value = (analogRead(DO_PIN) / 4095.0f) * 20.0f;
-  sensors.co2 = (analogRead(CO2_PIN) / 4095.0f) * 10.0f;
+  if (analog_adc_ready) {
+    float ph_fraction = constrain(analogAdc.computeVolts(analogAdc.readADC_SingleEnded(PH_ADC_CHANNEL)) / 3.3f, 0.0f, 1.0f);
+    float do_fraction = constrain(analogAdc.computeVolts(analogAdc.readADC_SingleEnded(DO_ADC_CHANNEL)) / 3.3f, 0.0f, 1.0f);
+    float turbidity_fraction = constrain(analogAdc.computeVolts(analogAdc.readADC_SingleEnded(TURBIDITY_ADC_CHANNEL)) / 3.3f, 0.0f, 1.0f);
+    float co2_fraction = constrain(analogAdc.computeVolts(analogAdc.readADC_SingleEnded(CO2_ADC_CHANNEL)) / 3.3f, 0.0f, 1.0f);
+    sensors.ph = ph_fraction * 14.0f;
+    sensors.turbidity = turbidity_fraction * 4095.0f;
+    sensors.do_value = do_fraction * 20.0f;
+    sensors.co2 = co2_fraction * 10.0f;
+  } else {
+    sensors.ph = 0.0f;
+    sensors.turbidity = 4096.0f;
+    sensors.do_value = 0.0f;
+    sensors.co2 = 0.0f;
+  }
   sensors.last_read = millis();
 
   Serial.println("===== SENSOR READINGS =====");
@@ -681,18 +703,19 @@ void apply_species_rules() {
 }
 
 void set_output(const char* name, bool state) {
+  uint8_t output_level = state ? RELAY_ACTIVE_LEVEL : RELAY_INACTIVE_LEVEL;
   if (strcmp(name, "pump") == 0) {
     outputs.pump = state;
-    digitalWrite(PUMP_PIN, state ? HIGH : LOW);
+    digitalWrite(PUMP_PIN, output_level);
   } else if (strcmp(name, "aerator") == 0) {
     outputs.aerator = state;
-    digitalWrite(AERATOR_PIN, state ? HIGH : LOW);
+    digitalWrite(AERATOR_PIN, output_level);
   } else if (strcmp(name, "circulation") == 0) {
     outputs.circulation = state;
-    digitalWrite(CIRCULATION_PIN, state ? HIGH : LOW);
+    digitalWrite(CIRCULATION_PIN, output_level);
   } else if (strcmp(name, "feeder") == 0) {
     outputs.feeder = state;
-    digitalWrite(FEEDER_PIN, state ? HIGH : LOW);
+    digitalWrite(FEEDER_PIN, output_level);
   }
 
   Serial.print("[OUTPUT] ");

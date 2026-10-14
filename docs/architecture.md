@@ -13,25 +13,26 @@ The Aquaculture Controller is designed to manage family pond conditions autonomo
 
 ## Hardware Architecture
 
+The shared PCB-A uses a socketed 30-pin ESP32 DevKit and sensor interfaces. A separate,
+farm-specific PCB-B carries or connects the output drivers/relays and per-output LEDs.
+Use an exact DevKit model and verify its header spacing and pinout before laying out PCB-A.
+
 ```
-    ESP32 Microcontroller
+    PCB-A: 30-pin ESP32 DevKit
     ├── 1-Wire Bus (GPIO4)
     │   └── DS18B20 Temperature Sensor
     ├── I2C Bus (GPIO21/22)
-    │   ├── ADS1115 #1 (pH & DO)
-    │   └── ADS1115 #2 (optional, future expansion)
-    ├── Analog Input (GPIO34)
-    │   └── Water Level Sensor
-    └── GPIO Digital Outputs (GPIO32-27, 14, 12-13)
-        ├── Relay 1: Aerator
-        ├── Relay 2: Water Pump
-        ├── Relay 3: Circulation
-        ├── Relay 4: Feeder
-        ├── Relay 5: Valve
-        ├── Relay 6: Light
-        ├── Relay 7: Spare 1
-        └── Relay 8: Spare 2
+    │   ├── ADS1115 at 0x48 (pH, DO, turbidity, CO₂)
+    │   └── BH1750 light sensor
+    └── Inter-board GPIO connector
+        └── PCB-B: 8 relay/driver channels with per-channel status LEDs
 ```
+
+The current firmware controls four outputs (pump, aerator, circulation, feeder). A
+physical 8-channel relay board can be used, but channels 5–8 are not assigned to
+firmware functions yet. GPIO12 is intentionally not used for a relay because it is a
+boot-strapping pin. See [hardware.md](hardware.md) for the interface, relay module
+compatibility, and electrical safety requirements.
 
 ## Software Architecture
 
