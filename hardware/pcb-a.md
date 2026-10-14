@@ -34,6 +34,7 @@ eight logic outputs to PCB-B through J_AB. It does not carry relay-coil or mains
 | J4 | 1×4, 2.54 mm | 1 | I²C expansion: 3V3, GND, SDA, SCL |
 | J5–J8 | 1×3, 2.54 mm | 4 | Analog sensors: VCC, GND, SIGNAL |
 | JP1–JP4 | 3-pad solder jumper | 4 | Select direct 0–3.3 V or 2:1 divider for 0–5 V signals |
+| JP5–JP8 | 3-pad solder jumper | 4 | Select sensor VCC as 3V3 or 5V/VIN |
 | R4–R11 | 10 kΩ / 20 kΩ divider pairs | 4 pairs | 10 kΩ upper, 20 kΩ lower; selected output is 2/3 of sensor input |
 | J_AB | 2×5 shrouded keyed header | 1 | Board-to-board connector; pinout in `interconnect.csv` |
 | TP1–TP4 | Test pads | 4 | 3V3, 5V/VIN, GND, SDA/SCL as space permits |
@@ -47,11 +48,15 @@ eight logic outputs to PCB-B through J_AB. It does not carry relay-coil or mains
 | Turbidity | A2 | Same shared I²C bus |
 | CO₂ module | A3 | Same shared I²C bus |
 
-Wire the analog outputs through JP1–JP4. Set each jumper to **DIRECT** only for a
+J5–J8 pin order is VCC, GND, SIGNAL. Set each power jumper JP5–JP8 to 3V3 or 5V/VIN
+for the sensor module being used; do not power a 3.3 V-only sensor from 5 V. Wire the
+analog outputs through JP1–JP4. Set each jumper to **DIRECT** only for a
 0–3.3 V maximum output. Set it to the **2:1 divider** for a 0–5 V maximum output;
 the 10 kΩ/20 kΩ pair scales 5 V to about 3.33 V. Never short both jumper positions.
-The 2:1 divider changes the transfer scale and the firmware's current linear estimates
-are placeholders; calibrate each sensor in firmware/application settings before use.
+The 2:1 divider maps 5 V to about 3.33 V and makes the firmware's normalized scale
+consistent for 0–5 V full-scale signals. Firmware's sensor conversions remain
+placeholders; calibrate each sensor before use. Each divider is 10 kΩ from sensor
+SIGNAL to ADC input and 20 kΩ from ADC input to GND.
 Do not exceed the ADS1115 supply voltage on any input.
 
 The DS18B20 pull-up connects DATA to 3.3 V. BH1750 can share the 3.3 V I²C bus. Keep

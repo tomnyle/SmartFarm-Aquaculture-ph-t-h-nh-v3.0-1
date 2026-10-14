@@ -35,7 +35,8 @@ ESP32-based aquaculture controller for family pond management with MQTT & Home A
 - 5V Power Supply
 
 See [`docs/hardware.md`](docs/hardware.md) for the PCB-A/PCB-B layout plan, pin mapping,
-and requirements for using a purchased 8-channel relay module.
+and requirements for using a purchased 8-channel relay module. Matched board-level
+specifications and the PCB-A/PCB-B connector pinout are in [`hardware/`](hardware/).
 
 ## Getting Started
 
