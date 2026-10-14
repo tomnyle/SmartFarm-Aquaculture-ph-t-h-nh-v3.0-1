@@ -25,34 +25,35 @@
         (48 "B.Fab" user)
         (49 "F.Fab" user)
     )
-    (net 1 "DO_VCC")
-    (net 2 "DO_RAW")
-    (net 3 "CO2_RAW")
-    (net 4 "DO_ADC")
-    (net 5 "RELAY5")
-    (net 6 "PH_ADC")
-    (net 7 "GPIO2")
+    (net 1 "TURB_RAW")
+    (net 2 "RELAY4")
+    (net 3 "CO2_ADC")
+    (net 4 "PH_ADC")
+    (net 5 "CO2_VCC")
+    (net 6 "DO_ADC")
+    (net 7 "DHT22_DATA")
     (net 8 "TURB_VCC")
-    (net 9 "CO2_ADC")
-    (net 10 "3V3")
-    (net 11 "RELAY1")
-    (net 12 "5V_VIN")
-    (net 13 "PH_RAW")
-    (net 14 "RELAY4")
+    (net 9 "CO2_RAW")
+    (net 10 "RELAY2")
+    (net 11 "GPIO2")
+    (net 12 "3V3")
+    (net 13 "DO_RAW")
+    (net 14 "RELAY8")
     (net 15 "I2C_SCL")
-    (net 16 "RELAY2")
-    (net 17 "PH_VCC")
-    (net 18 "RELAY6")
-    (net 19 "GND")
-    (net 20 "CO2_VCC")
-    (net 21 "DS18B20_DATA")
-    (net 22 "TURB_RAW")
-    (net 23 "STAT_LED_A")
-    (net 24 "RELAY8")
-    (net 25 "RELAY7")
-    (net 26 "RELAY3")
-    (net 27 "I2C_SDA")
-    (net 28 "TURB_ADC")
+    (net 16 "TURB_ADC")
+    (net 17 "RELAY7")
+    (net 18 "RELAY5")
+    (net 19 "RELAY3")
+    (net 20 "DS18B20_DATA")
+    (net 21 "PH_VCC")
+    (net 22 "RELAY6")
+    (net 23 "5V_VIN")
+    (net 24 "PH_RAW")
+    (net 25 "GND")
+    (net 26 "STAT_LED_A")
+    (net 27 "DO_VCC")
+    (net 28 "I2C_SDA")
+    (net 29 "RELAY1")
     (gr_line
         (start 5 5)
         (end 115 5)
@@ -61,7 +62,7 @@
             (type default)
         )
         (layer "Edge.Cuts")
-        (uuid "2bad7ba8-cab7-405a-91eb-66d5aef29475")
+        (uuid "ce473aa4-9a8a-46ac-b098-8871c2118be3")
     )
     (gr_line
         (start 115 5)
@@ -71,7 +72,7 @@
             (type default)
         )
         (layer "Edge.Cuts")
-        (uuid "faa89764-9010-43ae-93b7-5c11b8ea7d43")
+        (uuid "d01efb36-8dc2-4d44-9358-fa26cb9af3db")
     )
     (gr_line
         (start 115 125)
@@ -81,7 +82,7 @@
             (type default)
         )
         (layer "Edge.Cuts")
-        (uuid "afab3e70-ec9a-41cb-9378-9f155cf99307")
+        (uuid "179e680e-4de6-48c2-9d03-459481149167")
     )
     (gr_line
         (start 5 125)
@@ -91,12 +92,12 @@
             (type default)
         )
         (layer "Edge.Cuts")
-        (uuid "b6232484-a884-4d25-bbcc-2129d4be4f13")
+        (uuid "d3ea8cc9-7375-461f-b97a-27b37977445e")
     )
     (gr_text "SMARTFARM PCB-A  |  ROUTING REQUIRED"
         (at 8 8 0)
         (layer "F.SilkS")
-        (uuid "b0cdf398-7089-488c-ab07-4e0a2637c041")
+        (uuid "bcd21dab-805b-4058-aed9-64f287af7c6c")
         (effects
             (justify)
             (font
@@ -125,34 +126,35 @@
             (layer "F.SilkS")
         )
         (pad "1" thru_hole circle
-            (net 10 "3V3")
+            (net 12 "3V3")
             (at 0 -17.78 0)
             (size 1.7 1.7)
             (drill 1.0)
             (layers "*.Cu" "*.Mask")
         )
         (pad "2" thru_hole circle
-            (net 19 "GND")
+            (net 25 "GND")
             (at 0 -15.24 0)
             (size 1.7 1.7)
             (drill 1.0)
             (layers "*.Cu" "*.Mask")
         )
         (pad "3" thru_hole circle
+            (net 7 "DHT22_DATA")
             (at 0 -12.7 0)
             (size 1.7 1.7)
             (drill 1.0)
             (layers "*.Cu" "*.Mask")
         )
         (pad "4" thru_hole circle
-            (net 7 "GPIO2")
+            (net 11 "GPIO2")
             (at 0 -10.16 0)
             (size 1.7 1.7)
             (drill 1.0)
             (layers "*.Cu" "*.Mask")
         )
         (pad "5" thru_hole circle
-            (net 21 "DS18B20_DATA")
+            (net 20 "DS18B20_DATA")
             (at 0 -7.62 0)
             (size 1.7 1.7)
             (drill 1.0)
@@ -189,7 +191,7 @@
             (layers "*.Cu" "*.Mask")
         )
         (pad "11" thru_hole circle
-            (net 27 "I2C_SDA")
+            (net 28 "I2C_SDA")
             (at 0 7.62 0)
             (size 1.7 1.7)
             (drill 1.0)
@@ -215,7 +217,7 @@
             (layers "*.Cu" "*.Mask")
         )
         (pad "15" thru_hole circle
-            (net 24 "RELAY8")
+            (net 14 "RELAY8")
             (at 0 17.78 0)
             (size 1.7 1.7)
             (drill 1.0)
@@ -226,7 +228,7 @@
             (unlocked yes)
             (layer "F.SilkS")
             (hide yes)
-            (uuid "6bc950be-9729-451d-a868-a2f3606cdc1b")
+            (uuid "5c877392-8d20-4acd-8103-836d533818df")
             (effects
                 (font
                     (size 1 1)
@@ -239,7 +241,7 @@
             (unlocked yes)
             (layer "F.Fab")
             (hide no)
-            (uuid "3856203a-a1a4-4318-b49c-79531cba2923")
+            (uuid "ef183e92-6ff3-4a3e-a82e-539a053a3514")
             (effects
                 (font
                     (size 1 1)
@@ -268,21 +270,21 @@
             (layer "F.SilkS")
         )
         (pad "1" thru_hole circle
-            (net 12 "5V_VIN")
+            (net 23 "5V_VIN")
             (at 0 -17.78 0)
             (size 1.7 1.7)
             (drill 1.0)
             (layers "*.Cu" "*.Mask")
         )
         (pad "2" thru_hole circle
-            (net 19 "GND")
+            (net 25 "GND")
             (at 0 -15.24 0)
             (size 1.7 1.7)
             (drill 1.0)
             (layers "*.Cu" "*.Mask")
         )
         (pad "3" thru_hole circle
-            (net 11 "RELAY1")
+            (net 29 "RELAY1")
             (at 0 -12.7 0)
             (size 1.7 1.7)
             (drill 1.0)
@@ -295,14 +297,14 @@
             (layers "*.Cu" "*.Mask")
         )
         (pad "5" thru_hole circle
-            (net 26 "RELAY3")
+            (net 19 "RELAY3")
             (at 0 -7.62 0)
             (size 1.7 1.7)
             (drill 1.0)
             (layers "*.Cu" "*.Mask")
         )
         (pad "6" thru_hole circle
-            (net 14 "RELAY4")
+            (net 2 "RELAY4")
             (at 0 -5.08 0)
             (size 1.7 1.7)
             (drill 1.0)
@@ -315,21 +317,21 @@
             (layers "*.Cu" "*.Mask")
         )
         (pad "8" thru_hole circle
-            (net 16 "RELAY2")
+            (net 10 "RELAY2")
             (at 0 0 0)
             (size 1.7 1.7)
             (drill 1.0)
             (layers "*.Cu" "*.Mask")
         )
         (pad "9" thru_hole circle
-            (net 18 "RELAY6")
+            (net 22 "RELAY6")
             (at 0 2.54 0)
             (size 1.7 1.7)
             (drill 1.0)
             (layers "*.Cu" "*.Mask")
         )
         (pad "10" thru_hole circle
-            (net 5 "RELAY5")
+            (net 18 "RELAY5")
             (at 0 5.08 0)
             (size 1.7 1.7)
             (drill 1.0)
@@ -370,7 +372,7 @@
             (unlocked yes)
             (layer "F.SilkS")
             (hide yes)
-            (uuid "fdcd7939-ba9a-428f-8b3f-d4a0d48bb757")
+            (uuid "06ca1a98-0d9b-4fa3-b2b3-26bdf1780700")
             (effects
                 (font
                     (size 1 1)
@@ -383,7 +385,7 @@
             (unlocked yes)
             (layer "F.Fab")
             (hide no)
-            (uuid "ce575bb6-8274-477d-b706-9630cc757cb5")
+            (uuid "2bf26c36-d14b-4622-a11a-66484917a8a6")
             (effects
                 (font
                     (size 1 1)
@@ -412,61 +414,61 @@
             (layer "F.SilkS")
         )
         (pad "1" smd roundrect
-            (net 19 "GND")
-            (at -3.3 -2.54 0)
+            (net 25 "GND")
+            (at -2.75 -2.54 0)
             (size 1.5 0.6)
             (layers "F.Cu" "F.Paste" "F.Mask")
         )
         (pad "2" smd roundrect
-            (at -3.3 -1.27 0)
+            (at -2.75 -1.27 0)
             (size 1.5 0.6)
             (layers "F.Cu" "F.Paste" "F.Mask")
         )
         (pad "3" smd roundrect
-            (net 19 "GND")
-            (at -3.3 0 0)
+            (net 25 "GND")
+            (at -2.75 0 0)
             (size 1.5 0.6)
             (layers "F.Cu" "F.Paste" "F.Mask")
         )
         (pad "4" smd roundrect
-            (net 6 "PH_ADC")
-            (at -3.3 1.27 0)
+            (net 4 "PH_ADC")
+            (at -2.75 1.27 0)
             (size 1.5 0.6)
             (layers "F.Cu" "F.Paste" "F.Mask")
         )
         (pad "5" smd roundrect
-            (net 4 "DO_ADC")
-            (at -3.3 2.54 0)
+            (net 6 "DO_ADC")
+            (at -2.75 2.54 0)
             (size 1.5 0.6)
             (layers "F.Cu" "F.Paste" "F.Mask")
         )
         (pad "6" smd roundrect
-            (net 28 "TURB_ADC")
-            (at 3.3 2.54 0)
+            (net 16 "TURB_ADC")
+            (at 2.75 2.54 0)
             (size 1.5 0.6)
             (layers "F.Cu" "F.Paste" "F.Mask")
         )
         (pad "7" smd roundrect
-            (net 9 "CO2_ADC")
-            (at 3.3 1.27 0)
+            (net 3 "CO2_ADC")
+            (at 2.75 1.27 0)
             (size 1.5 0.6)
             (layers "F.Cu" "F.Paste" "F.Mask")
         )
         (pad "8" smd roundrect
-            (net 10 "3V3")
-            (at 3.3 0 0)
+            (net 12 "3V3")
+            (at 2.75 0 0)
             (size 1.5 0.6)
             (layers "F.Cu" "F.Paste" "F.Mask")
         )
         (pad "9" smd roundrect
             (net 15 "I2C_SCL")
-            (at 3.3 -1.27 0)
+            (at 2.75 -1.27 0)
             (size 1.5 0.6)
             (layers "F.Cu" "F.Paste" "F.Mask")
         )
         (pad "10" smd roundrect
-            (net 27 "I2C_SDA")
-            (at 3.3 -2.54 0)
+            (net 28 "I2C_SDA")
+            (at 2.75 -2.54 0)
             (size 1.5 0.6)
             (layers "F.Cu" "F.Paste" "F.Mask")
         )
@@ -475,7 +477,7 @@
             (unlocked yes)
             (layer "F.SilkS")
             (hide yes)
-            (uuid "ae814302-7424-4192-9206-f3c04b6f8e9c")
+            (uuid "c558b372-0056-43e2-9043-e00107617929")
             (effects
                 (font
                     (size 1 1)
@@ -488,7 +490,7 @@
             (unlocked yes)
             (layer "F.Fab")
             (hide no)
-            (uuid "b3918db5-112b-4eb1-a863-e0227077589e")
+            (uuid "63d3905b-be1c-4989-8fb8-e9f74d64f8ed")
             (effects
                 (font
                     (size 1 1)
@@ -517,21 +519,21 @@
             (layer "F.SilkS")
         )
         (pad "1" thru_hole circle
-            (net 17 "PH_VCC")
+            (net 21 "PH_VCC")
             (at 0 -2.54 0)
             (size 1.7 1.7)
             (drill 1.0)
             (layers "*.Cu" "*.Mask")
         )
         (pad "2" thru_hole circle
-            (net 19 "GND")
+            (net 25 "GND")
             (at 0 0 0)
             (size 1.7 1.7)
             (drill 1.0)
             (layers "*.Cu" "*.Mask")
         )
         (pad "3" thru_hole circle
-            (net 13 "PH_RAW")
+            (net 24 "PH_RAW")
             (at 0 2.54 0)
             (size 1.7 1.7)
             (drill 1.0)
@@ -542,7 +544,7 @@
             (unlocked yes)
             (layer "F.SilkS")
             (hide yes)
-            (uuid "de1c3f5d-9182-4712-9370-f3069691d5f3")
+            (uuid "ce3439db-f13b-4985-84ea-4f7e8d079334")
             (effects
                 (font
                     (size 1 1)
@@ -555,7 +557,7 @@
             (unlocked yes)
             (layer "F.Fab")
             (hide no)
-            (uuid "05e53bce-772e-47cf-91e3-d40c4cba0135")
+            (uuid "8dded6ea-8613-423b-b7fa-c226e9b62250")
             (effects
                 (font
                     (size 1 1)
@@ -584,21 +586,21 @@
             (layer "F.SilkS")
         )
         (pad "1" thru_hole circle
-            (net 10 "3V3")
+            (net 12 "3V3")
             (at 0 -2.54 0)
             (size 1.7 1.7)
             (drill 1.0)
             (layers "*.Cu" "*.Mask")
         )
         (pad "2" thru_hole circle
-            (net 17 "PH_VCC")
+            (net 21 "PH_VCC")
             (at 0 0 0)
             (size 1.7 1.7)
             (drill 1.0)
             (layers "*.Cu" "*.Mask")
         )
         (pad "3" thru_hole circle
-            (net 12 "5V_VIN")
+            (net 23 "5V_VIN")
             (at 0 2.54 0)
             (size 1.7 1.7)
             (drill 1.0)
@@ -609,7 +611,7 @@
             (unlocked yes)
             (layer "F.SilkS")
             (hide yes)
-            (uuid "dfbbdd56-d23f-4459-9f67-998dcfe468ed")
+            (uuid "379544cd-a1e4-46de-8039-b32a4872ba36")
             (effects
                 (font
                     (size 1 1)
@@ -622,7 +624,7 @@
             (unlocked yes)
             (layer "F.Fab")
             (hide no)
-            (uuid "a106c339-30ff-4c69-9891-7238955fdc4d")
+            (uuid "0884031d-d9ad-4393-a357-f9d590eacf69")
             (effects
                 (font
                     (size 1 1)
@@ -651,13 +653,13 @@
             (layer "F.SilkS")
         )
         (pad "1" smd roundrect
-            (net 13 "PH_RAW")
+            (net 24 "PH_RAW")
             (at -0.95 0 0)
             (size 1 1.2)
             (layers "F.Cu" "F.Paste" "F.Mask")
         )
         (pad "2" smd roundrect
-            (net 6 "PH_ADC")
+            (net 4 "PH_ADC")
             (at 0.95 0 0)
             (size 1 1.2)
             (layers "F.Cu" "F.Paste" "F.Mask")
@@ -667,7 +669,7 @@
             (unlocked yes)
             (layer "F.SilkS")
             (hide yes)
-            (uuid "a388b721-3e56-4fe2-90f5-a20216727b3c")
+            (uuid "18c73400-c579-4111-ad62-8a228b83fbeb")
             (effects
                 (font
                     (size 1 1)
@@ -680,7 +682,7 @@
             (unlocked yes)
             (layer "F.Fab")
             (hide no)
-            (uuid "9f4fd4a6-a3b0-49c7-8ffc-86f4955e370d")
+            (uuid "e33d356e-356e-42a7-a6be-60201b52baa2")
             (effects
                 (font
                     (size 1 1)
@@ -709,13 +711,13 @@
             (layer "F.SilkS")
         )
         (pad "1" smd roundrect
-            (net 6 "PH_ADC")
+            (net 4 "PH_ADC")
             (at -0.95 0 0)
             (size 1 1.2)
             (layers "F.Cu" "F.Paste" "F.Mask")
         )
         (pad "2" smd roundrect
-            (net 19 "GND")
+            (net 25 "GND")
             (at 0.95 0 0)
             (size 1 1.2)
             (layers "F.Cu" "F.Paste" "F.Mask")
@@ -725,7 +727,7 @@
             (unlocked yes)
             (layer "F.SilkS")
             (hide yes)
-            (uuid "13706be7-580d-464b-9b73-0c334a4db98c")
+            (uuid "548b4cc5-d27a-49cb-b392-96a78b3317e9")
             (effects
                 (font
                     (size 1 1)
@@ -738,7 +740,7 @@
             (unlocked yes)
             (layer "F.Fab")
             (hide no)
-            (uuid "a31416b7-36b2-45c1-aa6b-e153c4f010b8")
+            (uuid "969b5f91-9862-4567-bf87-f15759eef415")
             (effects
                 (font
                     (size 1 1)
@@ -767,21 +769,21 @@
             (layer "F.SilkS")
         )
         (pad "1" thru_hole circle
-            (net 1 "DO_VCC")
+            (net 27 "DO_VCC")
             (at 0 -2.54 0)
             (size 1.7 1.7)
             (drill 1.0)
             (layers "*.Cu" "*.Mask")
         )
         (pad "2" thru_hole circle
-            (net 19 "GND")
+            (net 25 "GND")
             (at 0 0 0)
             (size 1.7 1.7)
             (drill 1.0)
             (layers "*.Cu" "*.Mask")
         )
         (pad "3" thru_hole circle
-            (net 2 "DO_RAW")
+            (net 13 "DO_RAW")
             (at 0 2.54 0)
             (size 1.7 1.7)
             (drill 1.0)
@@ -792,7 +794,7 @@
             (unlocked yes)
             (layer "F.SilkS")
             (hide yes)
-            (uuid "4b579400-c4c4-405b-a832-9663cbf825e4")
+            (uuid "57114463-712e-4e4d-ac03-6e8d9332b0b3")
             (effects
                 (font
                     (size 1 1)
@@ -805,7 +807,7 @@
             (unlocked yes)
             (layer "F.Fab")
             (hide no)
-            (uuid "446077dc-aa30-41a5-a622-f42a3a677626")
+            (uuid "663c8a22-7043-4357-8ac8-f2e68416079d")
             (effects
                 (font
                     (size 1 1)
@@ -834,21 +836,21 @@
             (layer "F.SilkS")
         )
         (pad "1" thru_hole circle
-            (net 10 "3V3")
+            (net 12 "3V3")
             (at 0 -2.54 0)
             (size 1.7 1.7)
             (drill 1.0)
             (layers "*.Cu" "*.Mask")
         )
         (pad "2" thru_hole circle
-            (net 1 "DO_VCC")
+            (net 27 "DO_VCC")
             (at 0 0 0)
             (size 1.7 1.7)
             (drill 1.0)
             (layers "*.Cu" "*.Mask")
         )
         (pad "3" thru_hole circle
-            (net 12 "5V_VIN")
+            (net 23 "5V_VIN")
             (at 0 2.54 0)
             (size 1.7 1.7)
             (drill 1.0)
@@ -859,7 +861,7 @@
             (unlocked yes)
             (layer "F.SilkS")
             (hide yes)
-            (uuid "5fbd1fed-7491-4554-8143-3c46bbe576f2")
+            (uuid "ecd5c782-7d7a-4282-b1c0-79298ffb733b")
             (effects
                 (font
                     (size 1 1)
@@ -872,7 +874,7 @@
             (unlocked yes)
             (layer "F.Fab")
             (hide no)
-            (uuid "365db536-9d01-40cf-ae2f-eca5fcc4083c")
+            (uuid "11b8850d-a1b5-4844-8f87-453b69f8a393")
             (effects
                 (font
                     (size 1 1)
@@ -901,13 +903,13 @@
             (layer "F.SilkS")
         )
         (pad "1" smd roundrect
-            (net 2 "DO_RAW")
+            (net 13 "DO_RAW")
             (at -0.95 0 0)
             (size 1 1.2)
             (layers "F.Cu" "F.Paste" "F.Mask")
         )
         (pad "2" smd roundrect
-            (net 4 "DO_ADC")
+            (net 6 "DO_ADC")
             (at 0.95 0 0)
             (size 1 1.2)
             (layers "F.Cu" "F.Paste" "F.Mask")
@@ -917,7 +919,7 @@
             (unlocked yes)
             (layer "F.SilkS")
             (hide yes)
-            (uuid "e84498d2-19d2-4c18-a800-7bc81a705aa4")
+            (uuid "19e789fd-ea86-496c-a160-b353b992c18d")
             (effects
                 (font
                     (size 1 1)
@@ -930,7 +932,7 @@
             (unlocked yes)
             (layer "F.Fab")
             (hide no)
-            (uuid "7aaa953e-a566-4847-a628-a441dca1e8b8")
+            (uuid "7c45409a-fb93-4bee-a4d5-26cb7b7cb776")
             (effects
                 (font
                     (size 1 1)
@@ -959,13 +961,13 @@
             (layer "F.SilkS")
         )
         (pad "1" smd roundrect
-            (net 4 "DO_ADC")
+            (net 6 "DO_ADC")
             (at -0.95 0 0)
             (size 1 1.2)
             (layers "F.Cu" "F.Paste" "F.Mask")
         )
         (pad "2" smd roundrect
-            (net 19 "GND")
+            (net 25 "GND")
             (at 0.95 0 0)
             (size 1 1.2)
             (layers "F.Cu" "F.Paste" "F.Mask")
@@ -975,7 +977,7 @@
             (unlocked yes)
             (layer "F.SilkS")
             (hide yes)
-            (uuid "e4a46274-0048-4be1-b01f-6295872646ca")
+            (uuid "c8c487a8-baa5-43d5-9036-788019f767f9")
             (effects
                 (font
                     (size 1 1)
@@ -988,7 +990,7 @@
             (unlocked yes)
             (layer "F.Fab")
             (hide no)
-            (uuid "dc268081-7842-4a7a-9110-1b11d4a9a17a")
+            (uuid "ab640173-439c-4d56-9191-bd7fe14e5bdb")
             (effects
                 (font
                     (size 1 1)
@@ -1024,14 +1026,14 @@
             (layers "*.Cu" "*.Mask")
         )
         (pad "2" thru_hole circle
-            (net 19 "GND")
+            (net 25 "GND")
             (at 0 0 0)
             (size 1.7 1.7)
             (drill 1.0)
             (layers "*.Cu" "*.Mask")
         )
         (pad "3" thru_hole circle
-            (net 22 "TURB_RAW")
+            (net 1 "TURB_RAW")
             (at 0 2.54 0)
             (size 1.7 1.7)
             (drill 1.0)
@@ -1042,7 +1044,7 @@
             (unlocked yes)
             (layer "F.SilkS")
             (hide yes)
-            (uuid "066b2453-1fbc-4467-b0b4-ce699bc8c1a3")
+            (uuid "f0c2fc05-1625-4924-978f-198600df8049")
             (effects
                 (font
                     (size 1 1)
@@ -1055,7 +1057,7 @@
             (unlocked yes)
             (layer "F.Fab")
             (hide no)
-            (uuid "bf8ab533-f4a0-42e9-91d7-038b5fd7ad63")
+            (uuid "19e463b6-a91a-4350-a94d-bda3e9b6f79a")
             (effects
                 (font
                     (size 1 1)
@@ -1084,7 +1086,7 @@
             (layer "F.SilkS")
         )
         (pad "1" thru_hole circle
-            (net 10 "3V3")
+            (net 12 "3V3")
             (at 0 -2.54 0)
             (size 1.7 1.7)
             (drill 1.0)
@@ -1098,7 +1100,7 @@
             (layers "*.Cu" "*.Mask")
         )
         (pad "3" thru_hole circle
-            (net 12 "5V_VIN")
+            (net 23 "5V_VIN")
             (at 0 2.54 0)
             (size 1.7 1.7)
             (drill 1.0)
@@ -1109,7 +1111,7 @@
             (unlocked yes)
             (layer "F.SilkS")
             (hide yes)
-            (uuid "be865ef2-5ccf-4348-a6ff-c47c436e22b6")
+            (uuid "2c3d8c02-caee-40aa-a5c7-75c134744864")
             (effects
                 (font
                     (size 1 1)
@@ -1122,7 +1124,7 @@
             (unlocked yes)
             (layer "F.Fab")
             (hide no)
-            (uuid "b52d38f1-96cf-4f83-8e75-961c4e1a545c")
+            (uuid "cb30fd38-8eaa-4167-96da-9788ef4ed751")
             (effects
                 (font
                     (size 1 1)
@@ -1151,13 +1153,13 @@
             (layer "F.SilkS")
         )
         (pad "1" smd roundrect
-            (net 22 "TURB_RAW")
+            (net 1 "TURB_RAW")
             (at -0.95 0 0)
             (size 1 1.2)
             (layers "F.Cu" "F.Paste" "F.Mask")
         )
         (pad "2" smd roundrect
-            (net 28 "TURB_ADC")
+            (net 16 "TURB_ADC")
             (at 0.95 0 0)
             (size 1 1.2)
             (layers "F.Cu" "F.Paste" "F.Mask")
@@ -1167,7 +1169,7 @@
             (unlocked yes)
             (layer "F.SilkS")
             (hide yes)
-            (uuid "5b43c1fb-4e6c-4b75-a6e5-4593ba4746a9")
+            (uuid "705a2ff3-e2ab-4d3c-b327-90593386f020")
             (effects
                 (font
                     (size 1 1)
@@ -1180,7 +1182,7 @@
             (unlocked yes)
             (layer "F.Fab")
             (hide no)
-            (uuid "8ca20b4d-67c1-4971-a5c8-bb4e34d6a2cb")
+            (uuid "62df433a-c4e8-4aea-b290-779ff35d5b31")
             (effects
                 (font
                     (size 1 1)
@@ -1209,13 +1211,13 @@
             (layer "F.SilkS")
         )
         (pad "1" smd roundrect
-            (net 28 "TURB_ADC")
+            (net 16 "TURB_ADC")
             (at -0.95 0 0)
             (size 1 1.2)
             (layers "F.Cu" "F.Paste" "F.Mask")
         )
         (pad "2" smd roundrect
-            (net 19 "GND")
+            (net 25 "GND")
             (at 0.95 0 0)
             (size 1 1.2)
             (layers "F.Cu" "F.Paste" "F.Mask")
@@ -1225,7 +1227,7 @@
             (unlocked yes)
             (layer "F.SilkS")
             (hide yes)
-            (uuid "8d45ca1d-a18d-4ae8-a138-61290517d545")
+            (uuid "f5b49f0f-dcba-443d-afe8-2c43a1424164")
             (effects
                 (font
                     (size 1 1)
@@ -1238,7 +1240,7 @@
             (unlocked yes)
             (layer "F.Fab")
             (hide no)
-            (uuid "fb2e198e-3c34-4085-af6c-32d1eb190e6c")
+            (uuid "db7c98a6-74a2-4cd4-909f-7a9b66cb5160")
             (effects
                 (font
                     (size 1 1)
@@ -1267,21 +1269,21 @@
             (layer "F.SilkS")
         )
         (pad "1" thru_hole circle
-            (net 20 "CO2_VCC")
+            (net 5 "CO2_VCC")
             (at 0 -2.54 0)
             (size 1.7 1.7)
             (drill 1.0)
             (layers "*.Cu" "*.Mask")
         )
         (pad "2" thru_hole circle
-            (net 19 "GND")
+            (net 25 "GND")
             (at 0 0 0)
             (size 1.7 1.7)
             (drill 1.0)
             (layers "*.Cu" "*.Mask")
         )
         (pad "3" thru_hole circle
-            (net 3 "CO2_RAW")
+            (net 9 "CO2_RAW")
             (at 0 2.54 0)
             (size 1.7 1.7)
             (drill 1.0)
@@ -1292,7 +1294,7 @@
             (unlocked yes)
             (layer "F.SilkS")
             (hide yes)
-            (uuid "ff1c39b3-dc00-4301-bed7-bb8c90ab3be8")
+            (uuid "d38444d1-5edc-4347-9aa8-d0a48e16869d")
             (effects
                 (font
                     (size 1 1)
@@ -1305,7 +1307,7 @@
             (unlocked yes)
             (layer "F.Fab")
             (hide no)
-            (uuid "f97f4dac-4932-4651-ac3b-8f94700d09ba")
+            (uuid "d79927c0-3677-4554-a96f-ced1869b4392")
             (effects
                 (font
                     (size 1 1)
@@ -1334,21 +1336,21 @@
             (layer "F.SilkS")
         )
         (pad "1" thru_hole circle
-            (net 10 "3V3")
+            (net 12 "3V3")
             (at 0 -2.54 0)
             (size 1.7 1.7)
             (drill 1.0)
             (layers "*.Cu" "*.Mask")
         )
         (pad "2" thru_hole circle
-            (net 20 "CO2_VCC")
+            (net 5 "CO2_VCC")
             (at 0 0 0)
             (size 1.7 1.7)
             (drill 1.0)
             (layers "*.Cu" "*.Mask")
         )
         (pad "3" thru_hole circle
-            (net 12 "5V_VIN")
+            (net 23 "5V_VIN")
             (at 0 2.54 0)
             (size 1.7 1.7)
             (drill 1.0)
@@ -1359,7 +1361,7 @@
             (unlocked yes)
             (layer "F.SilkS")
             (hide yes)
-            (uuid "d4a0c3e1-ad7f-4ff2-bfa0-aefcb1f372b2")
+            (uuid "df047ef5-afc3-4897-be3d-04f3712cd7de")
             (effects
                 (font
                     (size 1 1)
@@ -1372,7 +1374,7 @@
             (unlocked yes)
             (layer "F.Fab")
             (hide no)
-            (uuid "96b3c102-742c-431f-bb41-27d60f430f43")
+            (uuid "d86679f2-42fd-4846-9b8c-6b7274ebd61b")
             (effects
                 (font
                     (size 1 1)
@@ -1401,13 +1403,13 @@
             (layer "F.SilkS")
         )
         (pad "1" smd roundrect
-            (net 3 "CO2_RAW")
+            (net 9 "CO2_RAW")
             (at -0.95 0 0)
             (size 1 1.2)
             (layers "F.Cu" "F.Paste" "F.Mask")
         )
         (pad "2" smd roundrect
-            (net 9 "CO2_ADC")
+            (net 3 "CO2_ADC")
             (at 0.95 0 0)
             (size 1 1.2)
             (layers "F.Cu" "F.Paste" "F.Mask")
@@ -1417,7 +1419,7 @@
             (unlocked yes)
             (layer "F.SilkS")
             (hide yes)
-            (uuid "afc0b57e-80d9-41a5-aa43-2c52a2cc7491")
+            (uuid "a4f0fcde-22c0-4290-8c63-404ff36f7c8c")
             (effects
                 (font
                     (size 1 1)
@@ -1430,7 +1432,7 @@
             (unlocked yes)
             (layer "F.Fab")
             (hide no)
-            (uuid "d5f2b05b-dd66-4391-a0ad-629af4f18ab2")
+            (uuid "d85b54cc-4217-45cd-90da-94c7d435abd4")
             (effects
                 (font
                     (size 1 1)
@@ -1459,13 +1461,13 @@
             (layer "F.SilkS")
         )
         (pad "1" smd roundrect
-            (net 9 "CO2_ADC")
+            (net 3 "CO2_ADC")
             (at -0.95 0 0)
             (size 1 1.2)
             (layers "F.Cu" "F.Paste" "F.Mask")
         )
         (pad "2" smd roundrect
-            (net 19 "GND")
+            (net 25 "GND")
             (at 0.95 0 0)
             (size 1 1.2)
             (layers "F.Cu" "F.Paste" "F.Mask")
@@ -1475,7 +1477,7 @@
             (unlocked yes)
             (layer "F.SilkS")
             (hide yes)
-            (uuid "7a3b6994-914f-4da0-9583-97b90e588ece")
+            (uuid "90b0be64-07b1-4dea-bcf5-a9f915b70271")
             (effects
                 (font
                     (size 1 1)
@@ -1488,7 +1490,132 @@
             (unlocked yes)
             (layer "F.Fab")
             (hide no)
-            (uuid "f9a0c514-25ff-48aa-b9ec-469207b2a214")
+            (uuid "11575778-8157-466a-84fb-ee3ea6749c76")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+    )
+    (footprint "SmartFarm:SF_PinHeader_1x3"
+        (at 15 115 0)
+        (version 20240108)
+        (generator "pcbnew")
+        (layer "F.Cu")
+        (descr "SmartFarm project footprint")
+        (attr through_hole)
+        (fp_rect
+            (start -2.1 -4.6)
+            (end 2.1 4.6)
+            (stroke
+                (width 0.12)
+                (type default)
+            )
+            (fill
+                (type none)
+            )
+            (layer "F.SilkS")
+        )
+        (pad "1" thru_hole circle
+            (net 12 "3V3")
+            (at 0 -2.54 0)
+            (size 1.7 1.7)
+            (drill 1.0)
+            (layers "*.Cu" "*.Mask")
+        )
+        (pad "2" thru_hole circle
+            (net 7 "DHT22_DATA")
+            (at 0 0 0)
+            (size 1.7 1.7)
+            (drill 1.0)
+            (layers "*.Cu" "*.Mask")
+        )
+        (pad "3" thru_hole circle
+            (net 25 "GND")
+            (at 0 2.54 0)
+            (size 1.7 1.7)
+            (drill 1.0)
+            (layers "*.Cu" "*.Mask")
+        )
+        (property "Reference" "J10"
+            (at 0 -6.1 0)
+            (unlocked yes)
+            (layer "F.SilkS")
+            (hide yes)
+            (uuid "98000f4e-4094-48ad-a996-14a57cdd4eef")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+        (property "Value" "DHT22"
+            (at 0 6.1 0)
+            (unlocked yes)
+            (layer "F.Fab")
+            (hide no)
+            (uuid "84c218e2-449f-4e6f-af26-fea15d9f45d2")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+    )
+    (footprint "SmartFarm:SF_R_0603"
+        (at 22 115 0)
+        (version 20240108)
+        (generator "pcbnew")
+        (layer "F.Cu")
+        (descr "SmartFarm project footprint")
+        (attr smd)
+        (fp_rect
+            (start -1.8 -1.3)
+            (end 1.8 1.3)
+            (stroke
+                (width 0.12)
+                (type default)
+            )
+            (fill
+                (type none)
+            )
+            (layer "F.SilkS")
+        )
+        (pad "1" smd roundrect
+            (net 12 "3V3")
+            (at -0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "2" smd roundrect
+            (net 7 "DHT22_DATA")
+            (at 0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (property "Reference" "R13"
+            (at 0 -2.8 0)
+            (unlocked yes)
+            (layer "F.SilkS")
+            (hide yes)
+            (uuid "10ac5e8f-9dbd-4baf-83b4-1892fc291284")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+        (property "Value" "4.7k pull-up"
+            (at 0 2.8 0)
+            (unlocked yes)
+            (layer "F.Fab")
+            (hide no)
+            (uuid "55b4038d-e69b-4122-9d39-c0018253cfba")
             (effects
                 (font
                     (size 1 1)
@@ -1517,21 +1644,21 @@
             (layer "F.SilkS")
         )
         (pad "1" thru_hole circle
-            (net 10 "3V3")
+            (net 12 "3V3")
             (at 0 -2.54 0)
             (size 1.7 1.7)
             (drill 1.0)
             (layers "*.Cu" "*.Mask")
         )
         (pad "2" thru_hole circle
-            (net 21 "DS18B20_DATA")
+            (net 20 "DS18B20_DATA")
             (at 0 0 0)
             (size 1.7 1.7)
             (drill 1.0)
             (layers "*.Cu" "*.Mask")
         )
         (pad "3" thru_hole circle
-            (net 19 "GND")
+            (net 25 "GND")
             (at 0 2.54 0)
             (size 1.7 1.7)
             (drill 1.0)
@@ -1542,7 +1669,7 @@
             (unlocked yes)
             (layer "F.SilkS")
             (hide yes)
-            (uuid "20ce3ab9-b824-4a20-bab9-e3f277e73f04")
+            (uuid "1a2dc1ab-ab6c-4982-82fe-51048b8f9485")
             (effects
                 (font
                     (size 1 1)
@@ -1555,7 +1682,7 @@
             (unlocked yes)
             (layer "F.Fab")
             (hide no)
-            (uuid "1e83d10e-2363-4ec1-a5c3-4453154586d2")
+            (uuid "81a62b0c-3271-46a2-8d52-a2a276887174")
             (effects
                 (font
                     (size 1 1)
@@ -1584,13 +1711,13 @@
             (layer "F.SilkS")
         )
         (pad "1" smd roundrect
-            (net 10 "3V3")
+            (net 12 "3V3")
             (at -0.95 0 0)
             (size 1 1.2)
             (layers "F.Cu" "F.Paste" "F.Mask")
         )
         (pad "2" smd roundrect
-            (net 21 "DS18B20_DATA")
+            (net 20 "DS18B20_DATA")
             (at 0.95 0 0)
             (size 1 1.2)
             (layers "F.Cu" "F.Paste" "F.Mask")
@@ -1600,7 +1727,7 @@
             (unlocked yes)
             (layer "F.SilkS")
             (hide yes)
-            (uuid "94400819-c13d-4f60-92ce-3bf87c19554c")
+            (uuid "b5df0e8b-f608-4046-980b-75229ff16ea4")
             (effects
                 (font
                     (size 1 1)
@@ -1613,7 +1740,7 @@
             (unlocked yes)
             (layer "F.Fab")
             (hide no)
-            (uuid "1472636f-d510-42b5-8451-3f670f3a1bbb")
+            (uuid "e07b2f24-f5eb-456f-94ae-24d8a5f0e34d")
             (effects
                 (font
                     (size 1 1)
@@ -1642,21 +1769,21 @@
             (layer "F.SilkS")
         )
         (pad "1" thru_hole circle
-            (net 10 "3V3")
+            (net 12 "3V3")
             (at 0 -3.81 0)
             (size 1.7 1.7)
             (drill 1.0)
             (layers "*.Cu" "*.Mask")
         )
         (pad "2" thru_hole circle
-            (net 19 "GND")
+            (net 25 "GND")
             (at 0 -1.27 0)
             (size 1.7 1.7)
             (drill 1.0)
             (layers "*.Cu" "*.Mask")
         )
         (pad "3" thru_hole circle
-            (net 27 "I2C_SDA")
+            (net 28 "I2C_SDA")
             (at 0 1.27 0)
             (size 1.7 1.7)
             (drill 1.0)
@@ -1674,7 +1801,7 @@
             (unlocked yes)
             (layer "F.SilkS")
             (hide yes)
-            (uuid "b8bc3385-fce0-4501-b17f-b49a9bf4ed38")
+            (uuid "73623c79-2337-4573-bd44-ebbb2ad68855")
             (effects
                 (font
                     (size 1 1)
@@ -1687,7 +1814,7 @@
             (unlocked yes)
             (layer "F.Fab")
             (hide no)
-            (uuid "89f482bb-3858-49a9-8ad6-346a076c14b6")
+            (uuid "50fe632e-cd8b-4235-a372-3244db62e7fe")
             (effects
                 (font
                     (size 1 1)
@@ -1697,7 +1824,7 @@
         )
     )
     (footprint "SmartFarm:SF_C_0603"
-        (at 71 91 0)
+        (at 72 84 0)
         (version 20240108)
         (generator "pcbnew")
         (layer "F.Cu")
@@ -1716,13 +1843,13 @@
             (layer "F.SilkS")
         )
         (pad "1" smd roundrect
-            (net 10 "3V3")
+            (net 12 "3V3")
             (at -0.95 0 0)
             (size 1 1.2)
             (layers "F.Cu" "F.Paste" "F.Mask")
         )
         (pad "2" smd roundrect
-            (net 19 "GND")
+            (net 25 "GND")
             (at 0.95 0 0)
             (size 1 1.2)
             (layers "F.Cu" "F.Paste" "F.Mask")
@@ -1732,7 +1859,7 @@
             (unlocked yes)
             (layer "F.SilkS")
             (hide yes)
-            (uuid "265b7e86-976a-4316-b07a-a3f8523dc825")
+            (uuid "0c262a34-f182-4c80-8d51-ea42cdf64250")
             (effects
                 (font
                     (size 1 1)
@@ -1745,7 +1872,7 @@
             (unlocked yes)
             (layer "F.Fab")
             (hide no)
-            (uuid "7a73d5c6-cac5-4d81-ada8-e27f594dae56")
+            (uuid "61d8df83-e86d-430c-a644-a79fa166be18")
             (effects
                 (font
                     (size 1 1)
@@ -1755,7 +1882,7 @@
         )
     )
     (footprint "SmartFarm:SF_C_0603"
-        (at 71 96 0)
+        (at 82 84 0)
         (version 20240108)
         (generator "pcbnew")
         (layer "F.Cu")
@@ -1774,13 +1901,13 @@
             (layer "F.SilkS")
         )
         (pad "1" smd roundrect
-            (net 10 "3V3")
+            (net 12 "3V3")
             (at -0.95 0 0)
             (size 1 1.2)
             (layers "F.Cu" "F.Paste" "F.Mask")
         )
         (pad "2" smd roundrect
-            (net 19 "GND")
+            (net 25 "GND")
             (at 0.95 0 0)
             (size 1 1.2)
             (layers "F.Cu" "F.Paste" "F.Mask")
@@ -1790,7 +1917,7 @@
             (unlocked yes)
             (layer "F.SilkS")
             (hide yes)
-            (uuid "b2744ea2-8f7d-402a-8a7f-b4f900e50bd5")
+            (uuid "2d4f0372-48a4-4fd8-9e8c-3af190f5d594")
             (effects
                 (font
                     (size 1 1)
@@ -1803,7 +1930,7 @@
             (unlocked yes)
             (layer "F.Fab")
             (hide no)
-            (uuid "ad885c7b-bdf9-4ce8-af8c-9a71109a8683")
+            (uuid "e526486a-464b-4708-9177-d4b6aa6bcc87")
             (effects
                 (font
                     (size 1 1)
@@ -1832,13 +1959,13 @@
             (layer "F.SilkS")
         )
         (pad "1" smd roundrect
-            (net 10 "3V3")
+            (net 12 "3V3")
             (at -0.95 0 0)
             (size 1 1.2)
             (layers "F.Cu" "F.Paste" "F.Mask")
         )
         (pad "2" smd roundrect
-            (net 27 "I2C_SDA")
+            (net 28 "I2C_SDA")
             (at 0.95 0 0)
             (size 1 1.2)
             (layers "F.Cu" "F.Paste" "F.Mask")
@@ -1848,7 +1975,7 @@
             (unlocked yes)
             (layer "F.SilkS")
             (hide yes)
-            (uuid "4ad6d6a4-df13-40f7-a1b7-8dd2355f84bb")
+            (uuid "1030bd57-0ab0-45be-b893-e84fd5b12b6e")
             (effects
                 (font
                     (size 1 1)
@@ -1861,7 +1988,7 @@
             (unlocked yes)
             (layer "F.Fab")
             (hide no)
-            (uuid "ebd784a5-3a12-42a6-8c4f-1b9370c043e5")
+            (uuid "589e59ae-a9ac-40ea-8a41-d92c08181c27")
             (effects
                 (font
                     (size 1 1)
@@ -1890,7 +2017,7 @@
             (layer "F.SilkS")
         )
         (pad "1" smd roundrect
-            (net 10 "3V3")
+            (net 12 "3V3")
             (at -0.95 0 0)
             (size 1 1.2)
             (layers "F.Cu" "F.Paste" "F.Mask")
@@ -1906,7 +2033,7 @@
             (unlocked yes)
             (layer "F.SilkS")
             (hide yes)
-            (uuid "3fef94b1-18bd-461d-9690-9ce281117944")
+            (uuid "355d7a6d-595c-48b7-a7ee-d0919370311f")
             (effects
                 (font
                     (size 1 1)
@@ -1919,7 +2046,7 @@
             (unlocked yes)
             (layer "F.Fab")
             (hide no)
-            (uuid "880459d1-64ed-40a7-b79d-fd1339e09f07")
+            (uuid "08352527-d2fa-40cd-bfc8-5fb73838a0a9")
             (effects
                 (font
                     (size 1 1)
@@ -1948,70 +2075,70 @@
             (layer "F.SilkS")
         )
         (pad "1" thru_hole rect
-            (net 11 "RELAY1")
+            (net 29 "RELAY1")
             (at 0 -5.08 0)
             (size 1.7 1.7)
             (drill 1.0)
             (layers "*.Cu" "*.Mask")
         )
         (pad "2" thru_hole circle
-            (net 16 "RELAY2")
+            (net 10 "RELAY2")
             (at 2.54 -5.08 0)
             (size 1.7 1.7)
             (drill 1.0)
             (layers "*.Cu" "*.Mask")
         )
         (pad "3" thru_hole circle
-            (net 26 "RELAY3")
+            (net 19 "RELAY3")
             (at 0 -2.54 0)
             (size 1.7 1.7)
             (drill 1.0)
             (layers "*.Cu" "*.Mask")
         )
         (pad "4" thru_hole circle
-            (net 14 "RELAY4")
+            (net 2 "RELAY4")
             (at 2.54 -2.54 0)
             (size 1.7 1.7)
             (drill 1.0)
             (layers "*.Cu" "*.Mask")
         )
         (pad "5" thru_hole circle
-            (net 5 "RELAY5")
+            (net 18 "RELAY5")
             (at 0 0 0)
             (size 1.7 1.7)
             (drill 1.0)
             (layers "*.Cu" "*.Mask")
         )
         (pad "6" thru_hole circle
-            (net 18 "RELAY6")
+            (net 22 "RELAY6")
             (at 2.54 0 0)
             (size 1.7 1.7)
             (drill 1.0)
             (layers "*.Cu" "*.Mask")
         )
         (pad "7" thru_hole circle
-            (net 25 "RELAY7")
+            (net 17 "RELAY7")
             (at 0 2.54 0)
             (size 1.7 1.7)
             (drill 1.0)
             (layers "*.Cu" "*.Mask")
         )
         (pad "8" thru_hole circle
-            (net 24 "RELAY8")
+            (net 14 "RELAY8")
             (at 2.54 2.54 0)
             (size 1.7 1.7)
             (drill 1.0)
             (layers "*.Cu" "*.Mask")
         )
         (pad "9" thru_hole circle
-            (net 19 "GND")
+            (net 25 "GND")
             (at 0 5.08 0)
             (size 1.7 1.7)
             (drill 1.0)
             (layers "*.Cu" "*.Mask")
         )
         (pad "10" thru_hole circle
-            (net 19 "GND")
+            (net 25 "GND")
             (at 2.54 5.08 0)
             (size 1.7 1.7)
             (drill 1.0)
@@ -2022,7 +2149,7 @@
             (unlocked yes)
             (layer "F.SilkS")
             (hide yes)
-            (uuid "5cef3bfd-8464-4e2c-8756-7fd3f74afb02")
+            (uuid "28d47c00-fad4-498e-b273-aaefaa20e193")
             (effects
                 (font
                     (size 1 1)
@@ -2035,7 +2162,7 @@
             (unlocked yes)
             (layer "F.Fab")
             (hide no)
-            (uuid "46a92473-3e2b-48f3-9e39-94114f7d3286")
+            (uuid "7d860a6c-5e28-4266-b9e4-d1cddd13ffa9")
             (effects
                 (font
                     (size 1 1)
@@ -2064,13 +2191,13 @@
             (layer "F.SilkS")
         )
         (pad "1" smd roundrect
-            (net 7 "GPIO2")
+            (net 11 "GPIO2")
             (at -0.95 0 0)
             (size 1 1.2)
             (layers "F.Cu" "F.Paste" "F.Mask")
         )
         (pad "2" smd roundrect
-            (net 23 "STAT_LED_A")
+            (net 26 "STAT_LED_A")
             (at 0.95 0 0)
             (size 1 1.2)
             (layers "F.Cu" "F.Paste" "F.Mask")
@@ -2080,7 +2207,7 @@
             (unlocked yes)
             (layer "F.SilkS")
             (hide yes)
-            (uuid "e0fbc06b-3a98-463e-a268-0c6296fc6648")
+            (uuid "12951e19-9a0d-461d-ad10-5970ed722e72")
             (effects
                 (font
                     (size 1 1)
@@ -2093,7 +2220,7 @@
             (unlocked yes)
             (layer "F.Fab")
             (hide no)
-            (uuid "312074e9-65f7-4a8d-b569-72f7debe38ab")
+            (uuid "a3fd456d-fd67-446a-b41a-a318093ac2d1")
             (effects
                 (font
                     (size 1 1)
@@ -2122,13 +2249,13 @@
             (layer "F.SilkS")
         )
         (pad "1" smd roundrect
-            (net 19 "GND")
+            (net 25 "GND")
             (at -0.95 0 0)
             (size 1 1.2)
             (layers "F.Cu" "F.Paste" "F.Mask")
         )
         (pad "2" smd roundrect
-            (net 23 "STAT_LED_A")
+            (net 26 "STAT_LED_A")
             (at 0.95 0 0)
             (size 1 1.2)
             (layers "F.Cu" "F.Paste" "F.Mask")
@@ -2138,7 +2265,7 @@
             (unlocked yes)
             (layer "F.SilkS")
             (hide yes)
-            (uuid "a1da092b-6564-4dba-9caa-d55d60fb0cb6")
+            (uuid "26ab1fa8-86e3-4c4b-9043-b6b7758e1c68")
             (effects
                 (font
                     (size 1 1)
@@ -2151,7 +2278,7 @@
             (unlocked yes)
             (layer "F.Fab")
             (hide no)
-            (uuid "760176e0-240d-4dc8-8f33-30435e28deed")
+            (uuid "5eb9154f-4125-43b0-b38f-5026dbd120ed")
             (effects
                 (font
                     (size 1 1)
