@@ -136,6 +136,10 @@ bool parse_boolean_message(const String& message, bool& value);
 void copy_text(char* destination, size_t destination_size, const char* source);
 
 void setup() {
+  static const uint8_t relay_pins[] = {
+      PUMP_PIN, AERATOR_PIN, CIRCULATION_PIN, FEEDER_PIN,
+      RELAY5_PIN, RELAY6_PIN, RELAY7_PIN, RELAY8_PIN};
+
   Serial.begin(115200);
   delay(100);
 
@@ -145,14 +149,10 @@ void setup() {
   copy_text(current_mode, sizeof(current_mode), DEFAULT_MODE);
   copy_text(current_species, sizeof(current_species), "Rô Phi");
 
-  digitalWrite(PUMP_PIN, RELAY_INACTIVE_LEVEL);
-  pinMode(PUMP_PIN, OUTPUT);
-  digitalWrite(AERATOR_PIN, RELAY_INACTIVE_LEVEL);
-  pinMode(AERATOR_PIN, OUTPUT);
-  digitalWrite(CIRCULATION_PIN, RELAY_INACTIVE_LEVEL);
-  pinMode(CIRCULATION_PIN, OUTPUT);
-  digitalWrite(FEEDER_PIN, RELAY_INACTIVE_LEVEL);
-  pinMode(FEEDER_PIN, OUTPUT);
+  for (uint8_t pin : relay_pins) {
+    digitalWrite(pin, RELAY_INACTIVE_LEVEL);
+    pinMode(pin, OUTPUT);
+  }
 
   Serial.println("[INIT] Initializing sensors...");
   waterTemp.begin();
