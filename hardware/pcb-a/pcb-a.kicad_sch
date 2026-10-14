@@ -1,0 +1,5180 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "c75c9e14-2847-487b-9ce4-609afbe5c10d")
+	(paper "A4")
+	(title_block
+		(title "SmartFarm PCB-A Controller")
+	)
+	(lib_symbols
+		(symbol "SmartFarm:Conn_01x15"
+			(property "Reference" "J"
+				(at 0 -21.59 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x15"
+				(at 0 21.59 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Conn_01x15_0_1"
+				(rectangle
+					(start -5.08 -19.05)
+					(end 2.54 19.05)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "Conn_01x15_1_1"
+				(pin passive line
+					(at -7.62 17.78 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 15.24 0)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 12.7 0)
+					(length 2.54)
+					(name "3"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 10.16 0)
+					(length 2.54)
+					(name "4"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 7.62 0)
+					(length 2.54)
+					(name "5"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 5.08 0)
+					(length 2.54)
+					(name "6"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "7"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 0.0000 0)
+					(length 2.54)
+					(name "8"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "9"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -5.08 0)
+					(length 2.54)
+					(name "10"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -7.62 0)
+					(length 2.54)
+					(name "11"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -10.16 0)
+					(length 2.54)
+					(name "12"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -12.7 0)
+					(length 2.54)
+					(name "13"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -15.24 0)
+					(length 2.54)
+					(name "14"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -17.78 0)
+					(length 2.54)
+					(name "15"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "15"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "SmartFarm:ADS1115"
+			(property "Reference" "U"
+				(at 0 -11.43 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "ADS1115"
+				(at 0 11.43 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "ADS1115_0_1"
+				(rectangle
+					(start -5.08 -8.89)
+					(end 5.08 8.89)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "ADS1115_1_1"
+				(pin input line
+					(at -7.62 7.62 0)
+					(length 2.54)
+					(name "ADDR"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin open_collector line
+					(at -7.62 5.08 0)
+					(length 2.54)
+					(name "ALERT/RDY"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 0 0)
+					(length 2.54)
+					(name "A0"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "A1"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -5.08 0)
+					(length 2.54)
+					(name "A2"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 7.62 -5.08 180)
+					(length 2.54)
+					(name "A3"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 7.62 -2.54 180)
+					(length 2.54)
+					(name "VDD"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "SCL"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 7.62 2.54 180)
+					(length 2.54)
+					(name "SDA"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "SmartFarm:Conn_01x03"
+			(property "Reference" "J"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x03"
+				(at 0 6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Conn_01x03_0_1"
+				(rectangle
+					(start -5.08 -3.81)
+					(end 2.54 3.81)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "Conn_01x03_1_1"
+				(pin passive line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 0.0000 0)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "3"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "SmartFarm:Jumper3"
+			(property "Reference" "JP"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "3-pin selector"
+				(at 0 6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Jumper3_0_1"
+				(rectangle
+					(start -2.54 -3.81)
+					(end 2.54 3.81)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "Jumper3_1_1"
+				(pin passive line
+					(at -5.08 2.54 0)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "COM"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "SmartFarm:R"
+			(property "Reference" "R"
+				(at 0 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "SmartFarm:Conn_01x04"
+			(property "Reference" "J"
+				(at 0 -7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x04"
+				(at 0 7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Conn_01x04_0_1"
+				(rectangle
+					(start -5.08 -5.08)
+					(end 2.54 5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "Conn_01x04_1_1"
+				(pin passive line
+					(at -7.62 3.81 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 1.27 0)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -1.27 0)
+					(length 2.54)
+					(name "3"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -3.81 0)
+					(length 2.54)
+					(name "4"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "SmartFarm:C"
+			(property "Reference" "C"
+				(at 0 -3.302 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "C"
+				(at 0 3.302 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "C_0_1"
+				(rectangle
+					(start -2.032 -0.762)
+					(end 2.032 0.762)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "C_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "SmartFarm:Conn_02x05"
+			(property "Reference" "J"
+				(at 0 -8.89 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_02x05"
+				(at 0 8.89 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Conn_02x05_0_1"
+				(rectangle
+					(start -5.08 -6.35)
+					(end 5.08 6.35)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "Conn_02x05_1_1"
+				(pin passive line
+					(at -7.62 5.08 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 5.08 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "3"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 2.54 180)
+					(length 2.54)
+					(name "4"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 0.0000 0)
+					(length 2.54)
+					(name "5"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 0.0000 180)
+					(length 2.54)
+					(name "6"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "7"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -2.54 180)
+					(length 2.54)
+					(name "8"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -5.08 0)
+					(length 2.54)
+					(name "9"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -5.08 180)
+					(length 2.54)
+					(name "10"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "SmartFarm:LED"
+			(property "Reference" "D"
+				(at 0 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "LED"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "LED_0_1"
+				(rectangle
+					(start -2.54 -2.54)
+					(end 2.54 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "LED_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:Conn_01x15")
+		(at 35.56 95.25 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "0b432abe-9aab-438c-9333-074490e245a3")
+		(property "Reference" "J1"
+			(at 35.56 73.66 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "ESP32 DevKit 30-pin socket row"
+			(at 35.56 116.84 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_PinSocket_1x15"
+			(at 33.782 95.25 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "430378e1-6e70-4cd7-9565-5f5a85d49e03")
+		)
+		(pin "2"
+			(uuid "0f7d32f2-603e-4301-b9f6-e009adcccf9e")
+		)
+		(pin "3"
+			(uuid "052d9c5f-3fa4-427f-bfc7-9c710566ebaf")
+		)
+		(pin "4"
+			(uuid "989081c5-01d7-4fd3-a987-a2e88212a5f6")
+		)
+		(pin "5"
+			(uuid "82ff6801-b86e-4ef8-b33b-b03098ef39aa")
+		)
+		(pin "6"
+			(uuid "94dea89a-054b-4cb3-acb9-9872213937ba")
+		)
+		(pin "7"
+			(uuid "2f5e5a0c-07d1-4477-b5f4-93bdd1da52e3")
+		)
+		(pin "8"
+			(uuid "5305b4db-f976-4ed3-acfe-46a2dad7c8ce")
+		)
+		(pin "9"
+			(uuid "4ea4d708-1e64-4237-9903-b75002ea8879")
+		)
+		(pin "10"
+			(uuid "330ad455-d917-416d-a582-ee76f440a776")
+		)
+		(pin "11"
+			(uuid "e561db85-60f6-481a-ad77-ce5edf962dd3")
+		)
+		(pin "12"
+			(uuid "58607acd-72b4-4cb3-a81f-f314da712638")
+		)
+		(pin "13"
+			(uuid "e7334dea-5c49-4058-a78b-b2169fd53e26")
+		)
+		(pin "14"
+			(uuid "3076d4a8-b1f7-4740-9b2e-ba00bd48171b")
+		)
+		(pin "15"
+			(uuid "3d404afa-1f7e-4cd2-86b8-141e1706b7e0")
+		)
+		(instances
+			(project "SmartFarm PCB-A Controller"
+				(path "/c75c9e14-2847-487b-9ce4-609afbe5c10d"
+					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:Conn_01x15")
+		(at 72.39 95.25 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "9c8a0e1b-eb8e-430c-b065-1a991889cc99")
+		(property "Reference" "J2"
+			(at 72.39 73.66 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "ESP32 DevKit 30-pin socket row"
+			(at 72.39 116.84 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_PinSocket_1x15"
+			(at 70.612 95.25 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c92351ad-dc39-4f42-9e0a-eff1c3fac915")
+		)
+		(pin "2"
+			(uuid "9c77283b-d189-41f9-bf2d-fb4a37b0dae7")
+		)
+		(pin "3"
+			(uuid "75f8bc8d-f252-49b2-8bb5-bb65352a4aaf")
+		)
+		(pin "4"
+			(uuid "bc8f9e4c-64cc-43ee-876d-9c9fb26e164f")
+		)
+		(pin "5"
+			(uuid "6802aaf9-aa75-45e1-803a-6dc07b194a98")
+		)
+		(pin "6"
+			(uuid "2b9b16dd-1d14-4903-88e1-d10ba88c81c0")
+		)
+		(pin "7"
+			(uuid "20171aa2-349c-42cb-8eed-a948781ec16b")
+		)
+		(pin "8"
+			(uuid "fbd2b8b5-01c3-47bc-b3a4-6c530b0879cd")
+		)
+		(pin "9"
+			(uuid "db16292b-6405-4c42-9c29-ffc447fe8024")
+		)
+		(pin "10"
+			(uuid "cbbd91c3-5c77-4f3e-b516-57400995d25d")
+		)
+		(pin "11"
+			(uuid "d04b53f7-a399-45db-b915-5a6c4b71a9a2")
+		)
+		(pin "12"
+			(uuid "4c157cd2-a57c-4e98-a4fb-89cc529e5a31")
+		)
+		(pin "13"
+			(uuid "27f56753-8110-4114-bb54-7ead6f495374")
+		)
+		(pin "14"
+			(uuid "fc0066b4-30ed-4a59-9f32-ec881068a6fb")
+		)
+		(pin "15"
+			(uuid "898a579f-42df-44a0-8174-27def5e6a047")
+		)
+		(instances
+			(project "SmartFarm PCB-A Controller"
+				(path "/c75c9e14-2847-487b-9ce4-609afbe5c10d"
+					(reference "J2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:ADS1115")
+		(at 124.46 92.71 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "56281a5c-fa37-4d0b-8e2a-67211164eb4c")
+		(property "Reference" "U1"
+			(at 124.46 81.28 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "ADS1115 (ADDR=GND)"
+			(at 124.46 104.14 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_SOIC10"
+			(at 122.682 92.71 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "65c14b47-6d65-4603-b580-137f3203af63")
+		)
+		(pin "2"
+			(uuid "3511b741-3ed6-4b2d-a37e-2a621dfa6c29")
+		)
+		(pin "3"
+			(uuid "3ef28291-a7f1-4077-94d3-25dc7a55817c")
+		)
+		(pin "4"
+			(uuid "cc281b9f-2b05-4dad-acec-3c9fad9a4d7f")
+		)
+		(pin "5"
+			(uuid "98ab3f48-6c4c-4456-b247-4c0c4107f23d")
+		)
+		(pin "6"
+			(uuid "e2b341d7-c866-4d63-8162-dec6180e9c47")
+		)
+		(pin "7"
+			(uuid "51fd58f6-d86a-40f8-b262-190e3f4cda46")
+		)
+		(pin "8"
+			(uuid "5bb77fa8-040b-4e4f-ac24-35290f2dcdc5")
+		)
+		(pin "9"
+			(uuid "65fc11a7-47e1-4c44-9470-bf133fe12e6d")
+		)
+		(pin "10"
+			(uuid "062bd416-f659-4114-acf7-807e2adb1924")
+		)
+		(instances
+			(project "SmartFarm PCB-A Controller"
+				(path "/c75c9e14-2847-487b-9ce4-609afbe5c10d"
+					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:Conn_01x03")
+		(at 30.48 49.53 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "37dbffcf-b43d-44a1-9cca-5e8e76580860")
+		(property "Reference" "J3"
+			(at 30.48 43.18 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "PH sensor"
+			(at 30.48 55.88 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_PinHeader_1x3"
+			(at 28.702 49.53 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "dc2acc5f-ec52-48bb-821d-502a7dfd4b50")
+		)
+		(pin "2"
+			(uuid "4cd26ca0-99b7-414d-8749-22b10c035eb8")
+		)
+		(pin "3"
+			(uuid "476989ba-e9f9-493d-acdb-221b971046ec")
+		)
+		(instances
+			(project "SmartFarm PCB-A Controller"
+				(path "/c75c9e14-2847-487b-9ce4-609afbe5c10d"
+					(reference "J3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:Jumper3")
+		(at 49.53 49.53 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "6db6cad9-1646-4856-9f0f-6bdbe8e4a6d3")
+		(property "Reference" "JP1"
+			(at 49.53 43.18 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Sensor supply select"
+			(at 49.53 55.88 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_Jumper_3"
+			(at 47.752 49.53 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0e7b9806-9ba1-442e-a8de-f2e710bb942d")
+		)
+		(pin "2"
+			(uuid "0bf3c15f-4daa-49a8-944b-c34b4792ec2c")
+		)
+		(pin "3"
+			(uuid "5d009153-865a-4e8b-b10b-46670952517b")
+		)
+		(instances
+			(project "SmartFarm PCB-A Controller"
+				(path "/c75c9e14-2847-487b-9ce4-609afbe5c10d"
+					(reference "JP1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:R")
+		(at 82.55 45.72 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "28e6322a-09f2-4987-8dc2-28ced29fb302")
+		(property "Reference" "R1"
+			(at 82.55 40.64 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k 1%"
+			(at 82.55 50.8 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_R_0603"
+			(at 80.772 45.72 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "98c2710b-2988-4754-86f1-abc491e5f64e")
+		)
+		(pin "2"
+			(uuid "0e7dd881-13ea-4332-abba-429c6cfc2c28")
+		)
+		(instances
+			(project "SmartFarm PCB-A Controller"
+				(path "/c75c9e14-2847-487b-9ce4-609afbe5c10d"
+					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:R")
+		(at 82.55 58.42 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "224cb878-bf4f-4a47-86d3-ac13139400cb")
+		(property "Reference" "R2"
+			(at 82.55 53.34 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "20k 1%"
+			(at 82.55 63.5 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_R_0603"
+			(at 80.772 58.42 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e2d9410e-41af-4247-960f-6f2ef27d1f3d")
+		)
+		(pin "2"
+			(uuid "fab0248a-cf84-4185-8c92-6f73f592fdcd")
+		)
+		(instances
+			(project "SmartFarm PCB-A Controller"
+				(path "/c75c9e14-2847-487b-9ce4-609afbe5c10d"
+					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:Conn_01x03")
+		(at 30.48 82.55 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "1f2274ba-6f3a-489e-81f3-d3cd6a1bb120")
+		(property "Reference" "J4"
+			(at 30.48 76.2 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "DO sensor"
+			(at 30.48 88.9 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_PinHeader_1x3"
+			(at 28.702 82.55 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "46b0c6de-b7ac-476a-b905-117b5468cb1f")
+		)
+		(pin "2"
+			(uuid "5e2eba8b-ab3f-401b-a8d2-55f82e54188f")
+		)
+		(pin "3"
+			(uuid "50e485c7-95c4-4010-ad9a-153ca3a15b6b")
+		)
+		(instances
+			(project "SmartFarm PCB-A Controller"
+				(path "/c75c9e14-2847-487b-9ce4-609afbe5c10d"
+					(reference "J4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:Jumper3")
+		(at 49.53 82.55 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "b7a92484-a6b6-442d-aabe-a634f12aa5ac")
+		(property "Reference" "JP2"
+			(at 49.53 76.2 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Sensor supply select"
+			(at 49.53 88.9 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_Jumper_3"
+			(at 47.752 82.55 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "38a8b08d-40ad-44d7-b943-96be0038ea45")
+		)
+		(pin "2"
+			(uuid "46ed3f1c-184f-4456-8ad2-ccea9d44c296")
+		)
+		(pin "3"
+			(uuid "002e0f1a-0390-4e34-bb6b-84818ec9b604")
+		)
+		(instances
+			(project "SmartFarm PCB-A Controller"
+				(path "/c75c9e14-2847-487b-9ce4-609afbe5c10d"
+					(reference "JP2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:R")
+		(at 82.55 77.47 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "3b94ef53-1ee0-453a-9325-e5e57b298afd")
+		(property "Reference" "R3"
+			(at 82.55 72.39 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k 1%"
+			(at 82.55 82.55 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_R_0603"
+			(at 80.772 77.47 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e33c7359-dd68-429f-97de-f05aecf8e149")
+		)
+		(pin "2"
+			(uuid "8c3a192a-64bf-42d5-88e5-ebb22f0d04b2")
+		)
+		(instances
+			(project "SmartFarm PCB-A Controller"
+				(path "/c75c9e14-2847-487b-9ce4-609afbe5c10d"
+					(reference "R3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:R")
+		(at 82.55 90.17 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "192589e0-a45c-4683-9a46-827779aa98bb")
+		(property "Reference" "R4"
+			(at 82.55 85.09 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "20k 1%"
+			(at 82.55 95.25 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_R_0603"
+			(at 80.772 90.17 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "10daef77-0602-4bd5-b26c-887552a753cf")
+		)
+		(pin "2"
+			(uuid "a05a88dc-e363-45e5-9506-9004e7a14ae3")
+		)
+		(instances
+			(project "SmartFarm PCB-A Controller"
+				(path "/c75c9e14-2847-487b-9ce4-609afbe5c10d"
+					(reference "R4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:Conn_01x03")
+		(at 30.48 114.3 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "74f2ad74-c08f-429c-a4c1-7966b40337f9")
+		(property "Reference" "J5"
+			(at 30.48 107.95 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TURB sensor"
+			(at 30.48 120.65 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_PinHeader_1x3"
+			(at 28.702 114.3 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "33a54153-3dd2-4a0f-95e8-ec934ef37821")
+		)
+		(pin "2"
+			(uuid "25693599-ef26-473c-9410-92cd15941299")
+		)
+		(pin "3"
+			(uuid "63e93961-1c97-432b-a6c0-f948ab4c9f3d")
+		)
+		(instances
+			(project "SmartFarm PCB-A Controller"
+				(path "/c75c9e14-2847-487b-9ce4-609afbe5c10d"
+					(reference "J5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:Jumper3")
+		(at 49.53 114.3 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "650ad3eb-2076-4dbb-ab54-f6007fc4fb55")
+		(property "Reference" "JP3"
+			(at 49.53 107.95 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Sensor supply select"
+			(at 49.53 120.65 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_Jumper_3"
+			(at 47.752 114.3 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "72a07d2b-de10-4689-8b76-f2f84acbbc34")
+		)
+		(pin "2"
+			(uuid "ab31c452-f183-46b9-84c4-21e360c5f15f")
+		)
+		(pin "3"
+			(uuid "c7fbb372-cef1-4f71-af67-4b7d43ca159e")
+		)
+		(instances
+			(project "SmartFarm PCB-A Controller"
+				(path "/c75c9e14-2847-487b-9ce4-609afbe5c10d"
+					(reference "JP3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:R")
+		(at 82.55 110.49 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f0cec8eb-bd38-47a4-af6a-a5aa2d6a6739")
+		(property "Reference" "R5"
+			(at 82.55 105.41 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k 1%"
+			(at 82.55 115.57 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_R_0603"
+			(at 80.772 110.49 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "41e11cc2-bec2-43c3-b829-1f9fd531ad8e")
+		)
+		(pin "2"
+			(uuid "b6662363-8eb8-40df-9b5b-56d4627bd460")
+		)
+		(instances
+			(project "SmartFarm PCB-A Controller"
+				(path "/c75c9e14-2847-487b-9ce4-609afbe5c10d"
+					(reference "R5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:R")
+		(at 82.55 121.92 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "edbf4199-371c-4028-b11c-8420cbf54967")
+		(property "Reference" "R6"
+			(at 82.55 116.84 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "20k 1%"
+			(at 82.55 127 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_R_0603"
+			(at 80.772 121.92 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "51e9b2e6-d4fd-40aa-b9ef-3dd931d1b7a0")
+		)
+		(pin "2"
+			(uuid "8da4a57c-3c91-4b5a-bc00-a920bffcc8cf")
+		)
+		(instances
+			(project "SmartFarm PCB-A Controller"
+				(path "/c75c9e14-2847-487b-9ce4-609afbe5c10d"
+					(reference "R6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:Conn_01x03")
+		(at 30.48 146.05 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "7be7fbae-83b8-4451-bbf2-f70244795fa4")
+		(property "Reference" "J6"
+			(at 30.48 139.7 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "CO2 sensor"
+			(at 30.48 152.4 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_PinHeader_1x3"
+			(at 28.702 146.05 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1f3c804c-100c-4250-bc9f-a2eb606a3a49")
+		)
+		(pin "2"
+			(uuid "89d862ad-5827-4c35-8f6f-0ed6acfcb86a")
+		)
+		(pin "3"
+			(uuid "1b12127a-c746-4ddd-9bd2-10c63b2529df")
+		)
+		(instances
+			(project "SmartFarm PCB-A Controller"
+				(path "/c75c9e14-2847-487b-9ce4-609afbe5c10d"
+					(reference "J6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:Jumper3")
+		(at 49.53 146.05 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "ba4c256a-db84-454c-92e4-0a134c73cb07")
+		(property "Reference" "JP4"
+			(at 49.53 139.7 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Sensor supply select"
+			(at 49.53 152.4 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_Jumper_3"
+			(at 47.752 146.05 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ed6d914a-ac12-4dbd-bd36-731121cbb11a")
+		)
+		(pin "2"
+			(uuid "a6bec5c8-ee8a-4d4b-8b53-e31df45f486e")
+		)
+		(pin "3"
+			(uuid "ad7f99e8-ee27-4e94-887f-6673d64fc1ef")
+		)
+		(instances
+			(project "SmartFarm PCB-A Controller"
+				(path "/c75c9e14-2847-487b-9ce4-609afbe5c10d"
+					(reference "JP4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:R")
+		(at 82.55 142.24 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "be19c7f5-0158-4d89-961e-defad9cbb69e")
+		(property "Reference" "R7"
+			(at 82.55 137.16 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k 1%"
+			(at 82.55 147.32 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_R_0603"
+			(at 80.772 142.24 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "60ea05e0-4781-401f-8f7c-560c09e5f92a")
+		)
+		(pin "2"
+			(uuid "721f8637-a2a5-4f53-ae38-5e30dcd805a3")
+		)
+		(instances
+			(project "SmartFarm PCB-A Controller"
+				(path "/c75c9e14-2847-487b-9ce4-609afbe5c10d"
+					(reference "R7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:R")
+		(at 82.55 153.67 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "219ee8bb-8268-4cae-8f8e-b3c911b04954")
+		(property "Reference" "R8"
+			(at 82.55 148.59 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "20k 1%"
+			(at 82.55 158.75 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_R_0603"
+			(at 80.772 153.67 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9e8c83c2-2c6e-4b9a-b5f1-10b4c1a8ffa7")
+		)
+		(pin "2"
+			(uuid "24a95fe7-6aea-49f2-b694-f05951f2d2f0")
+		)
+		(instances
+			(project "SmartFarm PCB-A Controller"
+				(path "/c75c9e14-2847-487b-9ce4-609afbe5c10d"
+					(reference "R8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:Conn_01x03")
+		(at 30.48 177.8 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "2afffdeb-356b-4d04-9323-e3c3f60a48c8")
+		(property "Reference" "J7"
+			(at 30.48 171.45 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "DS18B20"
+			(at 30.48 184.15 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_PinHeader_1x3"
+			(at 28.702 177.8 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "64e519b4-7f62-40b8-8ce8-f125dcfe16e5")
+		)
+		(pin "2"
+			(uuid "d94b0435-6a4e-417f-b12c-65548d057989")
+		)
+		(pin "3"
+			(uuid "a87f78b4-e17f-404d-ab15-a84562c9a512")
+		)
+		(instances
+			(project "SmartFarm PCB-A Controller"
+				(path "/c75c9e14-2847-487b-9ce4-609afbe5c10d"
+					(reference "J7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:R")
+		(at 52.07 177.8 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "ae52a1a3-f750-4547-bea5-d3799206bb1e")
+		(property "Reference" "R9"
+			(at 52.07 172.72 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4.7k"
+			(at 52.07 182.88 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_R_0603"
+			(at 50.292 177.8 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d8036f44-e2dc-4ef1-bfc7-d49adb313e00")
+		)
+		(pin "2"
+			(uuid "0527f026-3e31-454e-b96f-b6c1e9ce01a6")
+		)
+		(instances
+			(project "SmartFarm PCB-A Controller"
+				(path "/c75c9e14-2847-487b-9ce4-609afbe5c10d"
+					(reference "R9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:Conn_01x04")
+		(at 105.41 48.26 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "3a563d78-d268-4aed-8ad3-df8c9493ef3c")
+		(property "Reference" "J8"
+			(at 105.41 40.64 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "I2C expansion (BH1750)"
+			(at 105.41 55.88 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_PinHeader_1x4"
+			(at 103.632 48.26 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9dde98e0-5aea-4ba7-bcfa-eacfb30002d7")
+		)
+		(pin "2"
+			(uuid "b1e25beb-7db1-4704-9330-adf5a93a0470")
+		)
+		(pin "3"
+			(uuid "3a48de8e-6ea9-486d-9c2c-78aeb32f124a")
+		)
+		(pin "4"
+			(uuid "6c066ad0-1082-4b3c-a09f-3e9749ef32bc")
+		)
+		(instances
+			(project "SmartFarm PCB-A Controller"
+				(path "/c75c9e14-2847-487b-9ce4-609afbe5c10d"
+					(reference "J8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:C")
+		(at 143.51 49.53 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "07975849-4615-4e63-babf-dca8e7a149f6")
+		(property "Reference" "C1"
+			(at 143.51 46.228 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF"
+			(at 143.51 52.832 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_C_0603"
+			(at 141.732 49.53 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "aeef13ab-2706-48d9-bd6f-a6ccdf42b2c3")
+		)
+		(pin "2"
+			(uuid "e471b54a-e355-495b-bdaf-74706e62667e")
+		)
+		(instances
+			(project "SmartFarm PCB-A Controller"
+				(path "/c75c9e14-2847-487b-9ce4-609afbe5c10d"
+					(reference "C1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:C")
+		(at 143.51 66.04 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "d0267567-a526-4d6b-abc0-23e8d6022041")
+		(property "Reference" "C2"
+			(at 143.51 62.738 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10uF"
+			(at 143.51 69.342 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_C_0603"
+			(at 141.732 66.04 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f3161b5d-af68-4292-a74c-280aab84186e")
+		)
+		(pin "2"
+			(uuid "573796cf-34c1-448b-83a9-0fd8c7e813e5")
+		)
+		(instances
+			(project "SmartFarm PCB-A Controller"
+				(path "/c75c9e14-2847-487b-9ce4-609afbe5c10d"
+					(reference "C2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:R")
+		(at 105.41 76.2 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "8266d238-6154-409e-a813-3a2d2ba7bd18")
+		(property "Reference" "R10"
+			(at 105.41 71.12 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4.7k SDA pull-up"
+			(at 105.41 81.28 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_R_0603"
+			(at 103.632 76.2 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b40d6202-cd16-43d7-8242-104c2e23ed4f")
+		)
+		(pin "2"
+			(uuid "8f83dcbf-bcf4-4e7e-8dd8-d4946e886697")
+		)
+		(instances
+			(project "SmartFarm PCB-A Controller"
+				(path "/c75c9e14-2847-487b-9ce4-609afbe5c10d"
+					(reference "R10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:R")
+		(at 105.41 90.17 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "1d4d13c0-df27-4dbf-b654-bfc5c8655dba")
+		(property "Reference" "R11"
+			(at 105.41 85.09 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4.7k SCL pull-up"
+			(at 105.41 95.25 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_R_0603"
+			(at 103.632 90.17 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ade5599f-1903-47b9-be8b-1a4138e75a45")
+		)
+		(pin "2"
+			(uuid "aed9031b-3048-454c-9cae-a53bbd8772d3")
+		)
+		(instances
+			(project "SmartFarm PCB-A Controller"
+				(path "/c75c9e14-2847-487b-9ce4-609afbe5c10d"
+					(reference "R11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:Conn_02x05")
+		(at 154.94 138.43 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f3c8019b-b503-470b-985e-f164da302878")
+		(property "Reference" "J9"
+			(at 154.94 129.54 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "PCB-B relay interface"
+			(at 154.94 147.32 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_PinHeader_2x5"
+			(at 153.162 138.43 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7f046010-9114-474f-8d11-88abedfbb6c5")
+		)
+		(pin "2"
+			(uuid "f469d65b-393b-4a89-9a8f-46d18666156d")
+		)
+		(pin "3"
+			(uuid "c0029984-e7ed-4c23-8d53-e5c3e6e7877d")
+		)
+		(pin "4"
+			(uuid "15076bcf-deab-44ef-a0ec-2f721a2253b5")
+		)
+		(pin "5"
+			(uuid "955863c7-49bf-4591-bbe2-4c045c68dc81")
+		)
+		(pin "6"
+			(uuid "6717dc20-524c-48c8-ad04-0deb989d757f")
+		)
+		(pin "7"
+			(uuid "7ef3623f-d274-4a81-9e99-bd9f903358ab")
+		)
+		(pin "8"
+			(uuid "8f84f6f5-a24b-4b53-9cbd-d68ffc456849")
+		)
+		(pin "9"
+			(uuid "5d89d6c1-a58f-4a57-8d19-a6e665455b3b")
+		)
+		(pin "10"
+			(uuid "ee2909c2-e670-4586-8b81-9087a16b3c4c")
+		)
+		(instances
+			(project "SmartFarm PCB-A Controller"
+				(path "/c75c9e14-2847-487b-9ce4-609afbe5c10d"
+					(reference "J9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:R")
+		(at 147.32 90.17 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "52f26c9c-9222-4ee4-ba31-72d908afd503")
+		(property "Reference" "R12"
+			(at 147.32 85.09 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1k"
+			(at 147.32 95.25 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_R_0603"
+			(at 145.542 90.17 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3ca36e39-a4e2-4f05-83db-d7ef5ec5898b")
+		)
+		(pin "2"
+			(uuid "0c883659-8d5c-493c-b1e2-3627a97fc035")
+		)
+		(instances
+			(project "SmartFarm PCB-A Controller"
+				(path "/c75c9e14-2847-487b-9ce4-609afbe5c10d"
+					(reference "R12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:LED")
+		(at 166.37 90.17 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "42dd08e5-c538-42cb-a15c-a5bf9bbbfce3")
+		(property "Reference" "D1"
+			(at 166.37 85.09 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Controller status"
+			(at 166.37 95.25 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_LED_0603"
+			(at 164.592 90.17 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a53cdad3-b623-40b9-ab81-b0a901e9fd69")
+		)
+		(pin "2"
+			(uuid "903fe6ca-c736-4f25-b7e1-4af236b37c1d")
+		)
+		(instances
+			(project "SmartFarm PCB-A Controller"
+				(path "/c75c9e14-2847-487b-9ce4-609afbe5c10d"
+					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 27.94 77.47) (xy 25.4 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0463985e-5abb-494c-9733-f378e9b4ffa2")
+	)
+	(wire
+		(pts
+			(xy 27.94 80.01) (xy 25.4 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ad26616d-1bfc-4b6e-b8ed-d928876e1521")
+	)
+	(wire
+		(pts
+			(xy 27.94 82.55) (xy 25.4 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "181ef8f7-fcab-4a0f-aae1-581963d8e158")
+	)
+	(wire
+		(pts
+			(xy 27.94 85.09) (xy 25.4 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "38f2228f-f4d8-42a8-826c-16d7cfc61aeb")
+	)
+	(wire
+		(pts
+			(xy 27.94 87.63) (xy 25.4 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e4684b15-d38b-4e77-b51d-871d40199852")
+	)
+	(wire
+		(pts
+			(xy 27.94 90.17) (xy 25.4 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6b2ec41e-9d77-45cb-923f-a5aabde3f02d")
+	)
+	(wire
+		(pts
+			(xy 27.94 92.71) (xy 25.4 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "602d9d5b-073a-4d85-bcce-a39a90317557")
+	)
+	(wire
+		(pts
+			(xy 27.94 95.25) (xy 25.4 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "081bca78-e5c6-4cde-804f-ec23fcb63202")
+	)
+	(wire
+		(pts
+			(xy 27.94 97.79) (xy 25.4 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2eb69c88-12ec-4135-ad86-73e04aeadf61")
+	)
+	(wire
+		(pts
+			(xy 27.94 100.33) (xy 25.4 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e2046d8a-b852-4cc5-9836-17b332ea60fb")
+	)
+	(wire
+		(pts
+			(xy 27.94 102.87) (xy 25.4 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b36c3ad2-346b-4786-a0db-d5a1138f1bb3")
+	)
+	(wire
+		(pts
+			(xy 27.94 105.41) (xy 25.4 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7f91dedf-2c40-45c6-9709-6fa3ecc6202b")
+	)
+	(wire
+		(pts
+			(xy 27.94 107.95) (xy 25.4 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e986407a-a78a-470c-b214-1c4278ecb049")
+	)
+	(wire
+		(pts
+			(xy 27.94 110.49) (xy 25.4 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "463f9c96-7609-43e2-ab6d-900cb519d7f2")
+	)
+	(wire
+		(pts
+			(xy 27.94 113.03) (xy 25.4 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "528ff0e4-2e40-4681-87cd-404bab7e7c57")
+	)
+	(wire
+		(pts
+			(xy 64.77 77.47) (xy 62.23 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "19a4cdf7-7f78-4b8c-bb88-bd3c0ce5147d")
+	)
+	(wire
+		(pts
+			(xy 64.77 80.01) (xy 62.23 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "819ff277-b508-4ff4-9303-4b8550204c42")
+	)
+	(wire
+		(pts
+			(xy 64.77 82.55) (xy 62.23 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "730552d9-ece3-40f7-a68c-01101bb4114b")
+	)
+	(wire
+		(pts
+			(xy 64.77 85.09) (xy 62.23 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0f0f82d8-da24-4b7a-a183-08574a298adf")
+	)
+	(wire
+		(pts
+			(xy 64.77 87.63) (xy 62.23 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e04da9af-edc9-49ea-8255-9cd1bebf7c84")
+	)
+	(wire
+		(pts
+			(xy 64.77 90.17) (xy 62.23 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "34ff06fd-4ae6-4011-a0a7-e5d99f670684")
+	)
+	(wire
+		(pts
+			(xy 64.77 92.71) (xy 62.23 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "711d0318-e8ec-4287-8643-7e8ea29b7742")
+	)
+	(wire
+		(pts
+			(xy 64.77 95.25) (xy 62.23 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "57e43285-8f99-4655-8c97-cfc55ea7acdb")
+	)
+	(wire
+		(pts
+			(xy 64.77 97.79) (xy 62.23 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "869e9390-13a7-493f-8b84-6dfa7f52ddae")
+	)
+	(wire
+		(pts
+			(xy 64.77 100.33) (xy 62.23 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fab625bd-b975-4196-ad0b-1bfce595ed77")
+	)
+	(wire
+		(pts
+			(xy 64.77 102.87) (xy 62.23 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f95b7018-0053-4e0a-aee0-c7ab10b65739")
+	)
+	(wire
+		(pts
+			(xy 64.77 105.41) (xy 62.23 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3fa4d31c-fcc3-4fa2-8e66-5c10016afb79")
+	)
+	(wire
+		(pts
+			(xy 64.77 107.95) (xy 62.23 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "621d96ff-fae2-45e1-a061-ed0469ef26e7")
+	)
+	(wire
+		(pts
+			(xy 64.77 110.49) (xy 62.23 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c6151396-ef96-4c0f-9a61-8ce59984d316")
+	)
+	(wire
+		(pts
+			(xy 64.77 113.03) (xy 62.23 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aaa714a7-d5a0-4d1e-b9c3-5c5328132989")
+	)
+	(wire
+		(pts
+			(xy 116.84 85.09) (xy 114.3 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "67400867-dde2-4b6a-9f07-8e29f223e0ba")
+	)
+	(wire
+		(pts
+			(xy 116.84 90.17) (xy 114.3 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3ad2aabd-70ea-4860-be75-7759317f8646")
+	)
+	(wire
+		(pts
+			(xy 116.84 92.71) (xy 114.3 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5e74ad59-9ec2-42fc-aefd-d4fb7c518f6f")
+	)
+	(wire
+		(pts
+			(xy 116.84 95.25) (xy 114.3 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fa5ddab2-53d4-49d3-834d-4b4e118a7260")
+	)
+	(wire
+		(pts
+			(xy 116.84 97.79) (xy 114.3 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "881bc5b7-31da-463c-8b5c-c054c799a937")
+	)
+	(wire
+		(pts
+			(xy 132.08 97.79) (xy 134.62 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0a67e322-6360-45ea-b5a7-1f990afb8b93")
+	)
+	(wire
+		(pts
+			(xy 132.08 95.25) (xy 134.62 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2ed28d8f-071c-4f7f-a318-9e6ac06453f2")
+	)
+	(wire
+		(pts
+			(xy 132.08 92.71) (xy 134.62 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b7cbb3bc-c4f0-4a3b-bfd0-40eb49abd863")
+	)
+	(wire
+		(pts
+			(xy 132.08 90.17) (xy 134.62 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0adcb877-14d3-43c0-8b41-ba69c145ff63")
+	)
+	(wire
+		(pts
+			(xy 22.86 46.99) (xy 20.32 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3abc8901-ffe2-4e38-b63c-7781e996a6ad")
+	)
+	(wire
+		(pts
+			(xy 22.86 49.53) (xy 20.32 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3780b1b4-4b3a-47ee-9f1b-01cfdcd57048")
+	)
+	(wire
+		(pts
+			(xy 22.86 52.07) (xy 20.32 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "05038db1-73c6-4c90-81b9-6df017eb9637")
+	)
+	(wire
+		(pts
+			(xy 44.45 46.99) (xy 41.91 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1fb53175-c4e5-4f5a-a1f0-662f6a180fe8")
+	)
+	(wire
+		(pts
+			(xy 54.61 49.53) (xy 57.15 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f5909f42-88b8-4fc4-9c4b-0c158a3e00a9")
+	)
+	(wire
+		(pts
+			(xy 44.45 52.07) (xy 41.91 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "524e724b-6a5d-49d3-b64a-a759642ac110")
+	)
+	(wire
+		(pts
+			(xy 82.55 41.91) (xy 82.55 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d74859c5-dbcf-4355-a367-a77e9d334ea0")
+	)
+	(wire
+		(pts
+			(xy 82.55 49.53) (xy 82.55 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8c18929c-1658-49a6-a765-f5a84b977cf9")
+	)
+	(wire
+		(pts
+			(xy 82.55 54.61) (xy 82.55 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6f47d342-73c0-471b-bf5b-fa4fe9726718")
+	)
+	(wire
+		(pts
+			(xy 82.55 62.23) (xy 82.55 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a466557c-698e-415a-b1dd-cb220b6c2056")
+	)
+	(wire
+		(pts
+			(xy 116.84 92.71) (xy 114.3 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aab32249-c860-42cc-b782-76bb11f0e89c")
+	)
+	(wire
+		(pts
+			(xy 22.86 80.01) (xy 20.32 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eae76cb1-31bc-427a-b035-7ec94302ddfb")
+	)
+	(wire
+		(pts
+			(xy 22.86 82.55) (xy 20.32 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c297b36a-cd04-4dc0-88e7-d404960b8c97")
+	)
+	(wire
+		(pts
+			(xy 22.86 85.09) (xy 20.32 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "89cd8697-6db3-47c3-be91-674f834b5589")
+	)
+	(wire
+		(pts
+			(xy 44.45 80.01) (xy 41.91 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "62228d3e-84b1-4657-a870-0d7297499819")
+	)
+	(wire
+		(pts
+			(xy 54.61 82.55) (xy 57.15 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e759a742-6aed-4257-a3be-4284c62f50cb")
+	)
+	(wire
+		(pts
+			(xy 44.45 85.09) (xy 41.91 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0fbe19e8-8969-4f61-80a3-3f8a1f1d84ab")
+	)
+	(wire
+		(pts
+			(xy 82.55 73.66) (xy 82.55 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e3fe3105-42b8-4db8-b7ea-aef2d7b3e9ca")
+	)
+	(wire
+		(pts
+			(xy 82.55 81.28) (xy 82.55 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9d3ad28d-d366-49b0-a797-c820c20c7c0c")
+	)
+	(wire
+		(pts
+			(xy 82.55 86.36) (xy 82.55 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a7378d99-7744-4816-9b38-c442ee0993d2")
+	)
+	(wire
+		(pts
+			(xy 82.55 93.98) (xy 82.55 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a71651c8-cd5f-4ed6-ad13-3c7b8b658b7b")
+	)
+	(wire
+		(pts
+			(xy 116.84 95.25) (xy 114.3 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8f0c5a99-bd13-4a11-843a-a67e96654732")
+	)
+	(wire
+		(pts
+			(xy 22.86 111.76) (xy 20.32 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "29f72754-2f32-48d6-8d92-480a80abb107")
+	)
+	(wire
+		(pts
+			(xy 22.86 114.3) (xy 20.32 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "74097cd8-f874-4c30-9651-a26fdd96d9cc")
+	)
+	(wire
+		(pts
+			(xy 22.86 116.84) (xy 20.32 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ab53aa60-7b47-40f1-8e9f-91b0af36181f")
+	)
+	(wire
+		(pts
+			(xy 44.45 111.76) (xy 41.91 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8b4181ca-0e3a-49d5-9a72-39ecdcaff53a")
+	)
+	(wire
+		(pts
+			(xy 54.61 114.3) (xy 57.15 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "831c13e2-d84b-42e5-b787-9ddf0a22c3bc")
+	)
+	(wire
+		(pts
+			(xy 44.45 116.84) (xy 41.91 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2077fb4c-f238-49ae-88ad-ce037e7f2911")
+	)
+	(wire
+		(pts
+			(xy 82.55 106.68) (xy 82.55 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7d6422f4-fa0e-41e7-a404-393a6bb86d55")
+	)
+	(wire
+		(pts
+			(xy 82.55 114.3) (xy 82.55 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b250db50-6d8d-41a2-bc93-ec6bd01dab79")
+	)
+	(wire
+		(pts
+			(xy 82.55 118.11) (xy 82.55 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1ff80efd-6e20-4d63-b69f-3aa727add390")
+	)
+	(wire
+		(pts
+			(xy 82.55 125.73) (xy 82.55 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6ed77be5-0e40-48c4-a09c-9a03b0f9ac8d")
+	)
+	(wire
+		(pts
+			(xy 116.84 97.79) (xy 114.3 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a520557e-9951-4a68-97d2-4cd704c91452")
+	)
+	(wire
+		(pts
+			(xy 22.86 143.51) (xy 20.32 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "91752558-4905-4b78-9d3f-87735db992db")
+	)
+	(wire
+		(pts
+			(xy 22.86 146.05) (xy 20.32 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1a7a6404-139b-4569-9505-ccea6e4640f7")
+	)
+	(wire
+		(pts
+			(xy 22.86 148.59) (xy 20.32 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2c7d158b-d359-415d-8440-0d84408f58f0")
+	)
+	(wire
+		(pts
+			(xy 44.45 143.51) (xy 41.91 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e42c00b0-7ea8-4f6b-a1b4-2e31793b304e")
+	)
+	(wire
+		(pts
+			(xy 54.61 146.05) (xy 57.15 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d555c752-d253-4000-83a5-c36d5c5f71ff")
+	)
+	(wire
+		(pts
+			(xy 44.45 148.59) (xy 41.91 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fcc28378-cfff-4288-9399-85863cb87d6c")
+	)
+	(wire
+		(pts
+			(xy 82.55 138.43) (xy 82.55 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1f3e4bfb-3d34-43e5-ad50-cb50e811d06f")
+	)
+	(wire
+		(pts
+			(xy 82.55 146.05) (xy 82.55 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d3fcda02-18ae-457c-9a34-1b1bda4d9046")
+	)
+	(wire
+		(pts
+			(xy 82.55 149.86) (xy 82.55 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "905e10f6-cf2a-4324-80d5-c5a693b1ae36")
+	)
+	(wire
+		(pts
+			(xy 82.55 157.48) (xy 82.55 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5dc41ddb-722a-4e85-861c-ac927eddd31d")
+	)
+	(wire
+		(pts
+			(xy 132.08 97.79) (xy 134.62 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e2826cb6-ce14-4066-bfd0-4f19146523db")
+	)
+	(wire
+		(pts
+			(xy 22.86 175.26) (xy 20.32 175.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8637aaa3-571c-4b81-b137-eb8f5fcd1115")
+	)
+	(wire
+		(pts
+			(xy 22.86 177.8) (xy 20.32 177.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "15f4aec2-ddad-44c6-ad43-a8dc3c2586d9")
+	)
+	(wire
+		(pts
+			(xy 22.86 180.34) (xy 20.32 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7b68a5e7-b756-45dc-8125-f336fb7cf7a3")
+	)
+	(wire
+		(pts
+			(xy 52.07 173.99) (xy 52.07 176.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "01adfede-aed2-488d-816f-6b740604a670")
+	)
+	(wire
+		(pts
+			(xy 52.07 181.61) (xy 52.07 179.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e0abb040-5651-4d4a-926b-f9c859a870ee")
+	)
+	(wire
+		(pts
+			(xy 97.79 44.45) (xy 95.25 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d4934ed4-bd2f-4704-8769-19466358d727")
+	)
+	(wire
+		(pts
+			(xy 97.79 46.99) (xy 95.25 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cadd8ef2-235d-48da-b403-cb66980d9d8b")
+	)
+	(wire
+		(pts
+			(xy 97.79 49.53) (xy 95.25 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "22f5425f-66b3-40a5-9866-dbee2856d0db")
+	)
+	(wire
+		(pts
+			(xy 97.79 52.07) (xy 95.25 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4de901fc-840d-43c9-b796-6fde5b0957a6")
+	)
+	(wire
+		(pts
+			(xy 143.51 45.72) (xy 143.51 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "35b059c8-f2d9-470a-84ec-d423dcc146be")
+	)
+	(wire
+		(pts
+			(xy 143.51 53.34) (xy 143.51 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "88e7c2e3-6bb7-480b-8752-134fce550e88")
+	)
+	(wire
+		(pts
+			(xy 143.51 62.23) (xy 143.51 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0a750c16-20ed-4fb3-a01d-bf2b19a8e92c")
+	)
+	(wire
+		(pts
+			(xy 143.51 69.85) (xy 143.51 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "26736fbe-525f-4f39-999e-307212c660aa")
+	)
+	(wire
+		(pts
+			(xy 105.41 72.39) (xy 105.41 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "43d4c342-e49a-472b-bb21-5cc697f66e93")
+	)
+	(wire
+		(pts
+			(xy 105.41 80.01) (xy 105.41 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bbe6c0eb-7f15-4a0e-b7e5-6fc645ff4756")
+	)
+	(wire
+		(pts
+			(xy 105.41 86.36) (xy 105.41 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1783a86a-b550-41c7-91e6-b51c24270f20")
+	)
+	(wire
+		(pts
+			(xy 105.41 93.98) (xy 105.41 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f3f33a32-ac01-4aa6-8eef-ffec8975c01e")
+	)
+	(wire
+		(pts
+			(xy 147.32 133.35) (xy 144.78 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4de6bef7-5330-46b7-b658-7e3a949c9689")
+	)
+	(wire
+		(pts
+			(xy 162.56 133.35) (xy 165.1 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d925acb5-ab47-46b8-8d8e-cdf8a4ab41d0")
+	)
+	(wire
+		(pts
+			(xy 147.32 135.89) (xy 144.78 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ec2fa62e-7593-4f42-a64b-836776c3a564")
+	)
+	(wire
+		(pts
+			(xy 162.56 135.89) (xy 165.1 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a0503a0d-9156-4836-80c4-fc7d53e873a7")
+	)
+	(wire
+		(pts
+			(xy 147.32 138.43) (xy 144.78 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a45c5bc7-5985-4277-86b5-585c1728c919")
+	)
+	(wire
+		(pts
+			(xy 162.56 138.43) (xy 165.1 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fda9fd6c-22ea-49cf-a4aa-55ab5c2b2bfe")
+	)
+	(wire
+		(pts
+			(xy 147.32 140.97) (xy 144.78 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b57323f2-2cc8-416b-bb36-c1d387c2b07b")
+	)
+	(wire
+		(pts
+			(xy 162.56 140.97) (xy 165.1 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "19b54684-b860-4027-b29a-dd5da7603dba")
+	)
+	(wire
+		(pts
+			(xy 147.32 143.51) (xy 144.78 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "18db749b-ca88-4f56-8595-492c8631c550")
+	)
+	(wire
+		(pts
+			(xy 162.56 143.51) (xy 165.1 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ff03166d-5f86-45ab-9c8b-fea29ab9ffd8")
+	)
+	(wire
+		(pts
+			(xy 147.32 86.36) (xy 147.32 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c8fda8b2-6a8d-4882-97c0-8e7220640d41")
+	)
+	(wire
+		(pts
+			(xy 147.32 93.98) (xy 147.32 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "78c042da-4044-419a-ac8b-365bcb6afc93")
+	)
+	(wire
+		(pts
+			(xy 162.56 90.17) (xy 160.02 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3a2e0678-161f-40da-bdf6-7ea96da52ec5")
+	)
+	(wire
+		(pts
+			(xy 170.18 90.17) (xy 172.72 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5bc22baf-6390-4ef0-aae3-1bc291e8f886")
+	)
+	(label "3V3"
+		(at 25.4 77.47 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "893428ed-d2dc-43fd-8284-bb23f259043c")
+	)
+	(label "GND"
+		(at 25.4 80.01 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "83c123e5-191a-4866-8bfe-4643c1eaec55")
+	)
+	(label "GPIO15"
+		(at 25.4 82.55 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6149d483-a71b-46c8-a034-10fdad8b0a84")
+	)
+	(label "GPIO2"
+		(at 25.4 85.09 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "999130ff-4a83-4792-a8a9-ed5de5797e9d")
+	)
+	(label "DS18B20_DATA"
+		(at 25.4 87.63 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "aadacc3d-fdb3-4f7d-a210-5795f6e31fb2")
+	)
+	(label "GPIO16_RX2"
+		(at 25.4 90.17 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "53e91726-a07c-48ea-b5dc-84ad88fbe73c")
+	)
+	(label "GPIO17_TX2"
+		(at 25.4 92.71 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ee1ba98c-f39d-419b-8473-02a6e9b3bf11")
+	)
+	(label "GPIO5"
+		(at 25.4 95.25 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2f11526b-e1a5-4136-b0df-2e3f4674e37b")
+	)
+	(label "GPIO18"
+		(at 25.4 97.79 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1a8b9984-c1f0-45fa-9e26-7e32474be046")
+	)
+	(label "GPIO19"
+		(at 25.4 100.33 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f96c4587-c1ee-4c1b-8e21-552dc072c4a5")
+	)
+	(label "I2C_SDA"
+		(at 25.4 102.87 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a0cac5d8-4baf-4923-8eb7-abe6f9fad5a8")
+	)
+	(label "GPIO3_RX0"
+		(at 25.4 105.41 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9258ae91-9442-4aab-95f1-ae7b6f23cb80")
+	)
+	(label "GPIO1_TX0"
+		(at 25.4 107.95 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "44ff49db-6e8f-4036-b55a-ed3de631cd0c")
+	)
+	(label "I2C_SCL"
+		(at 25.4 110.49 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1fecfd1f-6441-44fb-a37c-ead24e08c6e4")
+	)
+	(label "RELAY8"
+		(at 25.4 113.03 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "db8f13b7-dafb-4bc4-a90f-bfdc9eb9f31e")
+	)
+	(label "5V_VIN"
+		(at 62.23 77.47 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "68fa2e2b-e376-4e2e-83b3-d6cf748437cc")
+	)
+	(label "GND"
+		(at 62.23 80.01 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b1c9dc71-c5b9-4937-b9f7-b38062d6f86d")
+	)
+	(label "RELAY1"
+		(at 62.23 82.55 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "341f43d0-babf-4a91-93ce-0514377a47c6")
+	)
+	(label "GPIO12_BOOT"
+		(at 62.23 85.09 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "07c58ab4-1597-4c53-a0a8-1880245b0101")
+	)
+	(label "RELAY3"
+		(at 62.23 87.63 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e23a99f4-2fb1-437e-91f6-d46f89d9a441")
+	)
+	(label "RELAY4"
+		(at 62.23 90.17 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "30c8d236-8f74-40dc-be14-d2b10004b3e2")
+	)
+	(label "GPIO26"
+		(at 62.23 92.71 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "23a88b3b-5be9-4e8c-b638-8dd64e6a181d")
+	)
+	(label "RELAY2"
+		(at 62.23 95.25 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5c45aaa0-3ec5-4b9b-965d-fd5a3fc4018c")
+	)
+	(label "RELAY6"
+		(at 62.23 97.79 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f97ab1d5-27ca-40ec-bfdf-602eea79cb81")
+	)
+	(label "RELAY5"
+		(at 62.23 100.33 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e5576d69-8804-4af7-a328-13c696167120")
+	)
+	(label "GPIO35"
+		(at 62.23 102.87 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f33276d1-6e27-40b6-b193-d8cb66bb1ff9")
+	)
+	(label "GPIO34"
+		(at 62.23 105.41 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a8cafc28-6f01-4de4-8b47-985797846a50")
+	)
+	(label "GPIO39"
+		(at 62.23 107.95 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2a1cb972-3adc-4d44-b787-76cc6f9a2e1d")
+	)
+	(label "GPIO36"
+		(at 62.23 110.49 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c7ef8149-77ce-41ab-b148-fd1fda34b685")
+	)
+	(label "EN"
+		(at 62.23 113.03 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ae5d7e37-a043-49b6-ac51-f08aa4a6b943")
+	)
+	(label "GND"
+		(at 114.3 85.09 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fc6eec34-3ceb-4cf4-90d6-e43426434eb9")
+	)
+	(label "GND"
+		(at 114.3 90.17 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a10ff4a6-503d-4665-b492-953004ec9044")
+	)
+	(label "PH_ADC"
+		(at 114.3 92.71 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c1c3f5e6-bde6-4f00-ad8c-c8409384ddf5")
+	)
+	(label "DO_ADC"
+		(at 114.3 95.25 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "85e6bc54-a236-43d8-b984-38bad8fd0556")
+	)
+	(label "TURB_ADC"
+		(at 114.3 97.79 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "71749122-4dbc-4812-98ba-3cebaf3fb01d")
+	)
+	(label "CO2_ADC"
+		(at 134.62 97.79 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e2e7fc7a-68e0-47ed-9665-ca62d5f9ccda")
+	)
+	(label "3V3"
+		(at 134.62 95.25 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "079f6ad8-cae6-471b-a04d-6c4724a47236")
+	)
+	(label "I2C_SCL"
+		(at 134.62 92.71 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "00c803db-c6c8-45e7-92de-c98a0c216461")
+	)
+	(label "I2C_SDA"
+		(at 134.62 90.17 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0ce1d0a1-338c-46f5-9256-74043ea273c0")
+	)
+	(label "PH_VCC"
+		(at 20.32 46.99 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "464bedd3-f621-4cd1-af5f-e97a32051607")
+	)
+	(label "GND"
+		(at 20.32 49.53 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "df4d94c7-d8a8-4701-b451-fd487d9c1fc3")
+	)
+	(label "PH_RAW"
+		(at 20.32 52.07 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "dfe13c82-a61f-4846-8b84-1af0ef71f6c8")
+	)
+	(label "3V3"
+		(at 41.91 46.99 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "92776880-aec7-4e68-bc5e-0c3d4c4c7cf9")
+	)
+	(label "PH_VCC"
+		(at 57.15 49.53 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4c610d09-316a-42ef-97ba-a3dcd9741ff0")
+	)
+	(label "5V_VIN"
+		(at 41.91 52.07 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6c0bb9c6-2d9a-4b69-ab21-2e56fd6dcb0e")
+	)
+	(label "PH_RAW"
+		(at 82.55 44.45 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6416cfce-f5f2-4cdd-8d8e-41095a168a31")
+	)
+	(label "PH_ADC"
+		(at 82.55 46.99 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2e6fb690-7666-4018-95c8-6f693edf7eaf")
+	)
+	(label "PH_ADC"
+		(at 82.55 57.15 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "acf31d8d-0ed7-4db6-9afa-e19dcd0ed2e1")
+	)
+	(label "GND"
+		(at 82.55 59.69 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "83d294b3-c519-4375-a812-abd2da8336a8")
+	)
+	(label "PH_ADC"
+		(at 114.3 92.71 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "300d4f39-6a05-4500-8846-17e304189e51")
+	)
+	(label "DO_VCC"
+		(at 20.32 80.01 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1efe6b77-73d4-4c16-8fcf-0585fbd26408")
+	)
+	(label "GND"
+		(at 20.32 82.55 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f9886363-c353-4718-9453-1efc4c479ada")
+	)
+	(label "DO_RAW"
+		(at 20.32 85.09 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1b9d66a0-092a-4d17-ad2a-0d4b7fd5dcee")
+	)
+	(label "3V3"
+		(at 41.91 80.01 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "93517693-7124-42ad-abee-a0e804d194bf")
+	)
+	(label "DO_VCC"
+		(at 57.15 82.55 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2406fb87-9792-4a8e-8a7f-9a8f1c2a82e6")
+	)
+	(label "5V_VIN"
+		(at 41.91 85.09 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "61dcde17-b2e9-43a5-8c97-b42f36f191c5")
+	)
+	(label "DO_RAW"
+		(at 82.55 76.2 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2c0b8326-2a44-4dad-9ab4-5e9d3065ba1d")
+	)
+	(label "DO_ADC"
+		(at 82.55 78.74 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6544ece3-1b01-4ca7-bab3-bb6c4c1bb4b6")
+	)
+	(label "DO_ADC"
+		(at 82.55 88.9 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "060a464f-d953-44c6-acf4-fd19f44fe861")
+	)
+	(label "GND"
+		(at 82.55 91.44 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "eff9085b-3800-416e-a547-41b728985920")
+	)
+	(label "DO_ADC"
+		(at 114.3 95.25 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a664c3f1-5bd2-4de7-80cc-6b5520a9a44e")
+	)
+	(label "TURB_VCC"
+		(at 20.32 111.76 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d65ff411-0874-41bc-a248-3a1122ac7d1c")
+	)
+	(label "GND"
+		(at 20.32 114.3 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "71cb4274-f482-40a3-b14e-d70522762fb3")
+	)
+	(label "TURB_RAW"
+		(at 20.32 116.84 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c44a8e11-2094-445b-a824-ed8e5974725a")
+	)
+	(label "3V3"
+		(at 41.91 111.76 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b7701497-fcd4-499c-bebf-98b1ec5b9224")
+	)
+	(label "TURB_VCC"
+		(at 57.15 114.3 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e44585ee-341f-4d4d-8b3c-453ddb9fa6b1")
+	)
+	(label "5V_VIN"
+		(at 41.91 116.84 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "97edbc2d-94de-4055-b798-28f353326e5f")
+	)
+	(label "TURB_RAW"
+		(at 82.55 109.22 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9eecfe08-eab2-4f80-99f0-ca8543fbe7e3")
+	)
+	(label "TURB_ADC"
+		(at 82.55 111.76 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8b7a6ac9-c926-4675-8717-04c7c4dc31f1")
+	)
+	(label "TURB_ADC"
+		(at 82.55 120.65 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "de908fe4-c9b3-4e77-a73a-cbdc8369878a")
+	)
+	(label "GND"
+		(at 82.55 123.19 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6c09ef1b-5f50-4c8f-81de-81eec1385962")
+	)
+	(label "TURB_ADC"
+		(at 114.3 97.79 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "cfb75fd0-59b6-439f-80e1-45509904d4ef")
+	)
+	(label "CO2_VCC"
+		(at 20.32 143.51 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4fa986ae-8443-463f-9d28-a126e024eb84")
+	)
+	(label "GND"
+		(at 20.32 146.05 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "85fb7ee4-e3ef-419c-acf0-ddf9cf90dfec")
+	)
+	(label "CO2_RAW"
+		(at 20.32 148.59 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "292663b8-769e-4f7d-b5f4-29bf63bf1383")
+	)
+	(label "3V3"
+		(at 41.91 143.51 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d40394d4-f502-44c9-9810-86c16204accd")
+	)
+	(label "CO2_VCC"
+		(at 57.15 146.05 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fd8ccc7e-852a-419e-adba-b6433a073909")
+	)
+	(label "5V_VIN"
+		(at 41.91 148.59 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e43c29ea-bf67-48cd-8c66-f8e62ccbf713")
+	)
+	(label "CO2_RAW"
+		(at 82.55 140.97 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "eca6adae-8634-453d-8d41-46a049195d1e")
+	)
+	(label "CO2_ADC"
+		(at 82.55 143.51 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e780f57d-9fe6-45f9-b344-a7c8fb693921")
+	)
+	(label "CO2_ADC"
+		(at 82.55 152.4 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "560235f6-8127-4d1c-bad0-4f7e56f9d9d4")
+	)
+	(label "GND"
+		(at 82.55 154.94 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "40421ca7-c7ed-491e-80d7-ddd12a00f916")
+	)
+	(label "CO2_ADC"
+		(at 134.62 97.79 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "81c7523b-08be-4c89-919a-e97f3099dc9b")
+	)
+	(label "3V3"
+		(at 20.32 175.26 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "46f8bff4-5538-45d8-842e-ca8c0887f3aa")
+	)
+	(label "DS18B20_DATA"
+		(at 20.32 177.8 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b7925a4a-1f55-45c3-8c50-abaf23017912")
+	)
+	(label "GND"
+		(at 20.32 180.34 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fcbeec81-c366-49ec-8925-bb48fe53af2e")
+	)
+	(label "3V3"
+		(at 52.07 176.53 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "201ab559-77a3-40b3-9af2-85c91bf5b071")
+	)
+	(label "DS18B20_DATA"
+		(at 52.07 179.07 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a1199975-0e77-49b8-ba09-efe7fc0d352e")
+	)
+	(label "3V3"
+		(at 95.25 44.45 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ce5447c1-4544-4456-b9f8-2632d648639d")
+	)
+	(label "GND"
+		(at 95.25 46.99 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "cc156be8-79e9-4082-bd87-0573c16f4844")
+	)
+	(label "I2C_SDA"
+		(at 95.25 49.53 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5ee68204-6c04-4732-84f0-a201b6cffb87")
+	)
+	(label "I2C_SCL"
+		(at 95.25 52.07 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b8f51974-0159-4cb3-ab5a-deebf82a12f5")
+	)
+	(label "3V3"
+		(at 143.51 48.26 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "29301173-5ac5-4381-bd11-d7feb852e411")
+	)
+	(label "GND"
+		(at 143.51 50.8 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6786bdde-abf0-456b-9d1d-0b3cf3099465")
+	)
+	(label "3V3"
+		(at 143.51 64.77 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "21267362-7a5c-4290-885f-1e3cb5d1dcfd")
+	)
+	(label "GND"
+		(at 143.51 67.31 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "64c2bd96-aa12-4572-a3fc-b9c75f72b032")
+	)
+	(label "3V3"
+		(at 105.41 74.93 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8d7f22ca-c1f6-4d93-9508-79307a671816")
+	)
+	(label "I2C_SDA"
+		(at 105.41 77.47 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2fec17d2-b5cf-421f-8f1d-04c8aee680d0")
+	)
+	(label "3V3"
+		(at 105.41 88.9 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0dec716f-956a-4cf0-a531-80dde89b268d")
+	)
+	(label "I2C_SCL"
+		(at 105.41 91.44 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a78c0244-aef1-492b-9de9-413556eb1c6b")
+	)
+	(label "RELAY1"
+		(at 144.78 133.35 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "994917c8-5612-457e-8408-61a6a5488543")
+	)
+	(label "RELAY2"
+		(at 165.1 133.35 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9a0f8002-78a4-42f3-9876-b56700877f7b")
+	)
+	(label "RELAY3"
+		(at 144.78 135.89 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "12c2ef20-2158-4bcf-a65e-8a94f061c4d3")
+	)
+	(label "RELAY4"
+		(at 165.1 135.89 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5c5787ed-c6ce-4d11-97d5-0eda35684b95")
+	)
+	(label "RELAY5"
+		(at 144.78 138.43 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f9525567-b244-4a03-9a25-1358fff17e5d")
+	)
+	(label "RELAY6"
+		(at 165.1 138.43 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1a97816f-4cd4-41ed-9495-034d9b84bd57")
+	)
+	(label "RELAY7"
+		(at 144.78 140.97 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8def2959-84a0-4c9a-99b7-3e262f4957f0")
+	)
+	(label "RELAY8"
+		(at 165.1 140.97 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9847215c-7ddd-4ef7-9472-39d31dec1fcf")
+	)
+	(label "GND"
+		(at 144.78 143.51 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b9a7b29e-fd0e-45ea-bec9-5877a74781dc")
+	)
+	(label "GND"
+		(at 165.1 143.51 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8d1f978b-ac62-4861-b749-d35f3d03ed3a")
+	)
+	(label "GPIO2"
+		(at 147.32 88.9 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6a8913f8-14e6-49b4-bf32-fa2a72e93685")
+	)
+	(label "STAT_LED_A"
+		(at 147.32 91.44 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7f42f9cd-3915-4b81-9f07-66b8368fb1c8")
+	)
+	(label "GND"
+		(at 160.02 90.17 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5f6f06b3-d055-4f4e-9b62-4ce6ec5c8b88")
+	)
+	(label "STAT_LED_A"
+		(at 172.72 90.17 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "30fe6c8f-88bf-4ac8-85d4-18c0030f5577")
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
