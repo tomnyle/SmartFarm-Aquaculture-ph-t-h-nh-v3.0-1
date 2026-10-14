@@ -228,10 +228,17 @@ automation:
 
 See `/docs` folder for:
 - `architecture.md` - System design
-- `hardware.md` - PCB-A/PCB-B interface and relay module requirements
+- `hardware.md` - PCB-A/PCB-B KiCad projects and relay module requirements
 - `sensors.md` - Sensor specifications & calibration
 - `wiring.md` - Hardware wiring diagram
 - `mqtt.md` - MQTT protocol details
+
+Open the KiCad designs with KiCad 9 or newer:
+- [`hardware/pcb-a/pcb-a.kicad_pro`](hardware/pcb-a/pcb-a.kicad_pro)
+- [`hardware/pcb-b/pcb-b.kicad_pro`](hardware/pcb-b/pcb-b.kicad_pro)
+
+The current PCB layouts are unrouted starting points and are not ready for fabrication;
+see [`docs/hardware.md`](docs/hardware.md) before assembling or ordering boards.
 
 ## License
 

@@ -41,7 +41,7 @@ sensor.setCalibrationOffset(offset_degrees_C);
 PH Electrode → Amplifier → ADS1115 A0
   ├─ VCC → 3.3V
   ├─ GND → GND
-  └─ OUT → ADS1115 A0
+  └─ OUT → PCB-A J3 SIGNAL → fixed divider → ADS1115 A0
 
 ADS1115 → ESP32 DevKit
   ├─ VCC → 3.3V
@@ -84,8 +84,14 @@ Must do two-point calibration before use:
 DO Probe → Amplifier → ADS1115 A1
   ├─ VCC → 3.3V or 5V
   ├─ GND → GND
-  └─ OUT → ADS1115 A1
+  └─ OUT → PCB-A J4 SIGNAL → fixed divider → ADS1115 A1
 ```
+
+PCB-A has a fixed 12 kΩ/20 kΩ divider on each analog input (J3–J6). It scales a
+positive 0–5 V sensor output to at most about 3.125 V before the ADS1115. Verify the
+sensor's output range and common ground; do not connect negative signals or outputs
+above 5 V. The sensor's power selector is separate from the signal divider. Calibrate
+using the voltage after the divider and the firmware's actual ADC scale.
 
 ### Calibration (Two-Point Recommended)
 

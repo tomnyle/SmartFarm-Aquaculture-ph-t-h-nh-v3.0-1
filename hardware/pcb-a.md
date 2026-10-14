@@ -1,76 +1,94 @@
 # PCB-A — ESP32 Controller and Sensor Board
 
-## Purpose
+## KiCad files
 
-PCB-A is the shared controller. It accepts the pictured 30-pin ESP32 DevKit as a
-replaceable module, connects sensors to the firmware's existing interfaces, and routes
-eight logic outputs to PCB-B through J_AB. It does not carry relay-coil or mains current.
+Open [`pcb-a/pcb-a.kicad_pro`](pcb-a/pcb-a.kicad_pro) in KiCad 9 or newer. The
+schematic is `pcb-a/pcb-a.kicad_sch`; the provisional two-layer layout is
+`pcb-a/pcb-a.kicad_pcb`. The project uses the shared symbols and footprints in
+`SmartFarm.kicad_sym` and `SmartFarm.pretty`.
 
-## DevKit socket
+The layout currently has component placement, board outline, and assigned pad nets,
+but no copper routing. It is a KiCad starting point, not a fabrication-ready board.
+The 30-pin DevKit socket spacing and antenna keep-out must be checked against the
+exact purchased module before routing or fabrication.
 
-- Use two 1×15 female sockets, 2.54 mm pitch, matching the two header rows of the
-  photographed ESP32-WROOM-32 USB-C DevKit.
-- Mount the antenna end over a PCB edge or RF keep-out; do not place copper, sensor
-  cables, or metal enclosure parts under/in front of the antenna.
-- The photo does not establish exact board dimensions or row spacing. Verify the
-  purchased DevKit's drawing and physical sample before fixing the socket spacing,
-  outline, mounting holes, or USB-C cutout.
-- Power the DevKit through its USB-C connector during initial testing. Do not connect
-  another 5 V source to its 5V/VIN header at the same time unless the exact DevKit has
-  verified power-path isolation.
+## Purpose and connectors
 
-## Circuit blocks and PCB-A BOM
+PCB-A is the shared controller. It accepts a 30-pin ESP32 DevKit on two 1×15,
+2.54 mm-pitch female sockets, connects sensors to the firmware interfaces, and sends
+eight logic outputs to PCB-B. It does not carry relay-coil or mains current.
+
+| Reference | Footprint / pin order | Use |
+|-----------|-----------------------|-----|
+| J1, J2 | 1×15 female sockets | ESP32 DevKit rows; confirm row spacing on the actual module |
+| J3–J6 | 1×3 header: VCC, GND, SIGNAL | pH, DO, turbidity, CO₂ sensor outputs |
+| J7 | 1×3 header: 3V3, DATA, GND | DS18B20, DATA on GPIO4 |
+| J8 | 1×4 header: 3V3, GND, SDA, SCL | I²C expansion/BH1750 |
+| J9 | 2×5 header, 2.54 mm pitch | PCB-B relay interface; logical connector `J_AB` in `interconnect.csv` |
+| J10 | 1×3 header: 3V3, DATA, GND | DHT22, DATA on GPIO15 |
+
+The custom 2×5 footprint is an unshrouded through-hole header pattern. Check the
+selected mating connector and cable orientation; pin 1 is identified by a square pad.
+Keep the DevKit antenna beyond the PCB edge or over a verified copper keep-out. The
+photo does not establish exact board dimensions, socket spacing, mounting holes, or
+USB-C clearance.
+
+## Circuit and BOM
 
 | Ref | Part/value | Count | Notes |
 |-----|------------|-------|-------|
-| U1 | 30-pin ESP32 DevKit, ESP-WROOM-32 | 1 | Exact model/footprint must be verified |
-| J1, J2 | 1×15 female socket, 2.54 mm | 2 | DevKit headers |
-| U2 | ADS1115, 16-bit ADC | 1 | I²C address 0x48; power at 3.3 V |
-| C1 | 100 nF ceramic | 1 | At ADS1115 VDD |
-| C2 | 10 µF ceramic | 1 | Local 3.3 V decoupling |
-| R1 | 4.7 kΩ | 1 | DS18B20 DATA pull-up to 3.3 V |
-| R2, R3 | 4.7 kΩ | 2 | I²C pull-ups to 3.3 V; omit if already fitted on modules |
-| J3 | 1×3, 2.54 mm | 1 | DS18B20: 3V3, DATA, GND |
-| J4 | 1×4, 2.54 mm | 1 | I²C expansion: 3V3, GND, SDA, SCL |
-| J5–J8 | 1×3, 2.54 mm | 4 | Analog sensors: VCC, GND, SIGNAL |
-| JP1–JP4 | 3-pad solder jumper | 4 | Select direct 0–3.3 V or 2:1 divider for 0–5 V signals |
-| JP5–JP8 | 3-pad solder jumper | 4 | Select sensor VCC as 3V3 or 5V/VIN |
-| R4–R11 | 10 kΩ / 20 kΩ divider pairs | 4 pairs | 10 kΩ upper, 20 kΩ lower; selected output is 2/3 of sensor input |
-| J_AB | 2×5 shrouded keyed header | 1 | Board-to-board connector; pinout in `interconnect.csv` |
-| TP1–TP4 | Test pads | 4 | 3V3, 5V/VIN, GND, SDA/SCL as space permits |
+| U1 | ADS1115, SOIC-10 | 1 | Address 0x48; ADDR tied to GND; ALERT/RDY not used |
+| C1 | 100 nF ceramic | 1 | ADS1115 local bypass |
+| C2 | 10 µF ceramic | 1 | 3.3 V local decoupling |
+| R1, R3, R5, R7 | 12 kΩ, 1% | 4 | Upper legs of fixed analog dividers |
+| R2, R4, R6, R8 | 20 kΩ, 1% | 4 | Lower legs of fixed analog dividers |
+| R9 | 4.7 kΩ | 1 | DS18B20 DATA pull-up to 3.3 V |
+| R10, R11 | 4.7 kΩ | 2 | I²C pull-ups to 3.3 V; omit if bus modules already have pull-ups |
+| R12, D1 | 1 kΩ, green LED | 1 each | GPIO2 status indicator |
+| R13 | 4.7 kΩ | 1 | DHT22 DATA pull-up; omit if the sensor module includes one |
+| JP1–JP4 | 3-pin solder-jumper footprint | 4 | Select each sensor supply: 3V3 or 5V/VIN |
+| J1, J2 | 1×15 female sockets | 2 | 30-pin ESP32 DevKit |
+| J3–J8, J10 | Through-hole headers | 7 | Sensor and I²C connectors listed above |
+| J9 | 2×5 through-hole header | 1 | PCB-A-to-PCB-B signals and ground |
 
-### Sensor channel wiring
+### Analog input path
 
-| Signal | ADS1115 | ESP32 interface |
-|--------|---------|-----------------|
-| pH amplifier | A0 | SDA GPIO21, SCL GPIO22 |
-| DO amplifier | A1 | Same shared I²C bus |
-| Turbidity | A2 | Same shared I²C bus |
-| CO₂ module | A3 | Same shared I²C bus |
+Each sensor SIGNAL enters a fixed divider: 12 kΩ from SIGNAL to the ADS1115 input,
+then 20 kΩ from that input to GND. The ratio is 20/(12+20), so a 5.0 V input becomes
+about 3.125 V. This circuit is intended for positive 0–5 V sensor outputs; verify each
+sensor's maximum output and common ground before connection. Do not use these inputs
+for negative voltages or signals above 5 V. Calibrate the firmware conversion for the
+actual sensor and divider.
 
-J5–J8 pin order is VCC, GND, SIGNAL. Set each power jumper JP5–JP8 to 3V3 or 5V/VIN
-for the sensor module being used; do not power a 3.3 V-only sensor from 5 V. Wire the
-analog outputs through JP1–JP4. Set each jumper to **DIRECT** only for a
-0–3.3 V maximum output. Set it to the **2:1 divider** for a 0–5 V maximum output;
-the 10 kΩ/20 kΩ pair scales 5 V to about 3.33 V. Never short both jumper positions.
-The 2:1 divider maps 5 V to about 3.33 V and makes the firmware's normalized scale
-consistent for 0–5 V full-scale signals. Firmware's sensor conversions remain
-placeholders; calibrate each sensor before use. Each divider is 10 kΩ from sensor
-SIGNAL to ADC input and 20 kΩ from ADC input to GND.
-Do not exceed the ADS1115 supply voltage on any input.
+JP1–JP4 select **sensor power only**: bridge the center pad to either 3V3 or 5V/VIN,
+never both. The signal divider is always connected; it has no bypass/direct setting.
+Use 3V3 for 3.3 V-only modules. The 5V/VIN rail depends on the DevKit power source.
 
-The DS18B20 pull-up connects DATA to 3.3 V. BH1750 can share the 3.3 V I²C bus. Keep
-the I²C pull-ups to 3.3 V only; do not use 5 V pull-ups.
+| Sensor | Connector | ADS1115 input |
+|--------|-----------|---------------|
+| pH amplifier | J3 | A0 |
+| DO amplifier | J4 | A1 |
+| Turbidity | J5 | A2 |
+| CO₂ module | J6 | A3 |
 
-## PCB-A pin assignment
+The ADS1115 runs at 3.3 V on shared I²C GPIO21/GPIO22. Keep all I²C pull-ups at 3.3 V;
+do not connect 5 V pull-ups. BH1750 may share J8's I²C bus.
 
-| Signal | ESP32 pin |
-|--------|-----------|
+## ESP32 and inter-board mapping
+
+| Function | ESP32 pin |
+|----------|-----------|
+| DHT22 DATA | GPIO15 |
 | DS18B20 DATA | GPIO4 |
 | I²C SDA / SCL | GPIO21 / GPIO22 |
 | Relay outputs 1–8 | GPIO13, GPIO25, GPIO14, GPIO27, GPIO32, GPIO33, GPIO26, GPIO23 |
-| Built-in status LED | GPIO2 |
+| Status LED | GPIO2 |
 
-GPIO12 is intentionally unused as a relay signal because it is a boot-strapping pin.
-GPIO34–GPIO39 are not connected to the analog sensors; the external ADS1115 handles
-those signals.
+J9 and PCB-B J1 use the pin order in [`interconnect.csv`](interconnect.csv): pins 1–8
+are RELAY1–RELAY8 and pins 9–10 are GND. GPIO12 is not used for a relay because it is
+a boot-strapping pin. GPIO34–GPIO39 are not used for the sensor inputs; the ADS1115
+handles the four analog channels.
+
+During initial testing, power the DevKit through USB-C. Do not connect another 5 V
+source to its 5V/VIN pin at the same time unless the exact module's power-path isolation
+has been verified.
