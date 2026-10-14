@@ -4,7 +4,9 @@
 
 - **PCB-A (shared controller/sensor board):** socket for one specific 30-pin ESP32
   DevKit model, 3.3 V supply/decoupling, DS18B20 connector, ADS1115 and analog sensor
-  connectors, I²C connector, status LEDs, and a keyed connector to PCB-B.
+  connectors, I²C connector, status LED footprints, and a keyed connector to PCB-B.
+  The current firmware only drives the DevKit's built-in GPIO2 LED; extra system LED
+  control still needs a defined GPIO/expander mapping.
 - **PCB-B (farm-specific output board):** eight protected output channels with a status
   LED per channel, or connectors for a compatible purchased 8-channel relay module.
   Select relay/contact ratings for the actual pump, aerator, feeder, valve, and lighting

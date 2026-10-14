@@ -109,7 +109,7 @@ sensor.setWaterTemperature(25.5);  // For accurate DO calculation
 
 ### Specifications
 - Type: Ultrasonic or capacitive water level sensor
-- Signal: 0-5V analog (read via ADS1115)
+- Signal: 0-5V analog (future firmware input; not connected in current mapping)
 - Accuracy: ±2-5% of range
 - Response Time: <100ms
 - Cost: $10-20
@@ -119,7 +119,7 @@ sensor.setWaterTemperature(25.5);  // For accurate DO calculation
 Water Level Sensor
   ├─ VCC → 5V
   ├─ GND → GND
-  └─ OUT → ADS1115 A2 (turbidity uses A2 in the current firmware)
+  └─ OUT → additional ADS1115 A0 after voltage conditioning
 ```
 
 ### Calibration
@@ -186,6 +186,7 @@ These are linear placeholder scales, not a substitute for probe calibration. Kee
 ADS1115 input between GND and its 3.3 V supply. Sensor modules with 5 V analog outputs
 must use a suitable divider or signal-conditioning stage before connecting to the ADC.
 Power the ADS1115 and its I²C pull-ups from 3.3 V; do not allow 5 V pull-ups on SDA/SCL.
-Water level is not currently read by the firmware; adding it requires another ADC input
-or another ADS1115 with a distinct I²C address. If the ADS1115 is absent, the firmware
+Water level is not currently read by the firmware; adding it requires another ADS1115
+with a distinct I²C address (for example, `0x49`) and input voltage conditioning.
+Turbidity already uses A2 on the existing ADC. If the ADS1115 is absent, the firmware
 marks the required analog readings invalid.
