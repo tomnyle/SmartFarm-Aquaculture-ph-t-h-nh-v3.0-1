@@ -26,13 +26,16 @@ ESP32-based aquaculture controller for family pond management with MQTT & Home A
 
 ## Hardware Requirements
 
-- ESP32 DevKitC V4 / ESP-WROOM-32
+- 30-pin ESP32 DevKit (select the exact module footprint before PCB layout)
 - DS18B20 Temperature Sensor
 - pH Electrode + ADS1115 ADC Module
 - Dissolved Oxygen Probe + ADS1115
 - Water Level Sensor
 - 8-Channel Relay Module
 - 5V Power Supply
+
+See [`docs/hardware.md`](docs/hardware.md) for the PCB-A/PCB-B layout plan, pin mapping,
+and requirements for using a purchased 8-channel relay module.
 
 ## Getting Started
 
@@ -224,6 +227,7 @@ automation:
 
 See `/docs` folder for:
 - `architecture.md` - System design
+- `hardware.md` - PCB-A/PCB-B interface and relay module requirements
 - `sensors.md` - Sensor specifications & calibration
 - `wiring.md` - Hardware wiring diagram
 - `mqtt.md` - MQTT protocol details

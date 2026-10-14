@@ -30,7 +30,7 @@ sensor.setCalibrationOffset(offset_degrees_C);
 ### Specifications
 - Electrode: Glass electrode (analog output)
 - Amplifier Module: PH meter analog module
-- ADC: ADS1115 (16-bit, I2C)
+- ADC: ADS1115 (16-bit, I2C, address 0x48, channel A0)
 - Sensitivity: ~59mV per pH unit (at 25°C)
 - Accuracy: ±0.2 pH (after calibration)
 - Response Time: 30-60 seconds
@@ -43,7 +43,7 @@ PH Electrode → Amplifier → ADS1115 A0
   ├─ GND → GND
   └─ OUT → ADS1115 A0
 
-ADS1115 → ESP32
+ADS1115 → ESP32 DevKit
   ├─ VCC → 3.3V
   ├─ GND → GND
   ├─ SDA → GPIO21
@@ -73,7 +73,7 @@ Must do two-point calibration before use:
 
 ### Specifications
 - Type: Optical DO probe or analog DO sensor
-- ADC: ADS1115 (16-bit, I2C)
+- ADC: ADS1115 (16-bit, I2C, address 0x48, channel A1)
 - Range: 0-20 mg/L (or 0-100%)
 - Accuracy: ±0.3 mg/L (after calibration)
 - Response Time: 10-30 seconds
@@ -119,7 +119,7 @@ sensor.setWaterTemperature(25.5);  // For accurate DO calculation
 Water Level Sensor
   ├─ VCC → 5V
   ├─ GND → GND
-  └─ OUT → GPIO34 or ADS1115 A2
+  └─ OUT → ADS1115 A2 (turbidity uses A2 in the current firmware)
 ```
 
 ### Calibration
@@ -140,7 +140,7 @@ Water Level Sensor
 ✓ Temperature (DS18B20)
 ✓ pH (via ADS1115)
 ✓ Dissolved Oxygen (via ADS1115)
-✓ Water Level (via ADS1115)
+✓ Water Level (planned; not currently read by firmware)
 
 ### Phase 2 - Enhanced Monitoring
 - ORP (Oxidation potential)
@@ -148,7 +148,7 @@ Water Level Sensor
 
 ### Phase 3 - Advanced Analysis
 - Ammonia/Nitrite/Nitrate
-- Turbidity
+- Turbidity (ADS1115 A2; firmware input)
 - Pressure/Depth
 
 ## Recommended Suppliers
@@ -168,4 +168,24 @@ Water Level Sensor
 | ADS1115 (2x) | $5 | ADC modules |
 | **Total** | **~$127** | USD |
 
-Note: Prices vary significantly by region and supplier quality.
+Note: Prices vary significantly by region and supplier quality. The estimate lists two
+ADS1115 modules, but the current four analog firmware inputs share one module.
+
+## Analog Input Wiring and Voltage Limits
+
+The firmware reads four analog signals through one ADS1115 at I²C address `0x48`:
+
+| Signal | ADS1115 input | Firmware scaling |
+|--------|---------------|------------------|
+| pH amplifier output | A0 | 0–3.3 V mapped to pH 0–14 |
+| DO amplifier output | A1 | 0–3.3 V mapped to 0–20 mg/L |
+| Turbidity output | A2 | 0–3.3 V mapped to 0–4095 |
+| CO₂ output | A3 | 0–3.3 V mapped to 0–10 |
+
+These are linear placeholder scales, not a substitute for probe calibration. Keep every
+ADS1115 input between GND and its 3.3 V supply. Sensor modules with 5 V analog outputs
+must use a suitable divider or signal-conditioning stage before connecting to the ADC.
+Power the ADS1115 and its I²C pull-ups from 3.3 V; do not allow 5 V pull-ups on SDA/SCL.
+Water level is not currently read by the firmware; adding it requires another ADC input
+or another ADS1115 with a distinct I²C address. If the ADS1115 is absent, the firmware
+marks the required analog readings invalid.
