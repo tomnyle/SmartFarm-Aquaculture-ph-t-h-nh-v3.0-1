@@ -233,7 +233,7 @@ See `/docs` folder for:
 - `wiring.md` - Hardware wiring diagram
 - `mqtt.md` - MQTT protocol details
 
-Open the KiCad designs with KiCad 9 or newer:
+Open the KiCad designs with KiCad 10 (files use the KiCad 9 file format):
 - [`hardware/pcb-a/pcb-a.kicad_pro`](hardware/pcb-a/pcb-a.kicad_pro)
 - [`hardware/pcb-b/pcb-b.kicad_pro`](hardware/pcb-b/pcb-b.kicad_pro)
 
