@@ -11,14 +11,19 @@ input interface using the pictured 30-pin ESP32 DevKit:
 
 The projects include schematics, board outlines, component placements, project-local
 symbols/footprints and assigned PCB pad nets. Both PCB layouts are **unrouted starting
-points**, not fabrication-ready boards. Open the project files with KiCad 9 or newer,
-verify the exact DevKit dimensions and connector mating, route the copper, then run
+points**, not fabrication-ready boards. The project files were generated in KiCad 9
+format; open them in KiCad 10 and keep a backup before accepting any format conversion.
+Verify the exact DevKit dimensions and connector mating, route the copper, then run
 schematic ERC and PCB DRC before manufacturing.
 
 PCB-B is an interface/driver between the ESP32 and a separate purchased 8-channel relay
 module; it does not switch mains loads itself. Its NPN open-collector outputs assume a
-low-level-trigger module with compatible input current. Verify that exact module's
-polarity, input current, supply requirements, and isolation topology before connection.
+low-level-trigger module, as confirmed by the user. The supplied module photo shows
+SRD-24VDC-SL-C relays and HIGH/COM/LOW selectors; set the selector(s) to LOW. The 24 V
+marking refers to the relay coils and does not define the input voltage/current. Do not
+connect module DC+ to either PCB. Verify the input circuit and whether module DC- must
+share PCB-B ground before wiring, to avoid defeating isolation or overloading the NPN
+drivers.
 
 Firmware reads pH, DO, turbidity and CO₂ via ADS1115 A0–A3 at 0x48, with SDA/SCL on
 GPIO21/GPIO22. PCB-A's fixed 12 kΩ/20 kΩ dividers scale a 0–5 V sensor output to a

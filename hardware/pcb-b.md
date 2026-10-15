@@ -2,9 +2,12 @@
 
 ## KiCad files
 
-Open [`pcb-b/pcb-b.kicad_pro`](pcb-b/pcb-b.kicad_pro) in KiCad 9 or newer. The
+Open [`pcb-b/pcb-b.kicad_pro`](pcb-b/pcb-b.kicad_pro) in KiCad 10. The
 schematic is `pcb-b/pcb-b.kicad_sch`; the provisional two-layer layout is
 `pcb-b/pcb-b.kicad_pcb`. Both projects use the shared library in `../SmartFarm`.
+
+The files were generated in KiCad 9 format. KiCad 10 may offer to update the project
+when first opened; keep a backup before accepting format conversion.
 
 The layout has component placement, a board outline, and assigned pad nets, but no
 copper routing. It is not ready for fabrication. Route and run KiCad DRC after
@@ -16,11 +19,19 @@ PCB-B converts PCB-A's 3.3 V GPIO commands into eight NPN open-collector sinks f
 separate purchased 8-channel relay module. PCB-B does not contain relay contacts and
 does not switch mains.
 
-This circuit assumes a low-level-trigger relay module whose inputs have suitable
-current limiting/pull-up. The actual module from the purchase listing has not been
-electrically verified. Confirm its trigger polarity, input current, supply and isolation
-requirements before connection; do not assume the 2.2 kΩ base drive is suitable for an
-unknown input load.
+The supplied photo shows an eight-channel module marked SRD-24VDC-SL-C, with DC+/DC-
+power terminals, IN1–IN8 inputs, and HIGH/COM/LOW trigger selectors. The relay marking
+indicates 24 VDC coils; it does not establish the input voltage or input current. You
+confirmed that this module is to be operated in LOW-trigger mode. Set its trigger
+selector(s) to LOW, not HIGH.
+
+PCB-B does not generate or switch 24 V. Never connect the relay module's DC+ terminal
+to PCB-A or PCB-B. Connect only its IN1–IN8 lines to the matching PCB-B outputs. The
+PCB-B ground must provide the NPN emitters' return; connect it to the module's DC-
+control reference only after confirming from the module documentation that this
+connection is required and safe. Verify input current, input-voltage limits, selector
+wiring, and isolation before applying power. The 2.2 kΩ base drive and open-collector
+interface must be checked against the module's input circuit.
 
 ## Circuit and BOM
 
@@ -47,9 +58,10 @@ the relay module keeps each relay OFF when PCB-B is disconnected or unpowered.
 
 The board's 2×5 J1 uses an unshrouded header footprint; verify pin 1 and cable
 orientation before power-up. J2 pin order is GND, IN1, IN2, IN3, IN4; J3 is GND, IN5,
-IN6, IN7, IN8. Connect these signals to the purchased module's logic-input pins and
-connect its logic GND to PCB-B GND. Power the relay module separately as specified by
-its manufacturer. Its coil supply and contacts are not routed through PCB-A or PCB-B.
+IN6, IN7, IN8. Connect each signal to the matching input on the relay module. Power the
+module separately according to its documentation; its 24 V relay-coil supply and
+contacts are not routed through PCB-A or PCB-B. Do not assume that PCB-B's GND should
+be tied to module DC- until its input/isolator circuit is verified.
 
 Do not add flyback diodes across relay coils on PCB-B: its transistors drive module
 inputs, not coils. Check the purchased module's onboard suppression, optocoupler
@@ -61,7 +73,8 @@ configuration, logic ground, and supply arrangements independently.
    PCB-B LEDs remain OFF after reset.
 2. Verify that GPIO13/25/14/27 control only channels 1–4. Channels 5–8 should remain
    OFF with current firmware.
-3. Connect only the relay module logic side, set its trigger selector to LOW, and test
-   each channel with no load. Confirm the OFF state at boot and when the ESP32 is reset.
+3. With the module disconnected from loads, set its trigger selector(s) to LOW. Verify
+   the exact input circuit and required ground reference, then connect and test each
+   channel. Confirm the OFF state at boot and when the ESP32 is reset.
 4. Verify relay-module power and contact ratings separately. Keep mains off these
    boards; have a qualified person handle any mains wiring and commissioning.

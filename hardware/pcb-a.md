@@ -2,10 +2,13 @@
 
 ## KiCad files
 
-Open [`pcb-a/pcb-a.kicad_pro`](pcb-a/pcb-a.kicad_pro) in KiCad 9 or newer. The
+Open [`pcb-a/pcb-a.kicad_pro`](pcb-a/pcb-a.kicad_pro) in KiCad 10. The
 schematic is `pcb-a/pcb-a.kicad_sch`; the provisional two-layer layout is
 `pcb-a/pcb-a.kicad_pcb`. The project uses the shared symbols and footprints in
 `SmartFarm.kicad_sym` and `SmartFarm.pretty`.
+
+The files were generated in KiCad 9 format. KiCad 10 may offer to update the project
+when first opened; keep a backup before accepting format conversion.
 
 The layout currently has component placement, board outline, and assigned pad nets,
 but no copper routing. It is a KiCad starting point, not a fabrication-ready board.
