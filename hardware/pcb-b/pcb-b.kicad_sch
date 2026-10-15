@@ -1,0 +1,5041 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "a55d38b7-9756-4038-b85f-7e95f0863ebf")
+	(paper "A4")
+	(title_block
+		(title "SmartFarm PCB-B Relay Interface")
+	)
+	(lib_symbols
+		(symbol "SmartFarm:Conn_02x05"
+			(property "Reference" "J"
+				(at 0 -8.89 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_02x05"
+				(at 0 8.89 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Conn_02x05_0_1"
+				(rectangle
+					(start -5.08 -6.35)
+					(end 5.08 6.35)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "Conn_02x05_1_1"
+				(pin passive line
+					(at -7.62 5.08 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 5.08 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "3"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 2.54 180)
+					(length 2.54)
+					(name "4"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 0.0000 0)
+					(length 2.54)
+					(name "5"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 0.0000 180)
+					(length 2.54)
+					(name "6"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "7"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -2.54 180)
+					(length 2.54)
+					(name "8"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -5.08 0)
+					(length 2.54)
+					(name "9"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -5.08 180)
+					(length 2.54)
+					(name "10"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "SmartFarm:R"
+			(property "Reference" "R"
+				(at 0 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "SmartFarm:NPN"
+			(property "Reference" "Q"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "BC817-40"
+				(at 0 6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "NPN_0_1"
+				(rectangle
+					(start -2.54 -3.81)
+					(end 2.54 3.81)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "NPN_1_1"
+				(pin input line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -2.54 180)
+					(length 2.54)
+					(name "E"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 2.54 180)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "SmartFarm:LED"
+			(property "Reference" "D"
+				(at 0 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "LED"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "LED_0_1"
+				(rectangle
+					(start -2.54 -2.54)
+					(end 2.54 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "LED_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "SmartFarm:Conn_01x05"
+			(property "Reference" "J"
+				(at 0 -8.89 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x05"
+				(at 0 8.89 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Conn_01x05_0_1"
+				(rectangle
+					(start -5.08 -6.35)
+					(end 2.54 6.35)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "Conn_01x05_1_1"
+				(pin passive line
+					(at -7.62 5.08 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 0.0000 0)
+					(length 2.54)
+					(name "3"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "4"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -5.08 0)
+					(length 2.54)
+					(name "5"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1 1)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:Conn_02x05")
+		(at 25.4 100.33 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "ff544e94-73b0-46fe-bf89-3d1464e440c5")
+		(property "Reference" "J1"
+			(at 25.4 91.44 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Mates to PCB-A J_AB"
+			(at 25.4 109.22 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_PinHeader_2x5"
+			(at 23.622 100.33 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3f41b748-d98b-4653-8fe0-72e98dbbe8f8")
+		)
+		(pin "2"
+			(uuid "dfaa145b-0570-413d-a0b0-14b51bfa1597")
+		)
+		(pin "3"
+			(uuid "510b64ba-5977-4869-a835-e6f8b499066a")
+		)
+		(pin "4"
+			(uuid "f6482933-33c0-43a4-9421-419af0c38b02")
+		)
+		(pin "5"
+			(uuid "d866d92d-a3e2-4185-b14f-bf9933a1cb9c")
+		)
+		(pin "6"
+			(uuid "e094c45d-eff0-49c7-b1c8-0e4bad83d222")
+		)
+		(pin "7"
+			(uuid "5a953b92-6376-4488-8249-8f8b54c504bb")
+		)
+		(pin "8"
+			(uuid "6e3f9aa8-d4af-4a54-a2fe-424962898855")
+		)
+		(pin "9"
+			(uuid "8392a686-f7eb-4aae-a7ee-2232b6c11071")
+		)
+		(pin "10"
+			(uuid "a72a58be-0cce-4aff-95f4-20a0c8617a2e")
+		)
+		(instances
+			(project "SmartFarm PCB-B Relay Interface"
+				(path "/a55d38b7-9756-4038-b85f-7e95f0863ebf"
+					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:R")
+		(at 64.77 39.37 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "59fa2879-96a7-483c-b426-c72916d65874")
+		(property "Reference" "R1"
+			(at 64.77 34.29 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2.2k base"
+			(at 64.77 44.45 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_R_0603"
+			(at 62.992 39.37 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "01116351-7c3f-4f08-93f8-5b04e9b5c572")
+		)
+		(pin "2"
+			(uuid "1e4fa167-7b62-4dea-8d1c-398bf3f6d1a2")
+		)
+		(instances
+			(project "SmartFarm PCB-B Relay Interface"
+				(path "/a55d38b7-9756-4038-b85f-7e95f0863ebf"
+					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:NPN")
+		(at 90.17 39.37 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "db8ddb63-9241-4c8c-9518-89ff1f867e5e")
+		(property "Reference" "Q1"
+			(at 90.17 33.02 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BC817-40 low-side sink"
+			(at 90.17 45.72 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_SOT23"
+			(at 88.392 39.37 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b3d8d94d-9360-44b2-a4db-053c0997738a")
+		)
+		(pin "2"
+			(uuid "1d9662d2-72fc-4371-90e7-198c7ebce942")
+		)
+		(pin "3"
+			(uuid "6ce432ad-9aa9-4289-bda1-c5c4ca42e24e")
+		)
+		(instances
+			(project "SmartFarm PCB-B Relay Interface"
+				(path "/a55d38b7-9756-4038-b85f-7e95f0863ebf"
+					(reference "Q1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:R")
+		(at 90.17 52.07 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "d10ed9d5-0205-4279-b61a-2ac2b81b58cd")
+		(property "Reference" "R9"
+			(at 90.17 46.99 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k base pulldown"
+			(at 90.17 57.15 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_R_0603"
+			(at 88.392 52.07 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8a95e418-3572-4272-a033-43bc77dd96a7")
+		)
+		(pin "2"
+			(uuid "a0ac197a-29d2-4755-a51f-1d76d2557e3a")
+		)
+		(instances
+			(project "SmartFarm PCB-B Relay Interface"
+				(path "/a55d38b7-9756-4038-b85f-7e95f0863ebf"
+					(reference "R9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:R")
+		(at 52.07 52.07 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "901c4e53-be04-478a-9a7c-ab64f2998543")
+		(property "Reference" "R17"
+			(at 52.07 46.99 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1k LED resistor"
+			(at 52.07 57.15 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_R_0603"
+			(at 50.292 52.07 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1f064481-b9cc-4065-a3e6-22f522112fbd")
+		)
+		(pin "2"
+			(uuid "2ff97fd0-fe5b-4996-ab3a-5152bede7515")
+		)
+		(instances
+			(project "SmartFarm PCB-B Relay Interface"
+				(path "/a55d38b7-9756-4038-b85f-7e95f0863ebf"
+					(reference "R17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:LED")
+		(at 115.57 52.07 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "ed80b2f3-63a8-4019-97fd-caf078be9968")
+		(property "Reference" "D1"
+			(at 115.57 46.99 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Relay 1 command"
+			(at 115.57 57.15 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_LED_0603"
+			(at 113.792 52.07 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "38625c78-f77f-4963-92f0-6d99924d7867")
+		)
+		(pin "2"
+			(uuid "35ae207f-6453-4e46-a106-2b5d854d4b93")
+		)
+		(instances
+			(project "SmartFarm PCB-B Relay Interface"
+				(path "/a55d38b7-9756-4038-b85f-7e95f0863ebf"
+					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:R")
+		(at 64.77 59.69 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "1a82322f-c6e8-459f-8daf-b5eac48821ac")
+		(property "Reference" "R2"
+			(at 64.77 54.61 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2.2k base"
+			(at 64.77 64.77 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_R_0603"
+			(at 62.992 59.69 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3ae6221c-8c64-4c8a-b401-947dbefb34a7")
+		)
+		(pin "2"
+			(uuid "0f52a99c-18d9-47cc-982f-57e8b40b9f47")
+		)
+		(instances
+			(project "SmartFarm PCB-B Relay Interface"
+				(path "/a55d38b7-9756-4038-b85f-7e95f0863ebf"
+					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:NPN")
+		(at 90.17 59.69 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "ba972abd-3b8a-497f-b819-85882b533f3c")
+		(property "Reference" "Q2"
+			(at 90.17 53.34 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BC817-40 low-side sink"
+			(at 90.17 66.04 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_SOT23"
+			(at 88.392 59.69 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a811b13e-9afb-4741-816e-8f33432f2ce6")
+		)
+		(pin "2"
+			(uuid "fc76cd26-e8d7-41e9-b355-f1aae5f723c8")
+		)
+		(pin "3"
+			(uuid "4f7fb2af-836d-4a02-a05e-aed4f826ace5")
+		)
+		(instances
+			(project "SmartFarm PCB-B Relay Interface"
+				(path "/a55d38b7-9756-4038-b85f-7e95f0863ebf"
+					(reference "Q2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:R")
+		(at 90.17 72.39 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "262bb1c6-9946-4642-b08c-285b7d770ef8")
+		(property "Reference" "R10"
+			(at 90.17 67.31 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k base pulldown"
+			(at 90.17 77.47 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_R_0603"
+			(at 88.392 72.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "900251c1-6615-4a98-956e-6738621e7ce6")
+		)
+		(pin "2"
+			(uuid "ed2e4dde-7c03-4a9e-b831-fb7c3175d0a7")
+		)
+		(instances
+			(project "SmartFarm PCB-B Relay Interface"
+				(path "/a55d38b7-9756-4038-b85f-7e95f0863ebf"
+					(reference "R10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:R")
+		(at 52.07 72.39 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "6849e35b-dd4c-4c7e-bf11-0105738c1a38")
+		(property "Reference" "R18"
+			(at 52.07 67.31 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1k LED resistor"
+			(at 52.07 77.47 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_R_0603"
+			(at 50.292 72.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f544b015-7ed3-4201-a4d1-e682ace46d2b")
+		)
+		(pin "2"
+			(uuid "545485b6-e362-41f3-b17d-c3c621612bf7")
+		)
+		(instances
+			(project "SmartFarm PCB-B Relay Interface"
+				(path "/a55d38b7-9756-4038-b85f-7e95f0863ebf"
+					(reference "R18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:LED")
+		(at 115.57 72.39 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "7c878e5e-11d5-442f-9795-c09993bf867c")
+		(property "Reference" "D2"
+			(at 115.57 67.31 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Relay 2 command"
+			(at 115.57 77.47 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_LED_0603"
+			(at 113.792 72.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9883fbdc-cb50-4d4c-858e-e90cab2307c0")
+		)
+		(pin "2"
+			(uuid "cecc7dec-63f0-41c9-b04d-7959200f7bf7")
+		)
+		(instances
+			(project "SmartFarm PCB-B Relay Interface"
+				(path "/a55d38b7-9756-4038-b85f-7e95f0863ebf"
+					(reference "D2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:R")
+		(at 64.77 80.01 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "4c419b1c-0d06-4876-a4fb-ffb2817fe53a")
+		(property "Reference" "R3"
+			(at 64.77 74.93 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2.2k base"
+			(at 64.77 85.09 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_R_0603"
+			(at 62.992 80.01 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e55a586d-e2d0-47ff-9e2a-8b5957368646")
+		)
+		(pin "2"
+			(uuid "e9926019-693c-409b-ba74-1abc908d8ae1")
+		)
+		(instances
+			(project "SmartFarm PCB-B Relay Interface"
+				(path "/a55d38b7-9756-4038-b85f-7e95f0863ebf"
+					(reference "R3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:NPN")
+		(at 90.17 80.01 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "d7c0d2cc-80d5-43b3-9264-d93afcad776b")
+		(property "Reference" "Q3"
+			(at 90.17 73.66 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BC817-40 low-side sink"
+			(at 90.17 86.36 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_SOT23"
+			(at 88.392 80.01 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2b5ddd6c-9893-4ea8-adef-a5773463fd93")
+		)
+		(pin "2"
+			(uuid "c8864303-c131-4278-9158-9479047156ad")
+		)
+		(pin "3"
+			(uuid "1b224e31-4f62-4d49-b900-1e6afe3f5053")
+		)
+		(instances
+			(project "SmartFarm PCB-B Relay Interface"
+				(path "/a55d38b7-9756-4038-b85f-7e95f0863ebf"
+					(reference "Q3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:R")
+		(at 90.17 91.44 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "a01a1750-1cf3-4d6c-b773-e1fbf215d949")
+		(property "Reference" "R11"
+			(at 90.17 86.36 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k base pulldown"
+			(at 90.17 96.52 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_R_0603"
+			(at 88.392 91.44 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6cd09952-a6f6-4a95-8b71-15f59c3474d0")
+		)
+		(pin "2"
+			(uuid "ce868be3-5934-4574-8cac-6c146a608a25")
+		)
+		(instances
+			(project "SmartFarm PCB-B Relay Interface"
+				(path "/a55d38b7-9756-4038-b85f-7e95f0863ebf"
+					(reference "R11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:R")
+		(at 52.07 91.44 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "a5141262-4b34-4b05-b772-3a860c311c6f")
+		(property "Reference" "R19"
+			(at 52.07 86.36 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1k LED resistor"
+			(at 52.07 96.52 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_R_0603"
+			(at 50.292 91.44 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9cb39816-f03d-47d1-87af-912bbefd3067")
+		)
+		(pin "2"
+			(uuid "7a5211b7-0acf-47b0-b890-1dfd5f3b33a1")
+		)
+		(instances
+			(project "SmartFarm PCB-B Relay Interface"
+				(path "/a55d38b7-9756-4038-b85f-7e95f0863ebf"
+					(reference "R19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:LED")
+		(at 115.57 91.44 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "750e0aa7-114f-4e30-8858-6d1a8b09d8f2")
+		(property "Reference" "D3"
+			(at 115.57 86.36 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Relay 3 command"
+			(at 115.57 96.52 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_LED_0603"
+			(at 113.792 91.44 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8c7c4716-09ad-4566-9d0c-695e19a07a8d")
+		)
+		(pin "2"
+			(uuid "424243fa-3071-41cd-900e-d9969ce12ea6")
+		)
+		(instances
+			(project "SmartFarm PCB-B Relay Interface"
+				(path "/a55d38b7-9756-4038-b85f-7e95f0863ebf"
+					(reference "D3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:R")
+		(at 64.77 100.33 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "134c696f-0313-4b0e-9941-abc4e74a0a86")
+		(property "Reference" "R4"
+			(at 64.77 95.25 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2.2k base"
+			(at 64.77 105.41 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_R_0603"
+			(at 62.992 100.33 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "dc37abf7-4cac-4774-9c17-e919bffeeb03")
+		)
+		(pin "2"
+			(uuid "6f5a76b5-4002-4d25-87c3-5816ea057215")
+		)
+		(instances
+			(project "SmartFarm PCB-B Relay Interface"
+				(path "/a55d38b7-9756-4038-b85f-7e95f0863ebf"
+					(reference "R4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:NPN")
+		(at 90.17 100.33 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "cd244c60-7e86-4104-a980-34783c6e912e")
+		(property "Reference" "Q4"
+			(at 90.17 93.98 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BC817-40 low-side sink"
+			(at 90.17 106.68 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_SOT23"
+			(at 88.392 100.33 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "14bdedf0-ff21-42c8-9eb3-58f8d492a11d")
+		)
+		(pin "2"
+			(uuid "4ec2112f-c43c-4ae5-9079-eb4f2c76e7d5")
+		)
+		(pin "3"
+			(uuid "00b9665b-2524-4a00-abd1-dde8e3342a80")
+		)
+		(instances
+			(project "SmartFarm PCB-B Relay Interface"
+				(path "/a55d38b7-9756-4038-b85f-7e95f0863ebf"
+					(reference "Q4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:R")
+		(at 90.17 111.76 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "c7dff4ff-3970-4652-b9a9-d0b8911ae95e")
+		(property "Reference" "R12"
+			(at 90.17 106.68 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k base pulldown"
+			(at 90.17 116.84 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_R_0603"
+			(at 88.392 111.76 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cfe0187a-a946-43de-95ec-d565be4c22ed")
+		)
+		(pin "2"
+			(uuid "2e63ef93-58b3-47bd-8fb6-76dff2615503")
+		)
+		(instances
+			(project "SmartFarm PCB-B Relay Interface"
+				(path "/a55d38b7-9756-4038-b85f-7e95f0863ebf"
+					(reference "R12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:R")
+		(at 52.07 111.76 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "49ec666d-5c3e-48fd-aff8-b0412524cd5c")
+		(property "Reference" "R20"
+			(at 52.07 106.68 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1k LED resistor"
+			(at 52.07 116.84 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_R_0603"
+			(at 50.292 111.76 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "460dacd1-63e6-4f77-bfa3-3e02bc97e094")
+		)
+		(pin "2"
+			(uuid "00cac728-1cd2-4b95-b418-8267305bbfd7")
+		)
+		(instances
+			(project "SmartFarm PCB-B Relay Interface"
+				(path "/a55d38b7-9756-4038-b85f-7e95f0863ebf"
+					(reference "R20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:LED")
+		(at 115.57 111.76 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "cac7bd3c-ac3f-4114-b1f9-fdb29a181cc6")
+		(property "Reference" "D4"
+			(at 115.57 106.68 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Relay 4 command"
+			(at 115.57 116.84 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_LED_0603"
+			(at 113.792 111.76 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4e288189-5966-4ac3-8635-c739e638dfb2")
+		)
+		(pin "2"
+			(uuid "e8f1f081-a1aa-4102-a7f3-3176ff3cddea")
+		)
+		(instances
+			(project "SmartFarm PCB-B Relay Interface"
+				(path "/a55d38b7-9756-4038-b85f-7e95f0863ebf"
+					(reference "D4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:R")
+		(at 64.77 119.38 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "84e3104b-daa4-4b1d-8751-35271de438f2")
+		(property "Reference" "R5"
+			(at 64.77 114.3 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2.2k base"
+			(at 64.77 124.46 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_R_0603"
+			(at 62.992 119.38 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "aff4f1ff-154e-43d7-a112-e907c1a7e442")
+		)
+		(pin "2"
+			(uuid "b697d8cf-f133-4e94-a13d-947590465257")
+		)
+		(instances
+			(project "SmartFarm PCB-B Relay Interface"
+				(path "/a55d38b7-9756-4038-b85f-7e95f0863ebf"
+					(reference "R5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:NPN")
+		(at 90.17 119.38 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "b189f070-db5e-4cc3-954c-46e3ee70c7e3")
+		(property "Reference" "Q5"
+			(at 90.17 113.03 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BC817-40 low-side sink"
+			(at 90.17 125.73 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_SOT23"
+			(at 88.392 119.38 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8c231d03-2e56-42b8-a056-2b8ef2e9529d")
+		)
+		(pin "2"
+			(uuid "1f946d00-97d3-4901-88de-b4aeaccce562")
+		)
+		(pin "3"
+			(uuid "66a70f15-4e1f-487d-9d97-8d0e48562de4")
+		)
+		(instances
+			(project "SmartFarm PCB-B Relay Interface"
+				(path "/a55d38b7-9756-4038-b85f-7e95f0863ebf"
+					(reference "Q5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:R")
+		(at 90.17 132.08 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "388e2485-93f2-4f9b-aa23-486999f7b855")
+		(property "Reference" "R13"
+			(at 90.17 127 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k base pulldown"
+			(at 90.17 137.16 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_R_0603"
+			(at 88.392 132.08 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2189c564-6af6-4d29-a880-938f701dea76")
+		)
+		(pin "2"
+			(uuid "d34cc9c4-c641-49d0-8ca2-ed9d7c99b37d")
+		)
+		(instances
+			(project "SmartFarm PCB-B Relay Interface"
+				(path "/a55d38b7-9756-4038-b85f-7e95f0863ebf"
+					(reference "R13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:R")
+		(at 52.07 132.08 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "0b7c7b33-3874-4364-8905-078c1f62cd51")
+		(property "Reference" "R21"
+			(at 52.07 127 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1k LED resistor"
+			(at 52.07 137.16 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_R_0603"
+			(at 50.292 132.08 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b7867786-ca5a-42ce-8ccf-7cee8702207f")
+		)
+		(pin "2"
+			(uuid "0ca27357-ce82-4b10-b650-d93b4f025f96")
+		)
+		(instances
+			(project "SmartFarm PCB-B Relay Interface"
+				(path "/a55d38b7-9756-4038-b85f-7e95f0863ebf"
+					(reference "R21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:LED")
+		(at 115.57 132.08 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "ed3ac81b-a99f-435f-ab80-c43eec9b15ae")
+		(property "Reference" "D5"
+			(at 115.57 127 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Relay 5 command"
+			(at 115.57 137.16 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_LED_0603"
+			(at 113.792 132.08 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "47e621da-7873-45d8-8b41-f77fecce500e")
+		)
+		(pin "2"
+			(uuid "e9649479-2aad-44ed-bac3-26c96d918814")
+		)
+		(instances
+			(project "SmartFarm PCB-B Relay Interface"
+				(path "/a55d38b7-9756-4038-b85f-7e95f0863ebf"
+					(reference "D5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:R")
+		(at 64.77 139.7 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "bc941556-e6eb-4790-84e2-2f3d7db38f77")
+		(property "Reference" "R6"
+			(at 64.77 134.62 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2.2k base"
+			(at 64.77 144.78 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_R_0603"
+			(at 62.992 139.7 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8df9e107-8b8e-427e-82a7-968f47773445")
+		)
+		(pin "2"
+			(uuid "0af18cc0-6ad0-45be-bbca-b41286668dbb")
+		)
+		(instances
+			(project "SmartFarm PCB-B Relay Interface"
+				(path "/a55d38b7-9756-4038-b85f-7e95f0863ebf"
+					(reference "R6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:NPN")
+		(at 90.17 139.7 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "56a6cde9-96f5-4d41-8bfd-48a7542baa33")
+		(property "Reference" "Q6"
+			(at 90.17 133.35 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BC817-40 low-side sink"
+			(at 90.17 146.05 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_SOT23"
+			(at 88.392 139.7 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "98de7b0f-5057-44ba-a859-8853db6caafe")
+		)
+		(pin "2"
+			(uuid "9e16c656-bedc-41aa-8eec-2e01c0b7d5ab")
+		)
+		(pin "3"
+			(uuid "53c5fd4e-eeb0-458d-b753-73f77461c44b")
+		)
+		(instances
+			(project "SmartFarm PCB-B Relay Interface"
+				(path "/a55d38b7-9756-4038-b85f-7e95f0863ebf"
+					(reference "Q6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:R")
+		(at 90.17 152.4 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "ede5b9fd-76e3-43c8-a073-266e4e5df653")
+		(property "Reference" "R14"
+			(at 90.17 147.32 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k base pulldown"
+			(at 90.17 157.48 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_R_0603"
+			(at 88.392 152.4 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "166a982e-8505-47ab-bae7-d315fa0e3a9f")
+		)
+		(pin "2"
+			(uuid "89b5fff7-b571-4916-9ccf-1878e3ab373c")
+		)
+		(instances
+			(project "SmartFarm PCB-B Relay Interface"
+				(path "/a55d38b7-9756-4038-b85f-7e95f0863ebf"
+					(reference "R14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:R")
+		(at 52.07 152.4 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "376c8472-3562-4816-8484-7f0372c85b31")
+		(property "Reference" "R22"
+			(at 52.07 147.32 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1k LED resistor"
+			(at 52.07 157.48 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_R_0603"
+			(at 50.292 152.4 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0618a912-9a44-489c-ba88-0faea4ba1a93")
+		)
+		(pin "2"
+			(uuid "9e3fbdc3-dc9e-4132-bd9b-75db45bfe876")
+		)
+		(instances
+			(project "SmartFarm PCB-B Relay Interface"
+				(path "/a55d38b7-9756-4038-b85f-7e95f0863ebf"
+					(reference "R22")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:LED")
+		(at 115.57 152.4 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f81eb8cd-797d-450b-a552-1a979c6cd4d0")
+		(property "Reference" "D6"
+			(at 115.57 147.32 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Relay 6 command"
+			(at 115.57 157.48 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_LED_0603"
+			(at 113.792 152.4 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d2049457-f104-4469-888c-d36d8dee670a")
+		)
+		(pin "2"
+			(uuid "0c53f710-7c57-42aa-87b6-20e1b724c630")
+		)
+		(instances
+			(project "SmartFarm PCB-B Relay Interface"
+				(path "/a55d38b7-9756-4038-b85f-7e95f0863ebf"
+					(reference "D6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:R")
+		(at 64.77 160.02 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "570d4094-8a4b-4f3a-b7b5-efdd0eea0b1f")
+		(property "Reference" "R7"
+			(at 64.77 154.94 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2.2k base"
+			(at 64.77 165.1 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_R_0603"
+			(at 62.992 160.02 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "88b21891-1d39-404e-8a54-8d95870cf48c")
+		)
+		(pin "2"
+			(uuid "78ff135f-a0c4-4a96-9673-6701f9b3ba84")
+		)
+		(instances
+			(project "SmartFarm PCB-B Relay Interface"
+				(path "/a55d38b7-9756-4038-b85f-7e95f0863ebf"
+					(reference "R7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:NPN")
+		(at 90.17 160.02 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "4c21907b-204e-4e5c-8ba6-6e65e22001c2")
+		(property "Reference" "Q7"
+			(at 90.17 153.67 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BC817-40 low-side sink"
+			(at 90.17 166.37 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_SOT23"
+			(at 88.392 160.02 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "273582ac-5a15-4c17-80a7-b158e7e77101")
+		)
+		(pin "2"
+			(uuid "1428623a-4ef2-418f-948c-647186eef481")
+		)
+		(pin "3"
+			(uuid "62f6096e-f31c-44b5-9c39-5814ea6cfad9")
+		)
+		(instances
+			(project "SmartFarm PCB-B Relay Interface"
+				(path "/a55d38b7-9756-4038-b85f-7e95f0863ebf"
+					(reference "Q7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:R")
+		(at 90.17 171.45 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "85c8f15b-3058-4e26-b392-a9883f3eeba8")
+		(property "Reference" "R15"
+			(at 90.17 166.37 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k base pulldown"
+			(at 90.17 176.53 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_R_0603"
+			(at 88.392 171.45 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "241c5c27-6d6c-4fcc-9153-9977cf09d6f7")
+		)
+		(pin "2"
+			(uuid "4c2ef0f0-89a1-485d-8174-2e8d923544ad")
+		)
+		(instances
+			(project "SmartFarm PCB-B Relay Interface"
+				(path "/a55d38b7-9756-4038-b85f-7e95f0863ebf"
+					(reference "R15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:R")
+		(at 52.07 171.45 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "c4330a06-d0bb-4006-8bf1-18af8b77a8b5")
+		(property "Reference" "R23"
+			(at 52.07 166.37 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1k LED resistor"
+			(at 52.07 176.53 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_R_0603"
+			(at 50.292 171.45 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c40ccddd-b86a-4536-bfc6-74fd4545208f")
+		)
+		(pin "2"
+			(uuid "da191f12-6851-43bb-8d30-459bd2277efe")
+		)
+		(instances
+			(project "SmartFarm PCB-B Relay Interface"
+				(path "/a55d38b7-9756-4038-b85f-7e95f0863ebf"
+					(reference "R23")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:LED")
+		(at 115.57 171.45 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "01d1f862-7cb5-4570-a172-3a8ee89fbb47")
+		(property "Reference" "D7"
+			(at 115.57 166.37 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Relay 7 command"
+			(at 115.57 176.53 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_LED_0603"
+			(at 113.792 171.45 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f51ba2aa-573f-4e96-8f3c-506d72a6c993")
+		)
+		(pin "2"
+			(uuid "19ba6da7-d9a3-4dc0-a9cb-762c9ecef835")
+		)
+		(instances
+			(project "SmartFarm PCB-B Relay Interface"
+				(path "/a55d38b7-9756-4038-b85f-7e95f0863ebf"
+					(reference "D7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:R")
+		(at 64.77 180.34 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "4401471f-3f62-4e01-b7ae-357b488c1de0")
+		(property "Reference" "R8"
+			(at 64.77 175.26 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2.2k base"
+			(at 64.77 185.42 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_R_0603"
+			(at 62.992 180.34 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d7b02e67-213d-4c8e-aced-bed9b047603b")
+		)
+		(pin "2"
+			(uuid "8aff0db4-386e-4e48-b7c0-8798ae3a074d")
+		)
+		(instances
+			(project "SmartFarm PCB-B Relay Interface"
+				(path "/a55d38b7-9756-4038-b85f-7e95f0863ebf"
+					(reference "R8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:NPN")
+		(at 90.17 180.34 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f04f1db2-b122-4594-b244-b9c38fe14889")
+		(property "Reference" "Q8"
+			(at 90.17 173.99 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BC817-40 low-side sink"
+			(at 90.17 186.69 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_SOT23"
+			(at 88.392 180.34 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2608fe82-6b12-4e62-82ae-2516c083a84b")
+		)
+		(pin "2"
+			(uuid "e4bfd1f6-e362-491e-8358-327632f515eb")
+		)
+		(pin "3"
+			(uuid "14230172-3f60-41b6-a113-2c53e01fcc85")
+		)
+		(instances
+			(project "SmartFarm PCB-B Relay Interface"
+				(path "/a55d38b7-9756-4038-b85f-7e95f0863ebf"
+					(reference "Q8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:R")
+		(at 90.17 191.77 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "4e2ce428-4d85-4574-a8ff-a51c08ae3a16")
+		(property "Reference" "R16"
+			(at 90.17 186.69 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k base pulldown"
+			(at 90.17 196.85 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_R_0603"
+			(at 88.392 191.77 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "53f0da74-209f-49a5-95da-7ea4b0e49f50")
+		)
+		(pin "2"
+			(uuid "dfa22a4a-2a34-4fa2-b54f-2441be0980e4")
+		)
+		(instances
+			(project "SmartFarm PCB-B Relay Interface"
+				(path "/a55d38b7-9756-4038-b85f-7e95f0863ebf"
+					(reference "R16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:R")
+		(at 52.07 191.77 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "53057618-3b1a-4931-ad3b-4bd45acf18cf")
+		(property "Reference" "R24"
+			(at 52.07 186.69 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1k LED resistor"
+			(at 52.07 196.85 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_R_0603"
+			(at 50.292 191.77 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "94537778-1ebe-46a0-818a-8b30f3c9736a")
+		)
+		(pin "2"
+			(uuid "0ab22265-789e-4938-9f18-3ac77bc2652c")
+		)
+		(instances
+			(project "SmartFarm PCB-B Relay Interface"
+				(path "/a55d38b7-9756-4038-b85f-7e95f0863ebf"
+					(reference "R24")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:LED")
+		(at 115.57 191.77 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "e8c73ecd-3f5a-4fb6-9fe7-6f6a61087d76")
+		(property "Reference" "D8"
+			(at 115.57 186.69 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Relay 8 command"
+			(at 115.57 196.85 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_LED_0603"
+			(at 113.792 191.77 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4f415d78-fadd-4ae3-8168-d94bcd59fa48")
+		)
+		(pin "2"
+			(uuid "2122ab9b-814e-49fe-bed1-1fabca90a2e1")
+		)
+		(instances
+			(project "SmartFarm PCB-B Relay Interface"
+				(path "/a55d38b7-9756-4038-b85f-7e95f0863ebf"
+					(reference "D8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:Conn_01x05")
+		(at 144.78 73.66 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "312fdffd-c391-4df4-90a3-558ad4990b14")
+		(property "Reference" "J2"
+			(at 144.78 64.77 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Relay module inputs 1-4"
+			(at 144.78 82.55 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_PinHeader_1x5"
+			(at 143.002 73.66 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "724c77b6-fd71-4c5e-8bf5-82a068bdcad6")
+		)
+		(pin "2"
+			(uuid "d26e0b0c-76a6-4110-9adb-894a025ada68")
+		)
+		(pin "3"
+			(uuid "6c44365b-79c3-4b23-9f8a-cac91e556317")
+		)
+		(pin "4"
+			(uuid "6fd70e14-d804-48da-855a-060b05a6f22b")
+		)
+		(pin "5"
+			(uuid "206bcace-b5b2-4a9f-81a6-f51140d7c3a5")
+		)
+		(instances
+			(project "SmartFarm PCB-B Relay Interface"
+				(path "/a55d38b7-9756-4038-b85f-7e95f0863ebf"
+					(reference "J2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SmartFarm:Conn_01x05")
+		(at 144.78 148.59 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "60b4a417-ec06-4d35-86d4-1f6c12696da9")
+		(property "Reference" "J3"
+			(at 144.78 139.7 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Relay module inputs 5-8"
+			(at 144.78 157.48 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SmartFarm:SF_PinHeader_1x5"
+			(at 143.002 148.59 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fc2fe681-7b6b-4ae7-8947-1fbe468730fa")
+		)
+		(pin "2"
+			(uuid "1c8728ba-2e0f-46a9-afef-366a488076d2")
+		)
+		(pin "3"
+			(uuid "7d078b39-957b-4d6d-b721-e056b06b0694")
+		)
+		(pin "4"
+			(uuid "98916072-8ec7-4048-b315-d3ea7e41433a")
+		)
+		(pin "5"
+			(uuid "99b80de5-b61e-4cbe-936d-37bd9f54a479")
+		)
+		(instances
+			(project "SmartFarm PCB-B Relay Interface"
+				(path "/a55d38b7-9756-4038-b85f-7e95f0863ebf"
+					(reference "J3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 17.78 95.25) (xy 15.24 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9e6a17f6-89fb-465d-ac48-b5037ec9795a")
+	)
+	(wire
+		(pts
+			(xy 33.02 95.25) (xy 35.56 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "800668ff-4c88-4b6d-bfcc-84994c0ee5d5")
+	)
+	(wire
+		(pts
+			(xy 17.78 97.79) (xy 15.24 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cb1bdab4-5549-4db2-82fa-ea9606a07665")
+	)
+	(wire
+		(pts
+			(xy 33.02 97.79) (xy 35.56 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "42e3fb23-4c06-407e-ba90-0705c98d8c96")
+	)
+	(wire
+		(pts
+			(xy 17.78 100.33) (xy 15.24 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "35a9fed2-2017-4821-95ba-0e218831a85f")
+	)
+	(wire
+		(pts
+			(xy 33.02 100.33) (xy 35.56 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "149c4a4a-9b5c-4ba7-80dc-e6fa859d9699")
+	)
+	(wire
+		(pts
+			(xy 17.78 102.87) (xy 15.24 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "df6c734a-7e83-4d60-8c6b-cddddeabff05")
+	)
+	(wire
+		(pts
+			(xy 33.02 102.87) (xy 35.56 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8302a00d-c254-41aa-ad8f-588b2255851e")
+	)
+	(wire
+		(pts
+			(xy 17.78 105.41) (xy 15.24 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "020a9b06-5690-45b1-8a9b-e3c4c46aa24b")
+	)
+	(wire
+		(pts
+			(xy 33.02 105.41) (xy 35.56 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6880d2f7-da61-4664-b7fd-5c6de2e72906")
+	)
+	(wire
+		(pts
+			(xy 64.77 35.56) (xy 64.77 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3e2ba0f8-b824-4b4c-a6bc-7377554ac0c0")
+	)
+	(wire
+		(pts
+			(xy 64.77 43.18) (xy 64.77 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d066406c-421e-4868-8509-9e1dd092ad91")
+	)
+	(wire
+		(pts
+			(xy 85.09 39.37) (xy 82.55 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "05a21b71-2fc5-468f-87f7-a51d52b4959b")
+	)
+	(wire
+		(pts
+			(xy 95.25 41.91) (xy 97.79 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "63e93749-fd66-4075-8959-5c98b0c24ae7")
+	)
+	(wire
+		(pts
+			(xy 95.25 36.83) (xy 97.79 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b57d24e9-02ef-42a5-bc7a-616550c941d9")
+	)
+	(wire
+		(pts
+			(xy 90.17 48.26) (xy 90.17 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cf68ccc9-479e-4954-9db2-f6199ecfde1c")
+	)
+	(wire
+		(pts
+			(xy 90.17 55.88) (xy 90.17 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "56794849-33d7-48be-82bd-0c0ec83a6fee")
+	)
+	(wire
+		(pts
+			(xy 52.07 48.26) (xy 52.07 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ea1e42c6-21f1-4c4a-807c-30de17f4c7dc")
+	)
+	(wire
+		(pts
+			(xy 52.07 55.88) (xy 52.07 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "96d850c9-b6da-49b9-8dfe-6ebf5f358388")
+	)
+	(wire
+		(pts
+			(xy 111.76 52.07) (xy 109.22 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c9ff7c87-d61e-4b6c-a6a2-783475029c0a")
+	)
+	(wire
+		(pts
+			(xy 119.38 52.07) (xy 121.92 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eb221ad8-be3a-4310-a862-75c3d41cbc26")
+	)
+	(wire
+		(pts
+			(xy 64.77 55.88) (xy 64.77 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d43ed591-6e3b-4aac-b697-e72ef97e43fe")
+	)
+	(wire
+		(pts
+			(xy 64.77 63.5) (xy 64.77 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d669c7e7-dcb6-4a6c-8f69-a9bc84fc7599")
+	)
+	(wire
+		(pts
+			(xy 85.09 59.69) (xy 82.55 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cad477f3-a4ef-499c-89a0-ae4bb4262e2b")
+	)
+	(wire
+		(pts
+			(xy 95.25 62.23) (xy 97.79 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b8a110e9-15d1-45eb-bed7-d5f8060a1037")
+	)
+	(wire
+		(pts
+			(xy 95.25 57.15) (xy 97.79 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1fb593cf-2579-4514-b6a5-f7f0d192a3a5")
+	)
+	(wire
+		(pts
+			(xy 90.17 68.58) (xy 90.17 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "90d0dfef-bc3c-4693-956c-1f8888022ec3")
+	)
+	(wire
+		(pts
+			(xy 90.17 76.2) (xy 90.17 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e0a23878-83c6-49db-b6e5-6c6e5914211b")
+	)
+	(wire
+		(pts
+			(xy 52.07 68.58) (xy 52.07 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "59de7afd-fbc1-40f3-b99a-6ede8d76a089")
+	)
+	(wire
+		(pts
+			(xy 52.07 76.2) (xy 52.07 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ce6ae7d2-6138-45b0-a0d1-addee0b5e5ff")
+	)
+	(wire
+		(pts
+			(xy 111.76 72.39) (xy 109.22 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6d05f67c-5568-4921-8cdc-6ac5933e1bbc")
+	)
+	(wire
+		(pts
+			(xy 119.38 72.39) (xy 121.92 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9d86fc17-3efb-4f7f-8f9d-28254a65f864")
+	)
+	(wire
+		(pts
+			(xy 64.77 76.2) (xy 64.77 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "26240bbf-c0c5-4e36-aa24-607653782644")
+	)
+	(wire
+		(pts
+			(xy 64.77 83.82) (xy 64.77 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e4c8cc55-c60e-4e57-8142-f71cd4d216ed")
+	)
+	(wire
+		(pts
+			(xy 85.09 80.01) (xy 82.55 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5c9c5622-4325-45fb-a388-3592fbec7067")
+	)
+	(wire
+		(pts
+			(xy 95.25 82.55) (xy 97.79 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c2f8bfce-76e1-4d3e-96fe-185de3c6a0f9")
+	)
+	(wire
+		(pts
+			(xy 95.25 77.47) (xy 97.79 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b358a333-42eb-4d95-ab86-41f2fd7e7664")
+	)
+	(wire
+		(pts
+			(xy 90.17 87.63) (xy 90.17 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1167cb38-f58e-424b-bbe5-d4f5a8e2b11a")
+	)
+	(wire
+		(pts
+			(xy 90.17 95.25) (xy 90.17 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "53db8006-9754-4bd4-bc87-8202967de5b1")
+	)
+	(wire
+		(pts
+			(xy 52.07 87.63) (xy 52.07 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8981d568-a9cd-47f4-8811-9e9b732833fc")
+	)
+	(wire
+		(pts
+			(xy 52.07 95.25) (xy 52.07 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "211966c6-99cf-4e41-b5a5-df3ae3e80f12")
+	)
+	(wire
+		(pts
+			(xy 111.76 91.44) (xy 109.22 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "62821a96-0ecb-489f-b962-e876f5cff238")
+	)
+	(wire
+		(pts
+			(xy 119.38 91.44) (xy 121.92 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "009172a5-f6ec-47ae-a051-dc539ccf9726")
+	)
+	(wire
+		(pts
+			(xy 64.77 96.52) (xy 64.77 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ae826a80-cad9-4ad2-b714-cfbfe3e42d01")
+	)
+	(wire
+		(pts
+			(xy 64.77 104.14) (xy 64.77 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e709078d-bb4e-457d-9a28-bcfc2ba6630f")
+	)
+	(wire
+		(pts
+			(xy 85.09 100.33) (xy 82.55 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5b6f87fc-52e6-4055-9870-5de2fef1c9c2")
+	)
+	(wire
+		(pts
+			(xy 95.25 102.87) (xy 97.79 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3fd27fff-2bd3-4184-a856-40bc83fa09ae")
+	)
+	(wire
+		(pts
+			(xy 95.25 97.79) (xy 97.79 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "feca5087-fb43-4cc7-8d05-e7f99d5cce0c")
+	)
+	(wire
+		(pts
+			(xy 90.17 107.95) (xy 90.17 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "afab6f3f-23e0-4da0-9b6e-e99626f9d7cd")
+	)
+	(wire
+		(pts
+			(xy 90.17 115.57) (xy 90.17 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d6b47631-9500-4b74-9bbf-0fcdee8b314d")
+	)
+	(wire
+		(pts
+			(xy 52.07 107.95) (xy 52.07 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5c38ed17-0498-4fdc-a068-f17ceb196499")
+	)
+	(wire
+		(pts
+			(xy 52.07 115.57) (xy 52.07 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ca0da508-a935-4be9-be0c-d59f7fc7fa3f")
+	)
+	(wire
+		(pts
+			(xy 111.76 111.76) (xy 109.22 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4f5566bd-6638-4e0f-bff6-246285057049")
+	)
+	(wire
+		(pts
+			(xy 119.38 111.76) (xy 121.92 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b6517fe7-db27-412d-8513-7d55a8fe00af")
+	)
+	(wire
+		(pts
+			(xy 64.77 115.57) (xy 64.77 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "51114763-6521-439b-835a-a423f4a5bd65")
+	)
+	(wire
+		(pts
+			(xy 64.77 123.19) (xy 64.77 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c505b6db-a6c0-4072-b6fc-4e13e5bf6351")
+	)
+	(wire
+		(pts
+			(xy 85.09 119.38) (xy 82.55 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "66667ee8-e131-4ab8-bcbb-9becadfaf526")
+	)
+	(wire
+		(pts
+			(xy 95.25 121.92) (xy 97.79 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "05c2810b-eb4f-4ab4-91e4-67e579b4ca49")
+	)
+	(wire
+		(pts
+			(xy 95.25 116.84) (xy 97.79 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "de46ad6b-ac72-4f76-98e0-8e7726ca0673")
+	)
+	(wire
+		(pts
+			(xy 90.17 128.27) (xy 90.17 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7ddefe21-f63b-4030-928a-e2022d4f1cad")
+	)
+	(wire
+		(pts
+			(xy 90.17 135.89) (xy 90.17 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "39edd83e-a325-4901-bdb9-eb4f6ad0a3ca")
+	)
+	(wire
+		(pts
+			(xy 52.07 128.27) (xy 52.07 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "76e42d71-cde0-4bfd-a491-b7ebf4825ddf")
+	)
+	(wire
+		(pts
+			(xy 52.07 135.89) (xy 52.07 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ba0c03e3-4a3c-4c96-bde4-1ff87fdb221b")
+	)
+	(wire
+		(pts
+			(xy 111.76 132.08) (xy 109.22 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e54b23d6-974c-41c0-b465-f70195375970")
+	)
+	(wire
+		(pts
+			(xy 119.38 132.08) (xy 121.92 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e966914a-8065-4c1e-8ac2-0d0c7677b8f5")
+	)
+	(wire
+		(pts
+			(xy 64.77 135.89) (xy 64.77 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0adcbbee-c455-482f-90d2-05d63490c5b9")
+	)
+	(wire
+		(pts
+			(xy 64.77 143.51) (xy 64.77 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eec5afc7-5e29-4015-a7ac-482b7679b0c2")
+	)
+	(wire
+		(pts
+			(xy 85.09 139.7) (xy 82.55 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4eeebbeb-f043-4758-b89c-39df9a76d6f7")
+	)
+	(wire
+		(pts
+			(xy 95.25 142.24) (xy 97.79 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c5135584-286d-4add-8ee3-318f7020015c")
+	)
+	(wire
+		(pts
+			(xy 95.25 137.16) (xy 97.79 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "408ac28e-a668-49bb-b1a2-62379f5e2c64")
+	)
+	(wire
+		(pts
+			(xy 90.17 148.59) (xy 90.17 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9019d1af-af9d-448a-bf37-eec39ca5c9a1")
+	)
+	(wire
+		(pts
+			(xy 90.17 156.21) (xy 90.17 153.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "99e4a021-30b4-4b08-9697-f0d61c7cd6c7")
+	)
+	(wire
+		(pts
+			(xy 52.07 148.59) (xy 52.07 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cd74d667-0233-4388-a571-339ee4f48175")
+	)
+	(wire
+		(pts
+			(xy 52.07 156.21) (xy 52.07 153.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "741b9476-0a34-4acd-aa1b-490b5c1a31f8")
+	)
+	(wire
+		(pts
+			(xy 111.76 152.4) (xy 109.22 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6a3c5d8d-0dde-4054-982f-8e2fa4963f3e")
+	)
+	(wire
+		(pts
+			(xy 119.38 152.4) (xy 121.92 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "be1841d1-c325-4945-b85c-bbf79d9a5d6b")
+	)
+	(wire
+		(pts
+			(xy 64.77 156.21) (xy 64.77 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1ce5fad7-d6d6-441d-a5c6-02ea9ed2e5e2")
+	)
+	(wire
+		(pts
+			(xy 64.77 163.83) (xy 64.77 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6ef1b500-9fbc-4f3c-ada0-c68c86b832f2")
+	)
+	(wire
+		(pts
+			(xy 85.09 160.02) (xy 82.55 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ae10e369-8c68-4f4e-aee2-1318b1207426")
+	)
+	(wire
+		(pts
+			(xy 95.25 162.56) (xy 97.79 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a06fcaae-a3c2-4738-817a-cee3d8655a1a")
+	)
+	(wire
+		(pts
+			(xy 95.25 157.48) (xy 97.79 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0ff24da7-3247-4470-832a-d37d46547547")
+	)
+	(wire
+		(pts
+			(xy 90.17 167.64) (xy 90.17 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7d7827fb-3a65-44cf-8ab5-80772ebcf3de")
+	)
+	(wire
+		(pts
+			(xy 90.17 175.26) (xy 90.17 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6be2554b-3153-48c8-b0a4-541da357b2d8")
+	)
+	(wire
+		(pts
+			(xy 52.07 167.64) (xy 52.07 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "93427646-2b49-489f-9c22-e0b1a6e41e3a")
+	)
+	(wire
+		(pts
+			(xy 52.07 175.26) (xy 52.07 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8047e5cc-6dd2-4329-af83-7410b2a8cb87")
+	)
+	(wire
+		(pts
+			(xy 111.76 171.45) (xy 109.22 171.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "28964bbd-a399-40a3-add1-4fe1f2866fcd")
+	)
+	(wire
+		(pts
+			(xy 119.38 171.45) (xy 121.92 171.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "42eadc65-5277-4571-95b1-4444c3e17ca1")
+	)
+	(wire
+		(pts
+			(xy 64.77 176.53) (xy 64.77 179.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b0320968-82a0-4110-85d5-4a9e7988eb99")
+	)
+	(wire
+		(pts
+			(xy 64.77 184.15) (xy 64.77 181.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f558e7a3-f5cd-4f67-adf0-c992084e38ef")
+	)
+	(wire
+		(pts
+			(xy 85.09 180.34) (xy 82.55 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8c32d3aa-588a-41ce-b233-7176f5031e78")
+	)
+	(wire
+		(pts
+			(xy 95.25 182.88) (xy 97.79 182.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "82a0fe57-2415-451d-9b44-55c0a5629e6f")
+	)
+	(wire
+		(pts
+			(xy 95.25 177.8) (xy 97.79 177.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c9f06c6d-f729-4c52-abda-eea215a6cf04")
+	)
+	(wire
+		(pts
+			(xy 90.17 187.96) (xy 90.17 190.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ddab6232-8d18-45d6-9e6a-f06dd560acb4")
+	)
+	(wire
+		(pts
+			(xy 90.17 195.58) (xy 90.17 193.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "64a109c2-64e1-4945-8af2-ebbf4a46658a")
+	)
+	(wire
+		(pts
+			(xy 52.07 187.96) (xy 52.07 190.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1b5abc47-e2f5-4173-84fa-a30b66682387")
+	)
+	(wire
+		(pts
+			(xy 52.07 195.58) (xy 52.07 193.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b133ab44-6180-4c92-af1c-d57939fc0608")
+	)
+	(wire
+		(pts
+			(xy 111.76 191.77) (xy 109.22 191.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1ce16a2f-cd05-426b-9543-6275ee92c5eb")
+	)
+	(wire
+		(pts
+			(xy 119.38 191.77) (xy 121.92 191.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4691845e-f5db-4b5e-8ca4-c4ef9c627d0d")
+	)
+	(wire
+		(pts
+			(xy 137.16 68.58) (xy 134.62 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0505cb5e-d764-495c-a5b2-ca5f9feb031f")
+	)
+	(wire
+		(pts
+			(xy 137.16 71.12) (xy 134.62 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d70a70ed-7210-4333-92e4-4eb44fa16469")
+	)
+	(wire
+		(pts
+			(xy 137.16 73.66) (xy 134.62 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fb7fd534-2468-4994-9395-7296d9a85e04")
+	)
+	(wire
+		(pts
+			(xy 137.16 76.2) (xy 134.62 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4ce0065a-9b6c-43bc-8274-169d4061ead5")
+	)
+	(wire
+		(pts
+			(xy 137.16 78.74) (xy 134.62 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0857841c-b5a8-47fc-8dad-1fe8b5e7b8f1")
+	)
+	(wire
+		(pts
+			(xy 137.16 143.51) (xy 134.62 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e63bd84c-97d1-4d7a-944d-bff0fe916075")
+	)
+	(wire
+		(pts
+			(xy 137.16 146.05) (xy 134.62 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "72f2ff36-a35c-4ef1-bf9c-b5b073a56130")
+	)
+	(wire
+		(pts
+			(xy 137.16 148.59) (xy 134.62 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2fc00941-89b1-4b6b-922d-c7254ae4b6a7")
+	)
+	(wire
+		(pts
+			(xy 137.16 151.13) (xy 134.62 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0506ea94-9b5f-4f6a-a7c5-fce537d034f5")
+	)
+	(wire
+		(pts
+			(xy 137.16 153.67) (xy 134.62 153.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "56aa1f0d-f958-4b29-9b1c-f59db4a1f597")
+	)
+	(label "RELAY1"
+		(at 15.24 95.25 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "09a4b857-ab25-4384-bc09-074ea492b0f8")
+	)
+	(label "RELAY2"
+		(at 35.56 95.25 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9b185af0-7f27-4c69-b867-067b2e07e3d7")
+	)
+	(label "RELAY3"
+		(at 15.24 97.79 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "18b076b0-9da0-4d02-8419-3240be63d23f")
+	)
+	(label "RELAY4"
+		(at 35.56 97.79 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1ccf1424-1b5f-4e2d-9b1e-4c252cff9d98")
+	)
+	(label "RELAY5"
+		(at 15.24 100.33 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "98d590ff-ebd1-4485-aa33-8f456d3bc3c8")
+	)
+	(label "RELAY6"
+		(at 35.56 100.33 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "51380411-0156-4651-8e84-dddb7e4d43b4")
+	)
+	(label "RELAY7"
+		(at 15.24 102.87 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "463d5ec8-faff-4187-b870-0f3fed30edb8")
+	)
+	(label "RELAY8"
+		(at 35.56 102.87 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f11a100b-0514-4e6e-b80e-64bf228a1bcd")
+	)
+	(label "GND"
+		(at 15.24 105.41 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "96769546-3fc5-4dc7-a882-597cf82e9469")
+	)
+	(label "GND"
+		(at 35.56 105.41 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "64b1a4db-9247-45ed-99be-f02e588c698f")
+	)
+	(label "RELAY1"
+		(at 64.77 38.1 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7331bd15-cf78-40e5-a4db-92aeee12d1fc")
+	)
+	(label "Q1_B"
+		(at 64.77 40.64 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1f47251d-afee-4faa-98dd-7a2eac142940")
+	)
+	(label "Q1_B"
+		(at 82.55 39.37 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "21bf299c-964b-4e23-ac4f-cd20bf3b6e39")
+	)
+	(label "GND"
+		(at 97.79 41.91 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b296b2d3-dc0e-4e72-8812-f1a54d6bf6f3")
+	)
+	(label "RELAY_IN1"
+		(at 97.79 36.83 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "83796384-5af5-48e7-8022-049ce02feaef")
+	)
+	(label "Q1_B"
+		(at 90.17 50.8 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5b84d67a-ed1e-4395-a978-3604a3c22afe")
+	)
+	(label "GND"
+		(at 90.17 53.34 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "008b868e-5916-440b-b9db-f8a8d393a74c")
+	)
+	(label "RELAY1"
+		(at 52.07 50.8 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "203f830b-a36f-4ab0-9977-f75210b64294")
+	)
+	(label "LED1_A"
+		(at 52.07 53.34 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "22896392-3628-43c0-9c6c-09b841b08c6b")
+	)
+	(label "GND"
+		(at 109.22 52.07 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8a3463d6-e8bb-496a-a475-a13bdb36bad8")
+	)
+	(label "LED1_A"
+		(at 121.92 52.07 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ecdda353-388c-4dce-9973-a910c4c245e5")
+	)
+	(label "RELAY2"
+		(at 64.77 58.42 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "05273093-6ea7-4fa9-999a-17559bec2efc")
+	)
+	(label "Q2_B"
+		(at 64.77 60.96 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "cc61b6c6-6a92-4f3c-add9-e30a18f802a2")
+	)
+	(label "Q2_B"
+		(at 82.55 59.69 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7c0230a2-3cfc-439c-8051-f1f73efbfcce")
+	)
+	(label "GND"
+		(at 97.79 62.23 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3b22877f-d3d1-4c85-b12d-0bd8ffeb84e6")
+	)
+	(label "RELAY_IN2"
+		(at 97.79 57.15 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "acfe72b5-3800-4dfe-9cfa-cd976949ed60")
+	)
+	(label "Q2_B"
+		(at 90.17 71.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "47e5ed27-6b0d-4864-9bf4-e6441197680b")
+	)
+	(label "GND"
+		(at 90.17 73.66 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2aa5b9ae-12a8-4171-90e0-9b9602494c17")
+	)
+	(label "RELAY2"
+		(at 52.07 71.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2df6a925-2b1c-41c9-9956-c223dceb360b")
+	)
+	(label "LED2_A"
+		(at 52.07 73.66 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ea64d693-f7de-45c9-8777-defea2079035")
+	)
+	(label "GND"
+		(at 109.22 72.39 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "92b05066-a4e2-44d5-beff-bf3644d2210f")
+	)
+	(label "LED2_A"
+		(at 121.92 72.39 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d73838f9-493a-4600-9c5d-db0ea6d88dcb")
+	)
+	(label "RELAY3"
+		(at 64.77 78.74 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "48c77dbe-fcf3-4442-8bde-87502ebd0a1a")
+	)
+	(label "Q3_B"
+		(at 64.77 81.28 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d68cded5-136c-46cc-86fe-c401bf838e27")
+	)
+	(label "Q3_B"
+		(at 82.55 80.01 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "85f10b72-30a9-45a8-ac80-e04f77b7cce4")
+	)
+	(label "GND"
+		(at 97.79 82.55 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e5774afc-21c3-4886-9543-523c5f1442d3")
+	)
+	(label "RELAY_IN3"
+		(at 97.79 77.47 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3b9d6afd-ae7d-4fee-8e1d-397c246d037a")
+	)
+	(label "Q3_B"
+		(at 90.17 90.17 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "bf9eb6bd-fe18-4d72-840a-4d7318cf963f")
+	)
+	(label "GND"
+		(at 90.17 92.71 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "24c4aa63-536b-4ced-822b-fc292e5bfb8a")
+	)
+	(label "RELAY3"
+		(at 52.07 90.17 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "aca7d82b-62ba-470c-b14a-780b3d29e9ea")
+	)
+	(label "LED3_A"
+		(at 52.07 92.71 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "486c0c79-7a3b-449f-aac3-202e2eea6f83")
+	)
+	(label "GND"
+		(at 109.22 91.44 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f0e82e6f-0f7f-4edc-bde3-ad25bac2fd4a")
+	)
+	(label "LED3_A"
+		(at 121.92 91.44 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4a719bd2-8387-45ba-8113-03c1f49ffbc5")
+	)
+	(label "RELAY4"
+		(at 64.77 99.06 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "29374a8a-49c8-4589-87ec-1da44dc44dfb")
+	)
+	(label "Q4_B"
+		(at 64.77 101.6 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "64ea00d5-10fd-4b36-99eb-4046e1de780e")
+	)
+	(label "Q4_B"
+		(at 82.55 100.33 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "01b26ed5-694e-4326-8b46-72ac4c24444e")
+	)
+	(label "GND"
+		(at 97.79 102.87 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f68ded5c-7034-4a5f-b0c6-c21b282476bd")
+	)
+	(label "RELAY_IN4"
+		(at 97.79 97.79 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d7c9f5d7-e24d-47c7-9ca6-51299307e86a")
+	)
+	(label "Q4_B"
+		(at 90.17 110.49 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f9668f50-5e0b-461a-ac34-d1cd2db94f55")
+	)
+	(label "GND"
+		(at 90.17 113.03 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2b69a4a3-008a-47c8-9a11-422c2dc964a5")
+	)
+	(label "RELAY4"
+		(at 52.07 110.49 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8299f2c0-f3e2-4c9d-b9ac-72056c6e2828")
+	)
+	(label "LED4_A"
+		(at 52.07 113.03 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e3a26d59-b920-45aa-94f7-df9e337e4cdc")
+	)
+	(label "GND"
+		(at 109.22 111.76 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c9054d27-9b1b-4f06-b057-6ddeb0856c42")
+	)
+	(label "LED4_A"
+		(at 121.92 111.76 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f4fc3c56-ded8-4fdd-bca0-a35c315e6c14")
+	)
+	(label "RELAY5"
+		(at 64.77 118.11 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7e094568-90af-46ca-8532-5b7fcb257e34")
+	)
+	(label "Q5_B"
+		(at 64.77 120.65 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "49defff4-e87c-4852-a59c-8922675bd382")
+	)
+	(label "Q5_B"
+		(at 82.55 119.38 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7d37f792-5ada-4dc0-b798-f173f46cbfec")
+	)
+	(label "GND"
+		(at 97.79 121.92 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "77020374-af1e-4d65-8136-4b2028fea53d")
+	)
+	(label "RELAY_IN5"
+		(at 97.79 116.84 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "81373b54-88fd-4a3a-98f3-a939c4257d86")
+	)
+	(label "Q5_B"
+		(at 90.17 130.81 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5bba1019-d7c4-42d8-a8a8-eb1e93109f22")
+	)
+	(label "GND"
+		(at 90.17 133.35 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "13c72afb-ca1a-4357-9866-01433bfed427")
+	)
+	(label "RELAY5"
+		(at 52.07 130.81 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e67d1bc8-1efd-4123-8389-0e7bad6773d3")
+	)
+	(label "LED5_A"
+		(at 52.07 133.35 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "dd9d13b6-eaca-4096-9860-97077ea62c12")
+	)
+	(label "GND"
+		(at 109.22 132.08 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "20b7e685-344f-4883-9916-9502a8e81e8c")
+	)
+	(label "LED5_A"
+		(at 121.92 132.08 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fe6b60b5-b820-46f7-99e9-9286d701ebc2")
+	)
+	(label "RELAY6"
+		(at 64.77 138.43 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a86ddc12-3b6e-428b-a41d-cadcbf8f8b9d")
+	)
+	(label "Q6_B"
+		(at 64.77 140.97 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "cb9d6cfc-1462-4195-aca2-40e4005d7bba")
+	)
+	(label "Q6_B"
+		(at 82.55 139.7 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "357c916e-55b0-4f3b-9aba-fd13d3d19e49")
+	)
+	(label "GND"
+		(at 97.79 142.24 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "edb4d479-c47a-4f5c-b605-752e61db8435")
+	)
+	(label "RELAY_IN6"
+		(at 97.79 137.16 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "42163442-b0d1-4844-abfd-2f1c1be17baf")
+	)
+	(label "Q6_B"
+		(at 90.17 151.13 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8aa86557-7e30-45fc-b7f2-38bb0ea6f383")
+	)
+	(label "GND"
+		(at 90.17 153.67 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ed05d9b9-757b-4ee2-ad20-45170439ca98")
+	)
+	(label "RELAY6"
+		(at 52.07 151.13 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8356f4c0-b95c-4463-8bbe-9757d875ee40")
+	)
+	(label "LED6_A"
+		(at 52.07 153.67 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "dfba2183-5692-4db1-80bc-54a23a6d8061")
+	)
+	(label "GND"
+		(at 109.22 152.4 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "da90bf9d-87e6-43d9-912e-087200a29a15")
+	)
+	(label "LED6_A"
+		(at 121.92 152.4 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7cb5cc8a-6aee-41e7-800b-f4986f410c06")
+	)
+	(label "RELAY7"
+		(at 64.77 158.75 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "37ef2113-ab82-4c52-964d-4bedbfb13af2")
+	)
+	(label "Q7_B"
+		(at 64.77 161.29 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ef5a3932-780c-4338-b050-1f0671d3b563")
+	)
+	(label "Q7_B"
+		(at 82.55 160.02 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "36b85e3f-504a-402f-b442-37add422876d")
+	)
+	(label "GND"
+		(at 97.79 162.56 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e852df67-4607-45bb-9b53-cdeed759a699")
+	)
+	(label "RELAY_IN7"
+		(at 97.79 157.48 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9e4e2651-e523-4e3d-aa63-54384f213f4a")
+	)
+	(label "Q7_B"
+		(at 90.17 170.18 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f9f513a1-bb9d-4035-ada2-60722bdca11c")
+	)
+	(label "GND"
+		(at 90.17 172.72 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d63bc803-0fb0-4ad3-a232-6baed6fc024a")
+	)
+	(label "RELAY7"
+		(at 52.07 170.18 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "90c9e95e-14cb-4bca-87be-af4480f9e6a0")
+	)
+	(label "LED7_A"
+		(at 52.07 172.72 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "54ae8956-4433-417c-b63f-09bb36f9326e")
+	)
+	(label "GND"
+		(at 109.22 171.45 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "aabb8f08-0049-42f9-9401-21bc8233a9b8")
+	)
+	(label "LED7_A"
+		(at 121.92 171.45 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "cb3eef94-5842-4f53-b132-dd5d56c1a270")
+	)
+	(label "RELAY8"
+		(at 64.77 179.07 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "571983d8-a2d1-4bf4-870c-16d8b141dc1d")
+	)
+	(label "Q8_B"
+		(at 64.77 181.61 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d3e4f42f-62ff-477a-b334-d802469cc559")
+	)
+	(label "Q8_B"
+		(at 82.55 180.34 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e4dbc4fe-e041-43d8-b431-9068cb304fce")
+	)
+	(label "GND"
+		(at 97.79 182.88 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1c229117-978d-497f-b75c-931f4cf5b060")
+	)
+	(label "RELAY_IN8"
+		(at 97.79 177.8 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7ad5d09a-09d7-42c9-9209-e00dc2f28bd0")
+	)
+	(label "Q8_B"
+		(at 90.17 190.5 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "cef178b3-6d3c-42a7-9367-9f4efeeb2360")
+	)
+	(label "GND"
+		(at 90.17 193.04 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c0af25ae-7d64-40d6-b027-191ade033799")
+	)
+	(label "RELAY8"
+		(at 52.07 190.5 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e671e8b4-1b7a-46ff-b045-ef28f89b17c2")
+	)
+	(label "LED8_A"
+		(at 52.07 193.04 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f3fe0c77-6fe0-44cc-ac50-f5c5ab9f4fcc")
+	)
+	(label "GND"
+		(at 109.22 191.77 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9848fa1f-8d53-48a8-8449-849276fca19d")
+	)
+	(label "LED8_A"
+		(at 121.92 191.77 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b93c2f4c-1307-4ac3-9b3d-0f691658ddd3")
+	)
+	(label "GND"
+		(at 134.62 68.58 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6e3cd9ba-c72b-4fb7-9ba1-09f81819e2d8")
+	)
+	(label "RELAY_IN1"
+		(at 134.62 71.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f76685df-e36f-4e61-8f89-9dd9aa9a5701")
+	)
+	(label "RELAY_IN2"
+		(at 134.62 73.66 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e80f8e32-273a-4055-9343-9e84aed73206")
+	)
+	(label "RELAY_IN3"
+		(at 134.62 76.2 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1779c014-7a75-4f82-ac50-03f07503ec29")
+	)
+	(label "RELAY_IN4"
+		(at 134.62 78.74 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6f93cee3-9ade-4109-b705-e5a9e5ec5c2f")
+	)
+	(label "GND"
+		(at 134.62 143.51 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a412501d-0043-4f70-8463-e9fce20499cd")
+	)
+	(label "RELAY_IN5"
+		(at 134.62 146.05 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2729a4e2-d6e5-4ba4-8f0f-d62b080b0a4b")
+	)
+	(label "RELAY_IN6"
+		(at 134.62 148.59 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "bf38aa26-c5fd-45ea-bc6b-4a80d56f739b")
+	)
+	(label "RELAY_IN7"
+		(at 134.62 151.13 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3d145d5a-869f-4036-bebf-cbebb185f0ba")
+	)
+	(label "RELAY_IN8"
+		(at 134.62 153.67 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "69881799-d6d5-4c0c-8937-797b12905721")
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

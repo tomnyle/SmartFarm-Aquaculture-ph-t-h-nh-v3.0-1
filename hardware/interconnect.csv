@@ -1,0 +1,11 @@
+connector,pin,signal,PCB-A endpoint,PCB-B endpoint,direction,notes
+J_AB,1,RELAY1,GPIO13,Q1 base via R1,PCB-A to PCB-B,Pump; HIGH activates low-trigger relay input
+J_AB,2,RELAY2,GPIO25,Q2 base via R2,PCB-A to PCB-B,Aerator; HIGH activates low-trigger relay input
+J_AB,3,RELAY3,GPIO14,Q3 base via R3,PCB-A to PCB-B,Circulation; HIGH activates low-trigger relay input
+J_AB,4,RELAY4,GPIO27,Q4 base via R4,PCB-A to PCB-B,Feeder; HIGH activates low-trigger relay input
+J_AB,5,RELAY5,GPIO32,Q5 base via R5,PCB-A to PCB-B,Reserved and held OFF by current firmware
+J_AB,6,RELAY6,GPIO33,Q6 base via R6,PCB-A to PCB-B,Reserved and held OFF by current firmware
+J_AB,7,RELAY7,GPIO26,Q7 base via R7,PCB-A to PCB-B,Reserved and held OFF by current firmware
+J_AB,8,RELAY8,GPIO23,Q8 base via R8,PCB-A to PCB-B,Reserved and held OFF by current firmware
+J_AB,9,GND,ESP32 GND,PCB-B control ground,common reference,Required for NPN input drivers
+J_AB,10,GND,ESP32 GND,PCB-B control ground,common reference,Duplicate return pin

@@ -1,0 +1,2759 @@
+(kicad_pcb
+    (version 20241229)
+    (generator "pycbnew")
+    (generator_version "1.0.1")
+    (paper "A4")
+    (layers
+        (0 "F.Cu" signal)
+        (31 "B.Cu" signal)
+        (32 "B.Adhes" user "B.Adhesive")
+        (33 "F.Adhes" user "F.Adhesive")
+        (34 "B.Paste" user)
+        (35 "F.Paste" user)
+        (36 "B.SilkS" user "B.Silkscreen")
+        (37 "F.SilkS" user "F.Silkscreen")
+        (38 "B.Mask" user)
+        (39 "F.Mask" user)
+        (40 "Dwgs.User" user "User.Drawings")
+        (41 "Cmts.User" user "User.Comments")
+        (42 "Eco1.User" user "User.Eco1")
+        (43 "Eco2.User" user "User.Eco2")
+        (44 "Edge.Cuts" user)
+        (45 "Margin" user)
+        (46 "B.CrtYd" user "B.Courtyard")
+        (47 "F.CrtYd" user "F.Courtyard")
+        (48 "B.Fab" user)
+        (49 "F.Fab" user)
+    )
+    (net 1 "RELAY_IN6")
+    (net 2 "LED4_A")
+    (net 3 "LED7_A")
+    (net 4 "RELAY4")
+    (net 5 "RELAY2")
+    (net 6 "Q5_B")
+    (net 7 "RELAY_IN3")
+    (net 8 "Q2_B")
+    (net 9 "LED6_A")
+    (net 10 "LED8_A")
+    (net 11 "RELAY1")
+    (net 12 "RELAY_IN4")
+    (net 13 "LED2_A")
+    (net 14 "Q6_B")
+    (net 15 "RELAY_IN5")
+    (net 16 "RELAY5")
+    (net 17 "RELAY_IN1")
+    (net 18 "LED1_A")
+    (net 19 "RELAY8")
+    (net 20 "LED3_A")
+    (net 21 "Q8_B")
+    (net 22 "RELAY7")
+    (net 23 "Q3_B")
+    (net 24 "RELAY6")
+    (net 25 "Q7_B")
+    (net 26 "GND")
+    (net 27 "RELAY_IN8")
+    (net 28 "LED5_A")
+    (net 29 "RELAY_IN7")
+    (net 30 "Q4_B")
+    (net 31 "RELAY3")
+    (net 32 "Q1_B")
+    (net 33 "RELAY_IN2")
+    (gr_line
+        (start 5 5)
+        (end 100 5)
+        (stroke
+            (width 0.05)
+            (type default)
+        )
+        (layer "Edge.Cuts")
+        (uuid "17394ab3-f72a-42fb-b52c-becba61c1f0a")
+    )
+    (gr_line
+        (start 100 5)
+        (end 100 70)
+        (stroke
+            (width 0.05)
+            (type default)
+        )
+        (layer "Edge.Cuts")
+        (uuid "15db4b84-06e9-4ffc-b22d-cf04392d43ae")
+    )
+    (gr_line
+        (start 100 70)
+        (end 5 70)
+        (stroke
+            (width 0.05)
+            (type default)
+        )
+        (layer "Edge.Cuts")
+        (uuid "222037de-5a91-4af3-b1a8-dc485988a15b")
+    )
+    (gr_line
+        (start 5 70)
+        (end 5 5)
+        (stroke
+            (width 0.05)
+            (type default)
+        )
+        (layer "Edge.Cuts")
+        (uuid "ce867cc0-683f-47b6-bd2d-535a15446d95")
+    )
+    (gr_text "SMARTFARM PCB-B | LOW-TRIGGER INPUT DRIVER"
+        (at 8 8 0)
+        (layer "F.SilkS")
+        (uuid "20435fa4-1fd0-463a-bb01-61107a532d7c")
+        (effects
+            (justify)
+            (font
+                (size 1.5 1.5)
+                (thickness 0.19)
+            )
+        )
+    )
+    (footprint "SmartFarm:SF_PinHeader_2x5"
+        (at 15 35 0)
+        (version 20240108)
+        (generator "pcbnew")
+        (layer "F.Cu")
+        (descr "SmartFarm project footprint")
+        (attr through_hole)
+        (fp_rect
+            (start -2.1 -7.2)
+            (end 4.7 7.2)
+            (stroke
+                (width 0.12)
+                (type default)
+            )
+            (fill
+                (type none)
+            )
+            (layer "F.SilkS")
+        )
+        (pad "1" thru_hole rect
+            (net 11 "RELAY1")
+            (at 0 -5.08 0)
+            (size 1.7 1.7)
+            (drill 1.0)
+            (layers "*.Cu" "*.Mask")
+        )
+        (pad "2" thru_hole circle
+            (net 5 "RELAY2")
+            (at 2.54 -5.08 0)
+            (size 1.7 1.7)
+            (drill 1.0)
+            (layers "*.Cu" "*.Mask")
+        )
+        (pad "3" thru_hole circle
+            (net 31 "RELAY3")
+            (at 0 -2.54 0)
+            (size 1.7 1.7)
+            (drill 1.0)
+            (layers "*.Cu" "*.Mask")
+        )
+        (pad "4" thru_hole circle
+            (net 4 "RELAY4")
+            (at 2.54 -2.54 0)
+            (size 1.7 1.7)
+            (drill 1.0)
+            (layers "*.Cu" "*.Mask")
+        )
+        (pad "5" thru_hole circle
+            (net 16 "RELAY5")
+            (at 0 0 0)
+            (size 1.7 1.7)
+            (drill 1.0)
+            (layers "*.Cu" "*.Mask")
+        )
+        (pad "6" thru_hole circle
+            (net 24 "RELAY6")
+            (at 2.54 0 0)
+            (size 1.7 1.7)
+            (drill 1.0)
+            (layers "*.Cu" "*.Mask")
+        )
+        (pad "7" thru_hole circle
+            (net 22 "RELAY7")
+            (at 0 2.54 0)
+            (size 1.7 1.7)
+            (drill 1.0)
+            (layers "*.Cu" "*.Mask")
+        )
+        (pad "8" thru_hole circle
+            (net 19 "RELAY8")
+            (at 2.54 2.54 0)
+            (size 1.7 1.7)
+            (drill 1.0)
+            (layers "*.Cu" "*.Mask")
+        )
+        (pad "9" thru_hole circle
+            (net 26 "GND")
+            (at 0 5.08 0)
+            (size 1.7 1.7)
+            (drill 1.0)
+            (layers "*.Cu" "*.Mask")
+        )
+        (pad "10" thru_hole circle
+            (net 26 "GND")
+            (at 2.54 5.08 0)
+            (size 1.7 1.7)
+            (drill 1.0)
+            (layers "*.Cu" "*.Mask")
+        )
+        (property "Reference" "J1"
+            (at 0 -8.7 0)
+            (unlocked yes)
+            (layer "F.SilkS")
+            (hide yes)
+            (uuid "0e45bafa-283c-4c85-83fe-5034c8acf108")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+        (property "Value" "PCB-A J_AB"
+            (at 0 8.7 0)
+            (unlocked yes)
+            (layer "F.Fab")
+            (hide no)
+            (uuid "07cb63f3-1534-4ff6-8fd0-34c4217f9c51")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+    )
+    (footprint "SmartFarm:SF_PinHeader_1x5"
+        (at 90 25 0)
+        (version 20240108)
+        (generator "pcbnew")
+        (layer "F.Cu")
+        (descr "SmartFarm project footprint")
+        (attr through_hole)
+        (fp_rect
+            (start -2.1 -7.2)
+            (end 2.1 7.2)
+            (stroke
+                (width 0.12)
+                (type default)
+            )
+            (fill
+                (type none)
+            )
+            (layer "F.SilkS")
+        )
+        (pad "1" thru_hole circle
+            (net 26 "GND")
+            (at 0 -5.08 0)
+            (size 1.7 1.7)
+            (drill 1.0)
+            (layers "*.Cu" "*.Mask")
+        )
+        (pad "2" thru_hole circle
+            (net 17 "RELAY_IN1")
+            (at 0 -2.54 0)
+            (size 1.7 1.7)
+            (drill 1.0)
+            (layers "*.Cu" "*.Mask")
+        )
+        (pad "3" thru_hole circle
+            (net 33 "RELAY_IN2")
+            (at 0 0 0)
+            (size 1.7 1.7)
+            (drill 1.0)
+            (layers "*.Cu" "*.Mask")
+        )
+        (pad "4" thru_hole circle
+            (net 7 "RELAY_IN3")
+            (at 0 2.54 0)
+            (size 1.7 1.7)
+            (drill 1.0)
+            (layers "*.Cu" "*.Mask")
+        )
+        (pad "5" thru_hole circle
+            (net 12 "RELAY_IN4")
+            (at 0 5.08 0)
+            (size 1.7 1.7)
+            (drill 1.0)
+            (layers "*.Cu" "*.Mask")
+        )
+        (property "Reference" "J2"
+            (at 0 -8.7 0)
+            (unlocked yes)
+            (layer "F.SilkS")
+            (hide yes)
+            (uuid "bd3f8809-f2fb-450f-9a48-70c1c59d5670")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+        (property "Value" "Relay module input 1-4"
+            (at 0 8.7 0)
+            (unlocked yes)
+            (layer "F.Fab")
+            (hide no)
+            (uuid "74638b10-fc51-4b58-842a-599187003a56")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+    )
+    (footprint "SmartFarm:SF_PinHeader_1x5"
+        (at 90 50 0)
+        (version 20240108)
+        (generator "pcbnew")
+        (layer "F.Cu")
+        (descr "SmartFarm project footprint")
+        (attr through_hole)
+        (fp_rect
+            (start -2.1 -7.2)
+            (end 2.1 7.2)
+            (stroke
+                (width 0.12)
+                (type default)
+            )
+            (fill
+                (type none)
+            )
+            (layer "F.SilkS")
+        )
+        (pad "1" thru_hole circle
+            (net 26 "GND")
+            (at 0 -5.08 0)
+            (size 1.7 1.7)
+            (drill 1.0)
+            (layers "*.Cu" "*.Mask")
+        )
+        (pad "2" thru_hole circle
+            (net 15 "RELAY_IN5")
+            (at 0 -2.54 0)
+            (size 1.7 1.7)
+            (drill 1.0)
+            (layers "*.Cu" "*.Mask")
+        )
+        (pad "3" thru_hole circle
+            (net 1 "RELAY_IN6")
+            (at 0 0 0)
+            (size 1.7 1.7)
+            (drill 1.0)
+            (layers "*.Cu" "*.Mask")
+        )
+        (pad "4" thru_hole circle
+            (net 29 "RELAY_IN7")
+            (at 0 2.54 0)
+            (size 1.7 1.7)
+            (drill 1.0)
+            (layers "*.Cu" "*.Mask")
+        )
+        (pad "5" thru_hole circle
+            (net 27 "RELAY_IN8")
+            (at 0 5.08 0)
+            (size 1.7 1.7)
+            (drill 1.0)
+            (layers "*.Cu" "*.Mask")
+        )
+        (property "Reference" "J3"
+            (at 0 -8.7 0)
+            (unlocked yes)
+            (layer "F.SilkS")
+            (hide yes)
+            (uuid "accc3468-d341-453d-b7db-f77e22594ccb")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+        (property "Value" "Relay module input 5-8"
+            (at 0 8.7 0)
+            (unlocked yes)
+            (layer "F.Fab")
+            (hide no)
+            (uuid "150fafea-ac10-41dc-b981-5975383be3d1")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+    )
+    (footprint "SmartFarm:SF_R_0603"
+        (at 42 17 90)
+        (version 20240108)
+        (generator "pcbnew")
+        (layer "F.Cu")
+        (descr "SmartFarm project footprint")
+        (attr smd)
+        (fp_rect
+            (start -1.8 -1.3)
+            (end 1.8 1.3)
+            (stroke
+                (width 0.12)
+                (type default)
+            )
+            (fill
+                (type none)
+            )
+            (layer "F.SilkS")
+        )
+        (pad "1" smd roundrect
+            (net 11 "RELAY1")
+            (at -0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "2" smd roundrect
+            (net 32 "Q1_B")
+            (at 0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (property "Reference" "R1"
+            (at 0 -2.8 0)
+            (unlocked yes)
+            (layer "F.SilkS")
+            (hide yes)
+            (uuid "6d544ec3-2a7d-4fa5-9dfa-e71017848b98")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+        (property "Value" "2.2k base"
+            (at 0 2.8 0)
+            (unlocked yes)
+            (layer "F.Fab")
+            (hide no)
+            (uuid "4e5cec75-381e-4221-9fa5-7b8763b66f7b")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+    )
+    (footprint "SmartFarm:SF_SOT23"
+        (at 48 17 0)
+        (version 20240108)
+        (generator "pcbnew")
+        (layer "F.Cu")
+        (descr "SmartFarm project footprint")
+        (attr smd)
+        (fp_rect
+            (start -2.1 -1.9)
+            (end 2.1 1.9)
+            (stroke
+                (width 0.12)
+                (type default)
+            )
+            (fill
+                (type none)
+            )
+            (layer "F.SilkS")
+        )
+        (pad "1" smd roundrect
+            (net 32 "Q1_B")
+            (at -1 -1 0)
+            (size 0.9 1)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "2" smd roundrect
+            (net 26 "GND")
+            (at -1 1 0)
+            (size 0.9 1)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "3" smd roundrect
+            (net 17 "RELAY_IN1")
+            (at 1.2 0 0)
+            (size 0.9 1)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (property "Reference" "Q1"
+            (at 0 -3.4 0)
+            (unlocked yes)
+            (layer "F.SilkS")
+            (hide yes)
+            (uuid "0fd4de1a-9a82-4162-9527-541319c8c163")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+        (property "Value" "BC817-40"
+            (at 0 3.4 0)
+            (unlocked yes)
+            (layer "F.Fab")
+            (hide no)
+            (uuid "8947398e-1134-47b5-82c6-8f886de10c95")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+    )
+    (footprint "SmartFarm:SF_R_0603"
+        (at 45 29 0)
+        (version 20240108)
+        (generator "pcbnew")
+        (layer "F.Cu")
+        (descr "SmartFarm project footprint")
+        (attr smd)
+        (fp_rect
+            (start -1.8 -1.3)
+            (end 1.8 1.3)
+            (stroke
+                (width 0.12)
+                (type default)
+            )
+            (fill
+                (type none)
+            )
+            (layer "F.SilkS")
+        )
+        (pad "1" smd roundrect
+            (net 32 "Q1_B")
+            (at -0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "2" smd roundrect
+            (net 26 "GND")
+            (at 0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (property "Reference" "R9"
+            (at 0 -2.8 0)
+            (unlocked yes)
+            (layer "F.SilkS")
+            (hide yes)
+            (uuid "c5afdff8-883b-4aad-b149-799c6ad746dd")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+        (property "Value" "10k pulldown"
+            (at 0 2.8 0)
+            (unlocked yes)
+            (layer "F.Fab")
+            (hide no)
+            (uuid "5e8f5110-2f0a-44a9-a04b-ecb2588fefcc")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+    )
+    (footprint "SmartFarm:SF_R_0603"
+        (at 42 29 90)
+        (version 20240108)
+        (generator "pcbnew")
+        (layer "F.Cu")
+        (descr "SmartFarm project footprint")
+        (attr smd)
+        (fp_rect
+            (start -1.8 -1.3)
+            (end 1.8 1.3)
+            (stroke
+                (width 0.12)
+                (type default)
+            )
+            (fill
+                (type none)
+            )
+            (layer "F.SilkS")
+        )
+        (pad "1" smd roundrect
+            (net 11 "RELAY1")
+            (at -0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "2" smd roundrect
+            (net 18 "LED1_A")
+            (at 0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (property "Reference" "R17"
+            (at 0 -2.8 0)
+            (unlocked yes)
+            (layer "F.SilkS")
+            (hide yes)
+            (uuid "c6193593-d7c1-45c5-83bd-9eeefec24b4e")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+        (property "Value" "1k LED"
+            (at 0 2.8 0)
+            (unlocked yes)
+            (layer "F.Fab")
+            (hide no)
+            (uuid "d151da21-910d-488b-8703-28d10febc95b")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+    )
+    (footprint "SmartFarm:SF_LED_0603"
+        (at 50 29 0)
+        (version 20240108)
+        (generator "pcbnew")
+        (layer "F.Cu")
+        (descr "SmartFarm project footprint")
+        (attr smd)
+        (fp_rect
+            (start -1.8 -1.3)
+            (end 1.8 1.3)
+            (stroke
+                (width 0.12)
+                (type default)
+            )
+            (fill
+                (type none)
+            )
+            (layer "F.SilkS")
+        )
+        (pad "1" smd roundrect
+            (net 26 "GND")
+            (at -0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "2" smd roundrect
+            (net 18 "LED1_A")
+            (at 0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (property "Reference" "D1"
+            (at 0 -2.8 0)
+            (unlocked yes)
+            (layer "F.SilkS")
+            (hide yes)
+            (uuid "4542ac4f-20de-4181-ac41-6245f7594a82")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+        (property "Value" "CH1"
+            (at 0 2.8 0)
+            (unlocked yes)
+            (layer "F.Fab")
+            (hide no)
+            (uuid "26f31627-7961-41c7-83e4-98a73d16714b")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+    )
+    (footprint "SmartFarm:SF_R_0603"
+        (at 42 29 90)
+        (version 20240108)
+        (generator "pcbnew")
+        (layer "F.Cu")
+        (descr "SmartFarm project footprint")
+        (attr smd)
+        (fp_rect
+            (start -1.8 -1.3)
+            (end 1.8 1.3)
+            (stroke
+                (width 0.12)
+                (type default)
+            )
+            (fill
+                (type none)
+            )
+            (layer "F.SilkS")
+        )
+        (pad "1" smd roundrect
+            (net 5 "RELAY2")
+            (at -0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "2" smd roundrect
+            (net 8 "Q2_B")
+            (at 0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (property "Reference" "R2"
+            (at 0 -2.8 0)
+            (unlocked yes)
+            (layer "F.SilkS")
+            (hide yes)
+            (uuid "d4fd5877-2cea-440c-a869-d3d78da838e1")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+        (property "Value" "2.2k base"
+            (at 0 2.8 0)
+            (unlocked yes)
+            (layer "F.Fab")
+            (hide no)
+            (uuid "944ca223-e148-4e30-9840-0ea236d63f8f")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+    )
+    (footprint "SmartFarm:SF_SOT23"
+        (at 48 29 0)
+        (version 20240108)
+        (generator "pcbnew")
+        (layer "F.Cu")
+        (descr "SmartFarm project footprint")
+        (attr smd)
+        (fp_rect
+            (start -2.1 -1.9)
+            (end 2.1 1.9)
+            (stroke
+                (width 0.12)
+                (type default)
+            )
+            (fill
+                (type none)
+            )
+            (layer "F.SilkS")
+        )
+        (pad "1" smd roundrect
+            (net 8 "Q2_B")
+            (at -1 -1 0)
+            (size 0.9 1)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "2" smd roundrect
+            (net 26 "GND")
+            (at -1 1 0)
+            (size 0.9 1)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "3" smd roundrect
+            (net 33 "RELAY_IN2")
+            (at 1.2 0 0)
+            (size 0.9 1)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (property "Reference" "Q2"
+            (at 0 -3.4 0)
+            (unlocked yes)
+            (layer "F.SilkS")
+            (hide yes)
+            (uuid "8cc33659-3849-4aa1-88c9-8cf0d9d37ec9")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+        (property "Value" "BC817-40"
+            (at 0 3.4 0)
+            (unlocked yes)
+            (layer "F.Fab")
+            (hide no)
+            (uuid "c93f740e-6ba1-469e-8177-68a393acc69d")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+    )
+    (footprint "SmartFarm:SF_R_0603"
+        (at 45 41 0)
+        (version 20240108)
+        (generator "pcbnew")
+        (layer "F.Cu")
+        (descr "SmartFarm project footprint")
+        (attr smd)
+        (fp_rect
+            (start -1.8 -1.3)
+            (end 1.8 1.3)
+            (stroke
+                (width 0.12)
+                (type default)
+            )
+            (fill
+                (type none)
+            )
+            (layer "F.SilkS")
+        )
+        (pad "1" smd roundrect
+            (net 8 "Q2_B")
+            (at -0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "2" smd roundrect
+            (net 26 "GND")
+            (at 0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (property "Reference" "R10"
+            (at 0 -2.8 0)
+            (unlocked yes)
+            (layer "F.SilkS")
+            (hide yes)
+            (uuid "12e4a744-19f3-4251-b9f3-80f9efee1900")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+        (property "Value" "10k pulldown"
+            (at 0 2.8 0)
+            (unlocked yes)
+            (layer "F.Fab")
+            (hide no)
+            (uuid "862df613-060c-40b2-8a73-a435f440ff23")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+    )
+    (footprint "SmartFarm:SF_R_0603"
+        (at 42 41 90)
+        (version 20240108)
+        (generator "pcbnew")
+        (layer "F.Cu")
+        (descr "SmartFarm project footprint")
+        (attr smd)
+        (fp_rect
+            (start -1.8 -1.3)
+            (end 1.8 1.3)
+            (stroke
+                (width 0.12)
+                (type default)
+            )
+            (fill
+                (type none)
+            )
+            (layer "F.SilkS")
+        )
+        (pad "1" smd roundrect
+            (net 5 "RELAY2")
+            (at -0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "2" smd roundrect
+            (net 13 "LED2_A")
+            (at 0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (property "Reference" "R18"
+            (at 0 -2.8 0)
+            (unlocked yes)
+            (layer "F.SilkS")
+            (hide yes)
+            (uuid "e4e771d7-dea8-4a66-977b-e0db189b82b1")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+        (property "Value" "1k LED"
+            (at 0 2.8 0)
+            (unlocked yes)
+            (layer "F.Fab")
+            (hide no)
+            (uuid "4dab90b6-6581-4e73-9d01-68f672319395")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+    )
+    (footprint "SmartFarm:SF_LED_0603"
+        (at 50 41 0)
+        (version 20240108)
+        (generator "pcbnew")
+        (layer "F.Cu")
+        (descr "SmartFarm project footprint")
+        (attr smd)
+        (fp_rect
+            (start -1.8 -1.3)
+            (end 1.8 1.3)
+            (stroke
+                (width 0.12)
+                (type default)
+            )
+            (fill
+                (type none)
+            )
+            (layer "F.SilkS")
+        )
+        (pad "1" smd roundrect
+            (net 26 "GND")
+            (at -0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "2" smd roundrect
+            (net 13 "LED2_A")
+            (at 0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (property "Reference" "D2"
+            (at 0 -2.8 0)
+            (unlocked yes)
+            (layer "F.SilkS")
+            (hide yes)
+            (uuid "3b285c13-c1eb-4d9c-8057-9bb3ce83cafa")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+        (property "Value" "CH2"
+            (at 0 2.8 0)
+            (unlocked yes)
+            (layer "F.Fab")
+            (hide no)
+            (uuid "49b42f33-0549-4875-9f42-0a710ba80b88")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+    )
+    (footprint "SmartFarm:SF_R_0603"
+        (at 42 41 90)
+        (version 20240108)
+        (generator "pcbnew")
+        (layer "F.Cu")
+        (descr "SmartFarm project footprint")
+        (attr smd)
+        (fp_rect
+            (start -1.8 -1.3)
+            (end 1.8 1.3)
+            (stroke
+                (width 0.12)
+                (type default)
+            )
+            (fill
+                (type none)
+            )
+            (layer "F.SilkS")
+        )
+        (pad "1" smd roundrect
+            (net 31 "RELAY3")
+            (at -0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "2" smd roundrect
+            (net 23 "Q3_B")
+            (at 0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (property "Reference" "R3"
+            (at 0 -2.8 0)
+            (unlocked yes)
+            (layer "F.SilkS")
+            (hide yes)
+            (uuid "c9eeb774-cea7-4ef3-a427-3c821f1ba579")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+        (property "Value" "2.2k base"
+            (at 0 2.8 0)
+            (unlocked yes)
+            (layer "F.Fab")
+            (hide no)
+            (uuid "00f61fcc-4284-489b-8038-8627d78040f1")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+    )
+    (footprint "SmartFarm:SF_SOT23"
+        (at 48 41 0)
+        (version 20240108)
+        (generator "pcbnew")
+        (layer "F.Cu")
+        (descr "SmartFarm project footprint")
+        (attr smd)
+        (fp_rect
+            (start -2.1 -1.9)
+            (end 2.1 1.9)
+            (stroke
+                (width 0.12)
+                (type default)
+            )
+            (fill
+                (type none)
+            )
+            (layer "F.SilkS")
+        )
+        (pad "1" smd roundrect
+            (net 23 "Q3_B")
+            (at -1 -1 0)
+            (size 0.9 1)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "2" smd roundrect
+            (net 26 "GND")
+            (at -1 1 0)
+            (size 0.9 1)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "3" smd roundrect
+            (net 7 "RELAY_IN3")
+            (at 1.2 0 0)
+            (size 0.9 1)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (property "Reference" "Q3"
+            (at 0 -3.4 0)
+            (unlocked yes)
+            (layer "F.SilkS")
+            (hide yes)
+            (uuid "78fa540c-9f6c-486f-907d-993ea15e5b98")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+        (property "Value" "BC817-40"
+            (at 0 3.4 0)
+            (unlocked yes)
+            (layer "F.Fab")
+            (hide no)
+            (uuid "43e1c78b-53f1-45a8-930a-420db5e6769b")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+    )
+    (footprint "SmartFarm:SF_R_0603"
+        (at 45 53 0)
+        (version 20240108)
+        (generator "pcbnew")
+        (layer "F.Cu")
+        (descr "SmartFarm project footprint")
+        (attr smd)
+        (fp_rect
+            (start -1.8 -1.3)
+            (end 1.8 1.3)
+            (stroke
+                (width 0.12)
+                (type default)
+            )
+            (fill
+                (type none)
+            )
+            (layer "F.SilkS")
+        )
+        (pad "1" smd roundrect
+            (net 23 "Q3_B")
+            (at -0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "2" smd roundrect
+            (net 26 "GND")
+            (at 0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (property "Reference" "R11"
+            (at 0 -2.8 0)
+            (unlocked yes)
+            (layer "F.SilkS")
+            (hide yes)
+            (uuid "fce8fcfe-a7b9-4182-be5b-9146373aa854")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+        (property "Value" "10k pulldown"
+            (at 0 2.8 0)
+            (unlocked yes)
+            (layer "F.Fab")
+            (hide no)
+            (uuid "4b713013-d4df-4e02-b28d-3909ce113acf")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+    )
+    (footprint "SmartFarm:SF_R_0603"
+        (at 42 53 90)
+        (version 20240108)
+        (generator "pcbnew")
+        (layer "F.Cu")
+        (descr "SmartFarm project footprint")
+        (attr smd)
+        (fp_rect
+            (start -1.8 -1.3)
+            (end 1.8 1.3)
+            (stroke
+                (width 0.12)
+                (type default)
+            )
+            (fill
+                (type none)
+            )
+            (layer "F.SilkS")
+        )
+        (pad "1" smd roundrect
+            (net 31 "RELAY3")
+            (at -0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "2" smd roundrect
+            (net 20 "LED3_A")
+            (at 0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (property "Reference" "R19"
+            (at 0 -2.8 0)
+            (unlocked yes)
+            (layer "F.SilkS")
+            (hide yes)
+            (uuid "d771084d-e4e9-48c9-a820-85c1b41ad691")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+        (property "Value" "1k LED"
+            (at 0 2.8 0)
+            (unlocked yes)
+            (layer "F.Fab")
+            (hide no)
+            (uuid "d259d2b4-2715-49ff-8371-465629509a6c")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+    )
+    (footprint "SmartFarm:SF_LED_0603"
+        (at 50 53 0)
+        (version 20240108)
+        (generator "pcbnew")
+        (layer "F.Cu")
+        (descr "SmartFarm project footprint")
+        (attr smd)
+        (fp_rect
+            (start -1.8 -1.3)
+            (end 1.8 1.3)
+            (stroke
+                (width 0.12)
+                (type default)
+            )
+            (fill
+                (type none)
+            )
+            (layer "F.SilkS")
+        )
+        (pad "1" smd roundrect
+            (net 26 "GND")
+            (at -0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "2" smd roundrect
+            (net 20 "LED3_A")
+            (at 0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (property "Reference" "D3"
+            (at 0 -2.8 0)
+            (unlocked yes)
+            (layer "F.SilkS")
+            (hide yes)
+            (uuid "c0166d58-4de1-412d-815c-f5655caacf6e")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+        (property "Value" "CH3"
+            (at 0 2.8 0)
+            (unlocked yes)
+            (layer "F.Fab")
+            (hide no)
+            (uuid "6250130c-61dc-4f7b-9fa8-e3a3266e3d08")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+    )
+    (footprint "SmartFarm:SF_R_0603"
+        (at 42 53 90)
+        (version 20240108)
+        (generator "pcbnew")
+        (layer "F.Cu")
+        (descr "SmartFarm project footprint")
+        (attr smd)
+        (fp_rect
+            (start -1.8 -1.3)
+            (end 1.8 1.3)
+            (stroke
+                (width 0.12)
+                (type default)
+            )
+            (fill
+                (type none)
+            )
+            (layer "F.SilkS")
+        )
+        (pad "1" smd roundrect
+            (net 4 "RELAY4")
+            (at -0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "2" smd roundrect
+            (net 30 "Q4_B")
+            (at 0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (property "Reference" "R4"
+            (at 0 -2.8 0)
+            (unlocked yes)
+            (layer "F.SilkS")
+            (hide yes)
+            (uuid "cada7ab3-7eda-4909-83a6-e42dd5bd51cb")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+        (property "Value" "2.2k base"
+            (at 0 2.8 0)
+            (unlocked yes)
+            (layer "F.Fab")
+            (hide no)
+            (uuid "345f7833-270b-411b-ade1-f1535189a15e")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+    )
+    (footprint "SmartFarm:SF_SOT23"
+        (at 48 53 0)
+        (version 20240108)
+        (generator "pcbnew")
+        (layer "F.Cu")
+        (descr "SmartFarm project footprint")
+        (attr smd)
+        (fp_rect
+            (start -2.1 -1.9)
+            (end 2.1 1.9)
+            (stroke
+                (width 0.12)
+                (type default)
+            )
+            (fill
+                (type none)
+            )
+            (layer "F.SilkS")
+        )
+        (pad "1" smd roundrect
+            (net 30 "Q4_B")
+            (at -1 -1 0)
+            (size 0.9 1)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "2" smd roundrect
+            (net 26 "GND")
+            (at -1 1 0)
+            (size 0.9 1)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "3" smd roundrect
+            (net 12 "RELAY_IN4")
+            (at 1.2 0 0)
+            (size 0.9 1)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (property "Reference" "Q4"
+            (at 0 -3.4 0)
+            (unlocked yes)
+            (layer "F.SilkS")
+            (hide yes)
+            (uuid "42c15a69-a718-447d-b351-a1d5cd828ac8")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+        (property "Value" "BC817-40"
+            (at 0 3.4 0)
+            (unlocked yes)
+            (layer "F.Fab")
+            (hide no)
+            (uuid "073dca1b-bd59-4b74-ab8a-1f0d30bdfa64")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+    )
+    (footprint "SmartFarm:SF_R_0603"
+        (at 45 65 0)
+        (version 20240108)
+        (generator "pcbnew")
+        (layer "F.Cu")
+        (descr "SmartFarm project footprint")
+        (attr smd)
+        (fp_rect
+            (start -1.8 -1.3)
+            (end 1.8 1.3)
+            (stroke
+                (width 0.12)
+                (type default)
+            )
+            (fill
+                (type none)
+            )
+            (layer "F.SilkS")
+        )
+        (pad "1" smd roundrect
+            (net 30 "Q4_B")
+            (at -0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "2" smd roundrect
+            (net 26 "GND")
+            (at 0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (property "Reference" "R12"
+            (at 0 -2.8 0)
+            (unlocked yes)
+            (layer "F.SilkS")
+            (hide yes)
+            (uuid "6d7232cc-b38f-411f-8096-77ed7a482407")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+        (property "Value" "10k pulldown"
+            (at 0 2.8 0)
+            (unlocked yes)
+            (layer "F.Fab")
+            (hide no)
+            (uuid "7b741592-9d0f-4a46-a2a1-e84d55e81d2b")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+    )
+    (footprint "SmartFarm:SF_R_0603"
+        (at 42 65 90)
+        (version 20240108)
+        (generator "pcbnew")
+        (layer "F.Cu")
+        (descr "SmartFarm project footprint")
+        (attr smd)
+        (fp_rect
+            (start -1.8 -1.3)
+            (end 1.8 1.3)
+            (stroke
+                (width 0.12)
+                (type default)
+            )
+            (fill
+                (type none)
+            )
+            (layer "F.SilkS")
+        )
+        (pad "1" smd roundrect
+            (net 4 "RELAY4")
+            (at -0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "2" smd roundrect
+            (net 2 "LED4_A")
+            (at 0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (property "Reference" "R20"
+            (at 0 -2.8 0)
+            (unlocked yes)
+            (layer "F.SilkS")
+            (hide yes)
+            (uuid "5b0459e8-1e68-445d-9a7b-f85be7f36968")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+        (property "Value" "1k LED"
+            (at 0 2.8 0)
+            (unlocked yes)
+            (layer "F.Fab")
+            (hide no)
+            (uuid "eae3152b-16f5-4253-8285-5060e630a25c")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+    )
+    (footprint "SmartFarm:SF_LED_0603"
+        (at 50 65 0)
+        (version 20240108)
+        (generator "pcbnew")
+        (layer "F.Cu")
+        (descr "SmartFarm project footprint")
+        (attr smd)
+        (fp_rect
+            (start -1.8 -1.3)
+            (end 1.8 1.3)
+            (stroke
+                (width 0.12)
+                (type default)
+            )
+            (fill
+                (type none)
+            )
+            (layer "F.SilkS")
+        )
+        (pad "1" smd roundrect
+            (net 26 "GND")
+            (at -0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "2" smd roundrect
+            (net 2 "LED4_A")
+            (at 0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (property "Reference" "D4"
+            (at 0 -2.8 0)
+            (unlocked yes)
+            (layer "F.SilkS")
+            (hide yes)
+            (uuid "64760f35-6b0f-4a46-af26-628cc37ee718")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+        (property "Value" "CH4"
+            (at 0 2.8 0)
+            (unlocked yes)
+            (layer "F.Fab")
+            (hide no)
+            (uuid "ff9b0d16-4011-4c78-a3db-a9acad1be9d4")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+    )
+    (footprint "SmartFarm:SF_R_0603"
+        (at 66 17 90)
+        (version 20240108)
+        (generator "pcbnew")
+        (layer "F.Cu")
+        (descr "SmartFarm project footprint")
+        (attr smd)
+        (fp_rect
+            (start -1.8 -1.3)
+            (end 1.8 1.3)
+            (stroke
+                (width 0.12)
+                (type default)
+            )
+            (fill
+                (type none)
+            )
+            (layer "F.SilkS")
+        )
+        (pad "1" smd roundrect
+            (net 16 "RELAY5")
+            (at -0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "2" smd roundrect
+            (net 6 "Q5_B")
+            (at 0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (property "Reference" "R5"
+            (at 0 -2.8 0)
+            (unlocked yes)
+            (layer "F.SilkS")
+            (hide yes)
+            (uuid "09edd4df-8c39-46cd-a291-b2949c5f7a34")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+        (property "Value" "2.2k base"
+            (at 0 2.8 0)
+            (unlocked yes)
+            (layer "F.Fab")
+            (hide no)
+            (uuid "bf71b010-8b53-43f0-8296-ebbe23e6f01a")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+    )
+    (footprint "SmartFarm:SF_SOT23"
+        (at 72 17 0)
+        (version 20240108)
+        (generator "pcbnew")
+        (layer "F.Cu")
+        (descr "SmartFarm project footprint")
+        (attr smd)
+        (fp_rect
+            (start -2.1 -1.9)
+            (end 2.1 1.9)
+            (stroke
+                (width 0.12)
+                (type default)
+            )
+            (fill
+                (type none)
+            )
+            (layer "F.SilkS")
+        )
+        (pad "1" smd roundrect
+            (net 6 "Q5_B")
+            (at -1 -1 0)
+            (size 0.9 1)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "2" smd roundrect
+            (net 26 "GND")
+            (at -1 1 0)
+            (size 0.9 1)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "3" smd roundrect
+            (net 15 "RELAY_IN5")
+            (at 1.2 0 0)
+            (size 0.9 1)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (property "Reference" "Q5"
+            (at 0 -3.4 0)
+            (unlocked yes)
+            (layer "F.SilkS")
+            (hide yes)
+            (uuid "0911bb68-1217-4419-bc15-8b305e23a9af")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+        (property "Value" "BC817-40"
+            (at 0 3.4 0)
+            (unlocked yes)
+            (layer "F.Fab")
+            (hide no)
+            (uuid "0dbe4492-dfff-4eb9-89c5-2d9cd09f6b25")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+    )
+    (footprint "SmartFarm:SF_R_0603"
+        (at 69 29 0)
+        (version 20240108)
+        (generator "pcbnew")
+        (layer "F.Cu")
+        (descr "SmartFarm project footprint")
+        (attr smd)
+        (fp_rect
+            (start -1.8 -1.3)
+            (end 1.8 1.3)
+            (stroke
+                (width 0.12)
+                (type default)
+            )
+            (fill
+                (type none)
+            )
+            (layer "F.SilkS")
+        )
+        (pad "1" smd roundrect
+            (net 6 "Q5_B")
+            (at -0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "2" smd roundrect
+            (net 26 "GND")
+            (at 0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (property "Reference" "R13"
+            (at 0 -2.8 0)
+            (unlocked yes)
+            (layer "F.SilkS")
+            (hide yes)
+            (uuid "d5a6be2c-1a17-447e-a092-a9d42b70b3fd")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+        (property "Value" "10k pulldown"
+            (at 0 2.8 0)
+            (unlocked yes)
+            (layer "F.Fab")
+            (hide no)
+            (uuid "76b06307-847d-49e5-90a2-8d289dfc6e41")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+    )
+    (footprint "SmartFarm:SF_R_0603"
+        (at 66 29 90)
+        (version 20240108)
+        (generator "pcbnew")
+        (layer "F.Cu")
+        (descr "SmartFarm project footprint")
+        (attr smd)
+        (fp_rect
+            (start -1.8 -1.3)
+            (end 1.8 1.3)
+            (stroke
+                (width 0.12)
+                (type default)
+            )
+            (fill
+                (type none)
+            )
+            (layer "F.SilkS")
+        )
+        (pad "1" smd roundrect
+            (net 16 "RELAY5")
+            (at -0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "2" smd roundrect
+            (net 28 "LED5_A")
+            (at 0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (property "Reference" "R21"
+            (at 0 -2.8 0)
+            (unlocked yes)
+            (layer "F.SilkS")
+            (hide yes)
+            (uuid "4f7346ba-0b91-45f3-b805-5668cf8e5409")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+        (property "Value" "1k LED"
+            (at 0 2.8 0)
+            (unlocked yes)
+            (layer "F.Fab")
+            (hide no)
+            (uuid "cf6dcdd3-b25f-43a0-ad08-ec6732ac3b6e")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+    )
+    (footprint "SmartFarm:SF_LED_0603"
+        (at 74 29 0)
+        (version 20240108)
+        (generator "pcbnew")
+        (layer "F.Cu")
+        (descr "SmartFarm project footprint")
+        (attr smd)
+        (fp_rect
+            (start -1.8 -1.3)
+            (end 1.8 1.3)
+            (stroke
+                (width 0.12)
+                (type default)
+            )
+            (fill
+                (type none)
+            )
+            (layer "F.SilkS")
+        )
+        (pad "1" smd roundrect
+            (net 26 "GND")
+            (at -0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "2" smd roundrect
+            (net 28 "LED5_A")
+            (at 0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (property "Reference" "D5"
+            (at 0 -2.8 0)
+            (unlocked yes)
+            (layer "F.SilkS")
+            (hide yes)
+            (uuid "bb387f09-f78e-446e-8481-f63c3355162c")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+        (property "Value" "CH5"
+            (at 0 2.8 0)
+            (unlocked yes)
+            (layer "F.Fab")
+            (hide no)
+            (uuid "89da6263-a605-4f3e-a087-fcb1ad0b339e")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+    )
+    (footprint "SmartFarm:SF_R_0603"
+        (at 66 29 90)
+        (version 20240108)
+        (generator "pcbnew")
+        (layer "F.Cu")
+        (descr "SmartFarm project footprint")
+        (attr smd)
+        (fp_rect
+            (start -1.8 -1.3)
+            (end 1.8 1.3)
+            (stroke
+                (width 0.12)
+                (type default)
+            )
+            (fill
+                (type none)
+            )
+            (layer "F.SilkS")
+        )
+        (pad "1" smd roundrect
+            (net 24 "RELAY6")
+            (at -0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "2" smd roundrect
+            (net 14 "Q6_B")
+            (at 0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (property "Reference" "R6"
+            (at 0 -2.8 0)
+            (unlocked yes)
+            (layer "F.SilkS")
+            (hide yes)
+            (uuid "28389a74-c658-4d89-83ef-3c0d4b61f4a2")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+        (property "Value" "2.2k base"
+            (at 0 2.8 0)
+            (unlocked yes)
+            (layer "F.Fab")
+            (hide no)
+            (uuid "1513403f-688c-41ca-a2e0-01937a7981eb")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+    )
+    (footprint "SmartFarm:SF_SOT23"
+        (at 72 29 0)
+        (version 20240108)
+        (generator "pcbnew")
+        (layer "F.Cu")
+        (descr "SmartFarm project footprint")
+        (attr smd)
+        (fp_rect
+            (start -2.1 -1.9)
+            (end 2.1 1.9)
+            (stroke
+                (width 0.12)
+                (type default)
+            )
+            (fill
+                (type none)
+            )
+            (layer "F.SilkS")
+        )
+        (pad "1" smd roundrect
+            (net 14 "Q6_B")
+            (at -1 -1 0)
+            (size 0.9 1)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "2" smd roundrect
+            (net 26 "GND")
+            (at -1 1 0)
+            (size 0.9 1)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "3" smd roundrect
+            (net 1 "RELAY_IN6")
+            (at 1.2 0 0)
+            (size 0.9 1)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (property "Reference" "Q6"
+            (at 0 -3.4 0)
+            (unlocked yes)
+            (layer "F.SilkS")
+            (hide yes)
+            (uuid "a1184c17-3605-4c17-a974-3ba10607a243")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+        (property "Value" "BC817-40"
+            (at 0 3.4 0)
+            (unlocked yes)
+            (layer "F.Fab")
+            (hide no)
+            (uuid "944e9117-43f0-440e-af95-9b45ad7c8d4e")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+    )
+    (footprint "SmartFarm:SF_R_0603"
+        (at 69 41 0)
+        (version 20240108)
+        (generator "pcbnew")
+        (layer "F.Cu")
+        (descr "SmartFarm project footprint")
+        (attr smd)
+        (fp_rect
+            (start -1.8 -1.3)
+            (end 1.8 1.3)
+            (stroke
+                (width 0.12)
+                (type default)
+            )
+            (fill
+                (type none)
+            )
+            (layer "F.SilkS")
+        )
+        (pad "1" smd roundrect
+            (net 14 "Q6_B")
+            (at -0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "2" smd roundrect
+            (net 26 "GND")
+            (at 0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (property "Reference" "R14"
+            (at 0 -2.8 0)
+            (unlocked yes)
+            (layer "F.SilkS")
+            (hide yes)
+            (uuid "fcb75506-8958-403e-9423-c5994eb5e315")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+        (property "Value" "10k pulldown"
+            (at 0 2.8 0)
+            (unlocked yes)
+            (layer "F.Fab")
+            (hide no)
+            (uuid "2059b8a3-9253-4610-9faf-e8b12cff43ef")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+    )
+    (footprint "SmartFarm:SF_R_0603"
+        (at 66 41 90)
+        (version 20240108)
+        (generator "pcbnew")
+        (layer "F.Cu")
+        (descr "SmartFarm project footprint")
+        (attr smd)
+        (fp_rect
+            (start -1.8 -1.3)
+            (end 1.8 1.3)
+            (stroke
+                (width 0.12)
+                (type default)
+            )
+            (fill
+                (type none)
+            )
+            (layer "F.SilkS")
+        )
+        (pad "1" smd roundrect
+            (net 24 "RELAY6")
+            (at -0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "2" smd roundrect
+            (net 9 "LED6_A")
+            (at 0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (property "Reference" "R22"
+            (at 0 -2.8 0)
+            (unlocked yes)
+            (layer "F.SilkS")
+            (hide yes)
+            (uuid "f7c9f84f-141b-4a1d-99ed-e2e6bf38c7e4")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+        (property "Value" "1k LED"
+            (at 0 2.8 0)
+            (unlocked yes)
+            (layer "F.Fab")
+            (hide no)
+            (uuid "d4613fc1-e733-4581-b899-ebb4faf19a1d")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+    )
+    (footprint "SmartFarm:SF_LED_0603"
+        (at 74 41 0)
+        (version 20240108)
+        (generator "pcbnew")
+        (layer "F.Cu")
+        (descr "SmartFarm project footprint")
+        (attr smd)
+        (fp_rect
+            (start -1.8 -1.3)
+            (end 1.8 1.3)
+            (stroke
+                (width 0.12)
+                (type default)
+            )
+            (fill
+                (type none)
+            )
+            (layer "F.SilkS")
+        )
+        (pad "1" smd roundrect
+            (net 26 "GND")
+            (at -0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "2" smd roundrect
+            (net 9 "LED6_A")
+            (at 0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (property "Reference" "D6"
+            (at 0 -2.8 0)
+            (unlocked yes)
+            (layer "F.SilkS")
+            (hide yes)
+            (uuid "71d3e2a2-4855-4e67-a641-96369ca67f67")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+        (property "Value" "CH6"
+            (at 0 2.8 0)
+            (unlocked yes)
+            (layer "F.Fab")
+            (hide no)
+            (uuid "91645b7b-c0c6-4eea-b7db-a3ef8af422e1")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+    )
+    (footprint "SmartFarm:SF_R_0603"
+        (at 66 41 90)
+        (version 20240108)
+        (generator "pcbnew")
+        (layer "F.Cu")
+        (descr "SmartFarm project footprint")
+        (attr smd)
+        (fp_rect
+            (start -1.8 -1.3)
+            (end 1.8 1.3)
+            (stroke
+                (width 0.12)
+                (type default)
+            )
+            (fill
+                (type none)
+            )
+            (layer "F.SilkS")
+        )
+        (pad "1" smd roundrect
+            (net 22 "RELAY7")
+            (at -0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "2" smd roundrect
+            (net 25 "Q7_B")
+            (at 0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (property "Reference" "R7"
+            (at 0 -2.8 0)
+            (unlocked yes)
+            (layer "F.SilkS")
+            (hide yes)
+            (uuid "893a1d0a-33cd-48d5-805b-837a6584bd94")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+        (property "Value" "2.2k base"
+            (at 0 2.8 0)
+            (unlocked yes)
+            (layer "F.Fab")
+            (hide no)
+            (uuid "f60873fa-41cd-4e31-afcf-9ef33ed8b14d")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+    )
+    (footprint "SmartFarm:SF_SOT23"
+        (at 72 41 0)
+        (version 20240108)
+        (generator "pcbnew")
+        (layer "F.Cu")
+        (descr "SmartFarm project footprint")
+        (attr smd)
+        (fp_rect
+            (start -2.1 -1.9)
+            (end 2.1 1.9)
+            (stroke
+                (width 0.12)
+                (type default)
+            )
+            (fill
+                (type none)
+            )
+            (layer "F.SilkS")
+        )
+        (pad "1" smd roundrect
+            (net 25 "Q7_B")
+            (at -1 -1 0)
+            (size 0.9 1)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "2" smd roundrect
+            (net 26 "GND")
+            (at -1 1 0)
+            (size 0.9 1)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "3" smd roundrect
+            (net 29 "RELAY_IN7")
+            (at 1.2 0 0)
+            (size 0.9 1)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (property "Reference" "Q7"
+            (at 0 -3.4 0)
+            (unlocked yes)
+            (layer "F.SilkS")
+            (hide yes)
+            (uuid "1639e7f0-9b80-4fbe-b97b-90e49f14983f")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+        (property "Value" "BC817-40"
+            (at 0 3.4 0)
+            (unlocked yes)
+            (layer "F.Fab")
+            (hide no)
+            (uuid "3bb9255a-5eb5-451b-8be2-cbccfc196d4b")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+    )
+    (footprint "SmartFarm:SF_R_0603"
+        (at 69 53 0)
+        (version 20240108)
+        (generator "pcbnew")
+        (layer "F.Cu")
+        (descr "SmartFarm project footprint")
+        (attr smd)
+        (fp_rect
+            (start -1.8 -1.3)
+            (end 1.8 1.3)
+            (stroke
+                (width 0.12)
+                (type default)
+            )
+            (fill
+                (type none)
+            )
+            (layer "F.SilkS")
+        )
+        (pad "1" smd roundrect
+            (net 25 "Q7_B")
+            (at -0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "2" smd roundrect
+            (net 26 "GND")
+            (at 0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (property "Reference" "R15"
+            (at 0 -2.8 0)
+            (unlocked yes)
+            (layer "F.SilkS")
+            (hide yes)
+            (uuid "e4aa436d-4050-4922-958f-31569f96f19e")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+        (property "Value" "10k pulldown"
+            (at 0 2.8 0)
+            (unlocked yes)
+            (layer "F.Fab")
+            (hide no)
+            (uuid "ab4e4470-fe4a-487d-b0d1-ba409dbf07cf")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+    )
+    (footprint "SmartFarm:SF_R_0603"
+        (at 66 53 90)
+        (version 20240108)
+        (generator "pcbnew")
+        (layer "F.Cu")
+        (descr "SmartFarm project footprint")
+        (attr smd)
+        (fp_rect
+            (start -1.8 -1.3)
+            (end 1.8 1.3)
+            (stroke
+                (width 0.12)
+                (type default)
+            )
+            (fill
+                (type none)
+            )
+            (layer "F.SilkS")
+        )
+        (pad "1" smd roundrect
+            (net 22 "RELAY7")
+            (at -0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "2" smd roundrect
+            (net 3 "LED7_A")
+            (at 0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (property "Reference" "R23"
+            (at 0 -2.8 0)
+            (unlocked yes)
+            (layer "F.SilkS")
+            (hide yes)
+            (uuid "ecdcc274-f67c-4e6a-b8c5-d8cde75eacdd")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+        (property "Value" "1k LED"
+            (at 0 2.8 0)
+            (unlocked yes)
+            (layer "F.Fab")
+            (hide no)
+            (uuid "f47b3ec9-5d67-4e49-846a-67cb93e0e7e8")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+    )
+    (footprint "SmartFarm:SF_LED_0603"
+        (at 74 53 0)
+        (version 20240108)
+        (generator "pcbnew")
+        (layer "F.Cu")
+        (descr "SmartFarm project footprint")
+        (attr smd)
+        (fp_rect
+            (start -1.8 -1.3)
+            (end 1.8 1.3)
+            (stroke
+                (width 0.12)
+                (type default)
+            )
+            (fill
+                (type none)
+            )
+            (layer "F.SilkS")
+        )
+        (pad "1" smd roundrect
+            (net 26 "GND")
+            (at -0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "2" smd roundrect
+            (net 3 "LED7_A")
+            (at 0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (property "Reference" "D7"
+            (at 0 -2.8 0)
+            (unlocked yes)
+            (layer "F.SilkS")
+            (hide yes)
+            (uuid "fbd6fd64-d7c5-4062-9d2c-611ad53ae2dd")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+        (property "Value" "CH7"
+            (at 0 2.8 0)
+            (unlocked yes)
+            (layer "F.Fab")
+            (hide no)
+            (uuid "6bcdfee4-dcb9-4e05-8116-8f59d0bbde75")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+    )
+    (footprint "SmartFarm:SF_R_0603"
+        (at 66 53 90)
+        (version 20240108)
+        (generator "pcbnew")
+        (layer "F.Cu")
+        (descr "SmartFarm project footprint")
+        (attr smd)
+        (fp_rect
+            (start -1.8 -1.3)
+            (end 1.8 1.3)
+            (stroke
+                (width 0.12)
+                (type default)
+            )
+            (fill
+                (type none)
+            )
+            (layer "F.SilkS")
+        )
+        (pad "1" smd roundrect
+            (net 19 "RELAY8")
+            (at -0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "2" smd roundrect
+            (net 21 "Q8_B")
+            (at 0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (property "Reference" "R8"
+            (at 0 -2.8 0)
+            (unlocked yes)
+            (layer "F.SilkS")
+            (hide yes)
+            (uuid "e687e26d-5563-40ca-947f-349dbdbf9ab7")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+        (property "Value" "2.2k base"
+            (at 0 2.8 0)
+            (unlocked yes)
+            (layer "F.Fab")
+            (hide no)
+            (uuid "37f213b5-a33a-4f34-9ffe-e0e00b098277")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+    )
+    (footprint "SmartFarm:SF_SOT23"
+        (at 72 53 0)
+        (version 20240108)
+        (generator "pcbnew")
+        (layer "F.Cu")
+        (descr "SmartFarm project footprint")
+        (attr smd)
+        (fp_rect
+            (start -2.1 -1.9)
+            (end 2.1 1.9)
+            (stroke
+                (width 0.12)
+                (type default)
+            )
+            (fill
+                (type none)
+            )
+            (layer "F.SilkS")
+        )
+        (pad "1" smd roundrect
+            (net 21 "Q8_B")
+            (at -1 -1 0)
+            (size 0.9 1)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "2" smd roundrect
+            (net 26 "GND")
+            (at -1 1 0)
+            (size 0.9 1)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "3" smd roundrect
+            (net 27 "RELAY_IN8")
+            (at 1.2 0 0)
+            (size 0.9 1)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (property "Reference" "Q8"
+            (at 0 -3.4 0)
+            (unlocked yes)
+            (layer "F.SilkS")
+            (hide yes)
+            (uuid "c297e5ae-ebd5-4b7a-b0f9-f53381da81c9")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+        (property "Value" "BC817-40"
+            (at 0 3.4 0)
+            (unlocked yes)
+            (layer "F.Fab")
+            (hide no)
+            (uuid "9f70aa48-667f-4e31-ab00-e2bbaa64e6b8")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+    )
+    (footprint "SmartFarm:SF_R_0603"
+        (at 69 65 0)
+        (version 20240108)
+        (generator "pcbnew")
+        (layer "F.Cu")
+        (descr "SmartFarm project footprint")
+        (attr smd)
+        (fp_rect
+            (start -1.8 -1.3)
+            (end 1.8 1.3)
+            (stroke
+                (width 0.12)
+                (type default)
+            )
+            (fill
+                (type none)
+            )
+            (layer "F.SilkS")
+        )
+        (pad "1" smd roundrect
+            (net 21 "Q8_B")
+            (at -0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "2" smd roundrect
+            (net 26 "GND")
+            (at 0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (property "Reference" "R16"
+            (at 0 -2.8 0)
+            (unlocked yes)
+            (layer "F.SilkS")
+            (hide yes)
+            (uuid "1fb742aa-4ec9-4299-a576-1bfaf9494ec1")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+        (property "Value" "10k pulldown"
+            (at 0 2.8 0)
+            (unlocked yes)
+            (layer "F.Fab")
+            (hide no)
+            (uuid "8daa1c78-9cf4-46f9-947e-ce6fb9c0316f")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+    )
+    (footprint "SmartFarm:SF_R_0603"
+        (at 66 65 90)
+        (version 20240108)
+        (generator "pcbnew")
+        (layer "F.Cu")
+        (descr "SmartFarm project footprint")
+        (attr smd)
+        (fp_rect
+            (start -1.8 -1.3)
+            (end 1.8 1.3)
+            (stroke
+                (width 0.12)
+                (type default)
+            )
+            (fill
+                (type none)
+            )
+            (layer "F.SilkS")
+        )
+        (pad "1" smd roundrect
+            (net 19 "RELAY8")
+            (at -0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "2" smd roundrect
+            (net 10 "LED8_A")
+            (at 0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (property "Reference" "R24"
+            (at 0 -2.8 0)
+            (unlocked yes)
+            (layer "F.SilkS")
+            (hide yes)
+            (uuid "33a33db8-1037-4da2-81e8-f75e98771d27")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+        (property "Value" "1k LED"
+            (at 0 2.8 0)
+            (unlocked yes)
+            (layer "F.Fab")
+            (hide no)
+            (uuid "f614d875-c697-472f-8726-200171882ed5")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+    )
+    (footprint "SmartFarm:SF_LED_0603"
+        (at 74 65 0)
+        (version 20240108)
+        (generator "pcbnew")
+        (layer "F.Cu")
+        (descr "SmartFarm project footprint")
+        (attr smd)
+        (fp_rect
+            (start -1.8 -1.3)
+            (end 1.8 1.3)
+            (stroke
+                (width 0.12)
+                (type default)
+            )
+            (fill
+                (type none)
+            )
+            (layer "F.SilkS")
+        )
+        (pad "1" smd roundrect
+            (net 26 "GND")
+            (at -0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (pad "2" smd roundrect
+            (net 10 "LED8_A")
+            (at 0.95 0 0)
+            (size 1 1.2)
+            (layers "F.Cu" "F.Paste" "F.Mask")
+        )
+        (property "Reference" "D8"
+            (at 0 -2.8 0)
+            (unlocked yes)
+            (layer "F.SilkS")
+            (hide yes)
+            (uuid "27937ac8-f77f-42e9-9980-5119c49cb45e")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+        (property "Value" "CH8"
+            (at 0 2.8 0)
+            (unlocked yes)
+            (layer "F.Fab")
+            (hide no)
+            (uuid "a2e9c24c-28fd-4853-8008-397c01dd7b8d")
+            (effects
+                (font
+                    (size 1 1)
+                    (thickness 0.15)
+                )
+            )
+        )
+    )
+)

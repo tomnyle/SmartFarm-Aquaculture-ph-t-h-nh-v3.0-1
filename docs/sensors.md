@@ -30,7 +30,7 @@ sensor.setCalibrationOffset(offset_degrees_C);
 ### Specifications
 - Electrode: Glass electrode (analog output)
 - Amplifier Module: PH meter analog module
-- ADC: ADS1115 (16-bit, I2C)
+- ADC: ADS1115 (16-bit, I2C, address 0x48, channel A0)
 - Sensitivity: ~59mV per pH unit (at 25°C)
 - Accuracy: ±0.2 pH (after calibration)
 - Response Time: 30-60 seconds
@@ -41,9 +41,9 @@ sensor.setCalibrationOffset(offset_degrees_C);
 PH Electrode → Amplifier → ADS1115 A0
   ├─ VCC → 3.3V
   ├─ GND → GND
-  └─ OUT → ADS1115 A0
+  └─ OUT → PCB-A J3 SIGNAL → fixed divider → ADS1115 A0
 
-ADS1115 → ESP32
+ADS1115 → ESP32 DevKit
   ├─ VCC → 3.3V
   ├─ GND → GND
   ├─ SDA → GPIO21
@@ -73,7 +73,7 @@ Must do two-point calibration before use:
 
 ### Specifications
 - Type: Optical DO probe or analog DO sensor
-- ADC: ADS1115 (16-bit, I2C)
+- ADC: ADS1115 (16-bit, I2C, address 0x48, channel A1)
 - Range: 0-20 mg/L (or 0-100%)
 - Accuracy: ±0.3 mg/L (after calibration)
 - Response Time: 10-30 seconds
@@ -84,8 +84,14 @@ Must do two-point calibration before use:
 DO Probe → Amplifier → ADS1115 A1
   ├─ VCC → 3.3V or 5V
   ├─ GND → GND
-  └─ OUT → ADS1115 A1
+  └─ OUT → PCB-A J4 SIGNAL → fixed divider → ADS1115 A1
 ```
+
+PCB-A has a fixed 12 kΩ/20 kΩ divider on each analog input (J3–J6). It scales a
+positive 0–5 V sensor output to at most about 3.125 V before the ADS1115. Verify the
+sensor's output range and common ground; do not connect negative signals or outputs
+above 5 V. The sensor's power selector is separate from the signal divider. Calibrate
+using the voltage after the divider and the firmware's actual ADC scale.
 
 ### Calibration (Two-Point Recommended)
 
@@ -109,7 +115,7 @@ sensor.setWaterTemperature(25.5);  // For accurate DO calculation
 
 ### Specifications
 - Type: Ultrasonic or capacitive water level sensor
-- Signal: 0-5V analog (read via ADS1115)
+- Signal: 0-5V analog (future firmware input; not connected in current mapping)
 - Accuracy: ±2-5% of range
 - Response Time: <100ms
 - Cost: $10-20
@@ -119,7 +125,7 @@ sensor.setWaterTemperature(25.5);  // For accurate DO calculation
 Water Level Sensor
   ├─ VCC → 5V
   ├─ GND → GND
-  └─ OUT → GPIO34 or ADS1115 A2
+  └─ OUT → additional ADS1115 A0 after voltage conditioning
 ```
 
 ### Calibration
@@ -140,7 +146,7 @@ Water Level Sensor
 ✓ Temperature (DS18B20)
 ✓ pH (via ADS1115)
 ✓ Dissolved Oxygen (via ADS1115)
-✓ Water Level (via ADS1115)
+✓ Water Level (planned; not currently read by firmware)
 
 ### Phase 2 - Enhanced Monitoring
 - ORP (Oxidation potential)
@@ -148,7 +154,7 @@ Water Level Sensor
 
 ### Phase 3 - Advanced Analysis
 - Ammonia/Nitrite/Nitrate
-- Turbidity
+- Turbidity (ADS1115 A2; firmware input)
 - Pressure/Depth
 
 ## Recommended Suppliers
@@ -168,4 +174,25 @@ Water Level Sensor
 | ADS1115 (2x) | $5 | ADC modules |
 | **Total** | **~$127** | USD |
 
-Note: Prices vary significantly by region and supplier quality.
+Note: Prices vary significantly by region and supplier quality. The estimate lists two
+ADS1115 modules, but the current four analog firmware inputs share one module.
+
+## Analog Input Wiring and Voltage Limits
+
+The firmware reads four analog signals through one ADS1115 at I²C address `0x48`:
+
+| Signal | ADS1115 input | Firmware scaling |
+|--------|---------------|------------------|
+| pH amplifier output | A0 | 0–3.3 V mapped to pH 0–14 |
+| DO amplifier output | A1 | 0–3.3 V mapped to 0–20 mg/L |
+| Turbidity output | A2 | 0–3.3 V mapped to 0–4095 |
+| CO₂ output | A3 | 0–3.3 V mapped to 0–10 |
+
+These are linear placeholder scales, not a substitute for probe calibration. Keep every
+ADS1115 input between GND and its 3.3 V supply. Sensor modules with 5 V analog outputs
+must use a suitable divider or signal-conditioning stage before connecting to the ADC.
+Power the ADS1115 and its I²C pull-ups from 3.3 V; do not allow 5 V pull-ups on SDA/SCL.
+Water level is not currently read by the firmware; adding it requires another ADS1115
+with a distinct I²C address (for example, `0x49`) and input voltage conditioning.
+Turbidity already uses A2 on the existing ADC. If the ADS1115 is absent, the firmware
+marks the required analog readings invalid.

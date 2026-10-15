@@ -2,11 +2,12 @@
 #define PINS_H
 
 // ==================== SENSOR PINS ====================
-// Analog Input Pins
-#define PH_PIN 34           // ADC1_CH6 - pH sensor
-#define TURBIDITY_PIN 35    // ADC1_CH7 - Turbidity sensor
-#define DO_PIN 36           // ADC1_CH0 - Dissolved Oxygen sensor
-#define CO2_PIN 39          // ADC1_CH3 - CO2 sensor
+// ADS1115 single-ended analog input channels
+#define ADS1115_ADDRESS 0x48
+#define PH_ADC_CHANNEL 0
+#define DO_ADC_CHANNEL 1
+#define TURBIDITY_ADC_CHANNEL 2
+#define CO2_ADC_CHANNEL 3
 
 // 1-Wire Bus
 #define ONE_WIRE_BUS 4      // DS18B20 temperature sensor
@@ -22,9 +23,19 @@
 // ==================== OUTPUT PINS ====================
 // Relay Pins
 #define PUMP_PIN 13         // Main pump relay
-#define AERATOR_PIN 12      // Aerator relay
+#define AERATOR_PIN 25      // Aerator relay (GPIO12 is a boot-strapping pin)
 #define CIRCULATION_PIN 14  // Circulation pump relay
 #define FEEDER_PIN 27       // Automatic feeder relay
+#define RELAY5_PIN 32       // Reserved relay output
+#define RELAY6_PIN 33       // Reserved relay output
+#define RELAY7_PIN 26       // Reserved relay output
+#define RELAY8_PIN 23       // Reserved relay output
+
+// Set RELAY_ACTIVE_LEVEL to LOW for active-low relay modules.
+#ifndef RELAY_ACTIVE_LEVEL
+#define RELAY_ACTIVE_LEVEL HIGH
+#endif
+#define RELAY_INACTIVE_LEVEL ((RELAY_ACTIVE_LEVEL) == HIGH ? LOW : HIGH)
 
 // Status LED (Optional)
 #define LED_PIN 2           // Built-in LED for status
