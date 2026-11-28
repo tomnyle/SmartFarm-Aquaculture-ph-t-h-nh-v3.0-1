@@ -2,11 +2,45 @@
 
 ESP32-based aquaculture controller for family pond management with MQTT & Home Assistant integration.
 
+## ESP32 Relay X8: no-load bench firmware
+
+The `esp32relay8_bench` environment is a **separate relay-only test**, not the
+aquaculture controller. It does not read sensors, run SmartFarm automation, or
+implement Modbus. Do not use it with connected loads or livestock. The existing
+`esp32dev` firmware is not compatible with this X8 board.
+
+The board marked `ESP32_Relay_X8_Modbus (303E32DC812)` is believed to use a
+74HC595 with active-low relay outputs: GPIO13 OE, GPIO25 latch, GPIO26 clock,
+GPIO33 data. Verify the hardware with no loads connected; this mapping and the
+boot/reset output behavior have not been tested on your board. No software can
+guarantee the relay state during power-up, reset, or a firmware fault.
+
+1. Disconnect every relay load. Configure Wi-Fi and MQTT in `include/app_config.h`.
+2. Flash with `platformio run -e esp32relay8_bench -t upload` and open
+   `platformio device monitor -b 115200`.
+3. After MQTT connects, press and release the physical BOOT button to arm one
+   command for 30 seconds. Toggle one of the eight X8 bench switches in Home
+   Assistant. One relay at a time turns on for up to five seconds; press BOOT
+   again for each test. OFF ends a pulse early. Network disconnect disarms and
+   turns the relay off when detected. These are software limits, not safety
+   guarantees.
+
+For direct MQTT use, command topics are printed in the serial log and change
+on each connection, preventing old retained commands from replaying. Send `ON`
+or `OFF` to the printed topic. States are published to
+`smartfarm/x8_bench/relay/1/state` through `relay/8/state`; availability is
+`smartfarm/x8_bench/status`. Keep command messages non-retained. The eight
+switches are separate from the original SmartFarm entities.
+
+Sensor types, calibration, safe wiring, and access to their physical pins remain
+unresolved. Production firmware must be adapted and tested separately before
+connecting pumps, aerators, or an occupied pond.
+
 ## Features
 
 - **Autonomous Control**: Works independently even without Home Assistant
 - **Multi-Species Support**: Profiles for Koi, Catfish, Shrimp, Tilapia, and more
-- **4 Operating Modes**: AUTO, MANUAL, SCHEDULE, SAFE
+- **4 Operating Modes**: AUTO, MANUAL, DRY_RUN, SAFE
 - **Safe Runtime Operation Profiles**: `SENSOR_TEST`, `NO_LIVESTOCK_TEST`, and `PRODUCTION`
 - **Commissioning Interlocks**: Separate `can_no_load_test`, `can_production`, retained block reasons, and livestock confirmation
 - **Core Sensors**:
@@ -47,7 +81,8 @@ Edit `include/app_config.h`:
 - WiFi SSID & Password
 - MQTT Broker Address
 - Device Name & Location
-- `SENSOR_TEST_MODE` (keep `true` until commissioning is complete)
+- `SENSOR_TEST_MODE` (set `true` only for sensor-only checkout; set `false`
+  before manual or dry-run load testing)
 
 ### 3. Build & Upload
 ```bash
@@ -84,8 +119,10 @@ ESP32 automatically controls relays based on sensor readings and active profile 
 ### MANUAL Mode
 Control relays directly from Home Assistant.
 
-### SCHEDULE Mode
-Execute predefined schedules (e.g., feeding times).
+### DRY_RUN Mode
+Controls the connected loads without requiring confirmed livestock.
+The firmware requests `NO_LIVESTOCK_TEST`, and outputs remain subject to the
+required-sensor, relay-test, critical-condition, and SAFE interlocks.
 
 ### SAFE Mode
 Activated when critical errors detected:

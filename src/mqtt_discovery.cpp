@@ -190,7 +190,7 @@ void publishModeSelectorDiscovery() {
     doc["icon"] = "mdi:cog";
     doc["options"][0] = "AUTO";
     doc["options"][1] = "MANUAL";
-    doc["options"][2] = "SCHEDULE";
+    doc["options"][2] = "DRY_RUN";
     doc["options"][3] = "SAFE";
     doc["device"]["identifiers"][0] = MQTT_CLIENT_ID;
     doc["device"]["name"] = "Aquaculture Controller";

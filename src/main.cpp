@@ -72,7 +72,7 @@ uint32_t last_feeder_change = 0;
 
 char current_mode[16] = "";
 char current_species[32] = "Rô Phi";
-OperationProfileId requested_profile = PROFILE_SENSOR_TEST;
+OperationProfileId requested_profile = PROFILE_NO_LIVESTOCK_TEST;
 OperationProfileId actual_profile = PROFILE_SENSOR_TEST;
 RelayTestStatusId requested_relay_test_status = RELAY_TEST_NOT_STARTED;
 RelayTestStatusId relay_test_status = RELAY_TEST_NOT_STARTED;
@@ -198,7 +198,11 @@ void loop() {
     last_sensor_read = now;
   }
 
-  if (now - last_rule_engine >= RULE_ENGINE_INTERVAL && strcmp(current_mode, "AUTO") == 0 && !outputs_locked) {
+  if (now - last_rule_engine >= RULE_ENGINE_INTERVAL &&
+      strcmp(current_mode, "AUTO") == 0 &&
+      actual_profile != PROFILE_SENSOR_TEST &&
+      !SENSOR_TEST_MODE &&
+      !outputs_locked) {
     apply_species_rules();
     last_rule_engine = now;
   }
@@ -284,7 +288,7 @@ void reconnect_mqtt() {
 }
 
 void publish_mqtt_discovery() {
-  static const char* const mode_options[] = {"AUTO", "MANUAL", "SCHEDULE", "SAFE"};
+  static const char* const mode_options[] = {"AUTO", "MANUAL", "DRY_RUN", "SAFE"};
   static const char* const species_options[] = {"Koi", "Cá Trắm", "Cá Chép", "Cá Tra", "Cá Lóc", "Tôm Thẻ", "Tôm Sú", "Tilapia"};
   static const char* const profile_options[] = {"SENSOR_TEST", "NO_LIVESTOCK_TEST", "PRODUCTION"};
   static const char* const relay_test_options[] = {"NOT_STARTED", "IN_PROGRESS", "PASSED", "FAILED"};
@@ -351,6 +355,7 @@ void mqtt_callback(char* topic, byte* payload, unsigned int length) {
 
   if (strcmp(topic, MQTT_TOPIC_CONTROL_PUMP) == 0) {
     copy_text(current_mode, sizeof(current_mode), "MANUAL");
+    update_operation_profile_state(true);
     handle_output_command("pump", message == "ON");
     publish_output_state();
     return;
@@ -358,6 +363,7 @@ void mqtt_callback(char* topic, byte* payload, unsigned int length) {
 
   if (strcmp(topic, MQTT_TOPIC_CONTROL_AERATOR) == 0) {
     copy_text(current_mode, sizeof(current_mode), "MANUAL");
+    update_operation_profile_state(true);
     handle_output_command("aerator", message == "ON");
     publish_output_state();
     return;
@@ -365,6 +371,7 @@ void mqtt_callback(char* topic, byte* payload, unsigned int length) {
 
   if (strcmp(topic, MQTT_TOPIC_CONTROL_CIRCULATION) == 0) {
     copy_text(current_mode, sizeof(current_mode), "MANUAL");
+    update_operation_profile_state(true);
     handle_output_command("circulation", message == "ON");
     publish_output_state();
     return;
@@ -372,15 +379,28 @@ void mqtt_callback(char* topic, byte* payload, unsigned int length) {
 
   if (strcmp(topic, MQTT_TOPIC_CONTROL_FEEDER) == 0) {
     copy_text(current_mode, sizeof(current_mode), "MANUAL");
+    update_operation_profile_state(true);
     handle_output_command("feeder", message == "ON");
     publish_output_state();
     return;
   }
 
   if (strcmp(topic, MQTT_TOPIC_CONTROL_MODE) == 0) {
+    if (strcmp(message.c_str(), "AUTO") != 0 &&
+        strcmp(message.c_str(), "MANUAL") != 0 &&
+        strcmp(message.c_str(), "DRY_RUN") != 0 &&
+        strcmp(message.c_str(), "SAFE") != 0) {
+      Serial.print("[WARN] Unsupported mode payload: ");
+      Serial.println(message);
+      return;
+    }
     copy_text(current_mode, sizeof(current_mode), message.c_str());
+    if (strcmp(current_mode, "DRY_RUN") == 0) {
+      requested_profile = PROFILE_NO_LIVESTOCK_TEST;
+    }
     Serial.print("[CONFIG] Mode changed to: ");
     Serial.println(current_mode);
+    update_operation_profile_state(true);
     mqtt_client.publish(MQTT_TOPIC_MODE_STATE, current_mode, true);
     return;
   }
@@ -535,7 +555,7 @@ void evaluate_conditions() {
 
 void update_operation_profile_state(bool force_publish) {
   bool any_output_active = outputs.pump || outputs.aerator || outputs.circulation || outputs.feeder;
-  external_outputs_locked = strcmp(current_mode, "SAFE") == 0 || (any_output_active && requested_profile != actual_profile);
+  external_outputs_locked = strcmp(current_mode, "SAFE") == 0;
   ProfileEligibilityInputs inputs = {
       conditions.required_sensors_valid,
       conditions.sensor_fault_active,
@@ -553,7 +573,11 @@ void update_operation_profile_state(bool force_publish) {
   requested_blockers = evaluation.requested_blockers;
   production_blockers = evaluation.production_blockers;
   display_blockers = requested_profile == PROFILE_SENSOR_TEST ? production_blockers : requested_blockers;
-  outputs_locked = external_outputs_locked || SENSOR_TEST_MODE || actual_profile == PROFILE_SENSOR_TEST;
+  bool manual_test_mode = strcmp(current_mode, "MANUAL") == 0 ||
+                          strcmp(current_mode, "DRY_RUN") == 0;
+  outputs_locked = external_outputs_locked ||
+                   SENSOR_TEST_MODE ||
+                   (!manual_test_mode && actual_profile == PROFILE_SENSOR_TEST);
 
   buildReasonList(display_blockers, false, block_codes, sizeof(block_codes));
   buildReasonList(display_blockers, true, block_summary, sizeof(block_summary));
