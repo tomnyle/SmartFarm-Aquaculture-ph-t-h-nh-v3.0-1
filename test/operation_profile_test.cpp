@@ -17,6 +17,27 @@ static ProfileEligibilityInputs baseInputs() {
 
 int main() {
   {
+    assert(!outputCommandMayEnterManual("SAFE"));
+    assert(outputCommandMayEnterManual("AUTO"));
+    assert(outputCommandMayEnterManual("MANUAL"));
+    assert(outputCommandMayEnterManual("DRY_RUN"));
+    assert(outputsLockedForProfile(true, false, PROFILE_PRODUCTION));
+    assert(outputsLockedForProfile(false, true, PROFILE_PRODUCTION));
+    assert(outputsLockedForProfile(false, false, PROFILE_SENSOR_TEST));
+    assert(!outputsLockedForProfile(false, false, PROFILE_NO_LIVESTOCK_TEST));
+    assert(!outputsLockedForProfile(false, false, PROFILE_PRODUCTION));
+
+    ProfileEligibilityInputs inputs = baseInputs();
+    inputs.relay_test_passed = false;
+    ProfileEvaluation evaluation = evaluateProfileRequest(PROFILE_NO_LIVESTOCK_TEST, inputs);
+    assert(outputsLockedForProfile(false, false, evaluation.actual_profile));
+    inputs.relay_test_passed = true;
+    inputs.critical_condition_active = true;
+    evaluation = evaluateProfileRequest(PROFILE_NO_LIVESTOCK_TEST, inputs);
+    assert(outputsLockedForProfile(false, false, evaluation.actual_profile));
+  }
+
+  {
     ProfileEligibilityInputs inputs = baseInputs();
     inputs.required_sensors_valid = false;
     inputs.sensor_fault_active = true;

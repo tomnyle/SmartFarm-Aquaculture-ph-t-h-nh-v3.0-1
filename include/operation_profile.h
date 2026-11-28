@@ -65,6 +65,17 @@ struct RelayTestCommandUpdate {
   RelayTestStatusId requested_status;
 };
 
+inline bool outputCommandMayEnterManual(const char* current_mode) {
+  return strcmp(current_mode, "SAFE") != 0;
+}
+
+inline bool outputsLockedForProfile(bool external_outputs_locked,
+                                    bool sensor_test_mode_enabled,
+                                    OperationProfileId actual_profile) {
+  return external_outputs_locked || sensor_test_mode_enabled ||
+         actual_profile == PROFILE_SENSOR_TEST;
+}
+
 inline const char* operationProfileToString(OperationProfileId profile) {
   switch (profile) {
     case PROFILE_NO_LIVESTOCK_TEST:

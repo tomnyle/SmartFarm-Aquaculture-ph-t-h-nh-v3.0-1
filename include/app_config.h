@@ -112,9 +112,9 @@
 #define DEFAULT_MODE "AUTO"  // AUTO, MANUAL, DRY_RUN, SAFE
 
 // ==================== SAFETY PROFILE LOCKS ====================
-// Set true only for sensor-only checkout. ON commands are suppressed,
+// Keep true during sensor-only checkout. ON commands are suppressed,
 // outputs remain locked OFF, and AUTO rules are skipped.
-#define SENSOR_TEST_MODE false
+#define SENSOR_TEST_MODE true
 
 // ==================== CONTROL THRESHOLDS ====================
 // Temperature (°C)

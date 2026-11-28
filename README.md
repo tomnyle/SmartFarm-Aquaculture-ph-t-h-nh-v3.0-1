@@ -36,6 +36,10 @@ Sensor types, calibration, safe wiring, and access to their physical pins remain
 unresolved. Production firmware must be adapted and tested separately before
 connecting pumps, aerators, or an occupied pond.
 
+The existing controller's pH and DO reads are uncalibrated placeholder scaling,
+not implementations for the Gravity sensors. Neither controller environment is
+ready for unattended production or use with livestock.
+
 ## Features
 
 - **Autonomous Control**: Works independently even without Home Assistant
@@ -45,8 +49,8 @@ connecting pumps, aerators, or an occupied pond.
 - **Commissioning Interlocks**: Separate `can_no_load_test`, `can_production`, retained block reasons, and livestock confirmation
 - **Core Sensors**:
   - Water Temperature (DS18B20)
-  - pH Level (via ADS1115)
-  - Dissolved Oxygen (via ADS1115)
+  - pH Level (uncalibrated placeholder)
+  - Dissolved Oxygen (uncalibrated placeholder)
   - Turbidity
 
 - **Relay Control** (8-channel):
@@ -81,8 +85,8 @@ Edit `include/app_config.h`:
 - WiFi SSID & Password
 - MQTT Broker Address
 - Device Name & Location
-- `SENSOR_TEST_MODE` (set `true` only for sensor-only checkout; set `false`
-  before manual or dry-run load testing)
+- `SENSOR_TEST_MODE` (keep `true` during sensor-only checkout; set `false`
+  only after commissioning and before manual or dry-run load testing)
 
 ### 3. Build & Upload
 ```bash
@@ -125,11 +129,9 @@ The firmware requests `NO_LIVESTOCK_TEST`, and outputs remain subject to the
 required-sensor, relay-test, critical-condition, and SAFE interlocks.
 
 ### SAFE Mode
-Activated when critical errors detected:
-- Sensor failures
-- Water level too low
-- Temperature critical
-- DO critical
+Select `SAFE` to lock outputs OFF. Output commands cannot leave this mode;
+change the mode explicitly to exit it. Profile interlocks also lock outputs
+when required sensors or other commissioning checks fail.
 
 ## Operation Profile State Machine
 

@@ -354,7 +354,7 @@ void mqtt_callback(char* topic, byte* payload, unsigned int length) {
   Serial.println(message);
 
   if (strcmp(topic, MQTT_TOPIC_CONTROL_PUMP) == 0) {
-    copy_text(current_mode, sizeof(current_mode), "MANUAL");
+    if (outputCommandMayEnterManual(current_mode)) copy_text(current_mode, sizeof(current_mode), "MANUAL");
     update_operation_profile_state(true);
     handle_output_command("pump", message == "ON");
     publish_output_state();
@@ -362,7 +362,7 @@ void mqtt_callback(char* topic, byte* payload, unsigned int length) {
   }
 
   if (strcmp(topic, MQTT_TOPIC_CONTROL_AERATOR) == 0) {
-    copy_text(current_mode, sizeof(current_mode), "MANUAL");
+    if (outputCommandMayEnterManual(current_mode)) copy_text(current_mode, sizeof(current_mode), "MANUAL");
     update_operation_profile_state(true);
     handle_output_command("aerator", message == "ON");
     publish_output_state();
@@ -370,7 +370,7 @@ void mqtt_callback(char* topic, byte* payload, unsigned int length) {
   }
 
   if (strcmp(topic, MQTT_TOPIC_CONTROL_CIRCULATION) == 0) {
-    copy_text(current_mode, sizeof(current_mode), "MANUAL");
+    if (outputCommandMayEnterManual(current_mode)) copy_text(current_mode, sizeof(current_mode), "MANUAL");
     update_operation_profile_state(true);
     handle_output_command("circulation", message == "ON");
     publish_output_state();
@@ -378,7 +378,7 @@ void mqtt_callback(char* topic, byte* payload, unsigned int length) {
   }
 
   if (strcmp(topic, MQTT_TOPIC_CONTROL_FEEDER) == 0) {
-    copy_text(current_mode, sizeof(current_mode), "MANUAL");
+    if (outputCommandMayEnterManual(current_mode)) copy_text(current_mode, sizeof(current_mode), "MANUAL");
     update_operation_profile_state(true);
     handle_output_command("feeder", message == "ON");
     publish_output_state();
@@ -554,7 +554,6 @@ void evaluate_conditions() {
 }
 
 void update_operation_profile_state(bool force_publish) {
-  bool any_output_active = outputs.pump || outputs.aerator || outputs.circulation || outputs.feeder;
   external_outputs_locked = strcmp(current_mode, "SAFE") == 0;
   ProfileEligibilityInputs inputs = {
       conditions.required_sensors_valid,
@@ -573,11 +572,7 @@ void update_operation_profile_state(bool force_publish) {
   requested_blockers = evaluation.requested_blockers;
   production_blockers = evaluation.production_blockers;
   display_blockers = requested_profile == PROFILE_SENSOR_TEST ? production_blockers : requested_blockers;
-  bool manual_test_mode = strcmp(current_mode, "MANUAL") == 0 ||
-                          strcmp(current_mode, "DRY_RUN") == 0;
-  outputs_locked = external_outputs_locked ||
-                   SENSOR_TEST_MODE ||
-                   (!manual_test_mode && actual_profile == PROFILE_SENSOR_TEST);
+  outputs_locked = outputsLockedForProfile(external_outputs_locked, SENSOR_TEST_MODE, actual_profile);
 
   buildReasonList(display_blockers, false, block_codes, sizeof(block_codes));
   buildReasonList(display_blockers, true, block_summary, sizeof(block_summary));
