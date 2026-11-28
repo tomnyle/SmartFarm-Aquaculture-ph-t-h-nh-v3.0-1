@@ -52,17 +52,16 @@ ADS1115 → ESP32
 
 ### Calibration (Two-Point)
 
-Must do two-point calibration before use:
+The firmware uses the DFRobot_PH library with EEPROM storage.
 
-1. **Calibration Point 1 (pH 7.0 or 6.86)**
-   - Place electrode in buffer solution pH 7.0
-   - Record voltage reading
-   - Call: `sensor.setCalibrationPoint1(voltage, 7.0)`
+Open the Serial Monitor at 115200 baud and enter:
 
-2. **Calibration Point 2 (pH 4.0 or 10.0)**
-   - Place electrode in second buffer solution
-   - Record voltage reading
-   - Call: `sensor.setCalibrationPoint2(voltage, 4.0)` or `(voltage, 10.0)`
+1. `ENTERPH`
+2. Place the electrode in pH 7.0 buffer and send `CALPH`
+3. Place the electrode in pH 4.0 buffer and send `CALPH`
+4. Send `EXITPH` to save the calibration points
+
+Calibration data is stored in ESP32 EEPROM and remains after reboot.
 
 ### Maintenance
 - Storage: Keep electrode in storage solution

@@ -6,6 +6,8 @@
 #include <DHT.h>
 #include <Wire.h>
 #include <BH1750.h>
+#include <DFRobot_PH.h>
+#include <EEPROM.h>
 #include "app_config.h"
 #include "pins.h"
 #include "species_rules.h"
@@ -18,6 +20,10 @@ OneWire oneWire(ONE_WIRE_BUS);
 DallasTemperature waterTemp(&oneWire);
 DHT dht(DHTPIN, DHTTYPE);
 BH1750 lightMeter;
+DFRobot_PH phSensor;
+
+float ph_voltage_mv = 1500.0f;
+float ph_temperature = 25.0f;
 
 struct SensorData {
   float water_temp;
@@ -69,6 +75,7 @@ uint32_t last_pump_change = 0;
 uint32_t last_aerator_change = 0;
 uint32_t last_circulation_change = 0;
 uint32_t last_feeder_change = 0;
+uint32_t last_eeprom_commit = 0;
 
 char current_mode[16] = "";
 char current_species[32] = "Rô Phi";
@@ -155,6 +162,10 @@ void setup() {
   waterTemp.begin();
   dht.begin();
   Wire.begin(I2C_SDA, I2C_SCL);
+  EEPROM.begin(32);
+  phSensor.begin();
+
+  Serial.println("[PH] Calibration commands: ENTERPH, CALPH, EXITPH");
 
   if (lightMeter.begin(BH1750::CONTINUOUS_HIGH_RES_MODE)) {
     Serial.println("[OK] BH1750 Light Sensor initialized");
@@ -189,7 +200,14 @@ void loop() {
     setup_wifi();
   }
 
+  phSensor.calibration(ph_voltage_mv, ph_temperature);
+
   uint32_t now = millis();
+
+  if (now - last_eeprom_commit >= 1000) {
+    EEPROM.commit();
+    last_eeprom_commit = now;
+  }
 
   if (now - last_sensor_read >= SENSOR_READ_INTERVAL) {
     read_sensors();
@@ -467,7 +485,9 @@ void read_sensors() {
     sensors.light = 0;
   }
 
-  sensors.ph = (analogRead(PH_PIN) / 4095.0f) * 14.0f;
+  ph_voltage_mv = analogReadMilliVolts(PH_PIN);
+  ph_temperature = sensors.water_temp > 0.0f ? sensors.water_temp : 25.0f;
+  sensors.ph = phSensor.readPH(ph_voltage_mv, ph_temperature);
   sensors.turbidity = analogRead(TURBIDITY_PIN);
   sensors.do_value = (analogRead(DO_PIN) / 4095.0f) * 20.0f;
   sensors.co2 = (analogRead(CO2_PIN) / 4095.0f) * 10.0f;
@@ -479,6 +499,9 @@ void read_sensors() {
   Serial.println("°C");
   Serial.print("pH: ");
   Serial.println(sensors.ph);
+  Serial.print("pH Voltage: ");
+  Serial.print(ph_voltage_mv);
+  Serial.println(" mV");
   Serial.print("DO: ");
   Serial.print(sensors.do_value);
   Serial.println(" mg/L");
