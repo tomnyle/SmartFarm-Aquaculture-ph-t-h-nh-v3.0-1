@@ -8,6 +8,7 @@
 #include <BH1750.h>
 #include <DFRobot_PH.h>
 #include <EEPROM.h>
+#include <Adafruit_ADS1X15.h>
 #include "app_config.h"
 #include "pins.h"
 #include "species_rules.h"
@@ -21,9 +22,111 @@ DallasTemperature waterTemp(&oneWire);
 DHT dht(DHTPIN, DHTTYPE);
 BH1750 lightMeter;
 DFRobot_PH phSensor;
+Adafruit_ADS1115 ads1115;
 
 float ph_voltage_mv = 1500.0f;
 float ph_temperature = 25.0f;
+float do_voltage_mv = 0.0f;
+float do_cal_voltage_mv = 1600.0f;
+float do_cal_temperature = 25.0f;
+bool do_calibration_mode = false;
+bool do_calibration_saved = false;
+uint32_t do_calibration_message_time = 0;
+bool ads1115_ready = false;
+
+#define DO_EEPROM_ADDR 32
+#define DO_CAL_MAGIC 0x444F4341
+
+struct DOCalibrationData {
+  uint32_t magic;
+  float saturation_voltage_mv;
+  float temperature_c;
+};
+
+static float getSaturationDO(float temperature_c) {
+  if (temperature_c < 0.0f) temperature_c = 0.0f;
+  if (temperature_c > 40.0f) temperature_c = 40.0f;
+  return 14.652025f
+       - 0.4102227f * temperature_c
+       + 0.007991f * temperature_c * temperature_c
+       - 0.000077774f * temperature_c * temperature_c * temperature_c;
+}
+
+static void loadDOCalibration() {
+  DOCalibrationData calibration = {};
+  EEPROM.get(DO_EEPROM_ADDR, calibration);
+  if (calibration.magic == DO_CAL_MAGIC &&
+      calibration.saturation_voltage_mv > 500.0f &&
+      calibration.saturation_voltage_mv < 3300.0f &&
+      calibration.temperature_c >= 0.0f &&
+      calibration.temperature_c <= 40.0f) {
+    do_cal_voltage_mv = calibration.saturation_voltage_mv;
+    do_cal_temperature = calibration.temperature_c;
+  }
+}
+
+static void saveDOCalibration() {
+  DOCalibrationData calibration = {};
+  calibration.magic = DO_CAL_MAGIC;
+  calibration.saturation_voltage_mv = do_cal_voltage_mv;
+  calibration.temperature_c = do_cal_temperature;
+  EEPROM.put(DO_EEPROM_ADDR, calibration);
+  EEPROM.commit();
+}
+
+static void handleDOCalibrationCommands(const String& command) {
+  if (command == "ENTERDO") {
+    do_calibration_mode = true;
+    do_calibration_saved = false;
+    Serial.println(F(">>> Enter DO Calibration Mode <<<"));
+    Serial.println(F("Expose the probe to air-saturated water, then send CALDO."));
+  } else if (command == "CALDO") {
+    if (!do_calibration_mode) {
+      Serial.println(F(">>> Send ENTERDO first <<<"));
+      return;
+    }
+    do_cal_voltage_mv = do_voltage_mv;
+    do_cal_temperature = ph_temperature;
+    do_calibration_saved = false;
+    Serial.print(F(">>> Saturation DO voltage captured: "));
+    Serial.print(do_cal_voltage_mv);
+    Serial.print(F(" mV at "));
+    Serial.print(do_cal_temperature);
+    Serial.println(F(" C. Send EXITDO to save <<<"));
+  } else if (command == "EXITDO") {
+    if (!do_calibration_mode) return;
+    if (do_cal_voltage_mv > 500.0f && do_cal_voltage_mv < 3300.0f) {
+      saveDOCalibration();
+      do_calibration_saved = true;
+      Serial.println(F(">>> DO Calibration Saved and Exit <<<"));
+    } else {
+      Serial.println(F(">>> DO Calibration Failed; CALDO was not completed <<<"));
+    }
+    do_calibration_mode = false;
+  } else if (do_calibration_mode) {
+    Serial.println(F(">>> Unknown DO command; use ENTERDO, CALDO, or EXITDO <<<"));
+  }
+}
+
+static void handleSensorCalibrationCommands() {
+  if (!Serial.available()) return;
+
+  String command = Serial.readStringUntil('\n');
+  command.trim();
+  command.toUpperCase();
+  if (command.length() == 0) return;
+
+  if (command == "ENTERPH" || command == "CALPH" || command == "EXITPH") {
+    char command_buffer[16] = {};
+    command.toCharArray(command_buffer, sizeof(command_buffer));
+    phSensor.calibration(ph_voltage_mv, ph_temperature, command_buffer);
+  } else if (command == "ENTERDO" || command == "CALDO" || command == "EXITDO") {
+    handleDOCalibrationCommands(command);
+  } else {
+    Serial.print(F(">>> Unknown calibration command: "));
+    Serial.println(command);
+  }
+}
 
 struct SensorData {
   float water_temp;
@@ -162,10 +265,26 @@ void setup() {
   waterTemp.begin();
   dht.begin();
   Wire.begin(I2C_SDA, I2C_SCL);
-  EEPROM.begin(32);
+  EEPROM.begin(64);
   phSensor.begin();
+  loadDOCalibration();
+
+  if (!ads1115.begin(0x48)) {
+    Serial.println("[WARN] ADS1115 not found; DO sensor unavailable");
+    ads1115_ready = false;
+  } else {
+    ads1115_ready = true;
+    ads1115.setGain(GAIN_ONE);
+    ads1115.setDataRate(RATE_ADS1115_128SPS);
+    Serial.println("[OK] ADS1115 initialized for DO at A0");
+  }
 
   Serial.println("[PH] Calibration commands: ENTERPH, CALPH, EXITPH");
+  Serial.print("[DO] Calibration commands: ENTERDO, CALDO, EXITDO. Saturation point: ");
+  Serial.print(do_cal_voltage_mv);
+  Serial.print(" mV at ");
+  Serial.print(do_cal_temperature);
+  Serial.println(" C");
 
   if (lightMeter.begin(BH1750::CONTINUOUS_HIGH_RES_MODE)) {
     Serial.println("[OK] BH1750 Light Sensor initialized");
@@ -200,7 +319,7 @@ void loop() {
     setup_wifi();
   }
 
-  phSensor.calibration(ph_voltage_mv, ph_temperature);
+  handleSensorCalibrationCommands();
 
   uint32_t now = millis();
 
@@ -489,7 +608,21 @@ void read_sensors() {
   ph_temperature = sensors.water_temp > 0.0f ? sensors.water_temp : 25.0f;
   sensors.ph = phSensor.readPH(ph_voltage_mv, ph_temperature);
   sensors.turbidity = analogRead(TURBIDITY_PIN);
-  sensors.do_value = (analogRead(DO_PIN) / 4095.0f) * 20.0f;
+  do_voltage_mv = 0.0f;
+  if (ads1115_ready) {
+    int16_t do_adc = ads1115.readADC_SingleEnded(0);
+    do_voltage_mv = ads1115.computeVolts(do_adc) * 1000.0f;
+  }
+  float temperature_difference = ph_temperature - do_cal_temperature;
+  float saturation_voltage_mv = do_cal_voltage_mv * (1.0f - 0.0021f * temperature_difference);
+  float saturation_do_mgl = getSaturationDO(ph_temperature);
+  if (saturation_voltage_mv > 500.0f) {
+    sensors.do_value = (do_voltage_mv / saturation_voltage_mv) * saturation_do_mgl;
+  } else {
+    sensors.do_value = 0.0f;
+  }
+  if (sensors.do_value < 0.0f) sensors.do_value = 0.0f;
+  if (sensors.do_value > 20.0f) sensors.do_value = 20.0f;
   sensors.co2 = (analogRead(CO2_PIN) / 4095.0f) * 10.0f;
   sensors.last_read = millis();
 
@@ -505,6 +638,9 @@ void read_sensors() {
   Serial.print("DO: ");
   Serial.print(sensors.do_value);
   Serial.println(" mg/L");
+  Serial.print("DO Voltage: ");
+  Serial.print(do_voltage_mv);
+  Serial.println(" mV");
   Serial.print("CO2: ");
   Serial.print(sensors.co2);
   Serial.println(" ppm");

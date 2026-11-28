@@ -80,24 +80,24 @@ Calibration data is stored in ESP32 EEPROM and remains after reboot.
 
 ### Wiring
 ```
-DO Probe → Amplifier → ADS1115 A1
+DO Probe → Amplifier → ADS1115 A0
   ├─ VCC → 3.3V or 5V
   ├─ GND → GND
   └─ OUT → ADS1115 A1
 ```
 
-### Calibration (Two-Point Recommended)
+### Calibration (Air-Saturation)
 
-1. **Zero Calibration (0% DO)**
-   - Use nitrogen gas or boiled water
-   - Record voltage
-   - Call: `sensor.setCalibrationPoints(voltage, 0.0, ...)`
+The DFRobot SEN0237 firmware uses one-point air-saturation calibration:
 
-2. **Span Calibration (100% DO)**
-   - Expose probe to air-saturated water
-   - Record voltage at 100% saturation
-   - Note: 100% varies by temperature and altitude
-   - At sea level, 25°C: ~8.6 mg/L
+1. Expose the probe to clean air-saturated water and stabilize for several minutes.
+2. Open Serial Monitor at 115200 baud.
+3. Send `ENTERDO`.
+4. Send `CALDO` when the voltage is stable.
+5. Send `EXITDO` to save the calibration to ESP32 EEPROM.
+
+The measurement uses ADS1115 A0 and compensates for water temperature using DS18B20.
+The calibration voltage and temperature remain available after reboot.
 
 ### Temperature Compensation
 ```cpp
