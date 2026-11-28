@@ -40,6 +40,37 @@ The existing controller's pH and DO reads are uncalibrated placeholder scaling,
 not implementations for the Gravity sensors. Neither controller environment is
 ready for unattended production or use with livestock.
 
+### X8 sensor-only bench
+
+The separate `esp32relay8_sensor_bench` environment commands relay output-enable
+OFF using the unverified X8 mapping and
+reports **ADC input voltage only**, not calibrated pH or dissolved oxygen.
+It does not control any loads or guarantee relay states on boot, reset or fault.
+Verify the proposed GPIOs and safe voltage levels
+on the actual board before wiring, and keep every relay load disconnected.
+GPIO21/22 (I2C), GPIO23 (DS18B20), and the availability of 3.3 V and GND
+on this specific board have not been verified.
+
+Proposed wiring: power an ADS1115 from a verified 3.3 V supply, connect its
+GND to the controller's GND, SDA to GPIO21 and SCL to GPIO22, with I2C pull-ups
+to 3.3 V. Set ADDR to GND (address 0x48). Connect the DO module's analog
+output to A0 and the pH signal to A1 **only after verifying each signal stays
+within 0–3.3 V at all times**. The selected older pH module uses 5 V; its
+output range and any necessary divider or isolation must be established before
+connection. Do not apply 5 V to a 3.3 V-powered ADS1115 or its I2C pins.
+Connect a 3.3 V-powered DS18B20 to GPIO23 with a 4.7 kOhm pull-up to 3.3 V.
+Observe each sensor manufacturer's supply, grounding and isolation requirements.
+Never connect these analog signals to the X8 opto-isolated IN terminals.
+
+Flash `platformio run -e esp32relay8_sensor_bench -t upload`; serial and
+non-retained MQTT readings are published every few seconds under
+`smartfarm/x8_sensor_bench/{do_adc_mv,ph_adc_mv,water_temp_c}`. ADC values are
+measured **after** any external voltage divider. `unavailable` indicates a
+detected I2C/temperature or range error; it does not prove that a probe is
+connected or correctly calibrated. MQTT `status` provides device availability.
+Calibrated pH/DO conversion, hardware fault detection and X8 production control
+are not implemented. Do not use these readings to control an occupied pond.
+
 ## Features
 
 - **Autonomous Control**: Works independently even without Home Assistant
