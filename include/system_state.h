@@ -46,7 +46,7 @@ struct OutputStates {
 enum SystemMode {
     MODE_AUTO,      // Tự động theo cảm biến
     MODE_MANUAL,    // Điều khiển từ HA
-    MODE_SCHEDULE,  // Lịch biểu
+    MODE_DRY_RUN,   // Chạy thử tải, không nuôi vật nuôi
     MODE_SAFE       // Chế độ an toàn
 };
 

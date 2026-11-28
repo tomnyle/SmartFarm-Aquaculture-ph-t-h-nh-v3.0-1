@@ -40,7 +40,7 @@ connecting pumps, aerators, or an occupied pond.
 
 - **Autonomous Control**: Works independently even without Home Assistant
 - **Multi-Species Support**: Profiles for Koi, Catfish, Shrimp, Tilapia, and more
-- **4 Operating Modes**: AUTO, MANUAL, SCHEDULE, SAFE
+- **4 Operating Modes**: AUTO, MANUAL, DRY_RUN, SAFE
 - **Safe Runtime Operation Profiles**: `SENSOR_TEST`, `NO_LIVESTOCK_TEST`, and `PRODUCTION`
 - **Commissioning Interlocks**: Separate `can_no_load_test`, `can_production`, retained block reasons, and livestock confirmation
 - **Core Sensors**:
@@ -81,7 +81,8 @@ Edit `include/app_config.h`:
 - WiFi SSID & Password
 - MQTT Broker Address
 - Device Name & Location
-- `SENSOR_TEST_MODE` (keep `true` until commissioning is complete)
+- `SENSOR_TEST_MODE` (set `true` only for sensor-only checkout; set `false`
+  before manual or dry-run load testing)
 
 ### 3. Build & Upload
 ```bash
@@ -118,8 +119,10 @@ ESP32 automatically controls relays based on sensor readings and active profile 
 ### MANUAL Mode
 Control relays directly from Home Assistant.
 
-### SCHEDULE Mode
-Execute predefined schedules (e.g., feeding times).
+### DRY_RUN Mode
+Controls the connected loads without requiring confirmed livestock.
+The firmware requests `NO_LIVESTOCK_TEST`, and outputs remain subject to the
+required-sensor, relay-test, critical-condition, and SAFE interlocks.
 
 ### SAFE Mode
 Activated when critical errors detected:

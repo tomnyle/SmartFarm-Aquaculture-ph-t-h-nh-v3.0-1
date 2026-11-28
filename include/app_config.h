@@ -109,12 +109,12 @@
 #define LOG_LEVEL 3  // 0=ERROR, 1=WARN, 2=INFO, 3=DEBUG
 
 // ==================== DEFAULT MODE ====================
-#define DEFAULT_MODE "AUTO"  // AUTO, MANUAL, SCHEDULE, SAFE
+#define DEFAULT_MODE "AUTO"  // AUTO, MANUAL, DRY_RUN, SAFE
 
 // ==================== SAFETY PROFILE LOCKS ====================
-// Keep true during sensor-only checkout; ON commands are suppressed,
+// Set true only for sensor-only checkout. ON commands are suppressed,
 // outputs remain locked OFF, and AUTO rules are skipped.
-#define SENSOR_TEST_MODE true
+#define SENSOR_TEST_MODE false
 
 // ==================== CONTROL THRESHOLDS ====================
 // Temperature (°C)
